@@ -1,0 +1,5 @@
+Stardew Expansion 2.0.2
+
+Fixed the hydroponic harvest-mode control using stale slot state during seed insertion and removal. The breeding control now appears when an Ancient Fruit seed is inserted and hides when the seed is removed or cleared.
+
+Gameplay balance and save data are unchanged.

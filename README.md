@@ -4,7 +4,7 @@ Source collection for four mods for *Probably Stolen*. Each mod has its own dire
 
 | Directory | Mod | Version | Mod ID |
 |---|---|---:|---|
-| `StardewExpansion/` | Stardew Expansion | 2.0.1 | `pelican_cultivation` |
+| `StardewExpansion/` | Stardew Expansion | 2.0.2 | `pelican_cultivation` |
 | `StationScavenging/` | Station Scavenging | 1.5.6 | `station_scavenging` |
 | `MetalWineBottles/` | Metal Wine Bottles | 0.2.1 | `metal_wine_bottles` |
 | `NightWalker/` | Night Walker | 1.1.0 | `night_walker` |

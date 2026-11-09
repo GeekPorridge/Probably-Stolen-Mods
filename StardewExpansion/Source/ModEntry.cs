@@ -5,8 +5,8 @@ namespace PelicanCultivation
 {
     public sealed class ModEntry : IMod
     {
-        public const string ModId="pelican_cultivation", Version="2.0.1";
-        public const string BuildRevision="r8";
+        public const string ModId="pelican_cultivation", Version="2.0.2";
+        public const string BuildRevision="r9";
         public static bool Enabled, GameplayReady;
         private static ModLog log;
         private static ConfigEntry<int> nativeSeedChance,stationSeedShare;

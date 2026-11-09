@@ -213,27 +213,29 @@ namespace PelicanCultivation
             var input=MachineHydroponic.GetInputSlot(machine);
             var mode=new MachineryButton(ModEntry.L("harvest_normal"));
             var modePanel=MachineHelper.Panel(ModEntry.L("harvest_mode"),mode,"pelican_harvest_mode").SetHidden(true);
-            Action refresh=()=>{
-                var seed=input.childItem;
-                bool breeding=seed!=null && seed.GetTagReadonly(Rules.BreedTag).GetBool();
-                mode.SetText(ModEntry.L(breeding?"harvest_breeding":"harvest_normal"));
+            Action<GameItem> refresh=seed=>{
                 bool ancient=seed!=null && HydroponicHelper.GetPlantId(seed)==Rules.Crops[Rules.AncientIndex].SeedId;
-                if(modePanel.isHidden==ancient) modePanel.SetHidden(!ancient);
+                bool breeding=ancient && seed.GetTagReadonly(Rules.BreedTag).GetBool();
+                mode.SetText(ModEntry.L(breeding?"harvest_breeding":"harvest_normal"));
+                bool hidden=!ancient;
+                if(modePanel.isHidden!=hidden) modePanel.SetHidden(hidden);
             };
             mode.SetCallback(()=>{
                 var seed=input.childItem;
                 if(seed==null || HydroponicHelper.GetPlantId(seed)!=Rules.Crops[Rules.AncientIndex].SeedId)
                 { ModEntry.Message("breeding_requires_ancient"); return; }
                 seed.ModifyTag(Rules.BreedTag,s=>s.Enable().SetBool(!s.GetBool()));
-                refresh(); seed.Validate();
+                refresh(seed); seed.Validate();
             });
-            input.onSlotAddItemFunc+=(self,inv,slot)=>refresh();
-            input.onSlotRemoveItemFunc+=(self,inv,slot)=>refresh();
-            machine.onLoaded+=self=>refresh();
+            // Slot callbacks can run before childItem reflects the mutation.
+            // Use the added item directly, and treat a removal as an empty slot.
+            input.onSlotAddItemFunc+=(seed,inv,slot)=>refresh(seed);
+            input.onSlotRemoveItemFunc+=(seed,inv,slot)=>refresh(null);
+            machine.onLoaded+=self=>refresh(input.childItem);
             // Extend the native row in place. Existing storage indices, live
             // inventories, the machine window and other mods' panels stay intact.
             row.Add(modePanel);
-            refresh();
+            refresh(input.childItem);
             var nativeSprites=machine.getItemSpriteModifierForItemFunc;
             machine.getItemSpriteModifierForItemFunc=self=>{
                 var seed=MachineHydroponic.GetInputSlot(self)?.childItem;
