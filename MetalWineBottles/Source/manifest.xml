@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>metal_wine_bottles</ID>
+  <Name>金属制瓶 / Metal Wine Bottles</Name>
+  <Author>小粥</Author>
+  <ModVersion>0.2.1</ModVersion>
+  <Description>将一块金属锭用于另一块金属锭，直接合成原版空酒瓶；只消耗两锭。真实纯度档位平均后向下取整，极低至完美默认产出1/3/5/7/9/10瓶，设置可调。 / Use one metal ingot on another to craft native empty wine bottles. Only the two ingots are consumed. Average true purity rounds down. Default yields: 1/3/5/7/9/10.</Description>
+  <GameVersions><Version>0.46D</Version></GameVersions>
+  <Prerequisites />
+  <Assemblies><Assembly>MetalWineBottles.dll</Assembly></Assemblies>
+  <Capabilities />
+</Manifest>

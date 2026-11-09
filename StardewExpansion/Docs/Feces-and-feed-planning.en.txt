@@ -1,0 +1,22 @@
+A Fellow Townsman Arrives v1.1.7 — Feces and per-machine feed planning
+
+Feces handling
+Husbandry > Automatically move feces to trash defaults ON.
+Without a cleaner robot in that cage, owned cage feces move to the native trash bin during nightly processing. With a robot, native collection continues; only near-full robot storage is emptied, at 80% occupied cells by default, configurable 50-100%. Each robot is successfully emptied at most once per night. Robots elsewhere do not serve this cage.
+Unavailable/full trash or removal restrictions leave original items in place. A successful late retry clears an earlier full-bin warning. Native trash collection can later dispose of transferred items. Turn the setting off to retain feces for water production. Native robot collection/incineration still follows its own controls. Carcasses and other items are not selected.
+
+Feed planning
+No warehouse-wide feeding. Native livestock feed dispensers supply food; players plan purchases, loading and hopper deliveries.
+Native night logs retain three base husbandry messages, then list every active cage/tank. Custom names take priority, with saved stable numbers otherwise. Enumeration changes do not renumber machines, and new machines get unused numbers.
+Rows show compatible processed calories and about how many nights they can supply, with urgent machines first. Missing dispensers, empty stock, incompatible diets and fullness targets below 75% have separate warnings. Egg-only tanks prompt preparation for larvae.
+Only processed, diet-compatible local dispenser feed is counted, excluding warehouse food, unprocessed inputs, other machines and animals' stomach reserves. Carnivorous lobsters cannot count industrial fish feed or plant calories. Existing stock is projected night by night using current mammal appetite, aquatic growth stages/speed/progress and milk/truffle nutrition costs. Forecasting does not consume real supplies or advance real animal state.
+Births/deaths, recovery, drug changes, diets, product-storage changes and future deliveries can change actual duration. These are approximate planning figures, capped at 365+ nights, not unlimited-feeding promises.
+
+Many machines
+Show per-machine feed supplies in night logs defaults ON.
+Show only machines needing feed defaults OFF: every active machine is listed. Enabling it hides sufficiently stocked machines.
+The refill warning threshold defaults to three nights, configurable 1-30.
+No fixed machine-count truncation or extra report page. Scroll the native log body with wheel or scrollbar; shortage-only mode can further reduce long lists.
+
+Validation
+Passed 160 night-report/equipment/serum checks, including 116 waste/feed checks, and existing native-method regressions. The user accepted v1.1.6 in game on 2026-11-06. v1.1.7 only cleans code and losslessly recompresses art; no separate new live overnight session was run.

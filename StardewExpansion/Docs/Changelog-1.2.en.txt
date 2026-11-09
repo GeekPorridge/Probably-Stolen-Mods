@@ -1,0 +1,12 @@
+A Fellow Townsman Arrives v1.2 — Release
+
+Show every eligible growth forecast, including Cattle, Pigs, Lobsters, Sea Cucumbers and native stock, without the two-entry cutoff.
+Compatibility with installed Neon Undertow 0.5.3 fixes the reproduced hatch/fry null-state overnight failure while retaining inheritance, full-space rollback and the founder pair.
+Retains the accepted report font, stopping/hatchet rules, historical item conversion and crop balance.
+The two-part version 1.2 is consistent across the DLL, manifest, guides and packages.
+
+SteamCMD upload uses an ASCII-only folder path, publish.vdf and English changenote. In-game Simplified Chinese and English remain.
+Retains Workshop item 3834581016 and updates content/changenote only. Local files are backed up and hash-verified; saves, settings and third-party mods are not edited. Workshop upload is not executed automatically.
+
+Corrects GameVersions to the native 0.46D identifier (VERSION 100-REV12), resolving the warning caused by the previous 1.0.0.12 declaration.
+Fixes overflowing text on the hydroponic Cycle control button. Stop after harvest now measures its localized caption and refreshes the layout when toggled, preserving the existing font size and stopping rules.

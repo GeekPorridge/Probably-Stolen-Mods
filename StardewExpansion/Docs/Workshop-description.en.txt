@@ -1,0 +1,34 @@
+[h1]Stardew Expansion 2.0[/h1]
+Grow familiar crops, turn eggs, milk and flowers into artisan goods, and spend an evening at the station reservoir. The Townsman brings farming stock on Wednesday, artisan machines on Friday and husbandry stock on Saturday.
+
+[h2]Twelve crops with distinct growth art[/h2]
+Parsnip, Potato, Corn, Wheat, Hops, Strawberry, Starfruit and Ancient Fruit join Chili, Blueberry, Poppy and Fairy Rose. All twelve use mature overlays aligned to the native machine, using native hydroponics and genetics. Flowers support perfume production, display and sale.
+
+[h2]Four artisan machines[/h2]
+[list]
+[*]Cheese Press: mayonnaise and cow/goat cheese.
+[*]Oil Press: truffle oil and two flower perfumes made with chili spirit.
+[*]Barrel: age whole native and added fruit wines through native maximum, then Silver, Gold and Iridium.
+[*]Grill: plain or seasoned food, two baits, Baked Lobster, Scallion Sea Cucumber and Sashimi Platter.
+[/list]
+A Barrel holds up to ten bottles without power. From native maximum, Silver takes 7 more nights (+25% value), Gold another 10 (+35%), and Iridium another 15 (+50%). Star bonuses replace one another rather than stacking. Saved aging progress is retained.
+Baked Lobster and Sashimi Platter are both Food and Luxury; Scallion Sea Cucumber is Food. Sashimi needs one whole Tuna, Lava Eel, Midnight Carp and Largemouth Bass. All three take one base night and contain their actual ingredient calories x1.2. Fixed base prices are Scallion Sea Cucumber 200, Baked Lobster 350 and Sashimi Platter 600; calories do not automatically change these prices.
+Perfume improves the current customer's buy/sell prices. Only the strongest effect applies; equal/stronger scent does not waste a charge. Perfumes are contraband. Used-machine resale ceilings prevent chassis flipping while preserving the independent value of contents.
+
+[h2]Chickens, goats and reservoir fishing[/h2]
+Healthy adult hens continue laying ordinary 150-kcal eggs. With a healthy adult male in the cage, they can also produce an additional 150-kcal fertile egg, at an extra 150-kcal food cost. The base chance is 50%, adjusted by both parents' fertility and health, with a three-night interval between successful fertile eggs. Sterilized chickens cannot breed, while hens still lay ordinary eggs. Production is automatic; protected fertile eggs inherit both parents' genes and hatch after two effective incubation nights without requiring the parents to remain. The one-cell chick replaces its egg in the same cell, so no additional empty cell is needed. Ordinary eggs and new fertile eggs use independent output space; a full destination does not charge the corresponding production cost.
+Goats supply milk. Cattle, chickens and goats eat plant food only; pigs remain omnivores.
+Aquaculture I opens the reservoir immediately after Dr. Jackson and before the Upper District. Without ordinary or premium bait in the selected travel backpack, its visible card explains why departure is unavailable. Owned inner bags count; ground and side pockets do not.
+Its compact native-style panel sits at the bottom right and fits the visible viewport. Choose ordinary or premium bait using the two selection buttons. Hold or release left mouse or Space to steer the cursor after the moving green target. Night fishing difficulty runs from 1 to 5, defaults to 3 and changes the next cast. Default targets are 50% faster than r6, with narrower green zones; cursor response scales with difficulty. Esc, settings and return confirmations pause the fight and its timer.
+The first visit each night sets the allowance from the bait carried, with no fixed eight-cast cap. Re-entry does not refresh it. There is no on-site bait purchase or free bait gift.
+Each cast immediately spends one selected backpack bait and one allowance. Success, failure or abandonment gives no refund and never charges a second time. If the ground is full, the catch remains pending for collection without another payment. The top X is hidden; the native bottom Return remains. Unexpected panel hiding or destruction at the reservoir restores the current fight without resetting the allowance.
+Saturday stock is five ordinary bait, with three additional premium bait after Aquaculture II. The Grill can also make both baits. Both occupy 2x2 cells and stack to 20; old stacks retain every unit while safely waiting for enough space to resize.
+Midnight Carp, Largemouth Bass, Tuna and Lava Eel can be raised and may come with bonus eggs. Their fish, eggs and fry have bilingual descriptions that remain correct after loading older saves or growing into a new stage. Legend, Crimsonfish, Glacierfish and Mutant Carp are rare, non-farmable collectibles with independent cooldowns after successful collection.
+Each unlocked night has a 20% chance of Legendary Fish Activity, lasting only that night. The native transit event card and a handbook page explain it. All four legendary probability intervals double, while premium bait retains its independent x1.5 bonus and cooldowns remain unchanged. Successful and unsuccessful daily rolls are both saved; re-entry or reload cannot reroll the event.
+
+[h2]Three illustrated handbooks[/h2]
+Planting, Husbandry and Artisan handbooks use independent illustrated windows with vanilla hydroponic guide assets, fixed-scale dragging and separate page state. Paper blocks machine hover information behind the reading area. Genetics chapters unlock with research. All new content supports Simplified Chinese and English.
+Includes the earlier seed-start, perennial-hatchet, shorter hydro-help and independent-handbook fixes. Matching fruit-wine bottle art, ten-bottle barrels and used-machine resale rules remain.
+
+[h2]Getting started[/h2]
+Uses native abilities, water/power, feed dispensers, cages, aquaculture tanks and hoppers. Buy seeds and farming books on Wednesday, machines and the Artisan Handbook on Friday, and livestock/bait on Saturday. Restart after updating and enable only one copy of the mod ID.

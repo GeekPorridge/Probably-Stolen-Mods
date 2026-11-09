@@ -1,0 +1,36 @@
+{
+  "r2_overlay": {
+    "ppu": 800,
+    "plant_bounds": [
+      16,
+      64,
+      352,
+      280
+    ],
+    "height": 512,
+    "width": 384
+  },
+  "native_plant_overlay": {
+    "ppu": 100,
+    "rect": [
+      320,
+      144,
+      48,
+      64
+    ],
+    "name": "nutrifruit_p"
+  },
+  "asset": "resources.assets",
+  "native_hydro_sprite": {
+    "ppu": 100,
+    "rect": [
+      448,
+      64,
+      48,
+      64
+    ],
+    "name": "hydroponic"
+  },
+  "ui_anchor": "Native UpdateInnateModSprite anchors at the machine top-left.",
+  "game": "Probably Stolen 0.46D / VERSION 100-REV12"
+}

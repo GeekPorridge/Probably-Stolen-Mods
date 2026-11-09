@@ -1,0 +1,4 @@
+Compatibility declaration correction (still v1.2)
+
+The installed game displays VERSION 100-REV12, while PlayerSettings.bundleVersion / Application.version remains 0.46D. The native mod menu compares manifest GameVersions against Application.version. The previous 1.0.0.12 declaration therefore produced a mismatch warning. It now declares 0.46D; the runtime DLL and gameplay files are byte-for-byte unchanged.
+Restart the game to reload the local declaration. Republishing this corrected payload is still required for Workshop subscribers.

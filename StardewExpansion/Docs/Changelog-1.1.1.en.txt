@@ -1,0 +1,21 @@
+A Fellow Townsman Arrives v1.1.1 — Meat names, categories and prices
+
+Beef and pork use Bite / Small / Standard names for 1/4/6 cells. Lobster meat keeps Bite / Small / Standard / Large for 1/2/4/6 cells. Names no longer include calories; bite names have no parentheses. Only six-cell beef, pork and lobster cuts are luxury items. Both truffles remain luxury.
+
+User-approved base values:
+Cells                  1        2        4        6
+Beef                  14        -       58      130
+Pork                  17        -       67      150
+Lobster meat          20       40       80      180
+Full-cut kcal        100      200      400      900
+Small Black Truffle: 60 -> 45. Black Truffle: 120 -> 90. Milk remains 42.
+Six-cell beef/pork/lobster meat fell from 144/189/306 to 130/150/180. Other cut values scale with calories and round to whole currency units. Slaughter remainders retain actual calories. Native market, event and quality modifiers still affect final prices.
+
+Adds natural short descriptions and flavor text for livestock, aquatic stock, eggs, larvae, milk, both truffles, whole sea cucumbers and all non-bite meat cuts. Bite cuts have no descriptions or flavor. Practical husbandry rules stay in the husbandry tooltips. English and Simplified Chinese are both updated.
+
+Quit the game, update the same Mods/PelicanCultivation folder, restart and load the existing save. Avoid duplicate copies. Existing cut and truffle names, categories, descriptions and base values refresh automatically while preserving quantity, footprint, actual calories, meat source, disease, ownership and other state. The update creates no extra products.
+This package is prepared locally; it does not replace the installed copy or publish to Steam Workshop.
+
+Validation passed: compilation, 31,185 existing logic checks, 182 native wine checks, 57 calendar checks, 102 husbandry/native-method and metadata-migration checks, 45 Harmony bindings, 210 bilingual keys and 71 textures. All original textures are unchanged.
+Migration coverage includes all ten cuts, incorrect luxury categories, both saved truffle values, repeated refresh, depleted cuts, disease/source/ownership preservation, native items and sea-cucumber harvest snapshots.
+The revised display and a real save round trip have not been retested inside the game engine. Headless checks do not replace full overnight, automatic-butcher or report-layout acceptance tests.

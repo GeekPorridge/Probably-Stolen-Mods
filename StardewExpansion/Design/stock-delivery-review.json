@@ -1,0 +1,55 @@
+{
+  "status": "native_behavior_verified_read_only_delivery_design_proposed_not_implemented",
+  "inspected_at": "2026-11-05",
+  "native_evidence": [
+    {
+      "type": "StoreShutterButton",
+      "method": "OnShutterDoorOpenMorning",
+      "finding": "Unless the newspaper-to-trash option succeeds, the morning newspaper uses AddDirectSellingItemToTable(newspaper, isOwend:true). This is the same front-counter placement path used by the seed supplier."
+    },
+    {
+      "type": "EmporiumEntry",
+      "finding": "The front selling counter is initialized as a distinct 18-by-4 GameGridInventory."
+    },
+    {
+      "type": "StoreClientListSpec",
+      "method": "CreateRetiredFarmer",
+      "finding": "Merchant dialogue end action populates physical goods by repeated AddDirectSellingItemToTable calls, without retaining failed offers through those calls."
+    },
+    {
+      "type": "PlayerStore",
+      "method": "TryAddDirectSellingItemToTable",
+      "finding": "String overload skips an offer when front counter CanTakeAnything is false. Instantiated-item overload invokes GraphUtils.TryAcceptAllOrDestroy and returns false if unplaced. Void AddDirectSellingItemToTable wrappers discard the bool return."
+    },
+    {
+      "type": "GraphUtils",
+      "method": "DestroyIfUnplaced / TryAcceptAllOrDestroy",
+      "finding": "An unplaced item is logged and destroyed. There is no deferred merchant stock ledger in this placement path."
+    },
+    {
+      "type": "PlayerStore",
+      "method": "BuyItem",
+      "finding": "Cash is deducted during purchase. The failed initial offer placement discussed here occurs before purchase. Do not generalize this finding to unverified post-purchase failure cases."
+    }
+  ],
+  "recommended_initial_scope": "User subsequently selected a separate NPC, 鹈鹕镇的农夫, visiting immediately after the weekly retired farmer. Retain guaranteed stock totals and deferred physical display for the new NPC; automatic scaling remains undecided.",
+  "separate_npc_capacity_finding": "Native departure cleanup removes unsold unowned goods from both counters. Existing owned goods and newspapers remain, so the new NPC still requires capacity-safe delivery.",
+  "proposed_delivery_requirements": [
+    "Retain quantities for mod seed offers that have not yet been placed on the counter",
+    "Try to display only what fits; reduce pending stock only after successful placement",
+    "Retry while the same merchant is present after space becomes available; keep stock and physical offers consistent",
+    "Keep seed offers unowned until normal purchase; do not bypass payment by moving failed offers into player storage",
+    "Do not delete or move the player's newspapers or owned items to make room",
+    "No new full quota on repeated dialogue or save reload during the same visit",
+    "Unpurchased pending stock ends with the merchant visit, following ordinary visit availability"
+  ],
+  "required_future_game_checks": [
+    "Front counter completely full of owned items including newspapers",
+    "Only one usable seed slot left",
+    "Fragmented free space and shape-sensitive placement",
+    "Space freed by buying or moving items while merchant remains present",
+    "Repeated dialogue, saving/loading, and merchant departure",
+    "Check both missing offers and accidental duplicate or free offers"
+  ],
+  "limits": "This review inspected code only. No mod-4 implementation or live full-counter verification has been performed."
+}

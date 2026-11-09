@@ -1,0 +1,29 @@
+水培与酿酒扩展 0.1.3
+
+1. 老乡在0.1.2的显示基础上缩小20%，保留同一张正面半身像。
+2. 修复8种种子缺少“种子”品类/SEED标签，无法通过原版水培机筛选的问题。新生成物品和旧存档物品均修正，不重置基因或生长进度。
+3. 复用已选美术原图，重做导出。种子不再压成16×16低分辨率图片；每格使用128像素保留纹理，再适配实际显示尺寸，单格种子仍只占一格。
+4. 果酒恢复原图宽高比，啤酒恢复矮宽瓶型。全部等比例缩放，酒瓶保留四格逻辑占格；矮瓶在画布中保留透明边距。
+5. 作物也使用同一套高分辨率导出与显示方式，已有作物加载后刷新贴图。
+
+安装或更新后，请重新启动游戏再加载原存档。仅复制文件不会更新正在运行的DLL和已缓存贴图。
+本地旧版备份保留，更新不涉及存档文件。当前包为测试版，未发布Steam工坊。
+
+验证：编译、4,422项原版规则与回归检查、原生模组扫描通过。
+使用原版真正的水培机输入筛选函数验证8种种子，并验证所有权与容器限制。
+75组中英文语言键、34张贴图、13张种袋/酒瓶导出比例检查通过。
+当前对比图为等尺寸贴图模拟；0.1.3游戏内画面和完整经营流程尚待实测。
+
+Hydroponics & Brewing 0.1.3
+
+1. The visitor is 20% smaller than in 0.1.2, using the same front-facing portrait.
+2. Fixed all eight seeds missing their native SEED category/tag. New and saved items are repaired without resetting genetics or growing progress.
+3. Re-exported the selected original art with 128 texture pixels per logical cell. Seed packets retain detail while still occupying one cell.
+4. Fruit wines retain original proportions; beers recover their squat, broad silhouettes. Uniform scaling replaces stretching. All bottles retain four inventory cells; short bottles have transparent margins.
+5. Produce uses the same high-resolution export/display system and refreshes on load.
+
+Restart the game before loading your save. Copying files cannot reload an active DLL or cached textures.
+The local previous version is backed up. Save files are not changed by installation. This test build has not been published to Steam Workshop.
+
+Validation: compilation, 4,422 native-rule/regression checks and native mod scan passed. The actual native hydroponic input predicate accepts all eight repaired owned seeds and retains ownership/container restrictions. Bilingual text, 34 sprites and 13 seed/bottle aspect ratios passed.
+The comparison is a same-size texture simulation. In-game 0.1.3 visuals and the complete production flow still require testing.

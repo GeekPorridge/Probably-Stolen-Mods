@@ -1,0 +1,25 @@
+水培与酿酒扩展 v0.1.7
+
+1. 土豆、玉米、草莓、杨桃、上古水果分小型2格、正常4格、大型6格、巨型9格，售价倍率0.5/1/2/3。贴图等比缩放，四档图案逐级变大。
+2. 小麦、啤酒花、防风草固定正常型2格，没有其他体型。
+3. 巨型要求采收养护≥95、有效品质加成≥50%。每批10%概率，最多1个，替换已有收成，总数量不增加。
+4. 同机同种连续10次达标未出巨型，下次达标保底1个。未达标不计数也不清零，各品种各机器分别保存；读档保留计数。
+5. 酿酒按每份大型＋1、巨型＋2分，小型/正常＋0分。成酒价格只随原版品级变化，不追加体型售价倍率；最高仍为琼浆玉液。
+6. 原版空酒瓶内部由12格扩为22格，8×3轮廓右下封闭2格。可放两份3×3巨型和一份酵母；原配方仍限定2份同种作物、最多1份酵母。
+7. 提示补充体型占格、状态/体型评分明细、巨型保底进度，以及当前矿物质与污染风险。
+
+旧档：旧作物安全调整占格；无法摆放时保留原格子并等待腾位，原料状态不变。旧大型价格一次性由2.5倍转2倍，防风草统一正常价，保留品系加成。已有种子基因和进度保留。正在发酵及已有成酒不重新计算品级。
+已通过11,239项逻辑检查、原生模组扫描、107组中英文文本检查、39张资源检查及23张作物的比例/逐级放大检查。尚待重启后的游戏内验证。
+
+Hydroponics & Brewing v0.1.7
+
+1. Potato, corn, strawberry, starfruit and ancient fruit use Small/Regular/Large/Giant footprints of 2/4/6/9 cells, with sale multipliers 0.5/1/2/3. Proportional artwork grows visibly across all four tiers.
+2. Wheat, hops and parsnip are always Regular, two cells.
+3. Giants require harvest care >=95 and effective quality >=50%. Each qualified batch has a 10% chance, at most one giant, replacing an existing crop without increasing yield.
+4. After ten qualified misses on the same machine and species, the next qualified harvest guarantees one giant. Unqualified harvests neither advance nor reset pity. Separate saved machine/species counters survive reloads.
+5. Each Large ingredient adds +1 wine score and each Giant +2; Small/Regular add zero. Wine value follows its native quality tier only, with no extra size sale multiplier. Master Vintage remains the top tier.
+6. Native empty bottles expand from 12 to exactly 22 ingredient cells: an 8x3 outline with the bottom-right two blocked. Two 3x3 giant crops fit beside yeast. Custom recipes still require exactly two matching crops and at most one yeast.
+7. Tooltips explain size/cells, condition/size scores, giant guarantee progress and current mineral/pollution risks.
+
+Saved produce expands safely or retains its old footprint while waiting for room. Historical ingredient condition remains. Old Large prices migrate once from 2.5x to 2x, parsnip to regular value, preserving strain modifiers. Seed genetics/progress remain. Existing fermenting and finished wine scores are retained.
+Passed 11,239 logic checks, native mod scanning, 107 bilingual text checks, 39 sprite checks and 23 crop proportion/visible-growth checks. In-game verification remains pending after restart.

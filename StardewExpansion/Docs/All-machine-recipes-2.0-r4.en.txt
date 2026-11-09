@@ -1,0 +1,33 @@
+Stardew Expansion 2.0 r4 — Current machine effects and complete recipes
+
+The Friday Townsman Artisan sells all four machines and the Artisan Handbook. Wednesday retains seeds and the Planting/Husbandry books; Saturday retains husbandry stock. Retail / empty-chassis resale ceilings: Cheese Press 450/72, Oil Press 600/96, Aging Barrel 450/72, Grill 500/80. Negative demand can lower the offer. Positive chassis bonuses cannot exceed these ceilings; player-supplied contents retain independent value.
+
+Aging Barrel: 10x4 cells, up to 10 whole individual bottles. No power, water, modules, recipe selector or progress panel. Accept whole finished non-counterfeit wine, including native wine and the four mod fruit wines; reject beer, pale ale, chili spirit, partially used bottles, empties and fermenting bottles. Tier 0–3 starts reach tier 4 after 6 nights and tier 5 plus one +10% Barrel Character reward after 14. Tier 4 starts finish in 8 nights; tier 5 starts receive the reward in 7. Currently even an undrinkable tier-0 finished bottle can enter if it meets the other rules. Each bottle keeps its own saved progress and native aging data; removal pauses progress and re-entry resumes it. The bonus cannot compound by reinsertion.
+
+Cheese Press: battery and universal modules; 8x4 input and 8x4 output. Process 1–4 matching eligible whole ingredients per batch, without needing a full batch.
+1 egg, at least 150 kcal -> 1 mayonnaise, 180 kcal, base value 30; 1 night.
+1 milk, at least 350 kcal -> 1 cheese, 350 kcal, 4 cells, value 70; 2 nights.
+1 goat milk, at least 400 kcal -> 1 goat cheese, 400 kcal, 4 cells, value 100; 2 nights.
+Each consumes one whole ingredient item. Auto order: eggs, milk, goat milk.
+
+Oil Press: battery and universal modules; expanded 10x4 input and 8x4 output. Existing machines expand on load, preserving contents.
+1 whole black truffle, at least 300 kcal OR 2 whole small truffles, each at least 125 kcal -> 1 truffle oil. 2 nights, up to 2 oil bottles/batch; truffle forms may be combined. Oil: 200 kcal, 4 cells, base value 150.
+1 whole chili spirit + 4 poppies + 4 empty wine bottles -> 4 poppy perfumes + 1 returned empty wine bottle; 2 nights.
+1 whole chili spirit + 4 fairy roses + 4 empty wine bottles -> 4 fairy rose perfumes + 1 returned empty wine bottle; 4 nights.
+Use empty wine bottles, with no water or contents, not generic chemical flasks. Flowers cannot be mixed. The spirit bottle is returned empty even when the spirit originated from its cheat catalog ID.
+Perfumes: 4 cells and 3 native charges. Poppy has base value 100 and 20% two-way influence; Fairy Rose 160 and 30%. Both are medium contraband. Only the current visit is affected; the strongest native/mod perfume wins, and equal/stronger existing influence spends no charge. Prose describes fragrance while native status shows charges. Auto order: complete Poppy perfume, complete Fairy Rose perfume, truffle oil.
+
+Grill: battery and universal modules; 8x4 input and output. All current base recipes take 1 night. Raw beef, pork, chicken, goat and recognized finfish meat are supported. Lobster, sea cucumber, rat meat, already cooked food and legendary fish are excluded.
+Plain: 1–1800 kcal of one raw meat kind -> the same total calories of cooked meat in 1–2 portions. Unused raw calories and proportional base value remain. Per 900 raw kcal, base cooked values are chicken 120, goat 185, beef 165, pork 190; fish is the consumed raw fish base value x1.25.
+Chili: 1800 kcal of one raw meat kind + 2 chili peppers, each at least 120 kcal -> 2 spicy portions; +30 base value per portion.
+Truffle: 1800 kcal of one raw meat kind + 1 truffle oil, at least 200 kcal -> 2 truffle portions; +85 per portion.
+Mayonnaise fish: 1800 kcal of fish meat + 1 mayonnaise, at least 180 kcal -> 2 portions; +25 per portion.
+Seasoning calories are added to the finished food and divided into two portions. Seasoned recipes need 1800 kcal of a single meat kind.
+Ordinary bait: 1 whole wheat, at least 300 kcal + 50 ml clean water -> 6 bait.
+Premium bait: 6 ordinary bait + 1 whole mayonnaise, at least 180 kcal -> 6 premium bait.
+Up to 4 bait groups/batch, or 24 portions; stacks hold 20. Clean water means >=97% water, with each of heavy metals, chemical contaminants, microbes, organic waste, acid and base <=0.1%. Only the required water is removed; vessels and leftover water remain.
+Auto order: premium bait, ordinary bait, chili meat, truffle meat, mayonnaise fish, plain meat. Only complete recipes are selected; unused ingredients remain.
+
+Powered-machine rules: default 8 work/night and base 8 energy per working night. Universal modules alter performance, efficiency or quality. Ingredient quality and quality modules affect product value; performance affects duration without changing the recipe. Equipment has dedicated bays and cannot enter raw input. Only owned items work. Input is locked during an active batch. No power pauses work; insufficient output room preserves ingredients and waits, without repeatedly charging the blocked final step. Ingredients are consumed only after all outputs fit. No recipe selectors, progress bars or extra control bays are present. Night fishing is unchanged this revision.
+
+Machine IDs: pelican_barrel, pelican_cheese_press, pelican_oil_press, pelican_grill. Spirit ID: pelican_chili_spirit. The seven finished-drink cheat IDs added in r3 remain available.

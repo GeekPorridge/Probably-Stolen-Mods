@@ -1,0 +1,29 @@
+Stardew Expansion 2.0 r2 — Revision and acceptance notes
+
+Version remains 2.0, local revision r2, including the accepted 1.2.1 fixes. No Workshop or Nexus upload.
+
+- Hide the appended information section for all registered crops/seeds while retaining native food, genetics and machine rows.
+- Show only mature plants throughout hydroponic growth, including resting perennials. Use the native 48x64 full overlay canvas, align roots with the base, and remove 24 unused intermediate growth sprites.
+- Redraw the four existing legendary fish from Wiki references: green Legend, maroon Crimsonfish, blue/pink Glacierfish and green deformed Mutant Carp. Update the eight older seed packets to folded paper bags matching the newer design.
+- Artisan inputs now reject batteries/modules. Older misplaced equipment attempts to move into the correct available bay, otherwise remaining intact.
+- Cheese Press, Oil Press and Grill automatically detect ingredients without recipe, progress or control panels. Preserve the approved overnight durations, power/module rules and working input lock. Blocked output retains ingredients.
+- Complete compound recipes take precedence. Oil Press tries perfumes before oil; Grill tries premium bait, ordinary bait, chili, truffle, mayonnaise fish, then plain meat. Unused seasoning remains. Lobster/sea-cucumber meat is excluded pending separate recipes.
+- Perfumes, both cheeses, truffle oil, wheat, poppy and fairy rose use 2x2 cells. Blueberries have small 1-cell, normal 4-cell and giant 9-cell variants.
+- Save migration preserves value, remaining food calories, perfume charges and other data. Without expansion room, retain the old footprint and retry after space becomes available.
+- Register reservoir cover/background as sprites recognized by the native map UI. Cover the camera view and restore shared scene transforms before another location uses them.
+- Create an explicit visible fishing track, green target and gold cursor instead of relying on the unavailable progress-bar prefab. Show a clear bite/observation signal, then start the cursor after 0.5 seconds. Preserve quotas, bait, pending catches and independent king cooldowns.
+
+Acceptance: restart, check old-item expansion and plant alignment, test battery/module routing and mixed ingredient recognition overnight, then verify reservoir images, bite text and timing interaction. The four kings retain the two-wins-in-three rule.
+
+Validation: 600 v2 checks, 436 crop checks and existing brewing/husbandry/visitor/report regressions pass. Native scanning accepts 894 methods. Two locales have 432 keys each. Runtime contains 156 item/growth sprites, two scenery images, DLL, manifest and two locale CSVs: 162 files.
+Real native save encode/decode tests migrate old wheat, blueberry and perfume states without restoring calories, value or charges. No player save is opened. The hydro layout composite is a review artifact, not an in-game screenshot.
+Unity scene rendering, physical placement and some resource boundaries remain fixtures. Actual r2 UI and mouse interaction require acceptance after restart. Running game processes are not terminated.
+
+Back up and synchronize the active local Mods/3834581016 folder and existing Mods/PelicanCultivation mirror, verify hashes, and retain configuration/save data. Do not enable an additional duplicate instance. Prepared Workshop text has not been published.
+See README.en.txt for the player guide; this revision takes precedence over historical initial-2.0 notes.
+
+Wiki references for generated redraws, not copied sprites:
+https://stardewvalleywiki.com/Legend
+https://stardewvalleywiki.com/Crimsonfish
+https://stardewvalleywiki.com/Glacierfish
+https://stardewvalleywiki.com/Mutant_Carp

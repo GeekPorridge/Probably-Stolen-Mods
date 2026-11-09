@@ -1,0 +1,11 @@
+A Fellow Townsman Arrives v1.1.4 — Husbandry finishing
+
+Removes old report/management code, warehouse-wide feeding and upkeep, and the added per-tank breeding toggle/32-stock cap. Uses native equipment and breeding.
+Appends only three native night logs: animal condition, expected growth and disease/environment warning. Existing messages and UI layout are preserved. Empty farms do not add an empty report; repeated callbacks do not duplicate it.
+Counts owned individuals and grouped larvae correctly. Estimates the nearest two next stages using actual ages, diet speed and saved growth progress; unfertilized/hungry/crowded stock gets no false due date. Reports paused production when a product tray is full.
+Green serum remains manual, with optional automatic treatment in mod settings, off by default. Uses real existing doses, never stacks active effects and never treats prion disease alone. Native immunity effects do not directly cure disease or clear prion tags. Night logs show successful automatic dose use.
+Confirms the original retired rancher sells Vacuum Robot. Native feeding and per-species automatic-butcher keepers support cattle/pigs; hoppers transport items. No duplicate slaughter system is added.
+Keeps milk/truffles, sea-cucumber organic cleanup, the first purchased male/female guarantee and safe crowded conversion. Includes a bilingual native disease/equipment guide.
+
+Passed 31,246 existing logic, 182 native wine, 57 calendar, 118 husbandry/metadata, 35 dialogue, 23 founder-pair and 44 night-report/equipment/serum checks. All 45 Harmony bindings, 227 bilingual keys, 71 unchanged textures and the minimal runtime passed. Native scanner: 479 methods, existing reflection-external only.
+Headless fixtures do not replace live overnight cosmetic-mod display or real-save acceptance testing. Verified files synchronize to the authorized game directory after backup; restart to load. No Workshop upload.

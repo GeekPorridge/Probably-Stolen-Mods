@@ -1,0 +1,850 @@
+{
+  "status": "test_build_1.1.3",
+  "updated_at": "2026-11-06",
+  "working_topic": "老乡来了 / A Fellow Townsman Arrives",
+  "confirmed_by_user": {
+    "early_seeds": [
+      "parsnip",
+      "potato",
+      "corn",
+      "wheat"
+    ],
+    "early_seed_supplier": "New independent NPC: 老乡 (Fellow Townsman), originally from Pelican Town",
+    "early_vegetable_products": "Parsnip, potato and corn seeds produce their corresponding crops for the early economy",
+    "initial_seed_return": {
+      "parsnip": "Harvest crop and guarantee one replacement seed; replanting is distinct from native perennial survival",
+      "potato": "No seeds returned; bulk crop sales support income",
+      "wheat": "No seeds returned; harvest may be sold directly or brewed",
+      "effect_of_future_gene_edits": "Potato and wheat may gain native perennial through editing and retain the mother plant for repeated harvests; they still do not return seeds",
+      "starfruit": "User selected no seeds returned on harvest; native gene editing remains available"
+    },
+    "perennial_crops_requiring_purchased_seeds_for_expansion": [
+      "corn",
+      "hops",
+      "strawberry"
+    ],
+    "advanced_seeds": [
+      "hops",
+      "strawberry",
+      "starfruit"
+    ],
+    "advanced_seed_gate": "After unlocking advanced hydroponics / plant gene editing through Wilde",
+    "advanced_seed_supplier": "The same Fellow Townsman; retain early seeds and add advanced seeds after native plant DNA unlock",
+    "seed_merchant_npc": {
+      "name_zh": "老乡",
+      "name_en_proposed": "Fellow Townsman",
+      "faction": "FACTION_LOWER_LEVEL",
+      "background": "A farmer stranded on the space station for unknown reasons; do not establish a definite cause without further user direction",
+      "schedule": "One visit on Wednesday and one on Saturday each week (positive operating day modulo 7 is 3 or 6), independent of native retired farmer unlock or presence.",
+      "early_goods": [
+        "parsnip_seed",
+        "potato_seed",
+        "corn_seed",
+        "wheat_seed"
+      ],
+      "advanced_goods_added": [
+        "hops_seed",
+        "strawberry_seed",
+        "starfruit_seed"
+      ],
+      "advanced_gate": "Native advanced plant gene editing unlock: NetworkUpgrade.IsPlantDnaUnlocked()",
+      "ancient_fruit_seed": "Never sold; one-time gift on cumulative third actual visit if no ancient seed has ever been obtained",
+      "stock_quantities": "User approved fixed per-visit stock counts listed below",
+      "stock_counts_per_visit": {
+        "parsnip_seed": 3,
+        "potato_seed": 6,
+        "corn_seed": 3,
+        "wheat_seed": 6,
+        "hops_seed": 2,
+        "strawberry_seed": 2,
+        "starfruit_seed": 2
+      },
+      "crop_buyback": "Disabled: this NPC only sells seeds and does not buy crops or wine",
+      "status": "v0.1.2 arrival and custom portrait confirmed by user; v0.1.3 shrinks portrait 20%",
+      "name_en": "Fellow Townsman",
+      "seed_footprint": "All eight seed packets occupy exactly one cell, including previously saved packets after load",
+      "portrait": "Same front-facing portrait as 0.1.2, fitted to both native bounds then scaled to 80% of prior display size"
+    },
+    "ancient_fruit": {
+      "first_seed_source": "User selected random discovery plus an event-based guarantee",
+      "random_discovery": {
+        "minimum_operating_day": 15,
+        "day_gate_interpretation": "Random discovery becomes eligible on operating day 15; no plant-gene-editing unlock requirement",
+        "without_station_scavenging": "Add a chance to find an ancient fruit seed through scavenging in the original dumping ground",
+        "with_station_scavenging": "Place the seed in the lower-level core valuable rewards, available from day 15",
+        "optional_dependency": "The brewing expansion must work without the station scavenging mod; select the applicable acquisition route based on whether that mod is loaded",
+        "probability": "Configurable test defaults: native dumping-ground item rolls 1%; Station Scavenging lower-core valuable outcomes 20% share",
+        "drops_after_first_seed": "User approved ongoing low-probability drops after first acquisition"
+      },
+      "guarantee_event": {
+        "host_zh": "老乡",
+        "trigger_visit_number": 3,
+        "eligibility": "Player has not previously obtained an ancient fruit seed",
+        "reward_seed_count": 1,
+        "one_time": true,
+        "sale_stock": false,
+        "visit_counter_origin": "User selected cumulative actual visits starting with this farmer's first visit in the save; do not reset at day 15 or gene unlock",
+        "delivery_requirement": "Only mark the gift delivered and obtained after the player successfully receives it; preserve pending delivery if inventory placement fails"
+      },
+      "acquisition_details_pending": "Exact probabilities are implemented as configurable first-test defaults; no gameplay balance validation yet",
+      "long_term_goal": "Obtain the first seed, then expand through seed breeding and native gene editing",
+      "expansion_method": "Breeding harvest selected by user",
+      "breeding_harvest_cost": "User selected half fruit yield plus seeds",
+      "breeding_seed_quantity_and_rounding": "Calculate seed yield for the whole breeding batch; initial strain reliably produces one seed",
+      "breeding_trait_effects": "Native seed-yield modifiers continue to apply; do not apply perennial reduction twice"
+    },
+    "brewing": {
+      "recipe_style": "Fixed recipes for the initial release",
+      "products": {
+        "wheat": "beer",
+        "hops": "pale_ale",
+        "strawberry": "strawberry_wine",
+        "starfruit": "starfruit_wine",
+        "ancient_fruit": "ancient_fruit_wine"
+      },
+      "ingredient_counts": "User selected two portions of the corresponding crop per bottle for all five fixed recipes",
+      "working_fermentation_and_prices": "User approved the previous version as the current working balance: wheat beer work 4 / base price 60; pale ale 6 / 100; strawberry wine 6 / 120; starfruit wine 8 / 320; ancient fruit wine 10 / 200. Detailed native yeast and quality calculations remain in brewing-proposal.json; no gameplay balance validation yet.",
+      "aging_scope": "Superseded on 2026-11-05: Wheat Beer and Pale Ale use powered-fridge Chilled +20%; only the three added fruit wines enter the ager. Keep historical beer value/age and native-only wine behavior.",
+      "fruit_wine_categories": "Successfully brewed strawberry, starfruit and ancient-fruit wines have SUBSTANCE plus LUXURY_ITEM display categories. Native alcohol amount, aging and quality features remain.",
+      "bottle_art": "Beer and Pale Ale now occupy 2x3 cells (six). Fruit wines retain 1x4 cells. Selected original proportions retained at 128 texture pixels per logical cell. Capacity is checked before expanding old/finished beer; preserve old safe footprint while full."
+    },
+    "merchant_stock_requirements": {
+      "minimum_stock_per_species": "Approved fixed per-visit counts in seed_merchant_npc.stock_counts_per_visit, gated by progression",
+      "automatic_scaling": "User is concerned about display capacity and item loss; not approved",
+      "capacity_concern": "Uncleared daily newspapers and existing goods may occupy the counter and prevent new custom seed offers from appearing"
+    },
+    "produce_and_wine_sales": "Players place crops in the showcase to attract original food buyers and sell through ordinary gameplay; wines use the original appropriate buyer groups. The user corrected that this game has no player eating mechanic: do not design player consumption, hunger, cooking requirements or self-feeding uses. No farmer buyback or guaranteed automatic cash-out.",
+    "working_seed_and_normal_crop_prices": "User selected the current prices in pricing-proposal.json as the working version; actual market and negotiated prices retain native behavior",
+    "harvest_specification": {
+      "size_based_crops": [
+        "parsnip",
+        "potato",
+        "corn",
+        "strawberry",
+        "starfruit",
+        "ancient_fruit"
+      ],
+      "size_grades": {
+        "small_cells": 1,
+        "normal_cells": 2,
+        "large_cells": 4
+      },
+      "size_price_multipliers": {
+        "small": 0.5,
+        "normal": 1,
+        "large": 2.5
+      },
+      "grade_names_zh": {
+        "small": "小型",
+        "normal": "普通",
+        "large": "大型"
+      },
+      "giant_grade": "User renamed the four-cell top tier from giant to large; retain exactly three size tiers and do not add a fourth giant tier",
+      "quality_based_crops": [
+        "wheat",
+        "hops"
+      ],
+      "brewing_portions": "Each individual crop counts as one ingredient portion regardless of size; each bottle requires two crops of the same species",
+      "display_names": "Small and regular produce use the base crop name; only four-cell produce receives the Large / 大型 prefix. Size mechanics and prices remain 0.5x, 1x, 2.5x."
+    },
+    "genetics": "Editing availability follows native rules; all trait effects retain their native scope",
+    "initial_trait_sets": "User accepted the current eight-crop trait direction; native effects verified before numerical balance",
+    "design_order": "Define base stats and initial traits for all eight crops before finalizing maturity cycles and income",
+    "growth_and_regrowth": "Previous numerical draft used as first-test defaults; native calculations verified in the test harness, gameplay balance pending",
+    "release": [
+      "Independent work",
+      "Free Steam Workshop release",
+      "Simplified Chinese and English",
+      "Optimize runtime size",
+      "Check real line breaks and paired Steam BBCode tags"
+    ],
+    "item_descriptions": "Eight individual seed descriptions and eight individual produce descriptions in Chinese and English, blending Stardew farming and the space-station pawnshop. Remove repeated seed tutorials. Five wine descriptions also updated.",
+    "art_export": "Preserve chosen style and source proportions. Use 128 texture pixels per logical 16px cell, mapped by 800 sprite PPU. Explicit inventory shapes are independent of texture resolution. All inventory art upgraded; native geometry and prices retained.",
+    "automatic_replanting": {
+      "default_enabled": true,
+      "configurable": "Global boolean in mod Hydroponics settings",
+      "coverage": "All seven registered native plants and all eight added plants",
+      "source_priority": [
+        "Own machine output",
+        "Main inventory",
+        "Warehouse / back inventory"
+      ],
+      "source_approval": "User explicitly selected output, then main inventory, then warehouse on 2026-11-05",
+      "amount": "One existing matching seed; no free seed generation",
+      "containers": "Search ordinary reserve containers; exclude seeds inside other machines and locked/unremovable seeds",
+      "perennial": "Keep the existing parent in place; do not consume a spare seed",
+      "genetics": "Preserve instance traits, deleted traits, heat and strain state; deep-copy TagState values for one unit split from a stack",
+      "timing": "After native harvest cleanup; next native cycle begins growth with normal power/water use",
+      "old_machines": "Remember input species; infer unrecorded species from local output when possible; never select arbitrary reserve species"
+    },
+    "release_0_1_7": {
+      "variable_footprints": [
+        2,
+        4,
+        6,
+        9
+      ],
+      "fixed_regular_two_cells": [
+        "wheat",
+        "hops",
+        "parsnip"
+      ],
+      "price_multipliers": [
+        0.5,
+        1,
+        2,
+        3
+      ],
+      "giant": {
+        "care": 95,
+        "effective_quality_percent": 50,
+        "chance_per_qualified_batch_percent": 10,
+        "maximum_per_batch": 1,
+        "qualified_misses_before_guaranteed_next": 10,
+        "counter_scope": "machine and species",
+        "ineligible_harvest": "pause without reset",
+        "quantity": "replace one existing crop"
+      },
+      "wine_size_effect": "User explicitly selected additional score, not an extra sale multiplier.",
+      "wine_size_scores": {
+        "small": 0,
+        "regular": 0,
+        "large": 1,
+        "giant": 2
+      },
+      "wine_quality_cap": "native top tier at score >=6; no higher tier or additional price multiplier",
+      "bottle_cells": 22,
+      "bottle_outline": "8x3; bottom-right two cells blocked"
+    },
+    "release_0_1_8": {
+      "variable_footprints": [
+        1,
+        4,
+        9
+      ],
+      "fixed_regular_two_cells": [
+        "wheat",
+        "hops",
+        "parsnip"
+      ],
+      "retired_large": "map to Regular; never harvested",
+      "price_multipliers": [
+        0.5,
+        1,
+        3
+      ],
+      "hidden_mod_information_for": [
+        "ancient_fruit",
+        "corn",
+        "potato",
+        "starfruit",
+        "strawberry"
+      ],
+      "hidden_on": "produce and seeds; native late mod-info callbacks only",
+      "wine_size_scores": {
+        "small": 0,
+        "regular": 0,
+        "giant": 2
+      },
+      "bottle_cells": 22,
+      "bottle_fix": "native MachineHelper.GetBodyStorage traverses MachineryIntake instead of a direct panel.content cast",
+      "user_testing": "User reported completion; detailed results not stated."
+    },
+    "release_0_1_9": {
+      "request": "Prevent added finished wines, including ancient fruit wine, from being poured into water/liquid storage containers.",
+      "saved_wines": "protected dynamically on initialization and load",
+      "existing_mixtures": "not edited or reconstructed"
+    },
+    "release_1_0": {
+      "request": "Change Ancient Fruit Wine from dark purple to light blue, finalize v1.0 and rename the mod 老乡来了.",
+      "display_name_zh": "老乡来了",
+      "display_name_en": "A Fellow Townsman Arrives",
+      "compatibility": "Keep original mod/item/NPC/save identifiers and install directory.",
+      "publishing": "Local release files and installation only; no workshop upload or publication requested."
+    },
+    "release_1_0_1": {
+      "request": "Route Pale Ale and Wheat Beer to the fridge for native Chilled +20%; only fruit wines enter the ager.",
+      "chilling": "Use native powered daily fridge cycle, feature, non-stacking and cold expiry.",
+      "compatibility": "Keep historical beer age and value; stop future beer aging and ager insertion. Keep native-only wines unchanged.",
+      "publishing": "Local release and installation only; no Workshop upload."
+    },
+    "release_1_0_2": {
+      "request": "Visit once every Wednesday and once every Saturday, independently of the native retired farmer.",
+      "stock": "Keep per-visit stock/prices; two weekly restocking opportunities. The seed gift continues to use actual visit counts.",
+      "compatibility": "Preserve active trades, counts and inventory. Reconcile stale off-day queued visits; do not requeue a completed same-day visit.",
+      "publishing": "Stage the update for existing Workshop item 3834091308, preserving website title, descriptions and visibility. No upload this turn."
+    },
+    "husbandry_expansion": {
+      "stage": "1.1.6: fix live trashcan resolution, concise labels/direct feed rows, native-body scrolling with original/add-on messages preserved.",
+      "priority": "Reduce extremely repetitive daily operation before adding production complexity.",
+      "user_reported_pain": "Rat meat production needs genetics, sterilization, disease and crowding management; fish need repeated feed preparation. Effort and return compare poorly with blind boxes and pure water.",
+      "cattle_and_pigs": "Use native rat husbandry/growth framework for cattle and pigs; both sexes are omnivorous. Adults may be kept for recurring products or sold; elderly animals can be slaughtered through the native butcher.",
+      "future_merchant_stock": "Seeds, calves, piglets and added fish species.",
+      "automation_boundary": "Native feeding, keepers/slaughter and hopper transport. Optional feces-to-trash defaults ON: no robot clears cage; same-cage robot only near full. Automatic green serum defaults OFF.",
+      "sales_channel": "Confirmed: calves and piglets are fattened to adulthood, then placed on the counter and sold to ordinary customers. No automatic sale.",
+      "economic_review": "Assess net income per space-day, capital payback time and player operations per week; do not set price multipliers before testing costs and production.",
+      "equipment_and_feed_sources": "Confirmed: reuse and expand the native animal cage for cattle/pigs. Automatic feeding searches edible items in the main inventory and warehouse.",
+      "housing": "Reuse/expand native AnimalCage; no new separate barn device.",
+      "feed_sources": "Native dispenser/hopper supply. The mod no longer consumes arbitrary warehouse food.",
+      "feed_priority": "Native rules and player-configured equipment; old automatic lowest-price selection removed.",
+      "maintenance_scope": "No mod automatic cage repair, water top-up or filter replacement in 1.1.4. Player/native devices handle supplies.",
+      "cage_repair": {
+        "trigger": "Below configurable threshold X; percentage/default to be specified",
+        "source": "Warehouse scrap metal only",
+        "no_resource": "Do not repair without stock; show supply status",
+        "scope": "Cage durability repair, not animal disease treatment"
+      },
+      "fish_pain": "Rapid breeding raises feeding requirements and fills RAS space; the user reports fish cannot be generated when crowded. Feed supply and safe crowded-tank growth are priority pain points.",
+      "fish_control": "Native breeding; old mod switches and 32-stock cap are inactive. No existing stock is deleted by retired controls.",
+      "fish_conversion_proposal": "Proposed priority fix: verify capacity before converting roe/fry; retain original stock and metadata if conversion cannot complete. This is independent of the player-controlled breeding policy.",
+      "feed_supply": "Superseded by weekly stock design: Wednesday retains seeds and has a 50% supplementary feed/food chance; Saturday guarantees food/feed and young livestock/fertilized roe. Saturday exact quantities/species remain to be finalized.",
+      "management_ui": "No management page. User explicitly authorized vertical scrolling in the existing native night report to show all original/add-on entries.",
+      "management_ui_proposal": {
+        "user_confirmed_location": "Post-sleep Night Report panel",
+        "layouts": [
+          "Expandable settings below the report",
+          "Report and management subpages inside the same Night Report panel"
+        ],
+        "recommended_layout": "Subpages, retaining the existing Calendar/Night Report/Status navigation",
+        "settings_scope": "Proposed per-device settings; feeding and maintenance toggles, fish breeding switch/cap, cage repair threshold and ingredient exclusions",
+        "timing": "Proposed: changes affect the next nightly settlement, not the already completed report",
+        "population_accounting": "Proposed: adult stock plus projected fry/fertilized roe count; retain existing offspring and manual disease treatment/harvest",
+        "report_contents": "Actual consumed feed, scrap/water/filter upkeep, breeding pauses, stock waiting for space, missing supplies",
+        "mockup_values": "Illustrative only; mockup population 18 and threshold 50% are not approved balance values",
+        "mockup": "C:/Users/pc/.codex/visualizations/2026/11/05/01a1ab76-a29f-7d42-ace0-76cf98b866c3/husbandry-night-report.html",
+        "selected_layout": "报告内分页"
+      },
+      "weekly_merchant_stock": {
+        "stage": "Design for husbandry release; not applied to installed 1.0.2",
+        "wednesday": {
+          "seeds": "Retain existing added seed sales and progression gates",
+          "supplement_probability_percent": 50,
+          "supplement": [
+            {
+              "id": "industrial_fish_feed",
+              "quantity": 1
+            },
+            {
+              "id": "gutterflow_pellet",
+              "quantity": 1
+            },
+            {
+              "factory": "PreBuiltItemHelper.CreateNutrifruitSmall",
+              "quantity": 3
+            }
+          ],
+          "roll_interpretation": "Proposed: one whole-bundle roll per Wednesday visit, stored with that visit so loading does not reroll.",
+          "ability_filter": "Planned interpretation: retain farming day eligibility; the one-time bonus roll stays fixed, but fish-only feed is offered only with aquaculture unlocked.",
+          "feed_upgrade_interpretation": "Proposed shared rule: Aquaculture II raises each feed to 2 in both an awarded Wednesday supplement and Saturday guaranteed stock; Small Nutrifruit stays at 3."
+        },
+        "saturday": {
+          "food_and_feed": "Guaranteed",
+          "young_livestock": [
+            "juvenile rat",
+            "calf",
+            "piglet"
+          ],
+          "fish": "Fertilized fish roe",
+          "quantities": "Confirmed: juvenile rats 2 (1 male + 1 female); calves 2 (1 male + 1 female); piglets 2 (1 male + 1 female); fertilized Tilapia/Graft Tilapia/Gutter Tilapia roe one unit of each; future added fish roe one per species, species TBD; Eel/Electric Eel/Sturgeon one each with Aquaculture II; gutterflow pellets and industrial fish feed one each initially, two each with Aquaculture II.",
+          "seed_sales": "Confirmed: no seeds on Saturday.",
+          "roe_species": [
+            "Tilapia",
+            "Graft Tilapia",
+            "Gutter Tilapia"
+          ],
+          "stock_definition": [
+            {
+              "kind": "juvenile rat",
+              "male": 1,
+              "female": 1,
+              "requires": "mammal_husbandry"
+            },
+            {
+              "kind": "calf",
+              "male": 1,
+              "female": 1,
+              "requires": "mammal_husbandry"
+            },
+            {
+              "kind": "piglet",
+              "male": 1,
+              "female": 1,
+              "requires": "mammal_husbandry"
+            },
+            {
+              "kind": "fertilized roe",
+              "species": [
+                "Tilapia",
+                "GraftTilapia",
+                "GutterTilapia"
+              ],
+              "quantity_each": 1,
+              "requires": "aquaculture"
+            },
+            {
+              "kind": "live fish",
+              "species": [
+                "Eel",
+                "ElectricEel",
+                "Sturgeon"
+              ],
+              "quantity_each": 1,
+              "requires": "aquaculture_II"
+            },
+            {
+              "kind": "feed",
+              "items": [
+                "gutterflow_pellet",
+                "industrial_fish_feed"
+              ],
+              "quantity_each": 1,
+              "quantity_each_with_aquaculture_II": 2,
+              "requires": "aquaculture"
+            }
+          ],
+          "meat_supplement": {
+            "decision": "Confirmed: sell a small supplementary quantity of meat on Saturday",
+            "proposal_item": "meat_scrap",
+            "proposal_quantity": 2,
+            "proposal_total_kcal": 700,
+            "proposal_status": "Suggested baseline, quantity not explicitly confirmed",
+            "purpose": "Emergency early-game supplement; not enough to replace purchased feed for a growing farm"
+          }
+        },
+        "compatibility": "Keep per-visit persisted inventory and pending-counter behavior; no rerolls or restocking from repeated loading."
+      },
+      "progression_requirements": {
+        "visit_policy": "No corresponding production ability means no corresponding stock and no visit just for that stock. Skip all visits if no relevant production ability is unlocked.",
+        "wednesday": "Only when farming/hydroponic ability is unlocked, including the Hydroponic Farmer start. Other starts wait until they unlock it.",
+        "saturday": "Animal husbandry and aquaculture stock unlock independently with their corresponding abilities/start conditions. Rat Breeder and Aquaculture starts gain their respective extension content.",
+        "aquaculture_base": "Fish culture requires explicit aquaculture/water-related ability/talent unlock; owning a tank alone is insufficient.",
+        "aquaculture_II": "Gates one each of Eel, Electric Eel and Sturgeon; raises gutterflow pellets and industrial feed to two each.",
+        "unresolved_native_mapping": "Resolved: farming uses native RETIRED_FARMER; mammal husbandry uses RETIRED_RANCHER; aquaculture uses AQUACULTURE / AQUACULTURE_II. FARMER, RANCHER and AQUAFARMER starts unlock the matching native ability during initialization.",
+        "native_checks": {
+          "farming": "NetworkUpgrade.IsRetiredFarmerUnlocked()",
+          "mammals": "NetworkUpgrade.IsRetiredRancherUnlocked()",
+          "aquaculture": "NetworkUpgrade.IsAquacultureUnlocked() or IsAquacultureIIUnlocked()",
+          "advanced_fish": "NetworkUpgrade.IsAquacultureIIUnlocked()",
+          "advanced_seeds": "Keep existing NetworkUpgrade.IsPlantDnaUnlocked() gate",
+          "water_merchant": "WATER_TRADER is a separate native unlock, not an implicit aquaculture unlock"
+        },
+        "merchant_visit_matrix": "Wednesday requires farming; Saturday requires mammals or aquaculture. Filter Saturday mammal/aquaculture stock independently. With no relevant unlocked ability, do not queue the merchant. Unlocking an ability later enables its group for any starting class.",
+        "ancient_seed_gift": "Proposed consequence of the content gate: the merchant ancient-seed gift also requires farming availability; preserve existing actual-visit and obtained/delivered records."
+      },
+      "next_design_checks": [
+        "In-engine acceptance: complete overnight and live save round trip, full product/tray/tank boundaries and report UI at target resolution.",
+        "Playtest feed costs, upkeep and pair-level space-day profit; use configurable stage ages and production intervals for tuning."
+      ],
+      "projected_fish_count": "Count fertilized roe and fry groups by their projected individual fish count. The three native tilapia variants each use groupCount=6, so one unit of each fertilized roe represents 18 future fish.",
+      "carnivore_feed_decision": "Confirmed B: retain native carnivorous-fish diet rules. Saturday merchant sells a small supplementary quantity of meat; industrial feed is not made universal.",
+      "food_economy_goal": "Early game still requires purchased food. Later, fish/livestock can be manually slaughtered and their meat can feed other compatible cultured species; create a cross-feeding production loop.",
+      "slaughter_boundary": "Supersedes the earlier manual-only limit: reuse and extend native MachineAutoButcher for suitable fish/cattle/pig slaughter. Preserve its age/weight rules and keeper protections. Sale still uses the existing counter/customer flow; no automatic cash sale was requested.",
+      "cross_feeding_design": {
+        "confirmed_goal": "Prepared meat from player-directed or native-automatic slaughter enters compatible cross-feeding loops, while early purchases remain relevant.",
+        "suggested_flow": [
+          "Owned edible food, plants or meat -> omnivorous cattle/pigs/rats and eligible fish",
+          "Native automatic butcher meat output -> feed or counter sale",
+          "Fish meat and mammal meat -> other compatible cultured species"
+        ],
+        "cattle_diet": "Confirmed B: cattle, pigs and rats all use omnivorous feeding rules.",
+        "automatic_consumption": "Prepared food and slaughter products from manual or native automatic slaughter; extension auto-feeding does not independently select and kill live stock.",
+        "automatic_exclusions_proposed": "Exclude live animals/fry/fertilized roe and meat carrying disease flags; avoid mammal same-species meat that triggers native cannibalism disease",
+        "economy": "Include growth time, space, water/power, upkeep, accumulated feeding and slaughter yields in the production balance"
+      },
+      "mammal_production": {
+        "growth_framework": "Native rat growth mechanisms remain confirmed. Earlier relative timing 1A (pigs faster than cattle) is now under balance review at the user request because pigs have recurring truffles plus luxury meat.",
+        "cow": {
+          "adult_female": "Produce milk every X days",
+          "milk_categories": [
+            "FOOD",
+            "BREVAGE"
+          ],
+          "adult_male": "Continue growing until elderly, then lose weight",
+          "elder_female": "Stops milk production; eligible for meat slaughter",
+          "period_and_yield": "Confirmed 2A default: one milk every two days during the adult female production phase; production interval adjustable in mod settings."
+        },
+        "pig": {
+          "adult_either_sex": "Superseded: recurring Small Black Truffle production is limited to adult males.",
+          "truffle_categories": [
+            "FOOD",
+            "LUXURY_ITEM"
+          ],
+          "elder_slaughter": "Meat plus exactly one Standard Black Truffle per elderly pig, either sex, per the previously confirmed rule.",
+          "period_and_yield": "Confirmed default: adult male pigs produce one Small Black Truffle every three days; adult females do not produce it. Interval remains adjustable in mod settings.",
+          "elder_recurring_small_truffles": "Not yet specified",
+          "adult_male": "Confirmed: produces Small Black Truffle at the configured interval; default one every three days.",
+          "adult_female": "Confirmed: does not produce recurring Small Black Truffles. Breeding, fattening, live sale and slaughter remain available."
+        },
+        "collection": "Confirmed 3A: milk and Small Black Truffle are automatically placed in a separate animal-cage product inventory during nightly processing; production pauses when that inventory is full and is reported in the Night Report.",
+        "butcher_compatibility": "Extend native cut generation for new species and the elderly-pig truffle bonus; preserve normal rat handling"
+      },
+      "new_aquatic_species": {
+        "confirmed": [
+          "lobster",
+          "sea cucumber"
+        ],
+        "growth_framework": "Native FishSpecies/AquacultureHelper water, feeding and growth mechanisms",
+        "roe_quantity": "One fertilized-roe unit per added species, per earlier merchant rule",
+        "diet_breeding_tier_yields": "Diet, reproduction, unlock tiers and harvest forms confirmed. Sea-cucumber tapering growth and organic-waste-only cleanup now confirmed. Numeric growth, yields, values and new-item footprints remain pending.",
+        "details": {
+          "lobster": {
+            "diet": "Carnivorous: meat only",
+            "role": "Confirmed: slaughter yields dedicated high-value Lobster Meat, displayed as FOOD + LUXURY_ITEM; keep functional meat-feed classification.",
+            "natural_reproduction": false,
+            "unlock": "Aquaculture II",
+            "merchant_roe": "Earlier one-unit added-species fertilized-roe rule retained unless user revises acquisition",
+            "harvest": {
+              "product": "Lobster Meat",
+              "visible_categories": [
+                "FOOD",
+                "LUXURY_ITEM"
+              ],
+              "functional_meat": true,
+              "yield_and_price": "Pending numeric balance",
+              "slaughter": "Reuse native automatic butcher output flow with custom species yield"
+            }
+          },
+          "sea_cucumber": {
+            "diet": "Omnivorous",
+            "role": "Confirmed: longer rearing raises whole-item food calories and nightly water remediation capacity. Harvest produces one intact sea cucumber, not separated fillets or meat pieces.",
+            "natural_reproduction": true,
+            "unlock": "Aquaculture I",
+            "population_control": "Subject to player-set tank breeding switch and population cap",
+            "harvest": {
+              "form": "One whole sea cucumber",
+              "visible_category": "FOOD",
+              "functional_meat": "MEAT_FOOD_TAG",
+              "separate_meat_drops": false,
+              "luxury": "Not requested",
+              "calories": "Retain accumulated nutrition at harvest",
+              "slaughter": "Native automatic butcher compatibility should output intact sea cucumber"
+            },
+            "growth_value": {
+              "user_rule": "Food calories and remediation capacity both increase with longer rearing",
+              "native_basis": "Native fish meat kcal uses consumed kcal times conversion efficiency; native remediation scales with weight.",
+              "implementation_proposal": "Healthy fed growth contributes nutrition; scale remediation with growth/rearing rather than fixed item value.",
+              "growth_curve_and_limits": "Confirmed 1A on 2026-11-05: during normal feeding, calories and organic-waste cleanup capacity increase with rearing time; later gains gradually taper. This choice does not specify numeric coefficients, a hard cap or final price.",
+              "remediation_pollutants": "Confirmed 2A on 2026-11-05: aquaculture organic_waste only. Do not remove heavy_metal, chemical_contaminant or physical_contaminant as part of the sea-cucumber effect.",
+              "confirmed_choices": {
+                "growth": "A: sustained growth with tapering later gains under normal feeding",
+                "cleanup": "A: aquaculture organic waste only",
+                "source": "Latest user message in continuation chat on 2026-11-05"
+              },
+              "implementation_constraint": "Use a species-scoped organic-waste cleanup path. Native AquacultureHelper.RunRemediation iterates heavy_metal, chemical_contaminant and physical_contaminant, not organic_waste; enabling that generic native remediation field alone would implement the wrong scope. Do not change the global native pollutant list."
+            }
+          }
+        }
+      },
+      "producer_handling_proposal": "Consider native-butchery protection for actively producing cattle/pigs, with elder-stage slaughter; exact interaction with existing age/weight/keeper settings is still to be designed.",
+      "creative_reference": "User explicitly identifies cattle, pigs, milk, black truffles, lobsters and sea cucumbers as inspired by Stardew Valley. Native Probably Stolen animal/aquaculture mechanisms remain the confirmed mechanical framework; exact timing and whether to borrow other Stardew-specific behavior are not yet confirmed.",
+      "product_storage_rules": {
+        "collection": "Automatic nightly collection into a distinct cage product inventory",
+        "full": "Pause production and show the reason in Night Report",
+        "previous_cycle_and_lost_items": "Do not discard products because inventory is full",
+        "feeding_separation_proposed": "Keep collected products outside the livestock feeding area; player can transfer them into eligible inventory for feeding or sale",
+        "milk_and_truffles": "Milk: FOOD/BREVAGE. Small/Standard Black Truffle: FOOD/LUXURY_ITEM."
+      },
+      "configuration_placement": {
+        "mod_settings": "User explicitly requests later adjustment of production intervals in mod settings. Defaults: milk 2 days, Small Black Truffle 3 days.",
+        "night_report": "Native messages append normally. NightReportScroll wraps the existing content group, supports wheel/drag and preferred text height; the themed frame/tabs/footer stay in place.",
+        "growth_tempo": "Relative pig/cattle tempo confirmed; numeric growth settings can be evaluated when assigning species stats."
+      },
+      "pig_cow_balance_concern": "User questions the earlier pig-faster/cow-slower choice: recurring Small Black Truffle plus luxury-tagged large meat may make pigs too profitable, while milk has FOOD/BREVAGE categories.",
+      "pig_cow_balance_review": "Keep confirmed milk 2-day and Small Black Truffle 3-day intervals as configurable defaults. Evaluate revised maturity/adult windows, pair-level recurring output, final meat, feed/maintenance costs and space-day profit before finalizing growth.",
+      "growth_balance_proposal": {
+        "status": "Proposed response to user concern; not final approved numeric tuning",
+        "direction": "Cows mature earlier and sustain milk production; pigs mature later with a shorter productive adult phase",
+        "cow": {
+          "adult_age": 6,
+          "elder_age": 26,
+          "interval": 2,
+          "outputs_per_adult_female": 10,
+          "productive_females_per_male_female_pair": 1
+        },
+        "pig": {
+          "adult_age": 10,
+          "elder_age": 22,
+          "interval": 3,
+          "small_truffles_per_adult": "Sex-dependent: 4 for an adult male, 0 for an adult female, under the proposed age 10-22 window.",
+          "producers_per_pair": 1,
+          "small_truffles_per_pair": 4,
+          "standard_truffles_at_elder_slaughter_per_pair": 2,
+          "small_truffles_per_adult_male": 4,
+          "small_truffles_per_adult_female": 0
+        },
+        "counting": "Count eligible adult nightly settlements from the first adult night; Elder stage stops recurring products. Values exclude disease/starvation/full-storage pauses and genetic/config changes.",
+        "economic_review": "Compare whole-pair lifecycle revenue including terminal meat, then subtract juvenile purchase, feed, upkeep and time/space costs. Higher unit price should not produce overwhelmingly higher steady net profit.",
+        "target": "Suggested: cattle offer earlier stable returns; pigs have high-value products with slower payback and only moderately higher steady profit.",
+        "latest_sex_rule": "The male-only Small Black Truffle rule supersedes the earlier both-sex production comparison. Proposed growth ages remain a test proposal, not a confirmed final balance."
+      },
+      "production_sex_rules": "Cow: recurring milk only from adult females. Pig: recurring Small Black Truffle only from adult males. Elder-pig slaughter Standard Black Truffle reward still applies to both sexes.",
+      "native_slaughter_reference": {
+        "source": "User-provided second screenshot and explicit footprint counts on 2026-11-05",
+        "fish_meat_cells": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "rat_meat_cells": [
+          1,
+          4,
+          6
+        ],
+        "meaning": "Inventory cells occupied by each product size tier, not the number of drops from one slaughter.",
+        "intended_use": "Reference for future cattle, pig, lobster and sea-cucumber product design, sprites and space-day balance.",
+        "new_species_footprints": "Confirmed by user: beef/pork 1/4/6 cells; lobster meat 1/2/4/6; intact sea cucumber grows through 1/2/4 cells.",
+        "sea_cucumber_exception": "Keep the confirmed single intact harvested sea cucumber with accumulated calories and food/meat classification; no separate meat pieces or duplicate carcass output.",
+        "reference_image": "References/native-slaughter-products.png"
+      },
+      "saturday_outfit": {
+        "confirmed": "Practical ranch workwear and apron with small cow/pig motifs",
+        "invariants": "Same face, hair, straw hat and character identity",
+        "asset": "farmer_ranch.png",
+        "weekday_rule": "Wednesday original clothing, Saturday ranch clothing; active trades retain their stock-day outfit"
+      },
+      "implementation_defaults": {
+        "status": "Implementation defaults after authorization to build; numeric values remain adjustable/playtestable",
+        "cow_adult": 6,
+        "cow_elder": 26,
+        "pig_adult": 10,
+        "pig_elder": 22,
+        "milk_interval": 2,
+        "male_pig_truffle_interval": 3,
+        "milk_kcal": 350,
+        "milk_value": 42,
+        "small_truffle_kcal": 125,
+        "small_truffle_value": 45,
+        "standard_truffle_kcal": 300,
+        "standard_truffle_value": 90,
+        "beef_value_per_kcal": 0.14444444444444443,
+        "pork_value_per_kcal": 0.16666666666666666,
+        "lobster_meat_value_per_kcal": 0.2,
+        "product_storage": "6x2 cells",
+        "population_cap": 32,
+        "repair_threshold_percent": 50,
+        "production_nutrition": "Milk spends 350 kcal; small truffle spends 125 kcal after successful product placement, retaining at least 25% hunger reserves",
+        "sea_calories": "60 + floor(900*ln(1+wellFedNights/20))",
+        "sea_cleanup_ml": "1 + 6*ln(1+wellFedNights/20)"
+      },
+      "release_1_1_1": {
+        "approved_by_user": "130 / 150 / 180 for six-cell beef / pork / lobster; 45 / 90 for truffles; lobster retains four sizes.",
+        "beef_names_1_4_6": [
+          "一口牛肉",
+          "牛肉（小）",
+          "牛肉（标准）"
+        ],
+        "pork_names_1_4_6": [
+          "一口猪肉",
+          "猪肉（小）",
+          "猪肉（标准）"
+        ],
+        "lobster_names_1_2_4_6": [
+          "一口龙虾肉",
+          "龙虾肉（小）",
+          "龙虾肉（标准）",
+          "龙虾肉（大）"
+        ],
+        "luxury": "Only six-cell beef/pork/lobster meat. Both truffles retain their existing luxury classification.",
+        "narratives": "Natural short description plus flavor for non-bite products and live stock; bite cuts have both fields empty. Gameplay conditions remain in husbandry tooltips.",
+        "migration": "Refresh factory/onLoaded and game-loaded/waking scans. Change only own cut/product presentation and base price; keep calories, count, shape, disease, source and ownership. Prices follow actual remaining calories."
+      },
+      "release_1_1_2": {
+        "approved": "2026-11-06 user accepted proposed aquatic numbers and the plain, occasionally humorous dialogue samples",
+        "saturday_nutrifruit": 0,
+        "management": "Removed pending redesign; saved settings retained",
+        "tooltip": "Hide added farm item mod-information; keep native status and descriptions",
+        "egg_names": [
+          "龙虾卵",
+          "海参卵"
+        ],
+        "dialogue": "First introduction; five ability announcements; three cumulative revenue milestones; twenty casual lines, contextual and non-repeating; persisted visit selection and acknowledgement",
+        "revenue": "Native totalSales + vendingIncome + fountainIncome; spending does not reduce milestones",
+        "lobster_stage_days": [
+          0,
+          2,
+          4,
+          8,
+          14,
+          30
+        ],
+        "lobster_mortality_age": 45,
+        "lobster_reference_day30_feed": 3646,
+        "lobster_reference_day30_meat": 3281,
+        "sea_stage_days": [
+          0,
+          1,
+          2,
+          4,
+          8,
+          60
+        ],
+        "sea_effective_nights_10_20_30": [
+          424,
+          683,
+          884
+        ],
+        "sea_feed_reference_day30": 1283,
+        "save_migration": "Preserve actual live feeding and age; apply new live sea curve to fed nights; no refill of dead/harvested nutrition."
+      },
+      "release_1_1_3": {
+        "dialogue": "Use planting and seed-gene editing wording; remove specified opening clauses from 1000/2000; replace 5000 with a known-merchant/known-farmer congratulation, retaining milestone triggers.",
+        "night_report": "Remove all added report/management pages and subpage bar. Keep native interface and saved automation settings.",
+        "sea_founders": "Record the first actual purchased clutch via native OnItemBought; persist a clutch tag through group hatching; set first two individuals male/female; mark established only after whole placement commits.",
+        "legacy": "Recover unconverted paid clutches using BOUGHT_PRICE_TAG; no adult sex changes; no changes to natural random-sex offspring.",
+        "tests": "23 founder tests plus prior logic, native hooks, dialogue and metadata checks."
+      },
+      "release_1_1_4": {
+        "request_date": "2026-11-06",
+        "scope": "Delete old report/management logic, redesign around native equipment, native-only night report",
+        "blood_serum": "User explicitly selected reminders and both manual/automatic use; automatic defaults off, real owned green doses, no active-effect stacking or prion-only dosing",
+        "native_robot": "Original retired rancher sells vacuum_robot; same-grid late-night collection, capacity and optional upgraded incineration",
+        "native_keepers": "RunCage groups ANIMAL_SPECIES_TAG before selecting male/female keepers; tested with rat/cow/pig",
+        "removed": "FarmAutomation.cs; added feed prefixes; custom breed prefix; upkeep methods, old report counters and exclusion settings",
+        "night_logs": "Exactly three messages when stock was present; last-night condition, nearest two conditional forecasts, disease/environment warning; persistent same-day guard",
+        "tests": 44,
+        "documentation": "Bilingual native disease/equipment guide; no live cosmetic UI/save acceptance claim"
+      },
+      "release_1_1_5": {
+        "user_confirmed": "2026-11-06: auto feces disposal defaults on, player can turn off for water production",
+        "robot_threshold_percent": 80,
+        "robot_frequency": "At most one successful emptying per robot per night; pre/post-cycle checks; full trash preserves original items and successful retry clears stale warnings",
+        "feed_report": "All active cages/tanks by default; stable per-item numbers/custom names; lowest reserve first; optional shortage-only, default 3 nights",
+        "estimate": "Processed diet-compatible local dispenser calories only; existing stock projected up to 365 nights with aquatic growth/current diet speed and mammal production costs; no real feed consumption",
+        "excluded": "Warehouse/unprocessed food, future births/deaths and deliveries; no new UI or layout edits",
+        "checks": 103,
+        "cosmetic_read_only": "Installed Hogwarts ledger theme inspected read-only: colors/backgrounds/tabs; this mod only appends native logs. No claim of live long-list display."
+      },
+      "release_1_1_6": {
+        "request": "2026-11-06: no-robot feces failure, concise wording, no feed heading, scroll all original/add-on night messages",
+        "trash": "Resolve actual EmporiumEntry.trashcan attached storage; do not trust factory cache trashcanInvElement. Added wrong/null cache and missing scene fixture regressions.",
+        "text": "Animals/Expected growth labels; no care qualifier; direct per-machine rows only",
+        "scroll": "Native InitPanel postfix, lowest priority; keep contentGroupObject and actual row objects, wrap with ScrollRect/RectMask2D, dynamic row height and vertical scrollbar. Restore on disable.",
+        "finance": "Preserve existing text and values from other writers; no replacement finance calculations",
+        "validation": "160 related checks, 116 waste/feed cases, 46 target bindings. Engine UI patch excluded from CLR execution; no live display acceptance claim."
+      }
+    },
+    "runtime_privacy_expectation": "User expects this gameplay mod to avoid collecting personal computer information or controlling external programs. Audit was requested after a Workshop comment alleged such behavior.",
+    "automatic_local_mod_sync": {
+      "authorized_on": "2026-11-06",
+      "scope": "This mod: after changes and appropriate verification, synchronize the full runtime to the installed game mod directory without asking again.",
+      "directory": "D:/steam/steamapps/common/Probably Stolen/Mods/PelicanCultivation",
+      "backup": "Keep a recoverable pre-update backup outside the Mods runtime.",
+      "running_game": "Do not stop the game automatically; update files when possible and tell the user to restart. A mapped DLL can be renamed to the same-volume ModUpdateBackups directory before replacement.",
+      "workshop": "Not part of automatic local synchronization."
+    }
+  },
+  "verified_local_game_facts": {
+    "build": "Local installed Assembly-CSharp.dll inspected read-only on 2026-11-05",
+    "plant_gene_editing_gate": "NetworkUpgrade.IsPlantDnaUnlocked() / PLANT_DNA",
+    "native_seed_vendor_and_schedule_anchor": "Native retired farmer remains StoreClientListSpec.CreateRetiredFarmer / retired_farmer on Friday. Added merchant now has an independent Wednesday/Saturday schedule.",
+    "perennial_behavior": "Native perennials begin the next fruiting cycle after harvest while retaining the parent plant",
+    "seed_return": "Harvest logic explicitly outputs seeds; PlantHarvest then applies SEED_YIELD and inherits parent traits",
+    "native_trait_inheritance": "InheritTraits copies current ranks for all registered traits, including zero ranks, and clears temporary editing heat",
+    "native_perennial_penalties": "Harvest quantity -25%, growth speed -20%, seed yield -50%; incompatible with infertile",
+    "native_seed_trait_compatibility": "Fertile and infertile require a crop marked as returning seeds; multiplying zero base seed output cannot create seeds",
+    "custom_client_generation_hook": "ModHook.OnGenerateCustomerVeryLate exposes StoreClientManager after native client generation; its clientStack is a List<StoreClient> consumed from index zero",
+    "native_merchant_departure_cleanup": "PlayerStore.DismissCurrentClient invokes RemoveNotOwnedItemFromTable; unowned items on front and back counters are destroyed, while owned objects such as newspapers remain",
+    "station_scavenging_optional_compatibility": "Read-only review of local StationScavenging v1.5.2: ModEntry.ModId is station_scavenging. Lower rewards use dumpingGroundTG with station_scavenging.lower_service_crate. All five regions share a three-night precious cooldown. LowerScavenging currently calls RecordPreciousFind only for the service-crate item, so adding a seed requires explicit integration rather than assuming that a loot-table entry automatically participates in the cooldown.",
+    "note": "v0.1.3 seed repair validated against the actual native compiled input predicate, including the prior rejection case and ownership/container rules. Same-size artwork comparison inspected. Live game remains on its loaded version until restart; no v0.1.3 in-game visual test has been performed.",
+    "native_seed_slot": "Actual MachineHydroponic.SetupInputSlot predicate requires ownership, SEED tag and absence of CONTAINER_TAG. HydroponicHelper.InitSeedItem adds SEED_ITEM_TAG but does not add the SEED category/tag. Missing SEED was the insertion blocker; the single-slot native filter is independent of the exported texture pixel size.",
+    "native_sprite_restore": "GameItem.SetSpriteAndShape does not clear useSpriteFromMod; clear it when a custom wine bottle is reset to native empty",
+    "native_ui_sprite_size": "GameItemElement uses Image.SetNativeSize. PPU maps 128px/cell textures to native 16px/cell display size. Bind via public SetSprite plus explicit SetShape, avoiding shape inference from high-resolution pixels.",
+    "user_confirmed_0_1_4": "User reported normal operation after crop hit-surface correction and downward portrait offset",
+    "native_seed_stack_split": "Native GetSplitItem creates a factory item without the original seed instance state. Native TagSystem.Clone shares TagState objects. AutoPlant copies individual TagState values so the planted seed and remaining stack stay independent.",
+    "native_harvest_cleanup": "ContinueGrowing finishes harvest and destroys annual seed before postfix replanting; perennial seeds remain in the input and are left alone",
+    "native_calendar": "StoreCalendar.GetDayOfWeek uses dayCounter modulo 7: 0 Sunday, 1 Monday, 3 Wednesday, 6 Saturday.",
+    "husbandry_baseline": "Installed build has AnimalSpecies.Rat, AnimalCage, MachineFeedDispenser automatic blending/target fullness, MachineAutoButcher with breeding-stock guards and fish roe collection, and extensible FishSpecies / AquacultureHelper. These are inspection findings, not new mod features.",
+    "native_cage_and_tank_maintenance": "AnimalCage exposes durability via CAGE_HEALTH_TAG; native Repair consumes scrap metal and restores 50% of maximum durability. AquacultureHelper tracks organic waste and filtration. No separate cage hygiene meter was found in inspected cage code.",
+    "fish_group_conversion": "Native AquacultureHelper.HatchRoe and GrowFry destroy the source roe/fry before attempting placement of generated fry/fish via GraphUtils.TryAcceptAllOrDestroy. A space-safe conversion path needs to retain source stock if placement cannot complete.",
+    "native_fish_feed_stock": "Installed StoreClientListSpec aquaculture vendor offers two industrial_fish_feed items per visit. Native feed is 5000 kcal by default and base value kcal/50; industrial diet applies a growth-speed modifier.",
+    "native_crowded_fish_loss": "GraphUtils.TryAcceptAllOrDestroy attempts placement, then destroys unplaced stock. HatchRoe/GrowFry consume original stock first, so lack of placement space can lose roe/fry-derived fish.",
+    "night_report_ui": "AdvCalendarUIManager has nightlyReportSection, OnNightlyReportButtonClicked and OpenUIFromNightlyReport. StartOfDayUIManager.ShowMorningReport opens that panel and InitPanel displays PlayerStore.nightLogs.",
+    "start_unlock_mapping": "Native NewGameData sets RETIRED_FARMER for FARMER, RETIRED_RANCHER for RANCHER, and AQUACULTURE for AQUAFARMER. WATER_MERCHANT sets WATER_TRADER separately.",
+    "slaughter_and_feed_baseline": "Native meat_scrap is 350 kcal, base value 12. Native fish meat nutrition is derived from consumed kcal and species conversion efficiency; native rat cuts retain ANIMAL_RAT meat-origin and prion tags. Native same-species mammal meat can trigger prion disease.",
+    "rat_growth_and_butcher": "Native rat stages are ages 0/1/3/5/11/14, with Adult at 5 and Elder at 11. Native MachineAutoButcher supports weight/age criteria, keeper sexes, protection flags, and output-space checks; HusbandryHelper.CreateButcherCuts currently returns cuts only for ANIMAL_RAT.",
+    "aquatic_harvest_paths": "Native AquacultureHelper.CreateFilletPieces normally decomposes fish into meat items; native automatic butcher routes its returned items into tray/feed storage. Whole sea-cucumber output requires an explicit species-specific harvest path retaining nutrition.",
+    "native_aquatic_remediation_scope": "Native AquacultureHelper.REMEDIATED_LIQUIDS contains heavy_metal, chemical_contaminant and physical_contaminant; organic_waste is not in that native biological-remediation list. Sea-cucumber waste cleanup scope must be specified separately.",
+    "sea_cucumber_cleanup_scope": "Inspected native AquacultureHelper: organic_waste is the aquaculture waste liquid, while REMEDIATED_LIQUIDS contains only heavy_metal, chemical_contaminant and physical_contaminant. Organic-only cleanup needs a targeted extension."
+  },
+  "next_decisions": [
+    "In-game playtest: full counters, freeing space, NPC save/reload and gift delivery",
+    "In-game playtest: all growth, harvest modes, wine save/reload, showcase sales and optional scavenging bridge",
+    "Tune whole-chain economics and drop rates after real gameplay"
+  ],
+  "implementation": {
+    "version": "1.1.7",
+    "runtime_mod_id": "pelican_cultivation",
+    "native_game_version": "0.46D",
+    "source_workspace": "C:/Users/pc/Documents/Codex/2026-11-05/codex-threads-01a1ab76-a29f-7d42-ace0/work/PelicanCultivation",
+    "native_seed_chance_percent_default": 1,
+    "station_seed_share_of_core_default_percent": 20,
+    "odd_fruit_halving": "round down",
+    "health_size_mapping": "Five variable crops: Small 1, Regular 4, Giant 9 cells. Large retired. Three fixed crops stay Regular 2 cells. Giant care/quality/chance/pity unchanged.",
+    "localization_keys_per_language": 248,
+    "sprites": 71,
+    "logic_checks_passed": 31246,
+    "capability": "reflection-external, declared for optional Station Scavenging bridge",
+    "gameplay_validation": "User accepted v1.1.6 in game on 2026-11-06. v1.1.7 passes 31,246 logic checks, native integration suites, 46 bindings, 160 night-report checks (including 116 waste/feed), 248 keys and 71 lossless texture comparisons. Unity rendering is excluded from standalone CLR.",
+    "runtime_bytes": 3654198,
+    "texture_pixels_per_cell": 128,
+    "inventory_sprite_ppu": 800,
+    "portrait_scale_vs_0_1_2": 0.8,
+    "seed_edible_trait": "Removed from all eight added defaults; selectively removed from legacy added seeds. Produce remains inherently FOOD.",
+    "inspection": "No INSPECTABLE_TAG on added produce, including saved produce.",
+    "legacy_produce": "Saved Large becomes Regular with one-time value/calorie conversion; Small shrinks to one cell; preserve strain, condition and care. Legacy IDs remain loadable.",
+    "growing_progress": "Only added plants: native health/nutrient loop bounded to remaining work. Native plants unchanged.",
+    "wine_transfer_protection": "Finished added wines cannot pour into LIQUID_CONTAINER_TAG targets except the intentional drain. Guard native targeting, whole source callback including reset, direct wine pour and generic transfer. Keep normal empty/native/drain/drink behavior.",
+    "ancient_wine_art": "Light-blue bottle; dark teal neck; cream ancient-fruit label; same 1x4 footprint and sprite key.",
+    "runtime_sha256": "50451DB41C66E7008F51CD702E47B245FF3B2A228DC8490B13655A43180D6058",
+    "native_harmony_integration_checks_passed": 300,
+    "native_calendar_integration_checks_passed": 57,
+    "merchant_schedule": "Queue independently on Wednesday/Saturday. Reconcile saved queue on game load/wake; retain active trade, prior visits and stock. Same-day visited/present/queued guards prevent duplicates.",
+    "beverage_storage": "Beer: native fridge Chilled +20%, no further aging or ager insertion. Fruit wines: native ager/aging. Clear chilled on beer empty/reset; keep historical value/age.",
+    "runtime_files": 75,
+    "husbandry_methods_scanned": 577,
+    "release_status": "Installed 1.1.7 at user-authorized local directory; all runtime hashes verified. Restart required if the game was running. No Workshop upload.",
+    "installed_mod_directory": "D:\\steam\\steamapps\\common\\Probably Stolen\\Mods\\PelicanCultivation"
+  },
+  "security_review_2026_11_05": {
+    "status": "Completed local static source and binary review; no gameplay/runtime changes made.",
+    "version": "1.0.2",
+    "dll_sha256": "CA58CDE48F68C61D27DFB66F0680589C17659CC0764F64C3FA7A9E301C3D59C9",
+    "deterministic_source_rebuild": "17 source files reproduced the exact released DLL byte for byte.",
+    "copies": "43 runtime files matched across Release, installed mod, Package-1.0.2, Workshop staging and the official-release ZIP; 17 shipped C# source files also matched the source ZIP.",
+    "scanner": "Installed native scanner: 273 methods, reflection-external only, 4 findings in Discovery.InstallBridge, no hard flags/refusal/error.",
+    "reflection_purpose": "Optional Station Scavenging 1.5.2 bridge: locate LowerScavenging.Search and StationGame.RecordPreciousFind for ancient-seed loot and shared precious-find cooldown.",
+    "result": "No direct personal-file access, hardware/account collection, outbound networking, process launch, OS input control, P/Invoke or dynamic payload loading found in this mod.",
+    "benign_generated_call": "Two System.Environment.CurrentManagedThreadId calls are generated for a C# iterator; they are not personal-device collection or outbound telemetry.",
+    "game_data": "ModHelper APIs still store gameplay progress/configuration and ModLog writes game logs through the game framework.",
+    "limitation": "Review applies to the examined local artifacts and hash. No live network/process tracing, no fresh Workshop payload download and no comprehensive audit of other installed mods or the game engine.",
+    "evidence": "C:/Users/pc/Documents/Codex/2026-11-05/codex-threads-01a1ab76-a29f-7d42-ace0/outputs/老乡来了-v1.0.2-核查证据.json"
+  },
+  "release_preparation_2026_11_06": {
+    "request": "Optimize accepted mod, remove redundant code, list content and organize individual art for Xiaoheihe and Steam.",
+    "version": "1.1.7",
+    "before_runtime_bytes": 5439301,
+    "after_runtime_bytes": 3654198,
+    "bytes_saved": 1785103,
+    "lossless_sprites": 71,
+    "current_sprites": 64,
+    "legacy_sprites": 7,
+    "master_cuts": 54,
+    "contact_sheets": 5,
+    "existing_workshop_id": "3834091308",
+    "uploaded": false
+  },
+  "workshop_republication_2026_11_06": {
+    "reason": "User deleted the uploaded Workshop item and wants to upload again after readers could not find it.",
+    "previous_id": "3834091308",
+    "previous_public_query_result": 9,
+    "new_id": "pending user SteamCMD upload",
+    "new_creation_vdf": "C:\\Users\\pc\\Documents\\Codex\\2026-11-06\\codex-threads-01a1ac38-bf0d-7743-a923-2\\outputs\\SteamWorkshop-1.1.7-NewItem\\pelican_cultivation_new.vdf",
+    "new_visibility": "public (0)",
+    "future_updates": "Keep the new ID, use prepare-update.ps1 to generate an update-only VDF preserving website metadata.",
+    "runtime_unchanged": true,
+    "runtime_mod_id": "pelican_cultivation",
+    "description_byte_limit_checked": true,
+    "assistant_uploaded": false
+  }
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "file": "bait.png",
+    "width": 256,
+    "height": 256,
+    "before_bytes": 126570,
+    "after_bytes": 87593,
+    "saved_bytes": 38977,
+    "rgba_sha256": "b68d09dacdd2e0310888c1c077f1628c638fbfe47fb1fa3874078e5890f7c22b",
+    "sha256": "f45861229498276969a8e1544ddf53bd9afb3630ac0184e7ab933d242da57ff1",
+    "pixels_identical": true,
+    "ancillary_chunks_identical": true,
+    "key": "bait",
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "visible_edge_pixels": 0,
+    "aspect_ratio_preserved": true
+  },
+  {
+    "file": "premium_bait.png",
+    "width": 256,
+    "height": 256,
+    "before_bytes": 138163,
+    "after_bytes": 92965,
+    "saved_bytes": 45198,
+    "rgba_sha256": "093e26562a4736e88c6299c9f52ed91029ce53f099a9f4c0749e259dd646d59c",
+    "sha256": "e9d352e93fc1a151cef73103b07d3b82f8fc4ade35e557478c2267873040da20",
+    "pixels_identical": true,
+    "ancillary_chunks_identical": true,
+    "key": "premium_bait",
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "visible_edge_pixels": 0,
+    "aspect_ratio_preserved": true
+  }
+]

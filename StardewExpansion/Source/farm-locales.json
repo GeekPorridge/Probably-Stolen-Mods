@@ -1,0 +1,707 @@
+[
+  [
+    "farm_cow",
+    "牛",
+    "Cattle"
+  ],
+  [
+    "farm_cow_desc",
+    "一头脾气温和的牛。",
+    "A mild-mannered cow."
+  ],
+  [
+    "farm_pig",
+    "猪",
+    "Pig"
+  ],
+  [
+    "farm_pig_desc",
+    "一只鼻子很灵的猪。",
+    "A pig with a remarkably keen nose."
+  ],
+  [
+    "farm_lobster",
+    "龙虾",
+    "Lobster"
+  ],
+  [
+    "farm_lobster_desc",
+    "一只有着坚硬外壳的龙虾。",
+    "A lobster in a sturdy shell."
+  ],
+  [
+    "farm_lobster_roe",
+    "龙虾卵",
+    "Lobster Eggs"
+  ],
+  [
+    "farm_lobster_fry",
+    "龙虾幼体",
+    "Lobster Larvae"
+  ],
+  [
+    "farm_sea_cucumber",
+    "海参",
+    "Sea Cucumber"
+  ],
+  [
+    "farm_sea_cucumber_desc",
+    "一只安安静静的海参。",
+    "A quiet, unassuming sea cucumber."
+  ],
+  [
+    "farm_sea_cucumber_roe",
+    "海参卵",
+    "Sea Cucumber Eggs"
+  ],
+  [
+    "farm_sea_cucumber_fry",
+    "海参幼体",
+    "Sea Cucumber Larvae"
+  ],
+  [
+    "farm_milk",
+    "牛奶",
+    "Milk"
+  ],
+  [
+    "farm_milk_desc",
+    "一瓶新鲜牛奶。",
+    "A bottle of fresh milk."
+  ],
+  [
+    "farm_truffle_small",
+    "小黑松露",
+    "Small Black Truffle"
+  ],
+  [
+    "farm_truffle_small_desc",
+    "一颗沾着泥土的小黑松露。",
+    "A small black truffle, still dusted with soil."
+  ],
+  [
+    "farm_truffle",
+    "黑松露",
+    "Black Truffle"
+  ],
+  [
+    "farm_truffle_desc",
+    "一颗香气浓郁的黑松露。",
+    "A black truffle with a rich, earthy aroma."
+  ],
+  [
+    "farm_sea_cucumber_food",
+    "整只海参",
+    "Whole Sea Cucumber"
+  ],
+  [
+    "farm_sea_cucumber_food_desc",
+    "一只完整的海参。",
+    "A whole sea cucumber."
+  ],
+  [
+    "farm_beef",
+    "牛肉",
+    "Beef"
+  ],
+  [
+    "farm_pork",
+    "猪肉",
+    "Pork"
+  ],
+  [
+    "farm_lobster_meat",
+    "龙虾肉",
+    "Lobster Meat"
+  ],
+  [
+    "farm_config_milk",
+    "母牛产奶间隔（天）",
+    "Cow milk interval (days)"
+  ],
+  [
+    "farm_config_truffle",
+    "公猪小松露间隔（天）",
+    "Boar small-truffle interval (days)"
+  ],
+  [
+    "farm_config_cow_adult",
+    "牛成年日龄",
+    "Cattle adult age"
+  ],
+  [
+    "farm_config_cow_elder",
+    "牛老年日龄（至少比成年晚2天）",
+    "Cattle elder age (at least 2 days after adulthood)"
+  ],
+  [
+    "farm_config_pig_adult",
+    "猪成年日龄",
+    "Pig adult age"
+  ],
+  [
+    "farm_config_pig_elder",
+    "猪老年日龄（至少比成年晚2天）",
+    "Pig elder age (at least 2 days after adulthood)"
+  ],
+  [
+    "farm_products",
+    "养殖产物",
+    "Farm Products"
+  ],
+  [
+    "farm_sea_yield",
+    "整只海参×1（{0}千卡）",
+    "1 whole sea cucumber ({0} kcal)"
+  ],
+  [
+    "farm_lobster_yield",
+    "龙虾肉×{0}（共{1}千卡）",
+    "{0} lobster meat cuts ({1} kcal total)"
+  ],
+  [
+    "farm_beef_tiny",
+    "一口牛肉",
+    "Bite of Beef"
+  ],
+  [
+    "farm_beef_medium",
+    "牛肉（小）",
+    "Beef (Small)"
+  ],
+  [
+    "farm_beef_large",
+    "牛肉（标准）",
+    "Beef (Standard)"
+  ],
+  [
+    "farm_pork_tiny",
+    "一口猪肉",
+    "Bite of Pork"
+  ],
+  [
+    "farm_pork_medium",
+    "猪肉（小）",
+    "Pork (Small)"
+  ],
+  [
+    "farm_pork_large",
+    "猪肉（标准）",
+    "Pork (Standard)"
+  ],
+  [
+    "farm_lobster_meat_tiny",
+    "一口龙虾肉",
+    "Bite of Lobster Meat"
+  ],
+  [
+    "farm_lobster_meat_small",
+    "龙虾肉（小）",
+    "Lobster Meat (Small)"
+  ],
+  [
+    "farm_lobster_meat_medium",
+    "龙虾肉（标准）",
+    "Lobster Meat (Standard)"
+  ],
+  [
+    "farm_lobster_meat_large",
+    "龙虾肉（大）",
+    "Lobster Meat (Large)"
+  ],
+  [
+    "farm_beef_desc",
+    "一块纹理分明的牛肉。",
+    "A cut of beef with a fine grain."
+  ],
+  [
+    "farm_beef_flavor",
+    "回收柜台上少见的鲜红色。老乡坚持说，煎之前得先把锅烧热。",
+    "An unusual splash of fresh red on the counter. The townsman insists you should get the pan hot first."
+  ],
+  [
+    "farm_pork_desc",
+    "一块肥瘦相间的猪肉。",
+    "A cut of pork with a generous ribbon of fat."
+  ],
+  [
+    "farm_pork_flavor",
+    "油脂遇热就会滋滋作响。还没端上桌，香味大概就已经走出店门了。",
+    "The fat sizzles as soon as it meets the pan. Its aroma will probably reach the shop door before dinner reaches the table."
+  ],
+  [
+    "farm_lobster_meat_desc",
+    "剥好的龙虾肉。",
+    "Lobster meat, neatly removed from its shell."
+  ],
+  [
+    "farm_lobster_meat_flavor",
+    "白嫩的肉上还留着一点海水气息。这里离海很远，晚餐倒可以离它近一些。",
+    "A faint scent of seawater clings to the pale flesh. The ocean is a long way from here; dinner can bring it a little closer."
+  ],
+  [
+    "farm_cow_flavor",
+    "草料的香味总能让它抬起头来。下层区很少有这样耐心的住客。",
+    "The smell of fodder always makes it look up. Few residents of the lower levels are quite this patient."
+  ],
+  [
+    "farm_pig_flavor",
+    "地板缝里藏着什么，它比谁都清楚。老乡说，留意它拱过的地方，偶尔会有好东西。",
+    "It knows what hides under the floor better than anyone. The townsman says to check where it has been rooting; sometimes there is something worth keeping."
+  ],
+  [
+    "farm_lobster_flavor",
+    "它对水缸外的世界没什么兴趣，对伸进来的手指倒很热情。",
+    "It takes little interest in the world outside its tank. Fingers reaching into it are another matter."
+  ],
+  [
+    "farm_sea_cucumber_flavor",
+    "在缸底慢慢挪动，看起来总像没睡醒。水倒是一天比一天清亮了。",
+    "It inches along the bottom as if it has never quite woken up. The water does seem a little clearer each day."
+  ],
+  [
+    "farm_milk_flavor",
+    "瓶口还留着淡淡的奶香。喝上一口，能暂时忘记头顶只有人造光。",
+    "A little sweetness lingers at the rim. One sip makes it easier to forget that all the light overhead is artificial."
+  ],
+  [
+    "farm_truffle_small_flavor",
+    "个头不大，香气却藏不住。猪觉得这只是一次成功的刨土，人们的看法显然更贵一些。",
+    "Small enough to overlook, until you catch the scent. The pig considers it a good bit of digging. People tend to put a higher price on it."
+  ],
+  [
+    "farm_truffle_flavor",
+    "看起来更像一块土坷垃。真正识货的人却会先关上门，再问你开价。",
+    "It looks rather like a clod of dirt. Someone who knows better will close the door before asking your price."
+  ],
+  [
+    "farm_sea_cucumber_food_flavor",
+    "模样不怎么讨喜，倒不妨碍识货的人把它端上餐桌。至于怎么做，老乡说得先有点耐心。",
+    "Its looks have never stopped an informed diner. As for preparing it, the townsman says a little patience comes first."
+  ],
+  [
+    "farm_lobster_roe_desc",
+    "一小簇等待孵化的龙虾卵。",
+    "A small clutch of lobster eggs, waiting to hatch."
+  ],
+  [
+    "farm_lobster_roe_flavor",
+    "老乡把它们装在最稳当的地方。路上少颠簸一下，往后就多一分盼头。",
+    "The townsman packs them in the safest corner. A smoother journey gives them a better start."
+  ],
+  [
+    "farm_lobster_fry_desc",
+    "一群刚长出模样的小龙虾。",
+    "A group of tiny lobsters, just beginning to look the part."
+  ],
+  [
+    "farm_lobster_fry_flavor",
+    "钳子还小，脾气倒已经有了。隔着水缸，也能看出它们各有各的打算。",
+    "The claws are small; the attitude is already there. Even through the glass, each one seems to have plans of its own."
+  ],
+  [
+    "farm_sea_cucumber_roe_desc",
+    "一小簇晶莹的海参卵。",
+    "A small cluster of translucent sea cucumber eggs."
+  ],
+  [
+    "farm_sea_cucumber_roe_flavor",
+    "很难想象，这些不起眼的小点以后会占满缸底。老乡对此倒很有把握。",
+    "It is hard to imagine these little specks one day filling the bottom of a tank. The townsman seems quite certain."
+  ],
+  [
+    "farm_sea_cucumber_fry_desc",
+    "一群细小的海参幼体。",
+    "A group of tiny sea cucumber larvae."
+  ],
+  [
+    "farm_sea_cucumber_fry_flavor",
+    "得凑近些才看得清。它们没有急着长大，你也最好别急。",
+    "You have to look closely to make them out. They are in no hurry to grow up. You may as well give them time."
+  ],
+  [
+    "farmer_story_intro",
+    "叫我老乡就成。我原先种地，也养几头牲口。那天还在地里忙，抬头就到了这铁皮房子里……怎么来的，我到现在也没弄明白。好在种子还在，人也还能干活。",
+    "Just call me the townsman. I used to work the land and keep a few animals. One moment I was out in the fields, and the next I was in this tin box... Still cannot tell you how I got here. At least I have my seeds, and these hands still work."
+  ],
+  [
+    "farmer_unlock_farming",
+    "听说你开始种植了？地方是小了点，可种子不嫌地方。先把根养稳，日子也能慢慢扎下去。",
+    "Heard you have started planting. A small patch, perhaps, but seeds never complain about the size. Get the roots settled first. The rest of life can follow."
+  ],
+  [
+    "farmer_unlock_dna",
+    "听说你连种子的基因都能编辑了？这手艺可了不得。我挑了些讲究一点的种子，下回来，你的柜台说不定就换了模样。",
+    "Heard you can even edit the genes in your seeds now. Quite a skill. I have picked out a few fussier varieties for you. This counter might look rather different by my next visit."
+  ],
+  [
+    "farmer_unlock_mammals",
+    "听说你把笼子备好了？牛慢性子，猪爱闹，照顾久了就知道，各有各的脾气。别嫌它们麻烦，牲口也认得待它好的人。",
+    "Heard you have a cage ready. Cattle take their time; pigs like a bit of commotion. You will get to know their habits soon enough. Animals remember who looks after them."
+  ],
+  [
+    "farmer_unlock_aquaculture",
+    "开始养水里的小家伙了？那我以后也带些鱼卵来。吃食和水都照顾稳当，别光盯着它们长——我试过，盯得再紧也快不了多少。",
+    "Keeping a little aquatic stock now? I will bring some eggs along. Mind the food and the water, rather than staring at them all day. I have tried that. It does not make them grow much faster."
+  ],
+  [
+    "farmer_unlock_aquaculture_ii",
+    "连龙虾都能养啦？那对钳子可是挑房客的。先把水缸收拾稳当，别让它一进门就来验你的手指。",
+    "Ready for lobsters, are you? Those claws make for rather particular tenants. Get the tank in order before they start inspecting your fingers."
+  ],
+  [
+    "farmer_income_1000",
+    "恭喜啊！头一茬收成最让人惦记，记得给自己留顿好饭。",
+    "Congratulations! The first harvest is always the one you remember. Save yourself enough for a decent meal."
+  ],
+  [
+    "farmer_income_2000",
+    "做生意跟种地有点像，天天忙着，回头一看，才发现已经攒下这么多了。",
+    "Trading is a bit like farming: you keep at it every day, then look back and realise how much has grown."
+  ],
+  [
+    "farmer_income_5000",
+    "恭喜呀，你如今已经是个有名的商人了！我从前在镇上，也是个有名的农夫呢。那时乡亲们聊起好庄稼，总会提上我两句。如今瞧着你的生意越做越好，我也跟着高兴。",
+    "Congratulations! You have made quite a name for yourself as a merchant. I was a well-known farmer back in our town, you know. Whenever the neighbours talked about a fine crop, my name tended to come up. Seeing your business thrive makes me happy too."
+  ],
+  [
+    "farmer_goods_seed",
+    "今天带的是种子，挑几包试试？",
+    "I have seeds with me today. Care to try a few packets?"
+  ],
+  [
+    "farmer_goods_ranch",
+    "今天带了些小家伙和养殖补给，给它们腾好地方再挑。",
+    "Some young stock and husbandry supplies today. Make a little room for them before choosing."
+  ],
+  [
+    "farmer_chat_seed_0",
+    "我今天出门前还想看看天色。抬头一看，又是那盏灯。倒也省心，不用猜会不会下雨了。",
+    "Thought I would check the sky before setting out. Looked up: same old lamp. Saves guessing whether it might rain, at least."
+  ],
+  [
+    "farmer_chat_seed_1",
+    "有个客人问我，土豆能不能种进花盆。我说能。他又问，连盆一起卖贵不贵……你这儿的人，想法挺多。",
+    "A fellow asked whether he could grow potatoes in a flowerpot. I said yes. Then he wanted to know what the whole pot would sell for. People here do have ideas."
+  ],
+  [
+    "farmer_chat_seed_2",
+    "别看种子包小，装的都是往后的饭。就是这地方的饭，有时候还得先问问电表答不答应。",
+    "Little packets, but there are dinners in every one. Though dinners here sometimes need permission from the electricity meter first."
+  ],
+  [
+    "farmer_chat_seed_3",
+    "以前催庄稼长，最多看两眼天。现在我看完水箱还得看插头，忙得倒像在修拖拉机。",
+    "Used to check the sky when the crops were slow. Now I check the tank, then the plug. Feels more like fixing a tractor."
+  ],
+  [
+    "farmer_chat_seed_4",
+    "我带来的种子都数过。要是多长出一棵，算你会种；要是少了一粒，先别找猪，它今天没来。",
+    "Counted every seed before I came. If an extra plant grows, that is your good work. If a seed goes missing, do not blame the pig. It stayed home today."
+  ],
+  [
+    "farmer_chat_seed_5",
+    "柜台擦得挺亮，就是不太适合晾种子。上回我才铺开，就有人问这一把怎么卖。",
+    "A fine clean counter, though not much use for drying seeds. Last time I spread some out, someone wanted a price for the handful."
+  ],
+  [
+    "farmer_chat_seed_6",
+    "你那些种子如今比我还讲究，连脾气都能改。我倒想借机器照照，看能不能把腰酸这个毛病也改掉。",
+    "Your seeds get better treatment than I do, having their very nature improved. Wonder whether that machine could do anything about my back."
+  ],
+  [
+    "farmer_chat_seed_7",
+    "我琢磨着，庄稼收了能酿酒，酒卖了能买种子……这圈倒是转得明白，比我来这儿的路明白多了。",
+    "Crops into drink, drink into money, money into seeds... A proper circle. Makes rather more sense than the route that brought me here."
+  ],
+  [
+    "farmer_chat_ranch_0",
+    "今天来得慢了些。小猪不肯走，牛又不肯快走。我夹在中间，倒像是它们赶着我做生意。",
+    "A slow journey today. The pig would not walk; the calf would not hurry. Between the two, it felt as though they were taking me to market."
+  ],
+  [
+    "farmer_chat_ranch_1",
+    "牛奶这东西，瓶子一装就显得体面了。早些年我们直接拿碗接，味道也没少半分。",
+    "Milk looks respectable in a bottle, does it not? We used to catch it straight in a bowl. Never seemed to hurt the taste."
+  ],
+  [
+    "farmer_chat_ranch_2",
+    "猪鼻子比我会找值钱的东西。我找半天只捡到个螺帽，它一拱，大家倒围过来了。",
+    "The pig has a better nose for valuables than I do. I spent ages finding a nut off a bolt. One bit of digging from the pig, and suddenly everyone was interested."
+  ],
+  [
+    "farmer_chat_ranch_3",
+    "要是听见小家伙们叫，先看看吃食。我有一回跟它们讲了半天道理，最后还是一把饲料管用。",
+    "If the little ones are making a fuss, check their food first. I once spent ages trying to reason with them. A handful of feed worked better."
+  ],
+  [
+    "farmer_chat_ranch_4",
+    "我把围裙洗了。结果刚出门，小猪就给我添了两个蹄印。挺好，省得人家以为我不干活。",
+    "Washed my apron today. Had barely left the door before the pig added two little hoofprints. Saves people thinking I never do any work."
+  ],
+  [
+    "farmer_chat_ranch_5",
+    "这草帽旧是旧了点。可牛认得，小猪也认得；哪天换了新的，我怕它们还得重新认老板。",
+    "An old hat, yes, but the cattle know it. So do the pigs. If I ever get a new one, they might need introducing to their keeper all over again."
+  ],
+  [
+    "farmer_chat_aqua_0",
+    "以前我嫌水缸不够大，如今倒盼着水缸少一点。鱼是不说话，张嘴吃饭的时候可一点不含糊。",
+    "Used to wish for bigger tanks. Now I sometimes wish for fewer of them. Fish may keep quiet, but there is nothing shy about their appetite."
+  ],
+  [
+    "farmer_chat_aqua_1",
+    "海参看着不着急，我盯着它看了一会儿，也跟着不着急了。直到想起，租金可不会陪咱们慢慢来。",
+    "A sea cucumber never seems in a hurry. Watched one for a while and felt quite peaceful myself. Then I remembered the rent does not share its patience."
+  ],
+  [
+    "farmer_chat_aqua_2",
+    "水里清不清，光闻可不成。我上回刚想夸一句，旁边那条鱼已经先把意见摆在脸上了。",
+    "A sniff will not tell you whether the water is good. Was about to compliment a tank once, until I noticed the look on the fish."
+  ],
+  [
+    "farmer_chat_aqua_3",
+    "我问过海参，天天在缸底忙什么。它没搭理我。挺好，比有些欠账的客人还省心。",
+    "Asked a sea cucumber what keeps it so busy down there. No answer. Still, less trouble than certain customers who owe me money."
+  ],
+  [
+    "farmer_chat_aqua_4",
+    "龙虾钳子上可没写着不许碰，是我后来补的。你要买它，那张纸也送你。",
+    "The lobster did not come with a warning about its claws. I added that myself. Buy it, and I will throw in the warning for free."
+  ],
+  [
+    "farmer_chat_aqua_5",
+    "装龙虾那会儿，它夹着筐沿不松手。我跟它说到了能住水缸，它倒像是想先看看房。",
+    "The lobster would not let go of the basket rim. Told it there was a tank waiting at the other end. Seemed to want a viewing first."
+  ],
+  [
+    "farm_config_auto_immunity",
+    "普通疾病自动使用绿色血清",
+    "Automatic green serum for ordinary illness"
+  ],
+  [
+    "farm_config_auto_immunity_hint",
+    "默认关闭。夜间对患普通疾病的自有动物使用主背包／仓库里的绿色血清，消耗实际次数；不取其他机器内的药。药效仍在时不重复，不能清除朊病毒，且会增加食量。",
+    "Off by default. At night, spend real green-serum doses from your main inventory or warehouse on owned animals with ordinary illness. Supplies inside other machines are reserved. No repeat while the effect remains. Does not clear prion disease and increases hunger."
+  ],
+  [
+    "farm_night_status",
+    "动物情况：存活{0}只，卵{1}份；缺粮{2}只，待处理尸体{3}只。",
+    "Animals: {0} alive, {1} egg clutches; {2} low on food, {3} carcasses to clear."
+  ],
+  [
+    "farm_night_products",
+    "牛奶{0}份、小松露{1}份。",
+    " Milk: {0}; small truffles: {1}."
+  ],
+  [
+    "farm_night_growth",
+    "预计成长：{0}。",
+    "Expected growth: {0}."
+  ],
+  [
+    "farm_night_growth_none",
+    "预计成长：暂无可估算的下一阶段。",
+    "Expected growth: no next stage can currently be estimated."
+  ],
+  [
+    "farm_night_forecast",
+    "{0}{1}只约{2}晚后{3}",
+    "{1} {0}: {3} in about {2} night(s)"
+  ],
+  [
+    "farm_night_stage_adult",
+    "成年",
+    "adulthood"
+  ],
+  [
+    "farm_night_stage_elder",
+    "进入老年",
+    "elder stage"
+  ],
+  [
+    "farm_night_stage_hatch",
+    "孵化",
+    "hatching"
+  ],
+  [
+    "farm_night_stage_juvenile",
+    "长成独立幼体",
+    "individual juvenile stage"
+  ],
+  [
+    "farm_night_blocked",
+    "另有{0}批因空间不足暂停转阶段。",
+    " {0} group(s) waiting for room to change stage."
+  ],
+  [
+    "farm_night_warning",
+    "疫病预警：{0}。",
+    "Disease warning: {0}."
+  ],
+  [
+    "farm_night_safe",
+    "疫病预警：未发现普通疾病、朊病毒或环境风险。",
+    "Disease warning: no ordinary illness, prion disease or environmental risks detected."
+  ],
+  [
+    "farm_night_ill",
+    "普通疾病{0}只，可手动用绿色血清",
+    "{0} with ordinary illness; green serum can help immunity"
+  ],
+  [
+    "farm_night_prion",
+    "朊病毒{0}只，血清无法清除",
+    "{0} with prion disease; serum cannot clear it"
+  ],
+  [
+    "farm_night_dirty",
+    "{0}处养殖区污物过多",
+    "{0} dirty animal area(s)"
+  ],
+  [
+    "farm_night_crowded",
+    "{0}处养殖区拥挤",
+    "{0} crowded animal area(s)"
+  ],
+  [
+    "farm_night_water",
+    "{0}缸缺水或水质异常",
+    "{0} tank(s) short of water or with poor water quality"
+  ],
+  [
+    "farm_night_power",
+    "{0}缸昨晚未供电",
+    "{0} tank(s) unpowered last night"
+  ],
+  [
+    "farm_night_immunity",
+    "{0}只免疫偏低",
+    "{0} with low immunity"
+  ],
+  [
+    "farm_night_treated",
+    "昨晚自动使用绿色血清{0}次。",
+    " Green serum automatically used {0} time(s) last night."
+  ],
+  [
+    "farm_night_separator",
+    "；",
+    "; "
+  ],
+  [
+    "farm_night_unknown",
+    "未知动物",
+    "unknown animal"
+  ],
+  [
+    "farm_night_product_full",
+    "{0}处产物栏已满，暂停产出。",
+    " {0} product tray(s) full; production paused."
+  ],
+  [
+    "farm_config_auto_feces",
+    "自动将粪便转入垃圾桶",
+    "Automatically move feces to trash"
+  ],
+  [
+    "farm_config_auto_feces_hint",
+    "默认开启。没有清洁机器人的笼子直接清理粪便；有机器人时仅在收集仓接近满载时清仓。垃圾桶满则保留原物。关闭可保留粪便制水；原版机器人的收集与焚烧由其自身设置决定。",
+    "On by default. Clear feces from cages without a cleaner robot; with a robot, empty only near-full collection storage. A full trash bin leaves items in place. Turn off to retain feces for water production. Native robot collection/incineration follows its own controls."
+  ],
+  [
+    "farm_config_robot_trash",
+    "清洁机器人转垃圾桶阈值（占格%）",
+    "Robot-to-trash threshold (occupied cells %)"
+  ],
+  [
+    "farm_config_robot_trash_hint",
+    "默认80%。只处理当前笼内的清洁机器人，每台机器人每晚至多成功清仓一次。",
+    "Default 80%. Only robots serving the same cage are checked; each robot is successfully emptied at most once per night."
+  ],
+  [
+    "farm_config_feed_report",
+    "夜报显示各机器饲料余量",
+    "Show per-machine feed supplies in night logs"
+  ],
+  [
+    "farm_config_feed_report_hint",
+    "按机器列出分配器内已处理且符合食性的饲料。编号随存档保留，自定义名称优先；按预计余量从少到多排列。估算包含当前群体成长和正常产物消耗，不计仓库、未来补料或新增幼崽。",
+    "List processed, diet-compatible dispenser feed per machine. Saved numbers stay stable; custom names take priority. Lowest estimated supplies appear first. Estimates include existing stock growth and normal production, excluding warehouse food, future deliveries and new births."
+  ],
+  [
+    "farm_config_feed_only_low",
+    "饲料清单仅显示需要补料的机器",
+    "Show only machines needing feed"
+  ],
+  [
+    "farm_config_feed_only_low_hint",
+    "默认关闭，列出所有正在饲养的笼／缸。开启后只列低于提醒天数、缺分配器、饲料不适口或目标饱食度过低的机器，适合后期机器较多时使用。",
+    "Off by default: list every active cage/tank. When on, list low supplies, missing dispensers, incompatible feed or low fullness targets only, useful with many machines."
+  ],
+  [
+    "farm_config_feed_warning",
+    "饲料补给提醒阈值（晚）",
+    "Feed refill warning threshold (nights)"
+  ],
+  [
+    "farm_waste_moved",
+    "粪便{0}份已转入垃圾桶。",
+    " {0} feces unit(s) moved to trash."
+  ],
+  [
+    "farm_waste_blocked",
+    "垃圾桶不可用、空间不足或物品受限，未能转移的粪便已保留。",
+    " Trash unavailable, full or transfer restricted; unmoved feces retained."
+  ],
+  [
+    "farm_feed_cage",
+    "动物笼{0}",
+    "Animal Cage {0}"
+  ],
+  [
+    "farm_feed_tank",
+    "养殖缸{0}",
+    "Aquaculture Tank {0}"
+  ],
+  [
+    "farm_feed_row",
+    "{0}：{1}。",
+    "{0}: {1}."
+  ],
+  [
+    "farm_feed_days",
+    "{0}千卡，约{1}晚{2}",
+    "{0} kcal, about {1} night(s){2}"
+  ],
+  [
+    "farm_feed_low",
+    "，建议备料",
+    ", plan a refill"
+  ],
+  [
+    "farm_feed_missing",
+    "未装牲畜饲料分配器",
+    "no livestock feed dispenser"
+  ],
+  [
+    "farm_feed_target",
+    "目标饱食度低于75%，请检查设置",
+    "fullness target below 75%; check settings"
+  ],
+  [
+    "farm_feed_empty",
+    "分配器已空，请补料",
+    "dispenser empty; refill needed"
+  ],
+  [
+    "farm_feed_wrong_diet",
+    "没有适口饲料，请检查食性",
+    "no compatible feed; check diets"
+  ],
+  [
+    "farm_feed_eggs",
+    "仅有卵，暂不耗料，请预备幼体饲料",
+    "eggs only; no current feed demand, prepare larval feed"
+  ]
+]

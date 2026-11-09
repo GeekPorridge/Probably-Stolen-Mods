@@ -1,0 +1,25 @@
+A Fellow Townsman Arrives v1.1.9 — Legacy size cleanup, report font correction and perennial hatchet rules
+
+1. Remove obsolete size entries from the catalog
+Six retired _large IDs and the retired small Parsnip are no longer registered as separate cheat/native item-catalog entries.
+Current crops retain Regular/Small/Giant sizes; Parsnip, Wheat and Hops keep fixed footprints.
+Historical save IDs resolve to the corresponding current regular crop, then follow the existing size/value/remaining-calorie migration. Seven legacy textures remain for the historical loading stage and do not create extra spawnable items. Existing saved produce is retained.
+
+2. Correct night-report text size
+The installed game's actual StartOfDayTMPPrefab stores fitted font size 15, base/max size 24, with auto-sizing enabled.
+v1.1.8 incorrectly froze 15. v1.1.9 uses the native auto-size maximum of 24; longer reports wrap and scroll instead of shrinking to fit. Text already enlarged by another font mod is not forced back down.
+The ledger frame/footer, native/other-mod report entries and numbers remain. Font Scale Mod, the night theme and their settings are not edited.
+
+3. Established perennials still require a hatchet
+Stop after harvest remains off by default. When enabled it finishes the current harvest, then blocks regrowth and replanting.
+Stopping no longer lets an established perennial be dragged out as a refunded seed. Changing crops still requires the native hatchet to clear the plant, without returning a seed.
+Turning the control off resumes a retained plant on its regrowth cycle. Unplanted seeds retain their native removal rules.
+This covers added plants, native Bloomberry and plants edited to become perennial. Clearing uses the original native hatchet implementation.
+
+4. Verification and installation
+Passed 358 crop-update checks, including native catalog enumeration of the 26 current crop/seed entries, native decoding of seven historical IDs, the actual 15-to-24 font regression and native hatchet callbacks.
+Existing 31,246 logic checks and wine/calendar/husbandry/dialogue/report integration regressions passed, with 50 Harmony target/parameter bindings and the native mod scanner.
+Font parameters were read from the installed game 1.0.0.12 (100-Rev12). Scene/render, placement, care, RNG and localization boundaries use isolated fixtures. No updated in-game report visual acceptance has been completed.
+Local installation backs up v1.1.8 and verifies runtime hashes. Saves, settings and third-party mods are not edited. Runtime retains 75 required files.
+The v1.1.8 crop prices/calories and Corn yield/timing improvements remain.
+Workshop item 3834581016 is retained. The content-update package is prepared without executing upload or changing webpage metadata.

@@ -1,0 +1,48 @@
+{
+  "version": "0.1.7",
+  "texture_pixels_per_logical_cell": 128,
+  "variable_crop_canvas_pixels": [
+    [
+      128,
+      256
+    ],
+    [
+      256,
+      256
+    ],
+    [
+      256,
+      384
+    ],
+    [
+      384,
+      384
+    ]
+  ],
+  "variable_subject_max_pixels": [
+    [
+      112,
+      160
+    ],
+    [
+      200,
+      200
+    ],
+    [
+      240,
+      288
+    ],
+    [
+      352,
+      352
+    ]
+  ],
+  "fixed_crop_canvas_pixels": [
+    128,
+    256
+  ],
+  "original_aspect_ratios_preserved": true,
+  "new_generated_art": false,
+  "legacy_parsnip_small_large_textures": "Retained for old saved sprite paths; no longer generated as harvest variants.",
+  "native_bottle_ingredient_grid": "00000000/00000000/00000011 (0 usable, 1 blocked)"
+}

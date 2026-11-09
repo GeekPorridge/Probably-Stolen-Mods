@@ -1,0 +1,1161 @@
+[
+  {
+    "key": "chili_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      38,
+      39,
+      211,
+      224
+    ]
+  },
+  {
+    "key": "chili",
+    "width": 1,
+    "height": 2,
+    "source_box": [
+      338,
+      55,
+      188,
+      192
+    ]
+  },
+  {
+    "key": "growth_chili_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      19,
+      6,
+      217,
+      244
+    ],
+    "source": "R2-base-growth_chili_2.png"
+  },
+  {
+    "key": "blueberry_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      38,
+      314,
+      210,
+      229
+    ]
+  },
+  {
+    "key": "blueberry",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      71,
+      118,
+      113
+    ],
+    "source": "R2-base-blueberry.png"
+  },
+  {
+    "key": "growth_blueberry_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      6,
+      15,
+      244,
+      235
+    ],
+    "source": "R2-base-growth_blueberry_2.png"
+  },
+  {
+    "key": "poppy_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      39,
+      592,
+      210,
+      232
+    ]
+  },
+  {
+    "key": "poppy",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      57,
+      118,
+      142
+    ],
+    "source": "R2-base-poppy.png"
+  },
+  {
+    "key": "growth_poppy_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      26,
+      6,
+      203,
+      244
+    ],
+    "source": "R2-base-growth_poppy_2.png"
+  },
+  {
+    "key": "fairy_rose_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      37,
+      875,
+      212,
+      230
+    ]
+  },
+  {
+    "key": "fairy_rose",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      59,
+      118,
+      137
+    ],
+    "source": "R2-base-fairy_rose.png"
+  },
+  {
+    "key": "growth_fairy_rose_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      16,
+      6,
+      224,
+      244
+    ],
+    "source": "R2-base-growth_fairy_rose_2.png"
+  },
+  {
+    "key": "growth_parsnip_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      8,
+      5,
+      239,
+      246
+    ],
+    "source": "R2-base-growth_parsnip_2.png"
+  },
+  {
+    "key": "growth_potato_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      5,
+      15,
+      246,
+      236
+    ],
+    "source": "R2-base-growth_potato_2.png"
+  },
+  {
+    "key": "growth_corn_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      23,
+      7,
+      209,
+      244
+    ],
+    "source": "R2-base-growth_corn_2.png"
+  },
+  {
+    "key": "growth_wheat_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      16,
+      5,
+      223,
+      246
+    ],
+    "source": "R2-base-growth_wheat_2.png"
+  },
+  {
+    "key": "growth_hops_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      17,
+      5,
+      222,
+      246
+    ],
+    "source": "R2-base-growth_hops_2.png"
+  },
+  {
+    "key": "growth_strawberry_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      5,
+      81,
+      246,
+      170
+    ],
+    "source": "R2-base-growth_strawberry_2.png"
+  },
+  {
+    "key": "growth_starfruit_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      5,
+      54,
+      246,
+      197
+    ],
+    "source": "R2-base-growth_starfruit_2.png"
+  },
+  {
+    "key": "growth_ancient_fruit_2",
+    "width": 3,
+    "height": 4,
+    "source_box": [
+      5,
+      32,
+      246,
+      219
+    ],
+    "source": "R2-base-growth_ancient_fruit_2.png"
+  },
+  {
+    "key": "chicken_baby",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      128,
+      210,
+      170,
+      200
+    ]
+  },
+  {
+    "key": "chicken_young",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      513,
+      109,
+      253,
+      305
+    ]
+  },
+  {
+    "key": "chicken_male",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      914,
+      18,
+      392,
+      402
+    ]
+  },
+  {
+    "key": "chicken_female",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      1366,
+      59,
+      342,
+      361
+    ]
+  },
+  {
+    "key": "goat_baby",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      91,
+      607,
+      228,
+      249
+    ]
+  },
+  {
+    "key": "goat_young",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      466,
+      520,
+      293,
+      338
+    ]
+  },
+  {
+    "key": "goat_male",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      875,
+      455,
+      392,
+      413
+    ]
+  },
+  {
+    "key": "goat_female",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      1330,
+      487,
+      387,
+      377
+    ]
+  },
+  {
+    "key": "midnight_carp_roe",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      41,
+      137,
+      136,
+      114
+    ]
+  },
+  {
+    "key": "midnight_carp_fry",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      252,
+      166,
+      120,
+      62
+    ]
+  },
+  {
+    "key": "midnight_carp_small",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      434,
+      125,
+      190,
+      116
+    ]
+  },
+  {
+    "key": "midnight_carp_medium",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      691,
+      98,
+      263,
+      157
+    ]
+  },
+  {
+    "key": "midnight_carp_large",
+    "width": 4,
+    "height": 2,
+    "source_box": [
+      1000,
+      69,
+      369,
+      206
+    ]
+  },
+  {
+    "key": "largemouth_bass_roe",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      41,
+      400,
+      137,
+      109
+    ]
+  },
+  {
+    "key": "largemouth_bass_fry",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      248,
+      431,
+      122,
+      57
+    ]
+  },
+  {
+    "key": "largemouth_bass_small",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      430,
+      397,
+      190,
+      107
+    ]
+  },
+  {
+    "key": "largemouth_bass_medium",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      676,
+      364,
+      280,
+      159
+    ]
+  },
+  {
+    "key": "largemouth_bass_large",
+    "width": 4,
+    "height": 2,
+    "source_box": [
+      995,
+      337,
+      387,
+      211
+    ]
+  },
+  {
+    "key": "tuna_roe",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      39,
+      655,
+      139,
+      114
+    ]
+  },
+  {
+    "key": "tuna_fry",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      249,
+      687,
+      123,
+      55
+    ]
+  },
+  {
+    "key": "tuna_small",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      443,
+      665,
+      184,
+      95
+    ]
+  },
+  {
+    "key": "tuna_medium",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      676,
+      641,
+      280,
+      138
+    ]
+  },
+  {
+    "key": "tuna_large",
+    "width": 4,
+    "height": 2,
+    "source_box": [
+      997,
+      615,
+      389,
+      184
+    ]
+  },
+  {
+    "key": "lava_eel_roe",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      32,
+      908,
+      149,
+      109
+    ]
+  },
+  {
+    "key": "lava_eel_fry",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      250,
+      947,
+      122,
+      43
+    ]
+  },
+  {
+    "key": "lava_eel_small",
+    "width": 2,
+    "height": 1,
+    "source_box": [
+      433,
+      927,
+      183,
+      71
+    ]
+  },
+  {
+    "key": "lava_eel_medium",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      662,
+      905,
+      279,
+      106
+    ]
+  },
+  {
+    "key": "lava_eel_large",
+    "width": 4,
+    "height": 2,
+    "source_box": [
+      977,
+      887,
+      407,
+      141
+    ]
+  },
+  {
+    "key": "legend",
+    "width": 4,
+    "height": 3,
+    "source_box": [
+      28,
+      201,
+      487,
+      347
+    ],
+    "source": "V2-kings.png"
+  },
+  {
+    "key": "crimsonfish",
+    "width": 4,
+    "height": 3,
+    "source_box": [
+      533,
+      204,
+      478,
+      345
+    ],
+    "source": "V2-kings.png"
+  },
+  {
+    "key": "glacierfish",
+    "width": 4,
+    "height": 3,
+    "source_box": [
+      1035,
+      204,
+      489,
+      344
+    ],
+    "source": "V2-kings.png"
+  },
+  {
+    "key": "mutant_carp",
+    "width": 4,
+    "height": 3,
+    "source_box": [
+      1555,
+      215,
+      476,
+      334
+    ],
+    "source": "V2-kings.png"
+  },
+  {
+    "key": "cheese_press",
+    "width": 3,
+    "height": 3,
+    "source_box": [
+      23,
+      19,
+      257,
+      273
+    ]
+  },
+  {
+    "key": "oil_press",
+    "width": 3,
+    "height": 3,
+    "source_box": [
+      290,
+      7,
+      267,
+      285
+    ]
+  },
+  {
+    "key": "barrel",
+    "width": 3,
+    "height": 3,
+    "source_box": [
+      591,
+      25,
+      217,
+      267
+    ]
+  },
+  {
+    "key": "grill",
+    "width": 3,
+    "height": 3,
+    "source_box": [
+      843,
+      79,
+      271,
+      202
+    ]
+  },
+  {
+    "key": "egg",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      57,
+      351,
+      170,
+      213
+    ]
+  },
+  {
+    "key": "goat_milk",
+    "width": 1,
+    "height": 2,
+    "source_box": [
+      350,
+      314,
+      140,
+      258
+    ]
+  },
+  {
+    "key": "mayonnaise",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      600,
+      345,
+      186,
+      212
+    ]
+  },
+  {
+    "key": "cheese",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      11,
+      118,
+      105
+    ],
+    "source": "R2-base-cheese.png"
+  },
+  {
+    "key": "goat_cheese",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      16,
+      118,
+      95
+    ],
+    "source": "R2-base-goat_cheese.png"
+  },
+  {
+    "key": "truffle_oil",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      6,
+      24,
+      116,
+      207
+    ],
+    "source": "R2-base-truffle_oil.png"
+  },
+  {
+    "key": "poppy_perfume",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      69,
+      118,
+      118
+    ],
+    "source": "R2-base-poppy_perfume.png"
+  },
+  {
+    "key": "fairy_perfume",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      5,
+      68,
+      118,
+      119
+    ],
+    "source": "R2-base-fairy_perfume.png"
+  },
+  {
+    "key": "chicken_meat_tiny",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      24,
+      880,
+      239,
+      202
+    ]
+  },
+  {
+    "key": "chicken_meat_medium",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      24,
+      880,
+      239,
+      202
+    ]
+  },
+  {
+    "key": "chicken_meat_large",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      24,
+      880,
+      239,
+      202
+    ]
+  },
+  {
+    "key": "goat_meat_tiny",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      291,
+      875,
+      244,
+      204
+    ]
+  },
+  {
+    "key": "goat_meat_medium",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      291,
+      875,
+      244,
+      204
+    ]
+  },
+  {
+    "key": "goat_meat_large",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      291,
+      875,
+      244,
+      204
+    ]
+  },
+  {
+    "key": "bait",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      587,
+      869,
+      213,
+      210
+    ],
+    "source": "V2-props.png",
+    "alpha_preserved": true,
+    "scaling": "uniform nearest-neighbor; transparent padding"
+  },
+  {
+    "key": "premium_bait",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      860,
+      870,
+      228,
+      210
+    ],
+    "source": "V2-props.png",
+    "alpha_preserved": true,
+    "scaling": "uniform nearest-neighbor; transparent padding"
+  },
+  {
+    "key": "plant_manual",
+    "width": 2,
+    "height": 3,
+    "source_box": [
+      38,
+      1109,
+      211,
+      280
+    ]
+  },
+  {
+    "key": "animal_manual",
+    "width": 2,
+    "height": 3,
+    "source_box": [
+      307,
+      1109,
+      211,
+      281
+    ]
+  },
+  {
+    "key": "artisan_manual",
+    "width": 2,
+    "height": 3,
+    "source_box": [
+      579,
+      1109,
+      212,
+      280
+    ]
+  },
+  {
+    "key": "chicken_egg",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      831,
+      1130,
+      271,
+      233
+    ]
+  },
+  {
+    "key": "cooked_chicken",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      17,
+      104,
+      368,
+      315
+    ]
+  },
+  {
+    "key": "cooked_goat",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      405,
+      65,
+      367,
+      354
+    ]
+  },
+  {
+    "key": "cooked_beef",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      793,
+      104,
+      369,
+      315
+    ]
+  },
+  {
+    "key": "cooked_pork",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      1181,
+      104,
+      369,
+      315
+    ]
+  },
+  {
+    "key": "cooked_fish",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      16,
+      594,
+      375,
+      316
+    ]
+  },
+  {
+    "key": "bottle_chili_spirit",
+    "width": 2,
+    "height": 3,
+    "source_box": [
+      117,
+      122,
+      791,
+      1327
+    ],
+    "source": "R3-chili-spirit.png"
+  },
+  {
+    "key": "bottle_blueberry_wine",
+    "width": 1,
+    "height": 4,
+    "source_box": [
+      999,
+      72,
+      269,
+      1015
+    ],
+    "source": "R4-fruit-wines.png",
+    "liquid_base_color": "#4C5DB6"
+  },
+  {
+    "key": "wheat",
+    "width": 2,
+    "height": 2,
+    "source_box": [
+      6,
+      57,
+      116,
+      142
+    ],
+    "source": "R2-base-wheat.png"
+  },
+  {
+    "key": "blueberry_small",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      5,
+      71,
+      118,
+      113
+    ],
+    "source": "R2-base-blueberry.png"
+  },
+  {
+    "key": "blueberry_huge",
+    "width": 3,
+    "height": 3,
+    "source_box": [
+      5,
+      71,
+      118,
+      113
+    ],
+    "source": "R2-base-blueberry.png"
+  },
+  {
+    "key": "parsnip_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      34,
+      101,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "potato_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      418,
+      101,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "corn_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      802,
+      101,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "wheat_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      1186,
+      101,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "hops_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      34,
+      613,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "strawberry_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      418,
+      613,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "starfruit_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      802,
+      613,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "ancient_fruit_seed",
+    "width": 1,
+    "height": 1,
+    "source_box": [
+      1186,
+      613,
+      316,
+      347
+    ],
+    "source": "R2-seed-packets.png"
+  },
+  {
+    "key": "bottle_ancient_wine",
+    "width": 1,
+    "height": 4,
+    "source_box": [
+      63,
+      72,
+      268,
+      1015
+    ],
+    "source": "R4-fruit-wines.png",
+    "liquid_base_color": "#0F7281"
+  },
+  {
+    "key": "bottle_strawberry_wine",
+    "width": 1,
+    "height": 4,
+    "source_box": [
+      376,
+      72,
+      267,
+      1015
+    ],
+    "source": "R4-fruit-wines.png",
+    "liquid_base_color": "#DB171F"
+  },
+  {
+    "key": "bottle_starfruit_wine",
+    "width": 1,
+    "height": 4,
+    "source_box": [
+      686,
+      72,
+      269,
+      1015
+    ],
+    "source": "R4-fruit-wines.png",
+    "liquid_base_color": "#E4C51F"
+  },
+  {
+    "key": "baked_lobster",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      126,
+      99,
+      1272,
+      872
+    ],
+    "source": "R5-baked_lobster.png",
+    "alpha_preserved": true,
+    "scaling": "uniform nearest-neighbor; transparent padding"
+  },
+  {
+    "key": "scallion_sea_cucumber",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      112,
+      129,
+      1283,
+      789
+    ],
+    "source": "R5-scallion_sea_cucumber.png",
+    "alpha_preserved": true,
+    "scaling": "uniform nearest-neighbor; transparent padding"
+  },
+  {
+    "key": "sashimi_platter",
+    "width": 3,
+    "height": 2,
+    "source_box": [
+      51,
+      72,
+      1417,
+      903
+    ],
+    "source": "R5-sashimi_platter.png",
+    "alpha_preserved": true,
+    "scaling": "uniform nearest-neighbor; transparent padding"
+  }
+]

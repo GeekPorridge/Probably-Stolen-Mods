@@ -1,0 +1,27 @@
+A Fellow Townsman Arrives v1.1.2 — Visitor dialogue and aquatic growth
+
+Saturday no longer offers Nutrifruit. Wednesday's existing 50% supply roll remains. Saved, undisplayed Saturday Nutrifruit offers are removed; displayed or purchased items are retained.
+Added livestock, aquatic stock, milk, truffles and meat no longer show the late mod-information section. Native status, diet, age, health, hunger, water, calories and narrative descriptions remain. Egg names are now Lobster Eggs / Sea Cucumber Eggs; native fertility status is unchanged.
+The management page is deferred for redesign. Original Report and Farm Report remain, with saved device settings retained and defaults for new devices. Production intervals, cattle/pig ages and global feeding exclusions remain in mod settings.
+Fixes the contradictory old-age countdown for already elderly added aquatic species, changing text only. Lobster mortality checks still start at age 45.
+
+The visitor introduces himself as a farmer who cannot explain how he reached the station. Five ability announcements cover farming, plant genetics, husbandry, Aquaculture I and II. Income congratulations use 1000/2000/5000 in cumulative saved counter, vending and fountain revenue, independent of current cash.
+Twenty contextual casual lines cover seeds (8), livestock (6) and aquaculture (6), filtered by visit and unlocked abilities. Consecutive spoken casual lines do not repeat. The selected line is saved for each visit, preventing reload rerolls. Announcements are acknowledged after speaking. Crossing several income thresholds uses the highest one. Existing saves do not replay every historical ability lesson; new unlocks and the highest unannounced revenue milestone remain eligible. The ancient-seed gift retains priority.
+
+User-approved first-playtest balance:
+Lobsters mature at 14, become elderly at 30 and retain mortality checks from 45. Growth weights are 100/400/850/1300 grams, growth costs 2.4 kcal per gram and conversion is 90%. Six-cell 900-kcal meat remains 180.
+The native fully-fed reference curve gives about 3646 kcal of feed and 3281 kcal of meat by age 30, worth about 656 before market modifiers. Actual feeding and growth can differ. The reported old 1556-kcal lobster is worth about 311 before the screenshot's combined +83% food events, consistent with about 568 gross sale value. This excludes purchase, feed, water, power and space costs.
+
+Sea cucumbers become individuals at age 2, adults at 8 and elders at 60, retaining the existing long lifespan, intact harvest, 1/2/4-cell footprints and organic-only cleanup.
+Whole-harvest calories = 60 + floor[900 * ln(1 + well-fed nights / 20)].
+Well-fed nights       10       20       30       60
+Whole kcal           424      683      884     1307
+Base value            84      136      176      261
+Egg/larval days do not count as well-fed nights. Later gains taper. The existing organic-waste cleanup curve is unchanged, with no metal or other pollutant removal. Feeding costs increase too: 2 kcal per gram of growth, 650 hunger capacity and about 1283 cumulative reference feed kcal by age 30. Existing food, power and water are still required.
+
+Existing live stock keeps age, actual feeding, health, well-fed nights and other state. New parameters govern subsequent growth; old lobsters are not artificially filled to the reference yield. Live sea cucumbers use their retained well-fed nights with the new curve. Existing meat, whole-cucumber food and dead-cucumber calorie snapshots remain unchanged, including partially consumed carcasses.
+Keeps size names, six-cell-only meat luxury and approved six-cell beef/pork/lobster values 130/150/180, with truffles at 45/90.
+
+Passed 31,254 logic checks, 182 native wine checks, 57 calendar checks, 118 husbandry/metadata checks, 35 dialogue/persisted-visit checks, 46 Harmony bindings, 216 bilingual keys and 71 unchanged textures. Elder-tooltip tests use the native slice structure with an engine-free AddLine fixture.
+Live dialogue bubbles, revised display, a 30-day husbandry playthrough and real save round trips still need testing. These checks are not an in-engine acceptance pass.
+Per user authorization, verified changes are synchronized directly to the local game mod folder with a recoverable backup. Restart a running game to load changed files. No Steam Workshop upload is performed.

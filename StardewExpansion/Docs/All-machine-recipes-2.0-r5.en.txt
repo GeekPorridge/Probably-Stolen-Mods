@@ -1,0 +1,78 @@
+Stardew Expansion 2.0 r5 — Current machine effects and complete recipes
+
+Durations below assume default 8 work/night. Values are base values before ingredient/module quality, market demand and negotiation. The manifest version remains 2.0. This reference supersedes r4's current-rule descriptions; earlier changelogs remain historical.
+
+Purchase and resale
+The Friday Townsman Artisan sells all four machines and the Artisan Handbook. Wednesday retains seeds and Planting/Husbandry books; Saturday retains husbandry stock and bait.
+Retail / empty-chassis resale ceiling: Cheese Press 450/72; Oil Press 600/96; Barrel 450/72; Grill 500/80.
+Negative demand can lower the offer. Positive chassis modifiers cannot exceed the ceiling. Player-supplied batteries, modules, wine and other contents retain independent value.
+
+Barrel
+Purpose: automatically improve whole finished native wine and added fruit wines through native maximum and then Silver, Gold and Iridium. No power, water, modules or bottle consumption. The wine variety remains unchanged. A single 10x4 storage bay holds up to ten whole individual bottles, each with its own saved progress. No recipe selector or progress panel.
+Reject beer, pale ale, chili spirit, counterfeit wine, partly used bottles, empty bottles and fermenting wine. A stacked item cannot bypass the ten-bottle limit. Tier-0 finished wine is eligible if it meets the same whole/non-counterfeit conditions.
+Starting at native tier 0–3: reach Reserve (tier 4) after 6 nights and native maximum (tier 5) after 14 nights.
+Starting at Reserve: reach native maximum after 8 nights.
+Starting at native maximum: begin star aging immediately.
+After native maximum: 7 nights -> Silver +25%; another 10 nights -> Gold +35%; another 15 nights -> Iridium +50%.
+Total nights from barrel entry, for a newly started bottle:
+- Native tier 0–3: native maximum 14; Silver 21; Gold 31; Iridium 46.
+- Reserve: native maximum 8; Silver 15; Gold 25; Iridium 40.
+- Already native maximum: Silver 7; Gold 17; Iridium 32.
+Star value is a final multiplier after native quality: x1.25, x1.35 or x1.50. A new star replaces the old barrel modifier; the stars do not stack with each other or with r4's +10% Barrel Character. Existing bottle progress is retained, and the old modifier is replaced upon reaching a star. Native aging data remain intact. Removal pauses progress; re-entry and changing barrels cannot duplicate a night's progress or compound rewards.
+
+Cheese Press
+Battery and universal modules; 8x4 input and 8x4 output. Process 1–4 matching eligible whole ingredients per batch; a full batch is not required.
+1 egg, at least 150 kcal -> 1 mayonnaise, 180 kcal, base value 30; 1 night.
+1 milk, at least 350 kcal -> 1 cheese, 350 kcal, 2x2 cells, value 70; 2 nights.
+1 goat milk, at least 400 kcal -> 1 goat cheese, 400 kcal, 2x2 cells, value 100; 2 nights.
+Each consumes one whole ingredient item. Partial food below the threshold is ineligible. Auto order: egg, milk, goat milk.
+
+Oil Press
+Battery and universal modules; 10x4 input and 8x4 output. Older 8x4 inputs expand on load while preserving contents.
+1 whole black truffle, at least 300 kcal OR 2 whole small truffles, each at least 125 kcal -> 1 truffle oil; 2 nights. Up to two oil bottles/batch; large and paired small truffles can be combined. Oil is 200 kcal, 2x2 cells, base value 150.
+1 whole chili spirit + 4 poppies + 4 empty wine bottles -> 4 poppy perfumes + 1 returned empty wine bottle; 2 nights.
+1 whole chili spirit + 4 fairy roses + 4 empty wine bottles -> 4 fairy rose perfumes + 1 returned empty wine bottle; 4 nights.
+Use wine bottles with no water or other contents; generic chemical flasks do not qualify. Flowers cannot be mixed. The consumed spirit bottle is returned empty, including spirit made with the finished-drink cheat ID.
+Perfumes occupy 2x2 cells and have three native charges. Poppy: value 100, 20% two-way influence. Fairy Rose: value 160, 30%. Both are contraband level 2. Effects apply to the current customer visit and take the strongest native/mod scent; no charge is used without a customer or under an equal/stronger effect. Flower quality changes sale value, not influence strength.
+Auto order: complete Poppy perfume, complete Fairy Rose perfume, truffle oil.
+
+Grill — general food
+Battery and universal modules; 8x4 input and 8x4 output. Every current Grill recipe takes one base night.
+General meat recipes accept raw beef, pork, chicken, goat and recognized finfish meat. Lobster and sea cucumber have dedicated recipes below and cannot become generic grilled fish. Rat meat, legendary collectibles and already cooked food are ineligible.
+Plain: 1–1800 kcal of one raw meat kind -> the same total calories in 1–2 cooked portions. Unused raw calories and proportional base value remain in the original item.
+Per 900 raw kcal, base cooked values are chicken 120, goat 185, beef 165 and pork 190. Fish uses consumed raw fish value x1.25.
+Chili: 1800 kcal of one raw meat kind + 2 chili peppers, each at least 120 kcal -> 2 spicy portions; +30 base value per portion.
+Truffle: 1800 kcal of one raw meat kind + 1 truffle oil, at least 200 kcal -> 2 truffle portions; +85 per portion.
+Mayonnaise fish: 1800 kcal of fish meat + 1 mayonnaise, at least 180 kcal -> 2 portions; +25 per portion.
+Seasoning calories enter the finished food and are divided between the two portions. Seasoned recipes require 1800 kcal of a single meat kind, without combining different animal types.
+
+Grill — new seafood
+1 raw lobster-meat portion -> 1 Baked Lobster; Food and Luxury.
+1 harvested sea-cucumber portion, or 1 whole sea cucumber -> 1 Scallion Sea Cucumber; Food only.
+1 whole Tuna + 1 whole Lava Eel + 1 whole Midnight Carp + 1 whole Largemouth Bass -> 1 Sashimi Platter; Food and Luxury.
+All three take one base night and occupy 3x2 cells. Lobster and sea-cucumber batches handle up to four eligible source portions of their respective recipe. One source item makes one dish, preserving its remaining calories; tiny/partial cuts do not gain full-portion nutrition.
+Whole sea-cucumber nutrition equals its current harvestable meat calories. Sashimi uses the sum of the four fish's currently harvestable meat calories. Each of the four named whole fish is required; eggs, fry and generic fish-meat cuts cannot substitute. One batch produces one platter.
+Base value is the source value x1.25, rounded to the native integer value. Whole sea cucumber uses the greater of its source value and harvestable kcal / 5 before that multiplier. Sashimi uses the four source fish values combined x1.25, with a minimum source value of 1 each. Ingredient/module quality still applies. Pellet-tainted whole fish retain the resulting trash-grade penalty.
+Finished dishes cannot be fed back through the Grill. Partly eaten dishes retain proportional value and remaining calories on save/load.
+
+Grill — bait
+1 whole wheat, at least 300 kcal + 50 ml clean water -> 6 ordinary bait.
+6 ordinary bait + 1 whole mayonnaise, at least 180 kcal -> 6 premium bait.
+Both take one base night. Up to four groups/batch, or 24 bait; each stack holds at most 20.
+Clean water means at least 97% water; heavy metals, chemical contaminants, microbes, organic waste, acid and base must each be at most 0.1%. Only the required water is removed, leaving its vessel and any remaining water.
+Full automatic priority: complete Sashimi Platter -> Baked Lobster -> Scallion Sea Cucumber -> premium bait -> ordinary bait -> chili meat -> truffle meat -> mayonnaise fish -> plain meat. An active batch retains its chosen recipe; unused ingredients remain for later batches.
+
+Shared powered-machine rules
+Default processing is 8 work/night with base energy use 8 per working night. Universal modules change performance, efficiency or quality; speed affects duration without changing ingredient quantities. Ingredient quality and quality modules affect product value.
+Batteries and modules have dedicated bays and are rejected by raw input. Only owned machines and ingredients are used. Input is locked during an active batch. No power pauses work. If the whole output batch cannot fit, ingredients remain intact while waiting, without repeatedly charging the blocked final step. Resources are consumed only after the full batch can be placed. Recipe selectors, progress bars and extra control bays are absent.
+
+Bait and reservoir use
+Saturday Townsman stock is five ordinary bait; Aquaculture II adds three premium bait. The reservoir has no purchases or free bait. The first entry each night records actual backpack bait as the allowance, without a fixed eight-catch cap; side pockets and ground items do not count, and re-entry does not reset it.
+Hold left mouse or Space to raise tension; release to lower it. The green zone advances the catch. Only successful placement on the ground spends one selected actual backpack bait and one allowance. Failure/cancellation spends neither. A full ground inventory keeps the catch pending and blocks new casts until collection. Legendary cooldown begins when its catch is successfully placed; bonus eggs cost no additional bait.
+Opening Esc or settings pauses tension, catch progress and the timeout; closing the menu resumes without counting the paused time. Removing the selected bait from the backpack cancels an active reel without payment. A pending catch remains saved, but its original bait type must be returned to the backpack before collection.
+
+Registered IDs
+Machines: pelican_barrel, pelican_cheese_press, pelican_oil_press, pelican_grill.
+New dishes: pelican_baked_lobster, pelican_scallion_sea_cucumber, pelican_sashimi_platter.
+Bait: pelican_bait, pelican_premium_bait. Spirit: pelican_chili_spirit.
+The seven finished-drink cheat IDs from r3 remain available; see 成品酒调试ID.zh-en.txt. Native ability unlocks still apply.

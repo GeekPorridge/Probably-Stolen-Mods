@@ -1,0 +1,25 @@
+{
+  "status": "user_selected_working_seed_crop_prices_and_size_multipliers_not_playtested",
+  "scope": "Normal-sized crops, initial traits, no market events, reputation or negotiated price changes; does not include cultivation, equipment, or waiting-for-customers costs",
+  "crop_prices": [
+    {"id":"parsnip","name_zh":"防风草","seed_base_price":12,"normal_crop_base_price":8,"innate_taste_percent":0},
+    {"id":"potato","name_zh":"土豆","seed_base_price":24,"normal_crop_base_price":9,"innate_taste_percent":0},
+    {"id":"corn","name_zh":"玉米","seed_base_price":36,"normal_crop_base_price":8,"innate_taste_percent":0},
+    {"id":"wheat","name_zh":"小麦","seed_base_price":18,"normal_crop_base_price":8,"innate_taste_percent":0},
+    {"id":"hops","name_zh":"啤酒花","seed_base_price":60,"normal_crop_base_price":10,"innate_taste_percent":0},
+    {"id":"strawberry","name_zh":"草莓","seed_base_price":80,"normal_crop_base_price":20,"innate_taste_percent":15},
+    {"id":"starfruit","name_zh":"杨桃","seed_base_price":100,"normal_crop_base_price":72,"innate_taste_percent":25},
+    {"id":"ancient_fruit","name_zh":"上古水果","seed_base_price":null,"normal_crop_base_price":36,"innate_taste_percent":0}
+  ],
+  "advanced_seed_stock": "Unlock advanced seed entries without replacing the four basic crops",
+  "income_interpretation": "Use sale proceeds minus seed spending as a comparison only; it is not net profit, instant cash, or guaranteed daily sales",
+  "brewing_prices": "User approved the working fermentation cycles and prices in brewing-proposal.json; whole-chain economics and customer affordability remain to be playtested",
+  "harvest_size_and_quality": "User selected small/normal/large for six vegetables and fruits, occupying 1/2/4 cells. The former giant label is replaced by large, with no extra fourth tier. User approved size price multipliers 0.5/1/2.5 relative to normal-sized prices. Wheat and hops use quality rather than size grades.",
+  "size_price_multipliers": {"small":0.5,"normal":1,"large":2.5},
+  "crop_sales_channel": "Crops are displayed to attract food buyers. There is no player eating mechanic; native food-related traits describe merchandise properties rather than player consumption.",
+  "showcase_findings": [
+    "ShowcaseHelper.CreateClientByStockType chooses original buyer profiles by stock category, displayed value, station day and store attractiveness",
+    "Native wine uses SUBSTANCE and ALCOHOL; sufficiently high native wine quality also grants LUXURY_ITEM",
+    "Do not assume adding a new ingredient tag alone creates a valid original-customer sales channel; verify classifications for all crops including hops"
+  ]
+}

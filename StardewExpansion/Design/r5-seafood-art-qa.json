@@ -1,0 +1,77 @@
+[
+  {
+    "key": "baked_lobster",
+    "width": 384,
+    "height": 256,
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "fully_transparent_pixels": 35754,
+    "subject_pixels": 60687,
+    "visible_edge_pixels": 0,
+    "bytes": 132256,
+    "sha256": "2C1533A103C257A605A93606C61AD3D9C0FAE32517C02D8D3E4B5E73B7431322",
+    "visual_qa": "Complete plate and subject visible; no text or background; no aspect distortion.",
+    "lossless_optimization": {
+      "file": "baked_lobster.png",
+      "width": 384,
+      "height": 256,
+      "before_bytes": 168713,
+      "after_bytes": 132256,
+      "saved_bytes": 36457,
+      "rgba_sha256": "87ef21bdc958bdf8f37f9039b4fc1d288eb12d07ce48e6d617e1b63ae5da86bf",
+      "sha256": "2c1533a103c257a605a93606c61ad3d9c0fae32517c02d8d3e4b5e73b7431322",
+      "pixels_identical": true,
+      "ancillary_chunks_identical": true
+    }
+  },
+  {
+    "key": "scallion_sea_cucumber",
+    "width": 384,
+    "height": 256,
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "fully_transparent_pixels": 30376,
+    "subject_pixels": 66872,
+    "visible_edge_pixels": 0,
+    "bytes": 138732,
+    "sha256": "9767423058D61A74FE89554660CA1EA601574B0433C49224CBA3E0047191441A",
+    "visual_qa": "Complete plate and subject visible; no text or background; no aspect distortion.",
+    "lossless_optimization": {
+      "file": "scallion_sea_cucumber.png",
+      "width": 384,
+      "height": 256,
+      "before_bytes": 183381,
+      "after_bytes": 138732,
+      "saved_bytes": 44649,
+      "rgba_sha256": "64727d396e4e3014d60df7e24a4c729b37dce92692e807fc2c5776953bf80752",
+      "sha256": "9767423058d61a74fe89554660ca1ea601574b0433c49224cba3e0047191441a",
+      "pixels_identical": true,
+      "ancillary_chunks_identical": true
+    }
+  },
+  {
+    "key": "sashimi_platter",
+    "width": 384,
+    "height": 256,
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "fully_transparent_pixels": 34837,
+    "subject_pixels": 62348,
+    "visible_edge_pixels": 0,
+    "bytes": 135465,
+    "sha256": "47FB7B61CD6B891DB614FEA7C978E8C8ECF222BE1556CC6E2A149932488C6237",
+    "visual_qa": "Complete plate and subject visible; no text or background; no aspect distortion.",
+    "lossless_optimization": {
+      "file": "sashimi_platter.png",
+      "width": 384,
+      "height": 256,
+      "before_bytes": 183281,
+      "after_bytes": 135465,
+      "saved_bytes": 47816,
+      "rgba_sha256": "5700cca0394c67afa3a71451120d3ee4bce0e932ee6d52b9020c1d6dd7b2dd61",
+      "sha256": "47fb7b61cd6b891db614fea7c978e8c8ecf222be1556cc6e2a149932488c6237",
+      "pixels_identical": true,
+      "ancillary_chunks_identical": true
+    }
+  }
+]

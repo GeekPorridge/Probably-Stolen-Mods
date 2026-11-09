@@ -1,0 +1,45 @@
+{
+  "source": "Existing v1.2 game sprites; Canvas layout and typography. No gameplay or original art modified.",
+  "images": [
+    {
+      "file": "01-overview.png",
+      "title": "星露谷扩展 / Stardew Expansion",
+      "width": 1600,
+      "height": 900,
+      "bytes": 252849,
+      "sha256": "cc95384345b0200c5be2eab5fb526c98de156e853a25a41b915fe07aef82b01c"
+    },
+    {
+      "file": "02-crops.png",
+      "title": "八种作物 / Eight Crops",
+      "width": 1600,
+      "height": 1120,
+      "bytes": 350898,
+      "sha256": "7196d972bf3ccb327326835974987eb9d312e3b14accd2dd074ab5c252b0dd9c"
+    },
+    {
+      "file": "03-brewing.png",
+      "title": "五种酒 / Five Brews",
+      "width": 1600,
+      "height": 900,
+      "bytes": 264465,
+      "sha256": "fbe69fcfca6fd5fa20e0f7d999734ac16a79996a16b4fafa6e5b86c7d4c520f7"
+    },
+    {
+      "file": "04-husbandry.png",
+      "title": "牛奶、松露与海鲜 / Ranching & Seafood",
+      "width": 1600,
+      "height": 1120,
+      "bytes": 359606,
+      "sha256": "0537aec0ac698a3b71b968fb8d45a8a265c76ecd952dbac1116adc453ac33ee9"
+    },
+    {
+      "file": "05-townsman.png",
+      "title": "周三种地，周六养殖 / Weekly Townsman Visits",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 334950,
+      "sha256": "62ae2b89e57ed2e05124b189ba9c92a8dc34ad1de9fb01bb8a798ec6c162d259"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+Stardew Expansion 2.0 r3 — Revision and acceptance notes
+
+Version remains 2.0, including the accepted 1.2.1 fixes. This revision addresses the latest seven requests. Night fishing gameplay is unchanged; no Workshop or Nexus publication.
+
+- Move all three handbooks to the live vanilla book window and its existing buttons. The optional generic PaperUI sprite catalog is absent from this game build and caused blue placeholders. Body text uses the night-report baseline of 24, with pagination measured by the actual TMP font and native body rectangle. Preserve native page turning, saved page, bilingual text and genetics chapter gates. Restore the original typography for unrelated books after closing.
+- Register seven independent finished-drink cheat IDs. Earlier products shared the native wine_bottle factory and recipe tags, leaving no separate finished-product catalog entries. The new factories retain native quality, drinking, pouring and emptying behavior. Empty debug bottles return to wine_bottle and cannot refill themselves on reload. Production-quality debug items do not change normal brewing or ability requirements.
+- All four legendary fish occupy 4x3 = 12 cells. Restore the original 2.0 artwork from before the Wiki redraw, and provide four distinct descriptions. Existing fish retain their value; expansion waits safely for space when necessary.
+- Give Poppy and Fairy Rose perfumes separate floral descriptions. Remove repeated charge counts and bargaining mechanics from their prose. Native charge status, the three-use mechanism and effects remain.
+- Classify Chili Spirit as ALCOHOL, remove fruit-wine/substance and luxury classification, and retain its native alcohol amount. Use a new clear broad-shouldered spirit bottle at 2x3 = 6 cells, matching beer and pale ale. This does not make spirit eligible for the beer chilling bonus. Existing bottles expand safely without losing aged value.
+- Fishing.cs and ReservoirStage.cs are unchanged from r2, including attempts, bites, timing, bait, rewards and king cooldowns.
+- Use native genetic traits and native readouts/editing for the four crops:
+  Chili: Perennial I, Hardy I, Drought Resistant I.
+  Blueberry: Perennial I, Bountiful I, Delicious I, Frail I.
+  Poppy: Hardy I, Fast Grower I, Simple Genome I.
+  Fairy Rose: Delicious I, Slow Grower I, Frail I, Complex Genome I.
+  Preserve the baseline initial/regrowth timing and yield at 8 work/night: Chili 4/2 nights and 4 produce; Blueberry 7/3 and 6; Poppy 4 nights and 4; Fairy Rose 8 nights and 4. Drought resistance reduces Chili water use from 120 to 90. Native abilities, genes and equipment still affect actual outcomes.
+  Upgrade only old seeds with the exact unedited r2 factory trait and no genetic heat, once. Edited/extracted genes and genetic heat remain intact; active growing progress is not reset.
+
+Finished-drink cheat IDs
+pelican_beer
+pelican_pale_ale
+pelican_strawberry_wine
+pelican_starfruit_wine
+pelican_ancient_wine
+pelican_chili_spirit
+pelican_blueberry_wine
+
+Validation: 692 v2, 436 crop and 15844 general checks plus the existing husbandry, visitor and night-report regressions pass. All 79 Harmony bindings validate; the native scanner accepts 916 methods. Both locales have 439 keys. Runtime has 156 item/growth sprites and 162 files in total.
+Real native save decoding covers king expansion, finished debug drinks, emptying and a second reload. No player save was opened or modified. Pagination logic and native navigation boundaries are verified; actual Unity rendering and mouse interaction require acceptance after restart. Offline artwork previews are not game screenshots.
+Back up and synchronize the two existing local copies, verify hashes, retain settings/saves and leave running game processes alone. Restart after installation to load the new assembly and art together.
+Acceptance: check all three books, generate seven finished drinks by ID, inspect spirit category/size/emptying, then verify twelve-cell kings with restored artwork/descriptions and the four crop trait sets.

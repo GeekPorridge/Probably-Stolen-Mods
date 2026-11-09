@@ -1,0 +1,99 @@
+name,Station Scavenging
+region_0,Lower Levels
+region_1,Upper Levels
+region_2,Security
+region_3,Revolutionaries
+region_4,Black Market
+attempts,Night searches remaining: {0}/{1}
+shelter_bonus, (shelter +5)
+precious_chance,Valuable find chance: {0}%
+detection,Detection chance: {0}%
+block_ended,This outing is over. Return when ready.
+block_exhausted,No searches left tonight. Pack your finds and return when ready.
+block_caught,You were caught tonight. Scavenging is closed in all five regions.
+block_wounded,A fresh injury prevents further lower-area scavenging. Pack and return when ready.
+block_locked,This destination is not unlocked.
+block_no_cash,You cannot cover the current penalty. Return to the store.
+action_error,This scavenging attempt failed. Check the mod log.
+caught,Caught! Lost {0} credits and {1} faction reputation. Evacuating immediately.
+found,Found: {0}. Pack it before leaving.
+found_extra,Found: {0}. Your scanner also found ordinary supplies.
+leave_warning,Returning leaves all ground items behind. Return now?
+config_fine_base,Base credit penalty when caught
+config_fine_cap,Maximum credit penalty per incident
+config_fine_rate,Penalty fraction of the value found
+config_rep_cap,Reputation loss cap at normal gain speed
+config_rest,Shared valuable rest nights (all five regions including Service crates)
+config_crate_end,Crate chance on the final nightly search (%)
+config_card_end,Black Market card-night chance on the final nightly search (%)
+status_exhausted,No scavenging attempts left
+status_caught,Caught earlier tonight
+status_locked,Access not granted
+status_visited,Already explored tonight
+lower_exhausted_hint,"No scavenging attempts left. Waste disposal and native story visits remain available."
+unlock_requirements,"From day {0}; requires {1} reputation. Current reputation: {2}."
+unlock_exchange,Also requires the underground exchange to be unlocked.
+reputation_existing_access,Your reputation is below the original threshold but your existing access remains valid.
+rest_notice,"Core valuables in all five regions (including Service crates) are resting for {0} more night(s). Regular supplies are still available."
+region_flavor_1,"The carpets belong to the elite. The service entrance belongs to the cleaners. Choose your door wisely."
+region_flavor_2,"Even the lost property has a file here. Watch the cameras before you take anything off the record."
+region_flavor_3,"The comrades are short of everything, especially people who can fix things."
+region_flavor_4,"Nobody asks where the goods came from. Somebody always asks who came for them."
+supply_0,Supply outlook: routine clearance.
+supply_1,"Supply outlook: household goods, food, medical supplies and substances have x1.5 weight."
+supply_2,"Supply outlook: tools, materials, ammunition and modules have x1.5 weight."
+supply_3,Extra patrols: detection chance +2 percentage points.
+effect_precious,Core valuable chance x{0}.
+effect_risk_up,Detection chance +{0} percentage points.
+effect_risk_down,Detection chance -{0} percentage points.
+effect_weight,Regular {0} loot weight x{1}.
+category_medical,medical supplies
+category_food,food
+category_ammo,ammunition
+category_household,household goods
+category_tool,tools
+category_substance,alcohol and substances
+category_material,materials and electronics
+event_arrival,"Tonight's tip: {0}. The panel already includes this event's effects."
+taunt_1_day_0,The carpets upstairs are not ready to meet your boots.
+taunt_1_day_1,"The guest list is not printed yet. No promises about your name being on it."
+taunt_1_rep_0,"Even the leftovers have standards. First, get someone upstairs to remember your name."
+taunt_1_rep_1,The councillors do not know you. The cleaners will not vouch for you either.
+taunt_2_day_0,Halt. Your turn for a temporary visitor's pass has not come.
+taunt_2_day_1,Join the queue. Making it move is outside our jurisdiction.
+taunt_2_rep_0,No record of service. We can always open a trespassing file instead.
+taunt_2_rep_1,Your credentials lack weight. Try not to become evidence before entering the evidence store.
+taunt_3_day_0,Not yet comrade. Learn to wait for the signal.
+taunt_3_day_1,Even the revolution has a rota. Your name is not on tonight's.
+taunt_3_rep_0,Loud slogans do not earn supplies. Help first.
+taunt_3_rep_1,You say we are all comrades. The quartermaster has not agreed yet.
+taunt_4_day_0,This alley knows familiar faces. Yours is not one of them yet.
+taunt_4_day_1,The back door is still shut. It does not know you either.
+taunt_4_rep_0,Not enough street credit. Do not even ask the price of the empty crates.
+taunt_4_rep_1,Build a reputation first. We sell information not introductions.
+taunt_4_exchange_0,Never found the exchange and already asking for our back door?
+taunt_4_exchange_1,Find the underground exchange first. Regulars know which alley holds the stock.
+event_upper_gala_title,Champagne Upstairs
+event_upper_gala_desc,"The elite are celebrating and the guards are fetching coats. Unclaimed supplies crowd the service entrance; even the medical crates got an invitation."
+event_upper_audit_title,The White-Glove Audit
+event_upper_audit_desc,"Councillors may lose jewellery. Cleaners may not lose a checklist. Every crate is being counted tonight, along with every unfamiliar pair of hands."
+event_upper_baths_title,Bathhouse Turnover
+event_upper_baths_desc,"The private baths are changing water and supplies. Fresh towels need signatures; the medical deliveries by the back door are still waiting for theirs."
+event_security_shift_title,The Shift-Change Sprint
+event_security_shift_desc,"The outgoing shift is leaving and the incoming shift is looking for keys. Three handover sheets later, nobody has claimed the supplies in the corner."
+event_security_stocktake_title,More Rifles Than Staff
+event_security_stocktake_desc,"Security is counting its stock. Ammunition and sealed cases fill the corridors. Patrols have been asked to count unfamiliar faces while they are at it."
+event_security_cameras_title,Snow on Every Screen
+event_security_cameras_desc,"The cameras have all developed an interest in static. Technicians hunt for the fault while the duty room's household supplies go unwatched."
+event_revolution_relay_title,Pass the Crate Comrade
+event_revolution_relay_desc,"Supplies are being relayed through the maintenance tunnels. The crates arrived before their escorts. A few interested eyes followed them in."
+event_revolution_rehearsal_title,Mandatory Slogan Practice
+event_revolution_rehearsal_desc,"Everyone has been called away to practise a particularly loud slogan. The workshop is quiet at last. Its tools are no longer being borrowed by three people at once."
+event_revolution_password_title,Yesterday's Password
+event_revolution_password_desc,"The password changed. Nobody told the quartermaster. He is checking everyone and putting better locks on the better crates."
+event_black_auction_title,After the Last Bid
+event_black_auction_desc,"The auction is over and unsold stock is moving into the back alley. The goods look promising. The disappointed bidders have not gone far either."
+event_black_blackout_title,Lights Out Business On
+event_black_blackout_desc,"Another circuit has tripped. Traders search for spare lamps while electronics and sealed stock share one conveniently dark passage."
+event_black_informant_title,A Tip Sold Twice
+event_black_informant_desc,"The informant promised good stock tonight. That part was true. So was the identical tip he sold to the patrol."

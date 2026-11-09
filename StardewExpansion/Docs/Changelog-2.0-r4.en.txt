@@ -1,0 +1,21 @@
+Stardew Expansion 2.0 r4 — Revision and acceptance notes
+
+Version remains 2.0, including the accepted 1.2.1 and earlier revision fixes. No Workshop or Nexus publication.
+
+The three handbooks now use independent illustrated windows, borrowing only paper, button and font assets from the actual vanilla Hydroponic Agriculture Guide. Every page has an illustration. Body text uses 24 points, measured TMP pagination and native locale-aware font roles. Dragging changes position only, without native docking/zoom behavior. Fresh button events and a separate page tag isolate navigation. All five r3 shared-book patches are removed. Compiled call inspection confirms no shared native navigation is called. Actual Unity rendering and mouse acceptance still require restart; isolated checks are not live game screenshots.
+
+Ancient, Strawberry, Starfruit and Blueberry wines now use matching blueberry-style 1x4 bottles at matching display heights. Liquid base colors: Ancient #0F7281, Strawberry #DB171F, Starfruit #E4C51F, Blueberry #4C5DB6, with pixel highlights and shadows. Blueberry prose now describes indigo-blue liquid. Hide appended mod information for all wines/alcohol, preserving ordinary native quality, alcohol, aging and status. The seven finished-drink cheat IDs remain.
+
+The barrel has a single storage bay, no recipe selector, progress bar or extra control column. Expand to 10x4 cells with a ten-whole-bottle limit. Old barrels preserve bottles and individual aging progress. Automatic overnight aging and no-power behavior are unchanged.
+
+The new Friday Townsman Artisan, with a separate portrait and four bilingual lines, sells the four machines and Artisan Handbook. Wednesday farming and Saturday husbandry remain; planting/husbandry books stay on Wednesday. Do not delete already displayed legacy stock; remove only unsent obsolete offers. Friday visits have a separate counter and do not accelerate the ancient-seed gift. Reloading does not duplicate visits or stock.
+
+Retail / empty-chassis resale ceilings: Cheese Press 450/72; Oil Press 600/96; Barrel 450/72; Grill 500/80. Owned chassis are limited to 16% of retail in native negotiated, current and refreshed values. Positive demand, events or perfume cannot lift the chassis above the ceiling; negative demand can reduce offers. Player-supplied batteries, modules, wine and other contents retain their independent value.
+
+Recipe review also found a capacity conflict: a complete perfume batch occupies 38 cells but the old Oil Press offered 32. Expand its input to 10x4=40 cells, including old machines on load. Perfume always returns a native empty wine bottle; cheat-ID spirit no longer produces another full spirit bottle as a by-product.
+Full current effects, recipes, thresholds, batch limits, durations, priorities and prices are in All-machine-recipes-2.0-r4.en.txt and the matching Chinese reference.
+
+Validation passes: 917 v2, 436 crop, 15876 general and 15637 husbandry checks, plus visitor/report regressions; 78 Harmony bindings; native scanning of 959 methods. Both locales have 445 keys. Runtime contains 157 item/growth sprites and 163 files in total.
+Coverage includes actual native negotiated resale ceilings and separate contents value, old-price save migration, the tenth/eleventh bottle boundary, old barrel expansion preserving progress, non-overlapping placement of the full perfume recipe, cheat spirit returning empty, Friday inventory/persistence and every handbook image existing.
+Fishing.cs and ReservoirStage.cs are byte-identical to r3. Night fishing is unchanged. No player save was opened or modified.
+Back up and synchronize the two existing local copies, verify runtime hashes and retain settings/saves. Do not terminate the running game. Restart to load the new assembly and art together.

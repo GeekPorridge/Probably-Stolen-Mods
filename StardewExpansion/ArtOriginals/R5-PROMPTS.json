@@ -1,0 +1,20 @@
+{
+  "record_type": "Generation prompt summaries; not verbatim transcripts",
+  "style": "Crisp shaded retro game inventory pixel art, one fully visible plated dish per image, isolated on true alpha transparency, no text or scenery.",
+  "baked_lobster": {
+    "source_file": "R5-baked_lobster.png",
+    "generated_file": "exec-10281d0d-8e00-41c7-be01-545de19e551a.png",
+    "prompt_summary": "Baked lobster: a bright red lobster on a dark oval plate, split shell filled with golden baked cheese and green herb garnish. A premium seafood dish."
+  },
+  "scallion_sea_cucumber": {
+    "source_file": "R5-scallion_sea_cucumber.png",
+    "generated_file": "exec-876c97df-1193-4892-a4c0-efec80afc40a.png",
+    "prompt_summary": "Scallion sea cucumber: glossy brown braised sea cucumbers with recognizable knobby bodies and large green scallion pieces, served in rich sauce on a dark oval plate."
+  },
+  "sashimi_platter": {
+    "source_file": "R5-sashimi_platter.png",
+    "generated_file": "exec-3ce09881-81b5-478f-ab1a-bae9fe6e3ba8.png",
+    "prompt_summary": "Sashimi platter: four distinct groups of sliced raw fish, red, pale pink, creamy white and vivid orange, arranged with green leaves on a dark oval plate. A premium mixed seafood dish."
+  },
+  "export": "Uniform nearest-neighbor fit inside a 384x256 transparent canvas, 3x2 inventory cells; original aspect ratio and alpha preserved."
+}

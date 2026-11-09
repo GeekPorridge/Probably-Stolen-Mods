@@ -1,0 +1,27 @@
+水培与酿酒扩展 v0.1.9
+
+修复：五种新增成酒不能再倒入水罐、水桶、水箱或其他液体容器。
+
+覆盖小麦啤酒、淡啤酒、草莓果酒、杨桃酒、上古果酒的已完成酒瓶，含旧存档中的成酒、不同品级及原版假酒分支。
+同时保护拖拽判定、整个倒酒动作和底层液体转移入口，避免禁止液体转移后酒瓶仍被重置为空瓶。
+被拒绝的误拖不会改变酒瓶、原料评分、陈酿天数、酒价或目标容器内容。
+空瓶装水、发酵、饮用、主动倒入排水口、原版酒的行为沿用原流程。
+此修复阻止后续误倒，不重建已经倒出并混合的酒液。
+
+安装前备份旧版和存档。重启游戏后生效。本次不接管游戏，不改写存档。
+通过13,064项逻辑检查；新增检查直接使用原版倒酒回调，覆盖五种酒、各品级、不同液体容器和陈酿数据保护。通过原生模组扫描、105组中英文文本检查及39张资源检查。
+v0.1.9尚待游戏内验证。
+
+Hydroponics & Brewing v0.1.9
+
+Fix: the five added finished brews can no longer be poured into water jugs, buckets, tanks or other liquid containers.
+
+Applies to Wheat Beer, Pale Ale, Strawberry Wine, Starfruit Wine and Ancient Fruit Wine, including saved bottles, all native quality tiers and the native counterfeit branch.
+Protects drag targeting, the entire pour callback and the underlying transfer APIs, preventing a blocked pour from still resetting the bottle to empty.
+Rejected interactions preserve the wine bottle, score, aging, price and target liquid contents.
+Empty-bottle filling, fermentation, drinking, intentional drain use and native-only wines retain their original behavior.
+The fix prevents future accidental pours; it does not reconstruct wine already poured and mixed.
+
+The previous version and saves are backed up before installation. Restart for the fix to take effect. This release does not control the game or edit saves.
+Passed 13,064 logic checks, including actual native pour callbacks across all five brews, quality tiers, liquid targets and aging preservation. Native scanning, 105 bilingual text checks and 39 sprite checks passed.
+In-game verification of v0.1.9 remains pending.

@@ -1,0 +1,80 @@
+{
+  "workshopId": "3834581016",
+  "galleryImages": 5,
+  "chinese": {
+    "language": "zh-cn",
+    "images": [
+      {
+        "complete": true,
+        "height": 900,
+        "src": "https://images.steamusercontent.com/ugc/12213250753444434113/A650C56D20B7656FF9ACD691DECF5B26C06AD86B/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1120,
+        "src": "https://images.steamusercontent.com/ugc/17464929372058454182/546735F237A474BE1DBB8442E476025A83F3ECF0/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 900,
+        "src": "https://images.steamusercontent.com/ugc/12152859435760493937/700630E1CF95957E981E190065E2D95683EF3881/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1000,
+        "src": "https://images.steamusercontent.com/ugc/14868121408892351152/04BA72D6C6A929172D3D355CB256BF1CA100B028/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1120,
+        "src": "https://images.steamusercontent.com/ugc/13924559869286394279/CA8466535EC1324F39247D76CEEE22E10907CC50/",
+        "width": 1600
+      }
+    ],
+    "hasCurrentCorn": true,
+    "hasStop": true,
+    "hasFullEnding": true
+  },
+  "english": {
+    "language": "en",
+    "images": [
+      {
+        "complete": true,
+        "height": 900,
+        "src": "https://images.steamusercontent.com/ugc/12213250753444434113/A650C56D20B7656FF9ACD691DECF5B26C06AD86B/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1120,
+        "src": "https://images.steamusercontent.com/ugc/17464929372058454182/546735F237A474BE1DBB8442E476025A83F3ECF0/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 900,
+        "src": "https://images.steamusercontent.com/ugc/12152859435760493937/700630E1CF95957E981E190065E2D95683EF3881/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1000,
+        "src": "https://images.steamusercontent.com/ugc/14868121408892351152/04BA72D6C6A929172D3D355CB256BF1CA100B028/",
+        "width": 1600
+      },
+      {
+        "complete": true,
+        "height": 1120,
+        "src": "https://images.steamusercontent.com/ugc/13924559869286394279/CA8466535EC1324F39247D76CEEE22E10907CC50/",
+        "width": 1600
+      }
+    ],
+    "hasCurrentCorn": true,
+    "hasStop": true,
+    "hasFullEnding": true
+  }
+}

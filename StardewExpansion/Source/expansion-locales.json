@@ -1,0 +1,882 @@
+{
+  "crop_chili": {
+    "zh": "辣椒",
+    "en": "Chili Pepper"
+  },
+  "seed_chili": {
+    "zh": "辣椒种子",
+    "en": "Chili Seeds"
+  },
+  "seed_desc_chili": {
+    "zh": "纸袋角上沾着一点红色粉末。老乡叮嘱，摘完别急着揉眼睛。",
+    "en": "A trace of red dust clings to the packet. The Townsman suggests washing your hands before rubbing your eyes."
+  },
+  "produce_desc_chili": {
+    "zh": "小小一根，足以让一锅清汤热闹起来。",
+    "en": "One little pepper can wake up a whole pot of soup."
+  },
+  "crop_blueberry": {
+    "zh": "蓝莓",
+    "en": "Blueberry"
+  },
+  "seed_blueberry": {
+    "zh": "蓝莓种子",
+    "en": "Blueberry Seeds"
+  },
+  "seed_desc_blueberry": {
+    "zh": "袋子很轻，画着的果串却沉甸甸的。",
+    "en": "A light packet with a picture of heavy berry clusters."
+  },
+  "produce_desc_blueberry": {
+    "zh": "果皮上的淡白霜，像是留住了一点清晨。",
+    "en": "A pale bloom on the skin seems to hold a little morning mist."
+  },
+  "crop_poppy": {
+    "zh": "虞美人花",
+    "en": "Poppy"
+  },
+  "seed_poppy": {
+    "zh": "虞美人花种子",
+    "en": "Poppy Seeds"
+  },
+  "seed_desc_poppy": {
+    "zh": "细小的种子藏在折好的纸角里，花的颜色已经印在封面上。",
+    "en": "Tiny seeds rest in a folded corner; the packet wears the color of their flowers."
+  },
+  "produce_desc_poppy": {
+    "zh": "薄红花瓣带着淡淡香气，风停了还轻轻颤动。",
+    "en": "Thin red petals carry a faint fragrance and tremble after the breeze has gone."
+  },
+  "crop_fairy_rose": {
+    "zh": "玫瑰仙子",
+    "en": "Fairy Rose"
+  },
+  "seed_fairy_rose": {
+    "zh": "玫瑰仙子种子",
+    "en": "Fairy Rose Seeds"
+  },
+  "seed_desc_fairy_rose": {
+    "zh": "老乡在封口处打了一个郑重的结，说好花值得多等几夜。",
+    "en": "The Townsman tied the packet carefully. Fine flowers, he says, are worth a few extra nights."
+  },
+  "produce_desc_fairy_rose": {
+    "zh": "层层粉色花瓣收拢着甜香，仿佛刚从山谷里带来。",
+    "en": "Layers of pink petals hold a sweet scent, as though fresh from a distant valley."
+  },
+  "wine_chili_spirit": {
+    "zh": "白酒",
+    "en": "Chili Spirit"
+  },
+  "wine_desc_chili_spirit": {
+    "zh": "清亮的烈酒装在宽肩玻璃瓶里。入口干净，片刻后辣椒的暖意才从舌尖慢慢升起。",
+    "en": "A clear strong spirit in a broad-shouldered glass bottle. It starts clean, then chili warmth slowly rises from the tongue."
+  },
+  "wine_blueberry_wine": {
+    "zh": "蓝莓果酒",
+    "en": "Blueberry Wine"
+  },
+  "wine_desc_blueberry_wine": {
+    "zh": "靛蓝酒液映着柔和的光，酸甜果香里藏着熟蓝莓的清香。慢慢转动酒瓶，像有一小片暮色在杯中流动。",
+    "en": "Indigo-blue wine catches the light, carrying ripe blueberry notes beneath its sweet-tart aroma. Turn the bottle slowly and a little twilight seems to move inside."
+  },
+  "v2_chicken": {
+    "zh": "鸡",
+    "en": "Chicken"
+  },
+  "v2_goat": {
+    "zh": "山羊",
+    "en": "Goat"
+  },
+  "v2_egg": {
+    "zh": "鸡蛋",
+    "en": "Egg"
+  },
+  "v2_goat_milk": {
+    "zh": "羊奶",
+    "en": "Goat Milk"
+  },
+  "v2_mayonnaise": {
+    "zh": "蛋黄酱",
+    "en": "Mayonnaise"
+  },
+  "v2_cheese": {
+    "zh": "普通奶酪",
+    "en": "Cheese"
+  },
+  "v2_goat_cheese": {
+    "zh": "山羊奶酪",
+    "en": "Goat Cheese"
+  },
+  "v2_truffle_oil": {
+    "zh": "松露油",
+    "en": "Truffle Oil"
+  },
+  "v2_poppy_perfume": {
+    "zh": "虞美人香水",
+    "en": "Poppy Perfume"
+  },
+  "v2_fairy_perfume": {
+    "zh": "玫瑰仙子香水",
+    "en": "Fairy Rose Perfume"
+  },
+  "v2_bait": {
+    "zh": "普通鱼饵",
+    "en": "Fishing Bait"
+  },
+  "v2_premium_bait": {
+    "zh": "高级诱饵",
+    "en": "Premium Bait"
+  },
+  "v2_chicken_meat": {
+    "zh": "鸡肉",
+    "en": "Chicken Meat"
+  },
+  "v2_goat_meat": {
+    "zh": "羊肉",
+    "en": "Goat Meat"
+  },
+  "v2_cooked_chicken": {
+    "zh": "烤鸡肉",
+    "en": "Grilled Chicken"
+  },
+  "v2_cooked_goat": {
+    "zh": "烤羊肉",
+    "en": "Grilled Goat"
+  },
+  "v2_cooked_beef": {
+    "zh": "烤牛肉",
+    "en": "Grilled Beef"
+  },
+  "v2_cooked_pork": {
+    "zh": "烤猪肉",
+    "en": "Grilled Pork"
+  },
+  "v2_cooked_fish": {
+    "zh": "烤鱼",
+    "en": "Grilled Fish"
+  },
+  "v2_midnight_carp": {
+    "zh": "午夜鲤鱼",
+    "en": "Midnight Carp"
+  },
+  "v2_largemouth_bass": {
+    "zh": "大嘴鲈鱼",
+    "en": "Largemouth Bass"
+  },
+  "v2_tuna": {
+    "zh": "金枪鱼",
+    "en": "Tuna"
+  },
+  "v2_lava_eel": {
+    "zh": "岩浆鳗鱼",
+    "en": "Lava Eel"
+  },
+  "v2_legend": {
+    "zh": "传说之鱼",
+    "en": "Legend"
+  },
+  "v2_crimsonfish": {
+    "zh": "绯红鱼",
+    "en": "Crimsonfish"
+  },
+  "v2_glacierfish": {
+    "zh": "冰川鱼",
+    "en": "Glacierfish"
+  },
+  "v2_mutant_carp": {
+    "zh": "变种鲤鱼",
+    "en": "Mutant Carp"
+  },
+  "v2_cheese_press": {
+    "zh": "乳酪机",
+    "en": "Cheese Press"
+  },
+  "v2_oil_press": {
+    "zh": "产油机",
+    "en": "Oil Press"
+  },
+  "v2_barrel": {
+    "zh": "木桶",
+    "en": "Aging Barrel"
+  },
+  "v2_grill": {
+    "zh": "烤肉机",
+    "en": "Grill"
+  },
+  "v2_plant_manual": {
+    "zh": "种植手册",
+    "en": "Planting Handbook"
+  },
+  "v2_animal_manual": {
+    "zh": "养殖手册",
+    "en": "Husbandry Handbook"
+  },
+  "v2_artisan_manual": {
+    "zh": "工匠手册",
+    "en": "Artisan Handbook"
+  },
+  "v2_midnight_carp_roe": {
+    "zh": "午夜鲤鱼卵",
+    "en": "Midnight Carp Eggs"
+  },
+  "v2_midnight_carp_fry": {
+    "zh": "午夜鲤鱼鱼苗",
+    "en": "Midnight Carp Fry"
+  },
+  "v2_largemouth_bass_roe": {
+    "zh": "大嘴鲈鱼卵",
+    "en": "Largemouth Bass Eggs"
+  },
+  "v2_largemouth_bass_fry": {
+    "zh": "大嘴鲈鱼鱼苗",
+    "en": "Largemouth Bass Fry"
+  },
+  "v2_tuna_roe": {
+    "zh": "金枪鱼卵",
+    "en": "Tuna Eggs"
+  },
+  "v2_tuna_fry": {
+    "zh": "金枪鱼鱼苗",
+    "en": "Tuna Fry"
+  },
+  "v2_lava_eel_roe": {
+    "zh": "岩浆鳗鱼卵",
+    "en": "Lava Eel Eggs"
+  },
+  "v2_lava_eel_fry": {
+    "zh": "岩浆鳗鱼鱼苗",
+    "en": "Lava Eel Fry"
+  },
+  "v2_modules": {
+    "zh": "模组",
+    "en": "Modules"
+  },
+  "v2_input": {
+    "zh": "原料",
+    "en": "Ingredients"
+  },
+  "v2_output": {
+    "zh": "成品",
+    "en": "Products"
+  },
+  "v2_control": {
+    "zh": "配方与进度",
+    "en": "Recipe and Progress"
+  },
+  "v2_recipe_hint": {
+    "zh": "点击切换配方。放入原料与电池，过夜自动加工；加工中原料锁定。",
+    "en": "Click to change recipe. Add ingredients and a battery; processing starts overnight. Ingredients stay locked while working."
+  },
+  "v2_automatic_hint": {
+    "zh": "等待原料或电力；过夜自动加工",
+    "en": "Waiting for ingredients or power; processes overnight"
+  },
+  "v2_work_left": {
+    "zh": "剩余工作量：{0}",
+    "en": "Work remaining: {0}"
+  },
+  "v2_cut_standard": {
+    "zh": "（标准）",
+    "en": " (Standard)"
+  },
+  "v2_cut_small": {
+    "zh": "（小）",
+    "en": " (Small)"
+  },
+  "v2_cut_bite": {
+    "zh": "（一口）",
+    "en": " (Bite)"
+  },
+  "v2_dairy_desc": {
+    "zh": "农场里的一份新鲜出产，厨房和工匠台都用得上。",
+    "en": "Fresh farm produce with a place in both the kitchen and the workshop."
+  },
+  "v2_raw_meat_desc": {
+    "zh": "一份新鲜肉料，适合料理。",
+    "en": "A fresh cut ready for the kitchen."
+  },
+  "v2_cooked_desc": {
+    "zh": "火候恰好，带着诱人的烤香。",
+    "en": "Carefully grilled, with an inviting smoky aroma."
+  },
+  "v2_bait_desc": {
+    "zh": "抛竿时消耗一份，成功或失败都不会返还。高级诱饵更容易引来鱼王。",
+    "en": "One portion is used when casting, whether the catch succeeds or fails. Premium bait attracts legendary fish more often."
+  },
+  "v2_chicken_desc": {
+    "zh": "会在笼边踱步的小家禽。成年母鸡每天产蛋，公鸡能帮助留种。",
+    "en": "A small bird that likes to patrol its cage. Mature hens lay eggs; roosters help raise the next generation."
+  },
+  "v2_goat_desc": {
+    "zh": "爱嚼嫩叶，叫声不大，能为小店带来香浓的羊奶。",
+    "en": "Fond of tender leaves, this quiet animal brings rich milk to the shop."
+  },
+  "v2_fertile_egg": {
+    "zh": "受精鸡蛋",
+    "en": "Fertilized Egg"
+  },
+  "v2_fertile_egg_desc": {
+    "zh": "公母鸡自然繁殖产生的受精蛋，留在笼中等待孵化。",
+    "en": "A fertile egg from a naturally breeding chicken pair. Leave it in the cage to hatch."
+  },
+  "v2_king_desc": {
+    "zh": "罕见的水库鱼王，适合珍藏或出售。",
+    "en": "A rare reservoir legend, worthy of a collection or a generous offer."
+  },
+  "v2_cheese_press_desc": {
+    "zh": "放入蛋奶与电池，自动识别原料，过夜加工成工匠食品。",
+    "en": "Add eggs or milk and power. Ingredients are recognized automatically and processed overnight."
+  },
+  "v2_oil_press_desc": {
+    "zh": "可压制松露油，也能用白酒、花材和空瓶调制香水。",
+    "en": "Presses truffle oil and blends perfume from spirit, flowers and empty bottles."
+  },
+  "v2_grill_desc": {
+    "zh": "自动识别生肉、调料或鱼饵原料，过夜加工。龙虾等另待专用配方。",
+    "en": "Automatically processes supported raw meat, seasonings or bait ingredients overnight. Shellfish await separate recipes."
+  },
+  "v2_barrel_desc": {
+    "zh": "整瓶存放合适的酒，慢慢培养品质与桶藏风味。",
+    "en": "Stores suitable whole bottles, slowly improving their quality and barrel character."
+  },
+  "v2_barrel_hint": {
+    "zh": "最多10整瓶。啤酒、淡啤酒、白酒、假酒与已饮用的酒不入桶。",
+    "en": "Up to 10 whole bottles. No beer, pale ale, chili spirit, counterfeit wine, or partially consumed bottles."
+  },
+  "v2_barrel_storage": {
+    "zh": "整瓶酒",
+    "en": "Whole Bottles"
+  },
+  "v2_barrel_bonus": {
+    "zh": "桶藏风味",
+    "en": "Barrel Character"
+  },
+  "v2_style_spicy": {
+    "zh": "香辣烤制",
+    "en": "Chili Seasoned"
+  },
+  "v2_style_truffle": {
+    "zh": "松露烤制",
+    "en": "Truffle Seasoned"
+  },
+  "v2_style_sauce": {
+    "zh": "蛋黄酱烤制",
+    "en": "Mayonnaise Glazed"
+  },
+  "v2_artisan_quality": {
+    "zh": "原料品质",
+    "en": "Ingredient Quality"
+  },
+  "v2_scent_desc": {
+    "zh": "精心萃取的花香，收在一只小巧的玻璃瓶中。",
+    "en": "Carefully distilled floral notes in a small glass bottle."
+  },
+  "v2_scent_no_need": {
+    "zh": "当前没有可作用的顾客，或已有相同、更强的香水效果；未消耗次数。",
+    "en": "There is no customer, or an equal or stronger perfume already applies. No use was spent."
+  },
+  "v2_scent_effect": {
+    "zh": "花香影响 {0}%",
+    "en": "Floral Influence {0}%"
+  },
+  "v2_reservoir_title": {
+    "zh": "空间站循环水库",
+    "en": "Station Reservoir"
+  },
+  "v2_fishing_intro": {
+    "zh": "灯光落在循环水面上。挑好鱼饵，留心浮漂。",
+    "en": "Station lights ripple on the circulating water. Choose your bait and watch the float."
+  },
+  "v2_fishing_idle": {
+    "zh": "点击按钮选择鱼饵，然后抛竿。",
+    "en": "Choose a bait button, then cast."
+  },
+  "v2_fishing_counts": {
+    "zh": "本晚剩余抛竿 {0} · 背包普通饵 {1} / 高级饵 {2}",
+    "en": "Casts left tonight: {0} · Backpack bait {1} / premium {2}"
+  },
+  "v2_cast": {
+    "zh": "抛竿",
+    "en": "Cast"
+  },
+  "v2_claim": {
+    "zh": "领取钓获",
+    "en": "Collect Catch"
+  },
+  "v2_fishing_controls": {
+    "zh": "追随左右移动的绿色区收线；按住左键或空格向右，松开向左。鱼王更快、绿区更窄。每次抛竿消耗所选鱼饵1份。难度可在设置中调整。",
+    "en": "Follow the moving green zone. Hold left mouse or Space to move right; release to move left. Legends are faster with narrower targets. Each cast uses 1 selected bait. Difficulty is adjustable in settings."
+  },
+  "v2_pending_catch": {
+    "zh": "渔获待领取，请先腾出地面栏空间。",
+    "en": "A catch is waiting. Make room in the ground inventory, then claim it."
+  },
+  "v2_no_money": {
+    "zh": "信用点不足。",
+    "en": "Not enough credits."
+  },
+  "v2_bag_full": {
+    "zh": "背包空间不足，没有扣款。",
+    "en": "No bag space; no credits spent."
+  },
+  "v2_no_bait": {
+    "zh": "背包内没有所选鱼饵。",
+    "en": "Your backpack has none of the selected bait."
+  },
+  "v2_ordinary_signal": {
+    "zh": "鱼已咬钩！金色游标进入绿色区时，按空格或左键。",
+    "en": "Hooked! Press Space or left-click when the gold cursor enters green."
+  },
+  "v2_fish_escaped": {
+    "zh": "鱼逃走了，本竿使用的鱼饵已消耗。",
+    "en": "The fish escaped. The bait used for this cast has been spent."
+  },
+  "v2_fish_caught": {
+    "zh": "钓获：{0}",
+    "en": "Caught: {0}"
+  },
+  "v2_manual_desc": {
+    "zh": "翻开这本手册，可以查阅老乡整理的经营知识。",
+    "en": "Open this handbook for the Townsman's practical notes."
+  },
+  "v2_book_intro_plant_manual": {
+    "zh": "从种子到收获，先照顾好水和电。\n\n本书列出12种作物的基础周期、收获、供水与用途。周期按每晚8工作量估计，基因、模组和养护会改变实际表现。\n\n基因编辑解锁后，本书追加词条章节。",
+    "en": "From seed to harvest, start with water and power.\n\nThis book covers 12 crops, their basic cycles, yields, water needs and uses. Cycles assume 8 work per night; genes, modules and care change actual results.\n\nTrait chapters appear after unlocking gene editing."
+  },
+  "v2_plant_cycle_perennial": {
+    "zh": "首次约{0}晚；之后每{1}晚复收，母株保留。",
+    "en": "About {0} nights to first harvest, then every {1} nights; the parent remains."
+  },
+  "v2_plant_cycle_annual": {
+    "zh": "约{0}晚收获，之后需要重新播种。",
+    "en": "Harvests in about {0} nights, then needs replanting."
+  },
+  "v2_plant_basics": {
+    "zh": "默认种子每轮约{0}份，基础耗水{1}毫升/晚。\n产量与耗水仍受基因及设备影响。",
+    "en": "Default seed: about {0} produce per crop, base water {1} ml/night.\nGenes and equipment still affect yield and water use."
+  },
+  "v2_plant_use_food": {
+    "zh": "可食用，也可供给需要植物性食物的动物。",
+    "en": "Edible, and suitable for animals that need plant food."
+  },
+  "v2_plant_use_wine": {
+    "zh": "可食用或供应农场，也能用于酿造：{0}。",
+    "en": "Edible or usable on the farm; also brews {0}."
+  },
+  "v2_plant_use_perfume": {
+    "zh": "花材用于制香、观赏和出售，不作为食物或饲料。",
+    "en": "Flowers are for perfume, display and sale, not food or feed."
+  },
+  "v2_plant_giants": {
+    "zh": "巨型：养护≥95、有效品质≥50%；达标批次10%机会，最多1个。连续10次达标未出后，下次达标必出。",
+    "en": "Giants: care at least 95 and effective quality at least 50%. Eligible crops have a 10% chance, at most one giant. After 10 eligible misses, the next eligible crop guarantees one."
+  },
+  "v2_plant_ancient": {
+    "zh": "普通采收保留全部水果，不返种。育种采收水果减半向下取整，产出继承母株词条的种子。收获前可切换。",
+    "en": "Regular harvest keeps all fruit and returns no seeds. Breeding halves fruit, rounded down, and produces seeds inheriting the parent traits. Switch before harvest."
+  },
+  "v2_plant_genetics": {
+    "zh": "植物基因编辑",
+    "en": "Plant Gene Editing"
+  },
+  "v2_plant_genetics_body": {
+    "zh": "词条会改变生长、产量、耗水、营养、适应性与育种。\n\n互斥词条不能同时安装；复杂基因组会提高编辑负担。留意遗传热量，保留稳定母株和备用种子。\n\n后续章节逐一列出当前可用的原版词条及一级效果。",
+    "en": "Traits alter growth, yield, water, nutrition, resilience and breeding.\n\nExclusive traits cannot coexist. Complex genomes increase the burden of editing. Watch genetic heat and keep a stable parent and spare seeds.\n\nThe following chapters show the currently available native traits and rank-one effects."
+  },
+  "v2_trait_rank": {
+    "zh": "等级上限：{0}\n基础复杂度：{1}",
+    "en": "Rank limit: {0}\nBase complexity: {1}"
+  },
+  "v2_unlimited": {
+    "zh": "不限",
+    "en": "Unlimited"
+  },
+  "v2_book_intro_animal_manual": {
+    "zh": "先备好适口食物，再迎接新伙伴。\n\n本书介绍牛、猪、鸡、山羊、龙虾、海参和四种新鱼的食性、成长与繁殖。供料不足、疾病、缺水或停电都会影响生产。\n\n基因编辑解锁后显示遗传知识。",
+    "en": "Prepare suitable food before welcoming new stock.\n\nThis book covers cattle, pigs, chickens, goats, lobsters, sea cucumbers and four new fish: diets, growth and breeding. Hunger, disease, poor water and power loss affect production.\n\nGenetics notes appear after gene editing is unlocked."
+  },
+  "v2_book_animal_cow": {
+    "zh": "食性：仅植物性食物。\n\n默认6晚成年，26晚进入老年。健康成年母牛每2晚产1份牛奶，额外消耗350千卡；基础每日消耗约110千卡。\n\n繁殖沿用公母配种与孕育规则。旧的混合饲料无法辨明来源时，请补充新研磨的作物饲料。",
+    "en": "Diet: plant food only.\n\nAdult at 6 nights, elderly at 26 by default. Healthy adult females yield one milk every 2 nights, costing another 350 kcal; maintenance is about 110 kcal/night.\n\nBreeding uses male/female mating and gestation. Refill with freshly ground crops when old mixed feed has no identifiable source."
+  },
+  "v2_book_animal_pig": {
+    "zh": "食性：杂食。\n\n默认10晚成年，22晚老年。健康成年公猪每3晚找到1份小黑松露；老年猪宰杀额外获得1份黑松露。\n\n保留公母与足量食物，让种群自然延续。",
+    "en": "Diet: omnivore.\n\nAdult at 10 nights and elderly at 22 by default. Healthy adult males find a small black truffle every 3 nights; elderly pigs yield another black truffle when butchered.\n\nKeep a breeding pair and sufficient food."
+  },
+  "v2_book_animal_chicken": {
+    "zh": "食性：仅植物性食物。\n\n4晚成年，18晚老年。健康成年母鸡每晚正常产1枚食用鸡蛋，额外消耗150千卡；基础耗料60千卡/晚。\n\n同笼有健康、未绝育的成年公母鸡时自动繁殖，无需切换模式。受精蛋额外产出、另耗150千卡，基础成功率约50%；成功后至少间隔3晚。笼满不消耗这部分热量，普通蛋照常产。\n\n受精蛋在笼中经过2个有效夜晚自动孵化，保留父母遗传。成熟蛋可原位换成幼鸡，无需额外空格；确实无法放置时保留等待。",
+    "en": "Diet: plant food only.\n\nAdult at 4 nights, elderly at 18. Healthy adult hens lay one edible egg per night for an extra 150 kcal; maintenance is 60 kcal per night.\n\nHealthy, non-neutered adult hens and roosters in one cage breed automatically, with no mode switch. Fertile eggs are additional and cost another 150 kcal, with about 50% base success and at least 3 nights between successful fertile eggs. A full cage does not charge this extra cost or block ordinary laying.\n\nFertile eggs hatch after 2 effective nights, keeping inherited genes. Chicks replace mature eggs in their existing slots without needing extra space; genuinely blocked placement keeps the egg waiting."
+  },
+  "v2_book_animal_goat": {
+    "zh": "食性：仅植物性食物。\n\n8晚成年，28晚老年。健康成年母羊每3晚1份羊奶，额外消耗400千卡；基础耗料80千卡/晚。无需先产仔即可产奶。\n\n怀孕6晚产仔，默认每胎1只，产后恢复3晚再配种。",
+    "en": "Diet: plant food only.\n\nAdult at 8 nights, elderly at 28. Healthy adult females yield one goat milk every 3 nights, costing another 400 kcal; maintenance is 80 kcal/night. No prior birth is required for milk.\n\nGestation lasts 6 nights, normally one kid, followed by 3 nights of recovery."
+  },
+  "v2_book_animal_lobster": {
+    "zh": "食性：肉食。不能自然繁殖。\n\n持续供料可育肥，宰杀得到龙虾肉。成长需要正常水质、供电与足够空间。鱼卵与幼体在满缸时保留等待。",
+    "en": "Diet: carnivore. No natural reproduction.\n\nContinued feeding fattens it for lobster meat. Growth needs suitable water, power and space. Eggs and fry wait safely in a full tank."
+  },
+  "v2_book_animal_sea_cucumber": {
+    "zh": "食性：杂食。可自然繁殖。\n\n海参可整只收获，并帮助去除有机废物。每档第一次从老乡购买的卵群会形成一公一母的起始对；后代性别随机。\n\n受精、孵化与长大需要适当的水、供料、空间及供电。",
+    "en": "Diet: omnivore. Breeds naturally.\n\nHarvest sea cucumbers whole; they also help remove organic waste. The first Townsman-bought clutch per save forms a male/female founding pair. Later offspring have random sexes.\n\nFertilization, hatching and growth require suitable water, food, room and power."
+  },
+  "v2_book_fish_midnight_carp": {
+    "zh": "杂食。卵第2晚孵化，第4晚成为单体幼鱼，8晚成年；24晚老年，36晚起有高龄风险。\n\n每只合格母鱼每晚12%产卵率，每团孵4条，产卵额外消耗80千卡。\n\n初始成鱼与鱼卵来自水库，老乡不出售。",
+    "en": "Omnivore. Eggs hatch at night 2; individual juveniles appear at 4, adulthood at 8, elderly at 24, mortality risk from 36.\n\nEach eligible female has a 12% nightly egg chance, 4 fry per clutch, costing another 80 kcal.\n\nInitial fish and eggs come from the reservoir, not the Townsman."
+  },
+  "v2_book_fish_largemouth_bass": {
+    "zh": "肉食。卵第2晚孵化，第5晚出现单体幼鱼，10晚成年；28晚老年，40晚起有高龄风险。\n\n每只合格母鱼每晚10%产卵率，每团孵3条，产卵额外消耗100千卡。",
+    "en": "Carnivore. Eggs hatch at night 2; individual juveniles appear at 5, adulthood at 10, elderly at 28, mortality risk from 40.\n\nEach eligible female has a 10% nightly egg chance, 3 fry per clutch, costing another 100 kcal."
+  },
+  "v2_book_fish_tuna": {
+    "zh": "肉食。卵第3晚孵化，第6晚出现单体幼鱼，14晚成年；36晚老年，50晚起有高龄风险。\n\n每只合格母鱼每晚8%产卵率，每团孵2条，产卵额外消耗160千卡。",
+    "en": "Carnivore. Eggs hatch at night 3; individual juveniles appear at 6, adulthood at 14, elderly at 36, mortality risk from 50.\n\nEach eligible female has an 8% nightly egg chance, 2 fry per clutch, costing another 160 kcal."
+  },
+  "v2_book_fish_lava_eel": {
+    "zh": "肉食。卵第3晚孵化，第6晚出现单体幼鱼，16晚成年；40晚老年，54晚起有高龄风险。\n\n每只合格母鱼每晚6%产卵率，每团孵2条，产卵额外消耗160千卡。可加工成鳗鱼肉。",
+    "en": "Carnivore. Eggs hatch at night 3; individual juveniles appear at 6, adulthood at 16, elderly at 40, mortality risk from 54.\n\nEach eligible female has a 6% nightly egg chance, 2 fry per clutch, costing another 160 kcal. Provides eel meat."
+  },
+  "v2_fish_breeding": {
+    "zh": "鱼类繁殖与照料",
+    "en": "Fish Breeding and Care"
+  },
+  "v2_fish_breeding_body": {
+    "zh": "同种健康成年公母鱼同缸，才具备自然繁殖、受精条件。卵受精后才开始有效培养。\n\n满缸时暂停新增，已有卵与鱼苗保留等待。老年后不再自然繁殖。\n\n实际产肉随累计摄食结算，不是到某个日龄就固定获得肉量。四种鱼王不能入缸养殖。",
+    "en": "Natural breeding and fertilization need healthy adult males and females of the same species in one tank. Effective egg development begins after fertilization.\n\nA full tank pauses new stock; existing eggs and fry wait safely. Elderly new fish no longer breed.\n\nMeat follows accumulated feeding, not a guaranteed amount at a fixed age. The four legendary fish cannot be farmed."
+  },
+  "v2_animal_genetics": {
+    "zh": "养殖遗传知识",
+    "en": "Husbandry Genetics"
+  },
+  "v2_animal_genetics_body": {
+    "zh": "生长率影响增重与成长，耗料率影响日常消耗；生育力影响配种成功，窝仔数影响后代数量。\n\n免疫力关系疾病抵抗，最大健康关系存活余量，寿命影响高龄阶段。\n\n保留健康公母与稳定供料，比只追求单一高数值更可靠。鸡的受精蛋保存双亲遗传信息。",
+    "en": "Growth rate changes growth and weight gain; hunger rate changes maintenance. Fertility affects mating success, and litter size affects offspring count.\n\nImmunity helps resist disease, maximum health provides a survival reserve, and longevity affects aging.\n\nKeep healthy breeding pairs and steady food rather than chasing a single high number. Fertile chicken eggs retain inherited parental genes."
+  },
+  "v2_book_intro_artisan_manual": {
+    "zh": "原料可以直接出售，也可以多等几夜，换成更有价值的成品。\n\n本书介绍四台机器、蛋奶加工、松露油、香水、烧烤、鱼饵及夜钓。\n\n加工机器投料、接电后自动识别原料并过夜运行；满输出栏时等待，不吞原料。木桶不耗电。",
+    "en": "Sell ingredients now, or wait a little for more valuable products.\n\nThis handbook covers four machines, dairy, truffle oil, perfume, grilling, bait and night fishing.\n\nAdd ingredients and power; the machine recognizes complete recipes and processes overnight. Full output waits without consuming ingredients. The barrel needs no power."
+  },
+  "v2_book_machine_cheese_press": {
+    "zh": "每批可投入1—4份同类完整原料。\n\n鸡蛋→蛋黄酱：1晚，成品基价30。\n牛奶→普通奶酪：2晚，基价70。\n羊奶→山羊奶酪：2晚，基价100。\n\n无需凑满四份。原料品质传给成品，加工需要电池。",
+    "en": "Processes 1–4 whole ingredients of one kind per batch.\n\nEgg → Mayonnaise: 1 night, base value 30.\nMilk → Cheese: 2 nights, value 70.\nGoat milk → Goat cheese: 2 nights, value 100.\n\nA full batch is optional. Ingredient quality carries into products. Requires a battery."
+  },
+  "v2_book_machine_oil_press": {
+    "zh": "松露油：1份黑松露或2份小黑松露→1瓶，2晚，每批最多2瓶。\n\n香水：白酒×1＋对应花材×4＋空瓶×4→香水×4，返还空酒瓶×1。\n\n虞美人香水2晚，玫瑰仙子香水4晚。原料品质影响成品估值。\n\n原料区40格，可放下完整香水配方。需用空酿酒瓶，不能用装水的酒瓶或普通化学瓶。",
+    "en": "Truffle oil: one black truffle or two small black truffles per bottle, 2 nights, up to 2 bottles/batch.\n\nPerfume: 1 chili spirit + 4 matching flowers + 4 empty bottles → 4 perfumes and 1 returned empty wine bottle.\n\nPoppy perfume takes 2 nights; fairy rose perfume takes 4. Ingredient quality affects product value.\n\nThe 40-cell input holds a complete perfume batch. Use empty wine bottles, not water-filled bottles or ordinary chemical flasks."
+  },
+  "v2_book_machine_barrel": {
+    "zh": "容量10整瓶，接收原版果酒和新增果酒，自动桶藏，无需电池。\n\n量产及以下：第6晚升臻品，第14晚升原版最高品质。臻品：8晚升最高。\n\n达到原版最高品质后：再7晚升银星（价值+25%）；再10晚升金星（+35%）；再15晚升铱星（+50%）。各档加价替换上一档，不叠加。进度随酒瓶保留。",
+    "en": "Automatically ages up to 10 whole native or added fruit-wine bottles, without power.\n\nProduction grade or below: Reserve after 6 nights, native maximum after 14. Reserve reaches maximum after 8.\n\nAfter native maximum: 7 more nights to Silver (+25% value), 10 more to Gold (+35%), then 15 more to Iridium (+50%). Each bonus replaces the previous one. Progress stays with the bottle."
+  },
+  "v2_book_machine_grill": {
+    "zh": "普通烤制每晚最多处理1800千卡同类原肉。调味可加辣椒×2或松露油×1；鱼肉可加蛋黄酱×1。\n\n龙虾肉→焗龙虾，基价350，食物、奢侈品；海参→葱爆海参，基价200，食物。每批最多4份。\n\n金枪鱼＋岩浆鳗鱼＋午夜鲤鱼＋大嘴鲈鱼各1整条→刺身拼盘，基价600，食物、奢侈品。\n\n三菜默认1晚，基价固定，热量为实际原料总量×1.2。龙虾不用于烤鱼。另能制作两种鱼饵。",
+    "en": "Plain grilling processes up to 1800 kcal of one meat per night. Season with 2 chilies or 1 truffle oil; fish also accepts 1 mayonnaise.\n\nLobster meat → Baked Lobster, base 350, Food/Luxury. Sea cucumber → Scallion Sea Cucumber, base 200, Food. Up to 4 portions per batch.\n\nOne whole tuna, lava eel, midnight carp and largemouth bass → Sashimi Platter, base 600, Food/Luxury.\n\nAll three take 1 base night, with fixed base prices and energy equal to actual ingredient calories ×1.2. Lobster cannot make grilled fish. Also makes both bait types."
+  },
+  "v2_artisan_dairy": {
+    "zh": "蛋奶与工匠食品",
+    "en": "Eggs, Dairy and Artisan Food"
+  },
+  "v2_book_dairy": {
+    "zh": "蛋黄酱、两种奶酪及松露油均可直接出售，也可供应后续配方。\n\n普通奶酪基价70，山羊奶酪100，蛋黄酱30，松露油150。\n\n原料、半成品与成品都有出售价值，可按现金与周转需要安排加工。",
+    "en": "Mayonnaise, both cheeses and truffle oil can be sold directly or used in later recipes.\n\nBase values: cheese 70, goat cheese 100, mayonnaise 30, truffle oil 150.\n\nIngredients, intermediates and finished goods all have value. Choose processing steps to fit your cash and turnaround."
+  },
+  "v2_artisan_perfume": {
+    "zh": "香水与交易",
+    "en": "Perfume and Trading"
+  },
+  "v2_book_perfume": {
+    "zh": "虞美人香水：3次，20%双向估值修正，满瓶基价100。\n玫瑰仙子香水：3次，30%双向修正，满瓶基价160。\n\n仅当前顾客本次来访有效。与原版香水取最高效果，已有相同或更强效果时不消耗次数。强度不随花材品质变化。\n\n两种香水均为违禁品。",
+    "en": "Poppy perfume: 3 uses, 20% two-way valuation effect, full-bottle base value 100.\nFairy rose perfume: 3 uses, 30%, base value 160.\n\nOnly affects the current visit. The strongest perfume applies, including native perfumes. Equal or stronger effects spend no uses. Flower quality does not change effect strength.\n\nBoth perfumes are contraband."
+  },
+  "v2_artisan_grill": {
+    "zh": "烧烤配方",
+    "en": "Grilling Recipes"
+  },
+  "v2_book_grill": {
+    "zh": "按900千卡原肉：烤鸡120、烤羊185、烤牛165、烤猪190；普通烤鱼为原料估值×1.25。\n\n香辣：每份基础烤肉价+30。\n松露：每份+85。\n酱烤鱼：每份+25。\n\n调味每批产两份，食物总热量包含实际加入的辅料。品质与剩余份量会影响最终估值。",
+    "en": "Per 900 kcal raw meat: chicken 120, goat 185, beef 165, pork 190; plain fish uses ingredient value ×1.25.\n\nChili seasoning: +30/portion.\nTruffle seasoning: +85/portion.\nMayonnaise fish: +25/portion.\n\nSeasoned batches yield two portions. Total food calories include the actual added seasoning. Quality and remaining portions affect final value."
+  },
+  "v2_artisan_bait": {
+    "zh": "鱼饵制作",
+    "en": "Making Bait"
+  },
+  "v2_book_bait": {
+    "zh": "普通鱼饵：小麦×1＋清水50毫升→6份。\n高级诱饵：普通饵×6＋蛋黄酱×1→6份。\n\n均为1晚，每台每晚最多4组。两种鱼饵都占2×2格，每叠最多20份。\n\n周六老乡出售5份普通饵，水产养殖II后追加3份高级饵。水库不售饵，也无首次赠饵；出发前装入背包。",
+    "en": "Ordinary bait: 1 wheat + 50 ml clean water → 6 portions.\nPremium: 6 ordinary bait + 1 mayonnaise → 6 portions.\n\nBoth take 1 night, up to 4 groups per machine. Each bait type occupies 2×2 cells and stacks up to 20.\n\nSaturday stock is 5 ordinary bait, plus 3 premium after Aquaculture II. The reservoir has no sales or first-visit gift. Pack bait before leaving."
+  },
+  "v2_book_fishing": {
+    "zh": "水库排在博士后面。水产养殖I后开放，背包内无普通或高级鱼饵时不能进入；地面和侧口袋不计。\n\n首次入场背包鱼饵总量作为当夜抛竿额度，重入不刷新。按钮选择饵种，抛竿立即扣对应鱼饵1份及1次额度，成功、失败或放弃不退还，不重复扣费。\n\n绿色目标区左右移动；按住左键或空格向右，松开向左。默认绿区更小、移动更快，鱼王更快更窄。Mod设置中可调1—5档，默认3，下竿生效。\n\n面板仅保留底部返回，Esc、设置和确认窗口暂停。满地面时保存渔获待领；普通鱼有20%机会附鱼卵。",
+    "en": "The reservoir follows Dr. Jackson on the map. It opens after Aquaculture I and requires ordinary or premium bait inside your travel backpack; ground and side pockets do not count.\n\nFirst-entry backpack bait sets tonight's cast allowance. Re-entry cannot refill it. Choose a bait button; casting spends 1 selected bait and 1 allowance. Success, failure or abandonment never refunds or charges twice.\n\nFollow the moving green target. Hold left mouse or Space to move right; release to move left. Targets are smaller and faster, especially for legends. Mod settings offer levels 1–5, default 3, applied next cast.\n\nUse the bottom Return button. Esc, settings and confirmations pause. Full ground inventory preserves catches; ordinary fish have a 20% egg chance."
+  },
+  "v2_fish_kings": {
+    "zh": "四种鱼王",
+    "en": "The Four Legends"
+  },
+  "v2_book_kings": {
+    "zh": "普通饵每次咬钩率：传说之鱼0.5%，其他三王各1%；高级饵分别乘1.5。杂物率普通8%、高级3%。\n\n传说之鱼：基价1600，冷却12晚。\n绯红鱼：900，冷却8晚。\n冰川鱼：1000，冷却8晚。\n变种鲤鱼：1100，冷却8晚。\n\n成功钓获后开始独立冷却；逃脱不冷却。冷却鱼王的概率回到普通鱼池，其余鱼王概率不变。鱼王只收藏或出售，不养殖加工。\n\n鱼王活跃夜出现时，上述四种鱼王概率均翻倍；高级饵加成继续生效。",
+    "en": "Per cast with ordinary bait: Legend 0.5%; each other legend 1%. Premium multiplies each by 1.5. Junk is 8% with ordinary bait, 3% with premium.\n\nLegend: base value 1600, 12-night cooldown.\nCrimsonfish: 900, 8 nights.\nGlacierfish: 1000, 8 nights.\nMutant Carp: 1100, 8 nights.\n\nSuccessful catches start separate cooldowns; escape does not. Ineligible legend probability returns to ordinary fish without increasing other legends. Legends are collectibles or sale items, not farm stock or ingredients.\n\nLegendary Fish Activity doubles all four listed bite chances; the premium-bait bonus still applies."
+  },
+  "v2_recipe_mayonnaise": {
+    "zh": "鸡蛋→蛋黄酱",
+    "en": "Egg → Mayonnaise"
+  },
+  "v2_recipe_cheese": {
+    "zh": "牛奶→普通奶酪",
+    "en": "Milk → Cheese"
+  },
+  "v2_recipe_goat_cheese": {
+    "zh": "羊奶→山羊奶酪",
+    "en": "Goat Milk → Cheese"
+  },
+  "v2_recipe_truffle_oil": {
+    "zh": "松露→松露油",
+    "en": "Truffle → Oil"
+  },
+  "v2_recipe_poppy_perfume": {
+    "zh": "虞美人香水",
+    "en": "Poppy Perfume"
+  },
+  "v2_recipe_fairy_perfume": {
+    "zh": "玫瑰仙子香水",
+    "en": "Fairy Rose Perfume"
+  },
+  "v2_recipe_plain": {
+    "zh": "普通烤制",
+    "en": "Plain Grill"
+  },
+  "v2_recipe_spicy": {
+    "zh": "香辣烤肉",
+    "en": "Chili Grill"
+  },
+  "v2_recipe_truffle": {
+    "zh": "松露烤肉",
+    "en": "Truffle Grill"
+  },
+  "v2_recipe_sauce": {
+    "zh": "酱烤鱼",
+    "en": "Glazed Fish"
+  },
+  "v2_recipe_bait": {
+    "zh": "普通鱼饵",
+    "en": "Ordinary Bait"
+  },
+  "v2_recipe_premium_bait": {
+    "zh": "高级诱饵",
+    "en": "Premium Bait"
+  },
+  "v2_seasoned_name": {
+    "zh": "{1}（{0}）",
+    "en": "{0} {1}"
+  },
+  "v2_ordinary_watch": {
+    "zh": "有鱼咬钩！先观察，再看金色游标。",
+    "en": "A fish is biting! Watch the target; the gold cursor starts in a moment."
+  },
+  "v2_manual_page": {
+    "zh": "第 {0}/{1} 页",
+    "en": "Page {0}/{1}"
+  },
+  "v2_legend_desc": {
+    "zh": "碧绿的鳞片泛着古金色光泽，长须随着呼吸缓缓摆动。它见过的水底，比流传下来的故事更深。",
+    "en": "Old gold traces its emerald scales, and long whiskers drift with every breath. It knows depths that no surviving story can name."
+  },
+  "v2_crimsonfish_desc": {
+    "zh": "绯红鳞甲像一团封在水里的火，张开的背鳍锐利如焰。离开水后，它仍不肯安静下来。",
+    "en": "Crimson scales hold the color of a submerged fire, with dorsal spines flared like flames. Even out of water, it refuses to settle."
+  },
+  "v2_glacierfish_desc": {
+    "zh": "冰蓝的鳍棱像碎裂的晶体，银白鳞片透出幽冷微光。靠近时，仿佛能听见远处冰层的低鸣。",
+    "en": "Its ice-blue fins resemble fractured crystals, and pale scales carry a cold inner glow. Nearby, you almost hear distant ice beginning to sing."
+  },
+  "v2_mutant_carp_desc": {
+    "zh": "紫色鳞片间浮着荧绿斑点，弯曲的鳍和长须让人难以移开视线。它适应了别人不愿靠近的水域。",
+    "en": "Luminous green spots break across purple scales, beneath oddly curved fins and trailing whiskers. It thrives in waters that others wisely avoid."
+  },
+  "v2_poppy_perfume_desc": {
+    "zh": "虞美人的花香里藏着一点温暖辛气，收在沉甸甸的小瓶中。轻轻一点，便在衣领间留下柔和余香。",
+    "en": "Warm, faintly spicy poppy notes rest in a weighty little bottle. A light dab leaves a soft floral trace along the collar."
+  },
+  "v2_fairy_perfume_desc": {
+    "zh": "玫瑰仙子的层层花瓣凝成清甜香气，尾调像夜里吹过花圃的微风。精巧瓶身仿佛留住了一小段山谷的春天。",
+    "en": "Layered Fairy Rose petals lend a clear sweetness, fading like a night breeze through a flower bed. The tiny bottle seems to hold a little of spring in the valley."
+  },
+  "v2_artisan_name": {
+    "zh": "老乡·工匠",
+    "en": "Townsman · Artisan"
+  },
+  "farmer_goods_artisan": {
+    "zh": "今天带了奶酪机、产油机、木桶、烤肉机和工匠手册。先看看哪台合用，再安排你的小作坊。",
+    "en": "Today I have cheese presses, oil presses, aging barrels, grills and the Artisan Handbook. See what fits, then plan your workshop."
+  },
+  "farmer_chat_artisan_0": {
+    "zh": "这回换条围裙来。庄稼收回来，只卖原料也成；要是愿意等上几晚，这几台家伙还能替你添一道手艺。",
+    "en": "A different apron today. You can sell the harvest as it is, or give these machines a few nights to add some craft to it."
+  },
+  "farmer_chat_artisan_1": {
+    "zh": "电池别塞进原料堆里，机器也得吃对东西。木桶倒省心，找个位置放好，剩下交给时间。",
+    "en": "Put the battery in its own bay, and give the machine the right ingredients. A barrel is simpler: find it a place and let time do the work."
+  },
+  "farmer_chat_artisan_2": {
+    "zh": "机器是给你开作坊的，可不是让你提着转手赚差价。自家用过的家伙什，再卖就是二手价了。",
+    "en": "These machines are for your workshop. Once they are yours, anyone buying them back is buying used equipment."
+  },
+  "farmer_chat_artisan_3": {
+    "zh": "别一口气把所有原料都压进去。先想好做哪一批，再给成品留点地方，周转起来才顺手。",
+    "en": "Decide which batch you want before loading everything in. Leave room for the finished goods and the workshop will run much more smoothly."
+  },
+  "v2_barrel_star_1": {
+    "zh": "银星桶藏（价值+25%）",
+    "en": "Silver-Star Aged (+25% value)"
+  },
+  "v2_barrel_star_2": {
+    "zh": "金星桶藏（价值+35%）",
+    "en": "Gold-Star Aged (+35% value)"
+  },
+  "v2_barrel_star_3": {
+    "zh": "铱星桶藏（价值+50%）",
+    "en": "Iridium-Star Aged (+50% value)"
+  },
+  "v2_fishing_tension": {
+    "zh": "拉力 {0}% · 收线 {1}%",
+    "en": "Tension {0}% · Reeled {1}%"
+  },
+  "v2_fishing_no_attempts": {
+    "zh": "本晚的抛竿额度已用完。",
+    "en": "Tonight's casting allowance is exhausted."
+  },
+  "v2_fishing_pending_bait": {
+    "zh": "请将本次使用的鱼饵放回背包，再领取渔获。",
+    "en": "Return the selected bait to your backpack to claim this catch."
+  },
+  "v2_fishing_ground_full": {
+    "zh": "地面已满，渔获已保留；领取不会重复收费。",
+    "en": "The ground is full. Your catch is saved; collection never charges twice."
+  },
+  "v2_baked_lobster": {
+    "zh": "焗龙虾",
+    "en": "Baked Lobster"
+  },
+  "v2_scallion_sea_cucumber": {
+    "zh": "葱爆海参",
+    "en": "Scallion Sea Cucumber"
+  },
+  "v2_sashimi_platter": {
+    "zh": "刺身拼盘",
+    "en": "Sashimi Platter"
+  },
+  "v2_baked_lobster_desc": {
+    "zh": "焗烤后的龙虾肉鲜甜紧实，香气浓郁。",
+    "en": "Sweet, tender lobster meat, baked until rich and fragrant."
+  },
+  "v2_scallion_sea_cucumber_desc": {
+    "zh": "海参裹上浓香葱汁，软糯鲜香。",
+    "en": "Tender sea cucumber coated in a fragrant scallion sauce."
+  },
+  "v2_sashimi_platter_desc": {
+    "zh": "四种鲜鱼细切成片，摆成一盘丰盛的刺身。",
+    "en": "Thin slices of four fresh fish, arranged as a generous sashimi platter."
+  },
+  "v2_bait_space_pending": {
+    "zh": "鱼饵需要2×2格空间；请整理当前容器，腾出空位后会自动调整，现有鱼饵数量已保留。",
+    "en": "Bait needs a 2×2 space. Make room in this container; it will resize automatically while preserving every bait unit."
+  },
+  "v2_fishing_bait_button": {
+    "zh": "{0}{1} ×{2}",
+    "en": "{0}{1} ×{2}"
+  },
+  "v2_midnight_carp_desc": {
+    "zh": "鳞片泛着幽暗的光，常在灯影稀疏的水面下缓缓游动。",
+    "en": "Its scales catch a dusky sheen as it drifts beneath the dimmer patches of water."
+  },
+  "v2_midnight_carp_roe_desc": {
+    "zh": "圆润的卵粒挤作一团，在静水中微微颤动。",
+    "en": "Rounded eggs huddle together, trembling gently in the still water."
+  },
+  "v2_midnight_carp_fry_desc": {
+    "zh": "稚嫩的小鲤鱼聚在水影里，偶尔摆动尾巴探向亮处。",
+    "en": "Tiny carp gather in the shadows, flicking their tails toward the light."
+  },
+  "v2_midnight_carp_flavor": {
+    "zh": "水库的灯渐渐暗了，它的夜晚才刚开始。",
+    "en": "As the reservoir lights fade, its night is only beginning."
+  },
+  "v2_largemouth_bass_desc": {
+    "zh": "宽阔的嘴和结实的身形，让这条鱼显得格外沉稳。水面稍有动静，它便倏地转过身。",
+    "en": "A broad mouth and sturdy body give this fish a composed air. The slightest ripple sends it turning sharply."
+  },
+  "v2_largemouth_bass_roe_desc": {
+    "zh": "紧密相依的鱼卵，薄薄的卵膜在灯下泛着细碎的光。",
+    "en": "Closely nestled eggs glimmer beneath their delicate membranes."
+  },
+  "v2_largemouth_bass_fry_desc": {
+    "zh": "小鱼已经长着一张醒目的大嘴，时不时向水中的细小影子扑去。",
+    "en": "These small fish already have conspicuous mouths, darting after tiny shadows in the water."
+  },
+  "v2_largemouth_bass_flavor": {
+    "zh": "安静的水面下，总有一位耐心的猎手。",
+    "en": "A patient hunter waits beneath the quiet surface."
+  },
+  "v2_tuna_desc": {
+    "zh": "流畅的身形带着银亮的光泽，摆尾时仿佛连身旁的水也一同加速。",
+    "en": "Its streamlined body shines silver, and every sweep of its tail seems to pull the water along."
+  },
+  "v2_tuna_roe_desc": {
+    "zh": "饱满的卵粒轻轻相依，透亮的表面映着摇晃的水光。",
+    "en": "Plump eggs rest together, their clear surfaces catching the shifting light."
+  },
+  "v2_tuna_fry_desc": {
+    "zh": "身形纤巧的小鱼结伴穿行，转向时闪过一片细碎的银光。",
+    "en": "Slender young fish travel together, flashing silver as they turn."
+  },
+  "v2_tuna_flavor": {
+    "zh": "每一道银光，都像藏着一段尚未结束的远行。",
+    "en": "Each silver flash seems to carry a journey still unfinished."
+  },
+  "v2_lava_eel_desc": {
+    "zh": "细长的身躯覆着余烬般的纹路，在暗水里蜿蜒游动，像一缕尚未熄灭的火。",
+    "en": "Ember-like markings trace its long body as it winds through dark water like a lingering flame."
+  },
+  "v2_lava_eel_roe_desc": {
+    "zh": "一簇透亮的鱼卵依偎在一起，卵膜下隐约映出温暖的色泽。",
+    "en": "A cluster of translucent eggs nestles together, with a warm tint beneath the membranes."
+  },
+  "v2_lava_eel_fry_desc": {
+    "zh": "细细的小鳗鱼挤在一处，柔软的身子随水流轻轻扭动。",
+    "en": "Threadlike young eels gather close, their supple bodies wriggling with the current."
+  },
+  "v2_lava_eel_flavor": {
+    "zh": "水能映出火光，也能藏住它。",
+    "en": "Water can mirror a flame, or conceal it."
+  },
+  "v2_reservoir_bait_required": {
+    "zh": "背包内无鱼饵",
+    "en": "No bait in travel backpack"
+  },
+  "v2_reservoir_bait_required_hint": {
+    "zh": "请在出发背包内放入普通鱼饵或高级诱饵后再前往水库。地面和侧口袋内的鱼饵不计入。",
+    "en": "Put ordinary or premium bait inside your selected travel backpack before visiting the reservoir. Bait on the ground or in side pockets does not count."
+  },
+  "v2_config_fishing_difficulty": {
+    "zh": "夜钓难度（1轻松～5困难）",
+    "en": "Night fishing difficulty (1 easy–5 hard)"
+  },
+  "v2_config_fishing_difficulty_hint": {
+    "zh": "默认3档。档位越高，绿区越窄、移动越快；调整从下一次抛竿生效。",
+    "en": "Default: 3. Higher levels narrow and speed up the target. Changes apply to your next cast."
+  },
+  "v2_king_activity_night": {
+    "zh": "鱼王活跃夜",
+    "en": "Legendary Fish Activity"
+  },
+  "v2_king_activity_desc": {
+    "zh": "循环泵降了转速，水面异常安静。深水里传来沉重的拍水声，平日少见的大鱼也靠近了灯光。",
+    "en": "The circulation pumps slow, leaving the water unusually still. Heavy splashes echo from below as rarely seen fish approach the lights."
+  },
+  "v2_king_activity_effect": {
+    "zh": "鱼王咬钩概率提高100%",
+    "en": "Legendary bite chances +100%"
+  },
+  "v2_book_reservoir_events": {
+    "zh": "每个已解锁水库的夜晚约20%概率出现「鱼王活跃夜」，仅限当晚。交通卡片会显示事件标题、说明与效果。\n\n活跃夜四种鱼王的咬钩概率均翻倍，高级诱饵的1.5倍加成继续生效。原有独立冷却保留：正在冷却的鱼王概率归回普通鱼池，不会转移给其他鱼王。\n\n同一晚开关菜单、往返或读档不会重新抽取事件，失败的事件判定也会保存。",
+    "en": "Each unlocked reservoir night has about a 20% chance of Legendary Fish Activity, lasting only that night. The transit card displays its title, story and effect.\n\nAll four legendary bite chances double. Premium bait retains its separate ×1.5 bonus. Independent cooldowns still apply: an unavailable legend's interval returns to ordinary fish, without boosting the other legends.\n\nReopening menus, revisiting or reloading cannot reroll the night. Unsuccessful event rolls are saved too."
+  }
+}

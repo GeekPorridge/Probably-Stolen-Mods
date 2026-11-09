@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "tool": "Built-in image_gen (imagegen skill); no API/CLI fallback",
+  "input": "Source/Items/bottle_ancient_wine.png from v0.1.9; also reproducible as the third cell of ArtOriginals/fruit-bottles-012.png",
+  "selected_original": "ArtOriginals/ancient-wine-light-blue-100.png",
+  "exported_sprite": "Source/Items/bottle_ancient_wine.png",
+  "transparent_background": true,
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied pixel-art Ancient Fruit Wine bottle inventory sprite. Change only the DARK PURPLE glass and wine body to a clearly LIGHT BLUE palette: pale sky-blue/icy blue glass, soft cyan-blue shaded interior, bright pale-blue glass highlights and medium desaturated blue shadows. The result must read as a light-blue wine bottle, not dark navy or purple. Preserve the EXACT single tall slender bottle silhouette, narrow dark teal stopper and foil neck, cork shape, cream parchment label with tiny teal ancient fruit and purple leaf, pixel-art style, dark thin outline and placement. Keep all geometry and the visible pixel-art details as close to the reference as possible; this is a color revision for a 1-by-4-cell game item, not a redesign. One isolated upright bottle on a genuinely transparent alpha background, centered, full bottle including stopper and bottom visible, same tall aspect ratio, clean pixel edges, generous transparent margins. No additional objects, text, letters, symbols, drop shadows, ground, borders, or opaque backdrop.",
+  "export": "Visible alpha bounds; uniform nearest-neighbor resize to 128x512 RGBA canvas; no palette processing in export.",
+  "other_sprites": "All other 38 runtime sprite hashes match v0.1.9."
+}

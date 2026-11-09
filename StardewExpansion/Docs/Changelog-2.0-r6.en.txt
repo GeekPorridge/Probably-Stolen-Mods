@@ -1,0 +1,31 @@
+Stardew Expansion 2.0 r6 — Revision notes
+
+The manifest version remains 2.0. Existing mod, configuration and save identifiers are retained. The r5 and earlier files remain historical references; README.en.txt and All-machine-recipes-2.0-r6.en.txt describe current rules.
+
+Automatic chicken breeding
+The chicken laying/breeding selector and management panel are removed. Healthy adult hens continue producing one ordinary 150-kcal egg at a 150-kcal food cost. A healthy adult male and female in the same cage can additionally produce a 150-kcal fertile egg at a separate 150-kcal cost; the fertile egg no longer replaces the ordinary egg.
+The existing 50% base chance, both parents' fertility and health, at least three nights between successful fertile eggs, and two-parent genetic inheritance remain. Sterilized chickens cannot breed; hens still produce ordinary eggs. Ordinary eggs use the product inventory and laying a new fertile egg requires cage space. These destinations are independent: blocked production waits without charging its corresponding food cost.
+A fertile egg hatches after two effective incubation nights and retains its inherited genes even if its parents are later moved or removed. The one-cell chick replaces the existing one-cell egg in place, so this works even when the rest of the cage is full and does not require an additional empty cell. A replacement that genuinely cannot fit preserves the egg while waiting. Existing protection against feeding, processing and automatic slaughter remains.
+
+Seafood nutrition and fixed prices
+Baked Lobster: Food and Luxury, fixed base value 350.
+Scallion Sea Cucumber: Food, fixed base value 200.
+Sashimi Platter: Food and Luxury, fixed base value 600.
+Each dish's nutrition is the actual ingredient calories x1.2. Whole sea cucumber and the four whole sashimi fish use their current harvestable meat calories. The fixed base price does not automatically vary with calories. Existing r5 dishes receive one nutrition upgrade of 20% and the fixed base price, without repeated upgrades on later loads.
+All three retain one base night, 3x2 cells, distinct artwork, their ingredient requirements and safe output rollback. Lobster and sea cucumber still cannot become generic grilled fish.
+
+Four-cell bait
+Ordinary and premium bait now occupy 2x2 cells and still stack to 20. Their original artwork is re-exported at 256x256 with aspect ratio and alpha preserved.
+Old one-cell bait stacks keep every unit, their identity and metadata until a valid 2x2 space exists in the current container. Full inventories show a space-needed hint and retry automatically. Migration neither merges stacks nor relocates bait into another container.
+
+Fishing control and cast payment
+The bottom-right native-style panel now offers separate ordinary and premium bait buttons and adapts to the visible viewport. Hold or release left mouse or Space to steer the cursor after a moving green target. Legendary targets move faster and are narrower.
+A cast immediately consumes one actual selected backpack bait and one nightly allowance. Success, failure and abandonment do not refund the cast and do not charge a second time. Pending ground catches and bonus eggs can be collected without further bait or allowance. The first-entry backpack snapshot, absence of an on-site shop, unchanged allowance on re-entry and independent legendary cooldowns remain.
+Esc, settings and native return confirmations pause the fight and its timer. The panel's X follows the native location-return flow. If the panel is unexpectedly hidden or destroyed while the player remains at the reservoir, it restores the current fight automatically without refreshing the allowance or charging another cast.
+
+Retained r5 content
+Handbook hover blocking, independent illustrated pages, the ten-bottle Barrel, native quality followed by Silver/Gold/Iridium, Saturday five ordinary bait plus three premium after Aquaculture II, artisan prices/resale ceilings and all other crop/husbandry rules remain.
+
+Verification and delivery
+Use the final delivered r6 logs for actual verification totals; earlier revision counts are historical. Isolated native-rule and save/inventory tests do not establish live Unity rendering. After restarting, check the automatic egg outputs and independent incubation, dish values/nutrition, full-bag bait migration, moving-target fishing, payment on all outcomes, menu pauses, native return flow, unexpected panel recovery and screen-bound placement.
+Workshop descriptions are local drafts. This revision includes no Workshop upload or web-page edit.

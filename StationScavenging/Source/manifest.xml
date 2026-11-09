@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>station_scavenging</ID>
+  <Name>站区拾荒 / Station Scavenging</Name>
+  <Author>小粥</Author>
+  <ModVersion>1.5.6</ModVersion>
+  <Description>五区共享每晚拾荒次数和贵重冷却（含下层后勤箱），四区独立像素场景、12种趣味事件、区域嘲讽与清晰门槛，完整中英文本。 / Five regions share nightly searches and valuable rest, including Lower Service crates. Four original pixel-art locations, twelve regional events and localized access notices.</Description>
+  <GameVersions><Version>0.46D</Version></GameVersions>
+  <Prerequisites />
+  <Assemblies><Assembly>StationScavenging.dll</Assembly></Assemblies>
+  <Capabilities />
+</Manifest>

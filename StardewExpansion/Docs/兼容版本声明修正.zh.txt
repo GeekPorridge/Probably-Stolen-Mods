@@ -1,0 +1,4 @@
+兼容版本声明修正（仍为 v1.2）
+
+当前安装的游戏显示 VERSION 100-REV12，但 PlayerSettings.bundleVersion / Application.version 仍为 0.46D。原版模组菜单按 Application.version 比较 manifest 的 GameVersions；此前误写的 1.0.0.12 会产生版本不匹配警告。现改为 0.46D，仅修正声明，运行 DLL 与玩法文件保持原字节。
+本机需重启游戏重新读取声明。工坊内容尚需重新上传这份修正版，才能同步给订阅者。

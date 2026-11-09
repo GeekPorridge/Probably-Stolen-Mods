@@ -1,0 +1,21 @@
+[h1]A Fellow Townsman Arrives[/h1]
+A fellow townsman reaches the station with a few packets of seeds. Grow familiar crops, care for your hydroponics, and sell the harvest at your counter or turn it into a bottle worth waiting for.
+
+[h2]Eight crops and a familiar visitor[/h2]
+Adds parsnip, potato, corn, wheat, hops, strawberry, starfruit and ancient fruit.
+The Fellow Townsman visits once every Wednesday and once every Saturday, selling seeds for seven crops independently of the retired farmer's unlock. Each visit has fixed stock; clear counter space during his visit for the remaining offers. Advanced seeds unlock with plant gene editing. Ancient seeds come from exploration and a one-time seed gift.
+
+[h2]Care for your crops and grow a giant[/h2]
+Potato, corn, strawberry, starfruit and ancient fruit have Small, Regular and Giant sizes occupying 1, 4 and 9 cells. Wheat, hops and parsnip stay Regular, two cells.
+Harvest care of at least 95 and effective quality bonus of at least 50% unlock a 10% chance per batch for at most one giant. After ten qualified misses on the same machine and species, the next qualified harvest guarantees one. Giants replace a crop in the batch without increasing total yield.
+Automatic replanting uses matching seeds from existing supplies and retains their actual genetics and edits. Ancient fruit offers normal and breeding harvest modes.
+
+[h2]Five brews using native winemaking[/h2]
+Wheat Beer, Pale Ale, Strawberry Wine, Starfruit Wine and light-blue Ancient Fruit Wine.
+Use two crops of the same species per bottle, with optional native yeast. The ingredient inventory expands to 22 cells, fitting two giant crops and yeast.
+Ingredient condition, giant bonus points, water and yeast determine quality. Size does not add a separate wine-price multiplier. Wheat Beer and Pale Ale gain Chilled (+20% value) in a powered fridge at its daily cycle and cannot enter the wine ager. The three fruit wines retain native aging value gains. Finished added wines cannot be poured into water-storage containers.
+
+[h2]Installation and compatibility[/h2]
+Includes English and Simplified Chinese. Uses native hydroponics, plant gene editing, showcase sales and aging. Station Scavenging and Metal Wine Bottles are optional companions.
+Formerly Hydroponics & Brewing. Version 1.0.2 keeps the original mod and save identifiers. Restart after updating and continue your existing save. Saved beer retains historical aging value but will not age further.
+For manual installation, place Mods/PelicanCultivation in the game's Mods directory. Do not install a duplicate copy.

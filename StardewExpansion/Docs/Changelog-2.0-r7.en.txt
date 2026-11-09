@@ -1,0 +1,29 @@
+Stardew Expansion 2.0 r7 — Revision notes
+
+The manifest version remains 2.0. Existing mod, configuration and save identifiers are retained. The r6 and earlier files remain historical references; README.en.txt and All-machine-recipes-2.0-r7.en.txt define current rules.
+
+Reservoir order and departure requirements
+The reservoir now appears immediately after native Dr. Jackson and before the Upper District, with other locations retaining their relative order. Aquaculture I still controls discovery. Without ordinary or premium bait inside the travel backpack, the card remains visible, shows a localized reason and prevents departure.
+The transportation menu and native departure boundary inspect the backpack that will actually travel: the selected backpack before native transfer, then the equipped afterhour backpack when already outside. Owned nested bags count; ground, side pockets, unowned inner bags and stale unplaced selections do not. A bait-filled selected backpack is not rejected because its afterhour slot has not yet been filled.
+
+Legendary Fish Activity
+Each unlocked reservoir night has a 20% chance of this native event, lasting one night. Its transit card shows the event title, description and effect; the Artisan Handbook has a dedicated event page.
+All four legendary probability intervals double. Premium bait independently keeps its x1.5 multiplier. Legendary cooldowns and junk chances are unchanged, and a legend still in cooldown returns only its own probability interval to ordinary fish.
+The daily roll is saved whether it succeeds or fails. Re-entry, menu reopening, disable/re-enable or reload cannot reroll that night. Unlocking the reservoir or installing the update after the native daily event loop still allows only that day's single eligible roll.
+
+Fishing difficulty and controls
+Night fishing difficulty has five levels, 1 easy through 5 hard, with 3 as the default. Changes apply to the next cast; an ongoing fight keeps its starting setting.
+Default target speeds rise by 50% over r6 to 0.42 for ordinary fish and 0.75 for legends. Default green-zone widths are 0.16 for ordinary fish and 0.10–0.13 for legends. Cursor response scales with target speed to preserve tracking control across all five settings. Hold or release left mouse or Space to follow the moving green target.
+The top X is hidden and disabled. The native bottom Return remains the exit control. Esc, settings and return confirmation continue pausing the fight and timer. Unexpected panel hiding or destruction at the reservoir restores the current fight without refreshing the nightly allowance or charging another cast. The panel retains viewport-based fitting and bottom-right placement.
+
+Fish descriptions
+Midnight Carp, Largemouth Bass, Tuna and Lava Eel plus their eggs and fry now retain complete Simplified Chinese and English descriptions and flavor text. The repair covers new item creation, older saves and native aging into another growth stage. Their diets, culture timing and breeding rules remain unchanged.
+
+Retained r6 rules
+Automatic chicken breeding still creates an additional fertile egg alongside the ordinary egg, with independent output space and food costs. Sterilized chickens cannot breed while hens retain ordinary egg production. A fertile egg hatches after two effective nights without requiring its parents, replacing the one-cell egg with a one-cell chick even when the rest of the cage is full.
+Both bait types remain 2x2 cells with stacks of 20 and safe old-stack migration. Casting immediately spends one selected backpack bait and one allowance; success, failure, abandonment and pending reward collection neither refund nor repeat the payment.
+Scallion Sea Cucumber, Baked Lobster and Sashimi Platter retain fixed base prices of 200, 350 and 600. Their nutrition is actual ingredient calories x1.2. The one-time r5 dish upgrade does not repeat on later loads. Handbook hover blocking, native wine quality followed by barrel stars, ten-bottle storage, Saturday bait stock and machine resale ceilings remain.
+
+Verification and delivery
+The final isolated r7 build passed 2,562 v2 checks, 26 reservoir-entry checks, 19 native-event checks and all existing regression suites. The delivered logs confirm 81 Harmony bindings, 474 bilingual keys, 160 item sprites and 1,061 native-scanned methods. These checks cover native rules and saved inventory/state without opening player saves; they do not establish live Unity rendering or physical mouse acceptance.
+After restarting, verify entry ordering and no-bait status, selected-backpack departure, event-card and handbook text, all five difficulty settings, hidden X and bottom Return, menu pauses and panel recovery, and fish/egg/fry descriptions after loading and aging. Workshop descriptions remain local drafts. No Workshop upload or web-page edit is included.

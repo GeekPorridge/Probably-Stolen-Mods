@@ -1,0 +1,290 @@
+[
+  {
+    "key": "farmer_ranch",
+    "width": 128,
+    "height": 160,
+    "source": "farmer-ranch.png",
+    "source_clip": "227,67,844,1107",
+    "bytes": 37913,
+    "sha256": "FB4659DFB3FAC09AE3BE019F3F5238ED1885FB0C4A70ECD130E3A7C293CF7D92"
+  },
+  {
+    "key": "cow_baby",
+    "width": 256,
+    "height": 128,
+    "source": "cattle-sheet.png",
+    "source_clip": "182,206,294,259",
+    "bytes": 20194,
+    "sha256": "EB52C4A5D30F59B6423A4C4719C4DC90687BA5C2BF10DE9835A69990EBA7FEEB"
+  },
+  {
+    "key": "cow_young",
+    "width": 256,
+    "height": 256,
+    "source": "cattle-sheet.png",
+    "source_clip": "714,138,425,333",
+    "bytes": 46449,
+    "sha256": "5605AAC034279162584BB17C5DAB8F022BB28931124D45E93B6968E30FC110FD"
+  },
+  {
+    "key": "cow_female",
+    "width": 384,
+    "height": 256,
+    "source": "cattle-sheet.png",
+    "source_clip": "94,720,468,382",
+    "bytes": 69852,
+    "sha256": "20A6F90E07A35A2C9F8C107D10320F2BC8CB67F0B96414A093E8F86D01C8F2D9"
+  },
+  {
+    "key": "cow_male",
+    "width": 384,
+    "height": 256,
+    "source": "cattle-sheet.png",
+    "source_clip": "667,690,527,420",
+    "bytes": 72862,
+    "sha256": "B8CEC6846360FBC47AF9344435959EB10729C533A5900449B869E2D02A417294"
+  },
+  {
+    "key": "pig_baby",
+    "width": 128,
+    "height": 128,
+    "source": "pig-sheet.png",
+    "source_clip": "206,213,247,200",
+    "bytes": 14671,
+    "sha256": "9885F236251DB2DE205203F2A72D95AD5A607B4AE30CE6A2EC29C8F570E13B42"
+  },
+  {
+    "key": "pig_young",
+    "width": 256,
+    "height": 128,
+    "source": "pig-sheet.png",
+    "source_clip": "790,157,357,271",
+    "bytes": 22621,
+    "sha256": "F8A7C02D9DE62D127256BAB9E0D6C13662687350941AFB480B110F15FA4D9D81"
+  },
+  {
+    "key": "pig_female",
+    "width": 256,
+    "height": 256,
+    "source": "pig-sheet.png",
+    "source_clip": "85,740,473,341",
+    "bytes": 46275,
+    "sha256": "136F4E106242309695034F5448106A23240A3B558E2CDC423CAD9B879F0569A6"
+  },
+  {
+    "key": "pig_male",
+    "width": 384,
+    "height": 256,
+    "source": "pig-sheet.png",
+    "source_clip": "717,709,532,372",
+    "bytes": 80385,
+    "sha256": "CCE571C966D7F3D8EA26C401EC795926CD206D02413E594A806898FA562084B6"
+  },
+  {
+    "key": "lobster_roe",
+    "width": 128,
+    "height": 128,
+    "source": "lobster-sheet.png",
+    "source_clip": "139,178,237,206",
+    "bytes": 22325,
+    "sha256": "00B2AA84F15994CDE68BDBE8AFD5F9E557C2C6B82062724A60AC4AEE8DE4E01D"
+  },
+  {
+    "key": "lobster_fry",
+    "width": 128,
+    "height": 128,
+    "source": "lobster-sheet.png",
+    "source_clip": "613,150,315,228",
+    "bytes": 15502,
+    "sha256": "B93C8A7B1CC00300F2C1169AB5AAB43FC30C69177179455806B9C94EE51059BE"
+  },
+  {
+    "key": "lobster_small",
+    "width": 256,
+    "height": 128,
+    "source": "lobster-sheet.png",
+    "source_clip": "1130,161,302,192",
+    "bytes": 34716,
+    "sha256": "A86992D370AD8273289455DB1BB4D2E862D952817F748E9E96E50D0094F5800B"
+  },
+  {
+    "key": "lobster_medium",
+    "width": 256,
+    "height": 256,
+    "source": "lobster-sheet.png",
+    "source_clip": "63,642,381,238",
+    "bytes": 53804,
+    "sha256": "A2D36812C3B354E824B78605FDECB2780D8AFC08408EB104579DBD765A64E8A0"
+  },
+  {
+    "key": "lobster_large",
+    "width": 384,
+    "height": 256,
+    "source": "lobster-sheet.png",
+    "source_clip": "524,610,490,316",
+    "bytes": 114191,
+    "sha256": "F1E6D83B531AA131360C1479D59C692A13135DB7422BBD85E21E925CCB2C84DB"
+  },
+  {
+    "key": "sea_cucumber_roe",
+    "width": 128,
+    "height": 128,
+    "source": "sea-cucumber-sheet.png",
+    "source_clip": "148,203,215,170",
+    "bytes": 13525,
+    "sha256": "20CD4D3C587665E97C0F448467C1642EF47159AC3834667203E60D00144DD543"
+  },
+  {
+    "key": "sea_cucumber_fry",
+    "width": 128,
+    "height": 128,
+    "source": "sea-cucumber-sheet.png",
+    "source_clip": "638,207,252,151",
+    "bytes": 7106,
+    "sha256": "C55D09322E68C975777979D5B8E0E55F88616464586FB3260A0786F17A5DA63C"
+  },
+  {
+    "key": "sea_cucumber_small",
+    "width": 128,
+    "height": 128,
+    "source": "sea-cucumber-sheet.png",
+    "source_clip": "1151,214,287,158",
+    "bytes": 9988,
+    "sha256": "B32CB2E2CEE11E22B2D35A165620479C3E5D48B665A469A37D416AE122E06AA6"
+  },
+  {
+    "key": "sea_cucumber_medium",
+    "width": 256,
+    "height": 128,
+    "source": "sea-cucumber-sheet.png",
+    "source_clip": "69,703,364,188",
+    "bytes": 26682,
+    "sha256": "A1515BB1AAA9246EECD3840CAB0E09E9A6B8510E2563995BF9AE4E0D1F97758A"
+  },
+  {
+    "key": "sea_cucumber_large",
+    "width": 256,
+    "height": 256,
+    "source": "sea-cucumber-sheet.png",
+    "source_clip": "533,660,469,241",
+    "bytes": 32048,
+    "sha256": "242B13A93F970A0D86A2C46752C5074636BECD12A5C02A5E2209F57BF8A075B6"
+  },
+  {
+    "key": "milk",
+    "width": 128,
+    "height": 256,
+    "source": "milk.png",
+    "source_clip": "151,143,566,1529",
+    "bytes": 27213,
+    "sha256": "7A2307F3EB4D84BC4C80120509BE129C7A6FC65FE11B3864E05718D8B3077F53"
+  },
+  {
+    "key": "truffle_small",
+    "width": 128,
+    "height": 128,
+    "source": "truffle-sheet.png",
+    "source_clip": "236,303,411,391",
+    "bytes": 14139,
+    "sha256": "44C5530BF46DC861A7EE81C344C0693A6C8C9E00B3C2916DFB3C1D61DFEA77D8"
+  },
+  {
+    "key": "truffle",
+    "width": 256,
+    "height": 256,
+    "source": "truffle-sheet.png",
+    "source_clip": "985,148,682,611",
+    "bytes": 56453,
+    "sha256": "1D0431D32BD24664220BC786877C80F6BA8CDB6DD27C4495DD6D84A369DDB681"
+  },
+  {
+    "key": "beef_tiny",
+    "width": 128,
+    "height": 128,
+    "source": "beef-sheet.png",
+    "source_clip": "261,312,191,184",
+    "bytes": 14739,
+    "sha256": "3EFC109F97B74532765EFB5EA5A6E681B8CE47454E21F8539A6E7A4420BF21F2"
+  },
+  {
+    "key": "beef_medium",
+    "width": 256,
+    "height": 256,
+    "source": "beef-sheet.png",
+    "source_clip": "847,236,392,334",
+    "bytes": 48604,
+    "sha256": "3C0E9F8360E916E7084C4E3D416E1ACD1C29345A1532E6A2AD6A0EBAD8B3B20E"
+  },
+  {
+    "key": "beef_large",
+    "width": 384,
+    "height": 256,
+    "source": "beef-sheet.png",
+    "source_clip": "1480,113,633,502",
+    "bytes": 78793,
+    "sha256": "D53F9A0E131DCF68191D64707D90AAF4A25143CEF7EBA8A4EE942CAD7D15E301"
+  },
+  {
+    "key": "pork_tiny",
+    "width": 128,
+    "height": 128,
+    "source": "pork-sheet.png",
+    "source_clip": "240,294,232,206",
+    "bytes": 13623,
+    "sha256": "5B5EDD7D6A40F8ED49112B02D61C6E11C8E89530971938373D9E9BAD5B21EE8C"
+  },
+  {
+    "key": "pork_medium",
+    "width": 256,
+    "height": 256,
+    "source": "pork-sheet.png",
+    "source_clip": "805,196,481,361",
+    "bytes": 46959,
+    "sha256": "0AE4E109D4A970210F74BC8BE66F35854E5C6C8613CEE1DB75D9B0E9B882C34E"
+  },
+  {
+    "key": "pork_large",
+    "width": 384,
+    "height": 256,
+    "source": "pork-sheet.png",
+    "source_clip": "1494,96,591,530",
+    "bytes": 69032,
+    "sha256": "CC3DC72DBDCD30BA5FDF82A58C4CA0B213645EE3C34AA805FAAC655232095F49"
+  },
+  {
+    "key": "lobster_meat_tiny",
+    "width": 128,
+    "height": 128,
+    "source": "lobster-meat-sheet.png",
+    "source_clip": "220,242,192,179",
+    "bytes": 14765,
+    "sha256": "63CCBF84BCB65903C2FFC2475DADCD6EF3DD701755539E9A82034ABCE16D9FB8"
+  },
+  {
+    "key": "lobster_meat_small",
+    "width": 256,
+    "height": 128,
+    "source": "lobster-meat-sheet.png",
+    "source_clip": "803,215,273,225",
+    "bytes": 18345,
+    "sha256": "0F7771CC073995EE4ABADEFCD3FC2CC82BF03B16B12162F5BA8D71C7B736A741"
+  },
+  {
+    "key": "lobster_meat_medium",
+    "width": 256,
+    "height": 256,
+    "source": "lobster-meat-sheet.png",
+    "source_clip": "147,803,329,307",
+    "bytes": 48028,
+    "sha256": "47629F5B8EEB8EDC69639730950500ECD3C4C3FA0A26E1054AF287895E9A06D9"
+  },
+  {
+    "key": "lobster_meat_large",
+    "width": 384,
+    "height": 256,
+    "source": "lobster-meat-sheet.png",
+    "source_clip": "678,724,521,434",
+    "bytes": 65831,
+    "sha256": "ECE720A6E6E67E6B0E2CA577FD7D95008C3D4E90D0DCD3AD9B2E63D509655437"
+  }
+]

@@ -1,0 +1,21 @@
+老乡来了 v1.1.0 — 养殖扩展测试版
+
+新增牛、猪、龙虾和海参；新增牛奶、小／标准黑松露、牛肉、猪肉、龙虾肉及整只海参收获。
+母牛默认每2天产奶；仅成年公猪默认每3天产小松露，老年公母猪屠宰各得标准松露1份。产物进独立栏，满栏暂停。
+海参按正常饲养晚数增加热量和有机废物处理能力，后期增幅放缓；保留完整收获与实际剩余热量。
+周三种子与50%补给、周六独立解锁的畜牧／水产库存；周六牧场服饰，人物形象保留。保存库存、抽取结果和跨日交易。
+新增按单价／热量选择的资源投喂、仓库废金属维修、补水／滤芯照料、各缸繁殖开关与预计数量上限，以及夜间报告内管理分页。
+鱼卵／鱼苗满缸转换保留原物品与状态；屠宰沿用原版机器及留种保护。补齐32张贴图和中英文文本。
+原作物、五种酒、啤酒冰镇＋20%、果酒催陈、自动补种及存档标识保留。
+已通过编译和自动检查；游戏内完整过夜与界面实机验收待首轮试玩。本包未自动安装或上传工坊。
+
+A Fellow Townsman Arrives v1.1.0 — Husbandry test build
+
+Adds cattle, pigs, lobsters and sea cucumbers, plus milk, small/standard black truffles, dedicated beef/pork/lobster meat and whole sea-cucumber harvests.
+Adult female cows default to milk every two days; only adult male pigs produce small truffles every three days. Elderly pigs of either sex add one standard truffle at slaughter. Products enter separate storage and pause when full.
+Sea-cucumber nutrition and organic-waste cleanup grow with well-fed nights and taper later. Whole harvests retain actual remaining calories.
+Adds ability-filtered Wednesday seed/50% supplement stock and Saturday husbandry/aquaculture stock, with ranch clothing that preserves the visitor's identity. Stock, rolls and cross-day trades are persisted.
+Adds value-per-kcal automatic feeding, warehouse-scrap repairs, water/filter upkeep, per-tank breeding switches/projected-population caps and Night Report management subpages.
+Crowded egg/larval conversion retains original stock and state. Uses native butcher/keeper rules. Includes 32 new textures and bilingual text.
+Existing crops, five brews, Chilled beer +20%, aged fruit wines, replanting and save identifiers remain.
+Compilation and automated checks passed. Full live overnight/UI acceptance awaits initial playtesting. This package was not automatically installed or uploaded to Workshop.

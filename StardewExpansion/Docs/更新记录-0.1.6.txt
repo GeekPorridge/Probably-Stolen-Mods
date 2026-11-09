@@ -1,0 +1,27 @@
+水培与酿酒扩展 v0.1.6
+
+1. 移除8种新增种子的默认“可食用”词条。旧种子加载时同步清理，其他基因、编辑热度及生长进度保留。产物本身具有食物属性，可自行选择售卖或酿酒。
+2. 修复高速水培超额结算健康损耗：只结算剩余生长工作量。按20工作量基准折算每轮养护评分，避免长周期作物天然低分。
+3. 普通养护下以2格普通作物为主，每批最多1–2个1格小型。4格大型需要采收养护≥85且有效品质加成≥20%；养护≥95、品质≥50%可提高大型比例。严重失养会增加小型。
+4. 原料分为受损−1、欠佳0、良好＋1、优质＋2。常规养护以良好和优质为主；原料、装瓶预览显示状态及评分明细。
+5. 新增作物无需放大镜鉴定，清理旧作物的空白鉴定入口。
+
+大型实例（6个收成）：普通养护5普通＋1小型；达到大型门槛4普通＋1小型＋1大型；达到高档门槛3普通＋3大型。
+评分实例：两份良好原料（2）＋双原料（1）＋酵母（1）＋清洁水（1）＝5，“臻品窖藏”。
+
+更新后重启游戏。新规则作用于后续采收，已有作物保留尺寸与原料状态，成酒保留品级。旧种子无需重新购买。
+本次通过5,775项逻辑检查、原生模组扫描、89组中英文文本检查及34张资源检查；尚待游戏内验证。
+
+Hydroponics & Brewing v0.1.6
+
+1. Remove the default Edible trait from all eight added seeds, including saved seeds. Preserve other genetics, heat and growing progress. Produce remains inherently food and can be sold or, where eligible, brewed.
+2. Limit high-speed care charges to the crop's remaining work. Normalize harvest care to a 20-work basis so long crops are comparable with short regrowth cycles.
+3. Regular two-cell crops dominate ordinary harvests, with at most one or two small one-cell crops per batch. Four-cell large crops require care ≥85 and effective quality ≥20%; care ≥95 with quality ≥50% increases the large share. Severe neglect increases the small share.
+4. Ingredient scores are Damaged −1, Poor 0, Good +1 and Excellent +2. Ordinary care mostly produces Good or Excellent ingredients. Ingredient and filled-bottle tooltips explain the scores.
+5. Remove empty magnifying-glass inspection from new and saved added produce.
+
+Six-item examples: ordinary care gives 5 regular + 1 small; the basic large gate gives 4 regular + 1 small + 1 large; the higher gate gives 3 regular + 3 large.
+Wine example: two Good ingredients (2) + paired ingredients (1) + yeast (1) + clean water (1) = 5, Reserve.
+
+Restart the game after updating. New harvest rules apply to subsequent harvests; existing produce keeps its size and ingredient state, and finished wine keeps its grade. Saved seeds do not need to be repurchased.
+Passed 5,775 logic checks, native mod scanning, 89 bilingual text checks and 34 sprite checks. In-game verification remains pending.

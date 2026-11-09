@@ -1,0 +1,1 @@
+r2 was built and verified against installed native assemblies. The currently running game has not been restarted by the agent; actual r2 UI/mouse acceptance remains pending. Initial-2.0 startup notes are historical.

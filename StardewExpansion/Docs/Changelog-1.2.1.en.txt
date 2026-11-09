@@ -1,0 +1,14 @@
+Stardew Expansion 1.2.1 — Hotfix
+
+- Stop after harvest now lets a manually inserted, unstarted seed finish one crop before pausing. Retained perennials resume their regrowth cycle when the option is switched off.
+- A hatchet can target a growing or resting plant inside the hydroponic input slot. Targeting the machine also remains supported. Clearing returns no seeds and generates no extra harvest. Native livestock/fish functions remain available.
+- Hide the hydroponic care, giant-pity and breeding appendix while keeping native status, power and water information.
+- Shorten the stop-button help to two actual lines and simplify the paused-state message in both supported languages.
+
+Distinct growth sprites are reserved for the major update. That update starts in the next round after hotfix acceptance.
+
+Validation: isolated tests against the installed game DLL, including 403 crop checks, the existing brewing/husbandry/report regressions, both locales, asset layout and the native mod scanner. The old 1.2 DLL fails the new initial-start regression. The native night callback and complete hatchet factory run in the harness; Unity presentation and resource boundaries use fixtures. No player save was opened or modified. In-game visuals and mouse interaction await user acceptance.
+
+Runtime payload: DLL, manifest, two locale files and 71 existing sprites; 75 files total. No Workshop or Nexus upload was performed. Existing mod/save IDs are retained.
+
+Manual installation: replace the matching files inside the currently enabled mod directory using Mods/PelicanCultivation from this package. When using a Workshop folder, update that same mod instance instead of enabling a duplicate copy.

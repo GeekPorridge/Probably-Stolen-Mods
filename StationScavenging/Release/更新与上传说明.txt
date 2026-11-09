@@ -1,0 +1,31 @@
+站区拾荒 v1.5.5 — 保留第三方Mod原作者规则
+
+本次行为
+木箱、金属箱等按“更好的拾荒”原作者规则正常在下层掉落，保留原概率、手套电子强化、箱内物品和远征掉落。
+它们不属于站区核心贵重：拿到不会触发或延长核心休整，核心休整期间也照常掉落。
+后勤箱及四新区核心贵重的共享休整保持原有规则。
+1.5.4的箱子核心池接管、独立掷骰拦截和权重重分配代码已移除；没有改动第三方DLL。
+保留同晚第二次进入下层的修复、剩余共享次数、耐力/手套加成、行动充沛、经验和读档处理。
+退出再进不会刷新搜索次数；受伤、被抓和夜末结算限制继续有效。
+
+验证与交付
+原始更好的拾荒1.13.0与拾荒拓展1.0.7 DLL完成168项隔离联合检查，原有12477项回归全部通过。
+验证了作者原有3%木箱/1%金属箱概率边界、电子强化的绝对掉率、远征、核心休整期照常掉箱、拾取不触发或延长核心冷却。
+验证了同晚二次入场、次数叠加、额外外出、读档、次数耗尽及经验结算。
+原生ModScanner扫描196个方法、零发现、零硬标记、无需额外权限。
+测试使用隔离的Unity场景、随机输入、音画与物品放置边界，未作游戏内手动试玩；未读取或改写用户存档/配置。
+本机与桌面的1.5.4已备份后同步至1.5.5；源码中旧的LowerCoreLoot.cs也已移出，避免后续构建重新带回接管逻辑。
+DLL SHA256：F31E1DA2FCB9E35EE1300C8094EFDC8AA0D08C29E9AF191026AD90B80F566E01
+本地运行目录、桌面发行/上传目录与此发布包逐文件校验一致；Steam下载缓存及第三方DLL保持不变。
+重启游戏确认版本1.5.5。本次尚未执行工坊上传，条目ID3833525075不变，页面标题/介绍/封面/可见性不覆盖。
+
+SteamCMD上传命令：
+workshop_build_item "C:\Users\pc\Desktop\StationScavenging\SteamWorkshop\station_scavenging.vdf"
+
+English
+Better Scavenging boxes keep their author's own Lower/expedition odds, glove bonuses, contents and factories.
+They are separate from Station core loot: they neither start/extend core rest nor become unavailable during it.
+The withdrawn v1.5.4 box-core interception code is removed. Repeat Lower entry, native bonus counts, outings, XP and reload fixes remain.
+Passed 168 original-peer DLL integration and 12477 regression checks, with isolated Unity engine boundaries rather than a manual in-game playthrough.
+Backed up and synchronized local runtime and desktop source/release/upload folders to v1.5.5; user saves/settings and third-party binaries were untouched.
+Restart and confirm v1.5.5. Workshop upload is prepared, not executed, under the existing item ID.

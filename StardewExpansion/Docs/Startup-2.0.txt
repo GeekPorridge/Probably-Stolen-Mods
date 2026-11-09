@@ -1,0 +1,10 @@
+2.0 startup check / 启动检查
+
+Observed game at the main menu after launch. No existing game save was opened. Native loader confirms 2.0 is running, with 178 sprites, two reservoir textures, two locales and 860 localized entries (430 keys in each language). Actual gameplay UI and mouse acceptance are still pending.
+
+[星露谷扩展 / Stardew Expansion]: Stardew Expansion 2.0 enabled; twelve crops, seven brews, artisan machines, husbandry, reservoir fishing and three paper manuals.
+[ModLoader] Duplicate mod ID 'pelican_cultivation' in 'D:/steam/steamapps/common/Probably Stolen/Probably Stolen_Data\..\Mods\PelicanCultivation' (already loaded from 'D:/steam/steamapps/common/Probably Stolen/Probably Stolen_Data\..\Mods\3834581016'), skipping: first folder wins.
+[ModLoader] 星露谷扩展 / Stardew Expansion: 2 texture(s), 178 item sprite(s), 0 paper sprite(s) loaded
+[ModLoader] 星露谷扩展 / Stardew Expansion: 2 locale(s), 860 localization entries loaded
+[星露谷扩展 / Stardew Expansion]: Resources ready: 178 sprites; 2 locales. Farmer factory registered as pelican_town_farmer.
+[ModLoader] audit: pelican_cultivation v2.0 source=Local workshop=0 owner=0 running=True trust=Updated caps=reflection-external hash=d6ff3dec272d97a65427b823c33acb8cae6b2781677ba888762313963ea26fbb

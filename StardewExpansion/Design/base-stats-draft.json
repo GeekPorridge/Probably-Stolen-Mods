@@ -1,0 +1,29 @@
+{
+  "status": "assistant_numeric_proposal_not_approved_or_playtested",
+  "reference": {
+    "machine_work_per_active_day": 8,
+    "machine_quality_yield_bonus_percent": 0,
+    "crop_health_effects": "Size, quality and possible health-related losses are not included in the displayed standard counts",
+    "native_source": "HydroponicHelper.GetRequiredProgress/GetBaseHarvestQuantity/GetWaterUsePerCycle; PlantGeneticsHelper.GetStatMultiplier; PlantTrait.GetStatPercent"
+  },
+  "crops": [
+    {"id":"parsnip","name_zh":"防风草","work":20,"regrowth_work":0,"quantity":3,"water_ml":80},
+    {"id":"potato","name_zh":"土豆","work":24,"regrowth_work":0,"quantity":6,"water_ml":120},
+    {"id":"corn","name_zh":"玉米","work":32,"regrowth_work":16,"quantity":8,"water_ml":120},
+    {"id":"wheat","name_zh":"小麦","work":30,"regrowth_work":0,"quantity":6,"water_ml":120},
+    {"id":"hops","name_zh":"啤酒花","work":36,"regrowth_work":12,"quantity":8,"water_ml":140},
+    {"id":"strawberry","name_zh":"草莓","work":32,"regrowth_work":16,"quantity":8,"water_ml":140},
+    {"id":"starfruit","name_zh":"杨桃","work":40,"regrowth_work":0,"quantity":4,"water_ml":180},
+    {"id":"ancient_fruit","name_zh":"上古水果","work":56,"regrowth_work":16,"quantity":8,"water_ml":200}
+  ],
+  "ancient_breeding_harvest": {
+    "fruit_fraction": 0.5,
+    "fraction_confirmed_by_user": true,
+    "proposed_normal_initial_count": 6,
+    "proposed_breeding_initial_fruit_count": 3,
+    "seed_count_and_rounding": "User selected whole-batch calculation and reliable one-seed output for the initial strain",
+    "derived_seed_calculation_proposal": "A base batch of two seeds times native SEED_YIELD multiplier gives one seed with innate perennial. Apply once to the whole batch; apply any fractional rounding after aggregation. This is a derived implementation proposal, not a separate user-approved formula.",
+    "odd_fruit_count_rounding": "Undecided for future edited strains"
+  },
+  "not_yet_balanced": ["Seed and crop prices", "Brewing recipes and prices", "Mineral requirements and consumption", "Merchant stock counts", "Health and size effects", "Non-ancient-fruit breeding and remaining seed-return rules"]
+}

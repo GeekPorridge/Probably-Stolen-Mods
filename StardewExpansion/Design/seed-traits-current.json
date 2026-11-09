@@ -1,0 +1,324 @@
+[
+  {
+    "crop": "parsnip",
+    "seed_id": "pelican_parsnip_seed",
+    "traits": [
+      {
+        "id": "fast_grower",
+        "rank": 1,
+        "name_en": "Fast Grower",
+        "stats_percent": {
+          "GROWTH_SPEED": 25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "hardy",
+        "rank": 1,
+        "name_en": "Hardy",
+        "stats_percent": {
+          "CONTAMINANT_SENSITIVITY": -30.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "simple_genome",
+        "rank": 1,
+        "name_en": "Simple Genome",
+        "stats_percent": {},
+        "complexity_offset": -4,
+        "locked": true,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": -4
+  },
+  {
+    "crop": "potato",
+    "seed_id": "pelican_potato_seed",
+    "traits": [
+      {
+        "id": "bountiful",
+        "rank": 2,
+        "name_en": "Bountiful",
+        "stats_percent": {
+          "HARVEST_QUANTITY": 33.635857
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "nutritious",
+        "rank": 1,
+        "name_en": "Nutritious",
+        "stats_percent": {
+          "CALORIES": 25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "thirsty",
+        "rank": 1,
+        "name_en": "Thirsty",
+        "stats_percent": {
+          "WATER_USE": 25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 0
+  },
+  {
+    "crop": "corn",
+    "seed_id": "pelican_corn_seed",
+    "traits": [
+      {
+        "id": "perennial",
+        "rank": 1,
+        "name_en": "Perennial",
+        "stats_percent": {
+          "HARVEST_QUANTITY": -25.0,
+          "GROWTH_SPEED": -20.0,
+          "SEED_YIELD": -50.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": true
+      },
+      {
+        "id": "hardy",
+        "rank": 1,
+        "name_en": "Hardy",
+        "stats_percent": {
+          "CONTAMINANT_SENSITIVITY": -30.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "thirsty",
+        "rank": 1,
+        "name_en": "Thirsty",
+        "stats_percent": {
+          "WATER_USE": 25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 0
+  },
+  {
+    "crop": "wheat",
+    "seed_id": "pelican_wheat_seed",
+    "traits": [
+      {
+        "id": "fast_grower",
+        "rank": 1,
+        "name_en": "Fast Grower",
+        "stats_percent": {
+          "GROWTH_SPEED": 25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "drought_resistant",
+        "rank": 1,
+        "name_en": "Drought Resistant",
+        "stats_percent": {
+          "WATER_USE": -25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 0
+  },
+  {
+    "crop": "hops",
+    "seed_id": "pelican_hops_seed",
+    "traits": [
+      {
+        "id": "perennial",
+        "rank": 1,
+        "name_en": "Perennial",
+        "stats_percent": {
+          "HARVEST_QUANTITY": -25.0,
+          "GROWTH_SPEED": -20.0,
+          "SEED_YIELD": -50.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": true
+      },
+      {
+        "id": "bountiful",
+        "rank": 1,
+        "name_en": "Bountiful",
+        "stats_percent": {
+          "HARVEST_QUANTITY": 20.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "thirsty",
+        "rank": 2,
+        "name_en": "Thirsty",
+        "stats_percent": {
+          "WATER_USE": 42.044823
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 0
+  },
+  {
+    "crop": "strawberry",
+    "seed_id": "pelican_strawberry_seed",
+    "traits": [
+      {
+        "id": "perennial",
+        "rank": 1,
+        "name_en": "Perennial",
+        "stats_percent": {
+          "HARVEST_QUANTITY": -25.0,
+          "GROWTH_SPEED": -20.0,
+          "SEED_YIELD": -50.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": true
+      },
+      {
+        "id": "delicious",
+        "rank": 1,
+        "name_en": "Delicious",
+        "stats_percent": {
+          "PRODUCE_SELL_PRICE": 15.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "frail",
+        "rank": 1,
+        "name_en": "Frail",
+        "stats_percent": {
+          "CONTAMINANT_SENSITIVITY": 30.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 0
+  },
+  {
+    "crop": "starfruit",
+    "seed_id": "pelican_starfruit_seed",
+    "traits": [
+      {
+        "id": "delicious",
+        "rank": 2,
+        "name_en": "Delicious",
+        "stats_percent": {
+          "PRODUCE_SELL_PRICE": 25.226892
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "slow_grower",
+        "rank": 1,
+        "name_en": "Slow Grower",
+        "stats_percent": {
+          "GROWTH_SPEED": -25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "frail",
+        "rank": 2,
+        "name_en": "Frail",
+        "stats_percent": {
+          "CONTAMINANT_SENSITIVITY": 50.453785
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "complex_genome",
+        "rank": 1,
+        "name_en": "Complex Genome",
+        "stats_percent": {},
+        "complexity_offset": 4,
+        "locked": true,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 4
+  },
+  {
+    "crop": "ancient_fruit",
+    "seed_id": "pelican_ancient_fruit_seed",
+    "traits": [
+      {
+        "id": "perennial",
+        "rank": 1,
+        "name_en": "Perennial",
+        "stats_percent": {
+          "HARVEST_QUANTITY": -25.0,
+          "GROWTH_SPEED": -20.0,
+          "SEED_YIELD": -50.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": true
+      },
+      {
+        "id": "slow_grower",
+        "rank": 1,
+        "name_en": "Slow Grower",
+        "stats_percent": {
+          "GROWTH_SPEED": -25.0
+        },
+        "complexity_offset": 0,
+        "locked": false,
+        "perennial": false
+      },
+      {
+        "id": "complex_genome",
+        "rank": 2,
+        "name_en": "Complex Genome",
+        "stats_percent": {},
+        "complexity_offset": 8,
+        "locked": true,
+        "perennial": false
+      }
+    ],
+    "initial_complexity": 8
+  }
+]

@@ -1,0 +1,42 @@
+A Fellow Townsman Arrives v1.1.7 — Disease, serum and native equipment
+Checked 2026-11-06 against the locally installed Probably Stolen 0.46D assembly. These are local-build rules, not assumptions about other releases or mods.
+
+Rats, cattle and pigs
+Current immunity below 50 adds a nightly ordinary-illness roll, roughly 5-25% as immunity decreases. Immunity below 25 also turns native health regeneration into damage.
+Feces plus animal-carcass occupied cells at 25% of an animal's actual inventory grid trigger hygiene checks; 35% is the higher tier. This applies to ordinary inventories containing uncaged animals as well as cages. Occupied cells, not object counts, are used.
+Animal occupancy above 55/70/90% gives crowding levels. Crowding increases hygiene risk once the dirt check is active, reduces fertility and at higher levels can cause fatal fights. Below 25% dirt, the native hygiene method returns before the crowding addition; crowding alone must not be described as guaranteed infection.
+Same-species meat can cause prion disease: rat to rat, cattle to cattle, pig to pig, including species-origin meat blended into a dispenser. Prion-tainted same-species feed guarantees infection; ordinary same-species meat uses an immunity-based roll. Avoid feeding a species its own meat.
+Red growth serum temporarily gives +20% growth, -40% immunity and +25% hunger rate. It is not an illness treatment.
+
+Ordinary illness versus prion disease
+Ordinary illness deals 25% of maximum health per night, then rolls recovery using current immunity. Green serum raises immunity; it neither directly clears illness nor directly restores health.
+Prion disease has its own persistent tag and growth/immunity/lifespan penalties. Native green serum does not remove that tag. Separate affected stock and feed sources. Hunger and old-age death have separate rules and cannot be replaced by serum treatment.
+
+Green serum
+Manual native targeting remains available for owned living rats, cattle and pigs. Each native dose injects 20 units, metabolized at 5 per night, about four nightly ticks including the current night. The effect is temporary +75% immunity and +25% hunger rate, not a genetic edit.
+Optional automatic treatment is in mod settings > Husbandry > Automatic green serum for ordinary illness, off by default. It targets owned living mammals with ordinary illness at night, invokes an actual green-serum item's native callback and spends a real dose from main inventory/warehouse. Ordinary containers are searched; supplies inside other machines are reserved. Active concentration/effects prevent repeat dosing. No supplies means a warning, never free treatment.
+Prion disease alone, carcasses, vendor stock and aquatic animals receive no automatic dose. A mammal with both ordinary illness and prion disease may receive treatment for its ordinary illness while retaining the prion tag. Night logs record successful dose use only.
+
+Fish, lobsters and sea cucumbers
+These use food, water, power and organic-waste checks, not mammal serum treatment. Native unpowered tanks first lose 34% of maximum health per night. Too little water damages health; below half the water requirement sets health to zero. Lobster organic waste above 3% damages health, and 8% is fatal. Other species scale thresholds with their sensitivity.
+Added sea cucumbers ignore organic-waste injury but still need food, water and power. Their cleanup requires a living fed animal, power and a water tank, and removes organic waste only. No heavy-metal or other pollutant cure is added.
+
+Native automation
+Livestock feed dispensers blend loaded food into stored calories and feed animals to a target fullness. Registered cattle/pigs use the same logic. Dispensers need supplied food, manually or via hoppers; they do not take food from every warehouse automatically.
+The original retired rancher sells Vacuum Robot (vacuum_robot). Place it inside the same cage/inventory grid as the feces. It collects that grid's feces in the late nightly phase and can be activated manually. Full storage stops collection. A Common Electronic upgrade enables an incinerator, which must then be turned on. It does not collect carcasses.
+Native hygiene/disease checks run before late robotic collection. Animals can therefore become ill before the robot clears that night's dirt. Manual cleaning before sleep can matter. Night-log dirt/crowding warnings describe the environment after nightly processing.
+The native automatic butcher counts male/female keepers separately per species, supporting rats, cattle and pigs. It also has age/weight filters, marker/custom-name protection and pregnancy protection. Enabled illness/prion culling can select unprotected sick animals before normal keeper selection; a keeper quota is not absolute protection against disease culling.
+Intake/outlet hoppers move items between linked inventory grids with filters, retained quantities and nightly order. They do not select good genes. Use native butcher settings and protection marks for breeding stock rather than adding another automatic slaughter system.
+
+This update
+Removes old report/management logic and warehouse-wide feeding/repair/water/filter automation. Old tank breeding toggles and the added 32-individual cap are inactive; breeding returns to native rules. Existing saved stock is never deleted by those retired controls.
+Keeps species production, the milk/truffle tray, sea-cucumber organic cleanup, the first purchased male/female pair guarantee and safe crowded egg/larval conversion.
+Appends three base native night-log messages plus per-machine feed reserves: condition, growth and warnings. The original log body scrolls; the themed frame/tabs/background and footer remain. No stock means no empty husbandry report.
+
+Primary code inspected
+HusbandryHelper: CheckHygiene, CheckImmunityDisease, HandleDisease, CheckCannibalism, HandleStarvation.
+HusbandryDirectory: VacuumRobot, SerumGreen, SerumRed; StoreClientListSpec: CreateRetiredRancher.
+Liquid: livestock_immunity/livestock_steroid; MachineFeedDispenser, MachineAutoButcher, HopperHelper, AquacultureHelper.
+
+Version 1.1.5 introduced optional feces-to-trash handling (on by default) and per-machine feed planning. Same-cage robots are emptied only near full; disable disposal to retain feces for water. See Feces-and-feed-planning.en.txt.
+Passed 160 night-report/equipment/serum checks, including 116 waste/feed checks, and existing native-method regressions. The user accepted v1.1.6 in game on 2026-11-06. v1.1.7 only cleans code and losslessly recompresses art; no separate new live overnight session was run.

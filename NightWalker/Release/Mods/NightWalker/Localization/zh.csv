@@ -1,0 +1,4 @@
+perk_name,夜行者
+perk_description,夜晚最多外出3次，同一地点当晚只能访问一次，次日恢复。
+config_perk_cost,起始特性消耗点数
+config_perk_cost_hint,可选1或2点，默认为2点。应用后重启游戏，对新游戏的特性选择生效；现有存档的外出效果不变。

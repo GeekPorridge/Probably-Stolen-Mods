@@ -1,0 +1,32 @@
+[
+  {
+    "index": 0,
+    "filename": "01-overview.png",
+    "url": "https://images.steamusercontent.com/ugc/15950355918590973878/961CC66479C7AC9816EA721F6C9395A8C4E2DBC6/",
+    "type": "k_EItemPreviewType_Image"
+  },
+  {
+    "index": 1,
+    "filename": "02-crops.png",
+    "url": "https://images.steamusercontent.com/ugc/18300540117172331708/8E9AFEAD6C12ADF4CB07B533989D32C12848F9D7/",
+    "type": "k_EItemPreviewType_Image"
+  },
+  {
+    "index": 2,
+    "filename": "03-brewing.png",
+    "url": "https://images.steamusercontent.com/ugc/14136188332932506542/197FC00924E9B0F59E84A3B9B2CABACFC5C518EF/",
+    "type": "k_EItemPreviewType_Image"
+  },
+  {
+    "index": 3,
+    "filename": "04-husbandry.png",
+    "url": "https://images.steamusercontent.com/ugc/9644535107841263069/3119494A78E293E85112316D5BDF54159F91B147/",
+    "type": "k_EItemPreviewType_Image"
+  },
+  {
+    "index": 4,
+    "filename": "05-townsman.png",
+    "url": "https://images.steamusercontent.com/ugc/11934087523116679263/6B0D6F4920998BE1AB2A664708475BD4910EBE05/",
+    "type": "k_EItemPreviewType_Image"
+  }
+]

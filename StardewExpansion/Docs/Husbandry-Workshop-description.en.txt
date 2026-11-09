@@ -1,0 +1,81 @@
+[h2]v1.2 update[/h2]
+Show every eligible growth forecast, including Cattle, Pigs, Lobsters and Sea Cucumbers. Fix the reproduced Neon Undertow 0.5.3 hatch/fry overnight failure while retaining inheritance and safe space checks.
+
+[h2]v1.1.9 fixes[/h2]
+Remove obsolete duplicate crop-size catalog entries with save conversion; use the native report auto-size maximum of 24 instead of fitted 15; retain stopping while requiring a hatchet to clear established perennials without a seed refund.
+
+[h2]v1.1.8 update[/h2]
+Higher crop values/calories and stronger Corn yield/regrowth. Each hydroponic machine can stop after harvest; established perennials still require a hatchet to clear without returning a seed; continuous production remains the default. Native report font size with scrolling. Old produce upgrades once in proportion to its remaining portion.
+
+[h1]A Fellow Townsman Arrives[/h1]
+Grow crops, brew drinks and raise cattle, pigs, lobsters and sea cucumbers, with a Townsman visiting each week.
+
+[h2]Eight crops and five brews[/h2]
+[list]
+[*]Parsnip, Potato, Corn, Wheat, Hops, Strawberry, Starfruit and Ancient Fruit, with seeds and native hydroponics/genetics.
+[*]Potato, Corn, Strawberry, Starfruit and Ancient Fruit have Small/Regular/Giant footprints of 1/4/9 cells. Parsnip, Wheat and Hops remain two cells. Giant harvests have care/quality requirements, a chance and a pity system.
+[*]Find ancient seeds through scavenging or the Townsman's gift; switch Ancient Fruit between normal harvesting and breeding inside the hydroponic machine.
+[*]Wheat Beer, Pale Ale, Strawberry Wine, Starfruit Wine and Ancient Fruit Wine each have individual bottle art. Beer can gain Chilled +20%; fruit wines use native aging.
+[/list]
+
+[h2]Farming Wednesdays, ranching Saturdays[/h2]
+The Townsman brings seeds on Wednesdays and changes into ranching clothes on Saturdays for juvenile rats, cattle, pigs, aquatic eggs and feed. Stock follows ability unlocks. Wednesday retains a 50% supplementary-bundle chance; Saturday stock has no seeds or Nutrifruit.
+Stock and the bundle roll persist with the save and wait for counter space. Thirty contextual dialogue lines cover introductions, a seed gift, ability unlocks, revenue milestones and everyday conversation.
+
+[h2]Milk, truffles and seafood[/h2]
+[list]
+[*]Adult female cattle produce Milk every two days by default. Adult male pigs find Small Black Truffles every three days; butchering elderly pigs of either sex also yields a Black Truffle.
+[*]Cattle and pigs are omnivorous and use native genetics, breeding, hunger and disease. Carnivorous lobsters do not reproduce naturally and reward continued feeding.
+[*]Omnivorous sea cucumbers breed, are harvested whole and help remove organic waste. The first Townsman-purchased egg clutch per save guarantees a male/female pair when grown. Later natural breeding keeps random sexes.
+[*]Beef, Pork and Lobster Meat have different cut sizes. Only six-cell meat cuts also count as luxury items; both truffles are luxury items.
+[*]Hunger, disease, poor nutrition or full product trays pause production. Due cycles are retained; eggs and larvae keep their state while waiting safely for enough tank space to hatch or grow.
+[/list]
+
+[h2]Convenience features and improved night reports[/h2]
+Use native feed dispensers, robots, butchers and hoppers, with separate keeper counts for rats, cattle and pigs. Added conveniences:
+[list]
+[*][b]Automatic replanting, on by default:[/b] Covers seven native and eight added plants. After clearing the old plant, it takes an existing matching seed from output, main inventory, then warehouse, preserving genes and strain. No seeds means waiting.
+[*][b]Automatic green serum, off by default:[/b] Manual use remains. Automatic treatment spends existing doses for ordinary disease, avoiding an active effect. Serum boosts immunity; it does not directly remove disease or prions.
+[*][b]Per-machine feed forecasts, on by default:[/b] Lists how many nights compatible feed should last for each cage/tank. Custom names take priority over saved stable numbers. Low reserves appear first, with an optional low-supply-only filter.
+[*][b]Scrollable night reports:[/b] Condition, growth, disease warnings and feed plans append to native reports. Wheel/scrollbar support preserves native/other-mod text and numbers, including net income, and the cosmetic ledger frame/footer.
+[*][b]Feces-to-trash handling, on by default:[/b] Transfers cage feces without a robot; with a robot it allows normal collection and empties storage at 80% occupied cells by default. A full or restricted bin leaves items intact. Disable disposal to keep feces for water production.
+[/list]
+Forecasts use compatible processed local feed and current growth/production costs. Births, illness, diets and deliveries affect duration. The refill warning defaults to three nights and is configurable.
+
+[h2]Growth cycles and base values[/h2]
+[b]Reference conditions:[/b] Default settings, unedited initial seeds, standard hydroponics, normal water/power and no extra growth bonuses. Values exclude trait, condition, size, aging and trade modifiers. Genes, equipment and feeding affect actual growth and returns.
+
+[h3]Crops[/h3]
+[list]
+[*][b]Parsnip:[/b] about 2 nights to harvest; base produce value 12 credits each.
+[*][b]Potato:[/b] about 3 nights to harvest; base produce value 14 credits each.
+[*][b]Corn:[/b] about 4 nights to first harvest, then 2 nights per regrowth; base produce value 16 credits each.
+[*][b]Wheat:[/b] about 3 nights to harvest; base produce value 12 credits each.
+[*][b]Hops:[/b] about 6 nights to first harvest, then 2 nights per regrowth; base produce value 14 credits each.
+[*][b]Strawberry:[/b] about 5 nights to first harvest, then 3 nights per regrowth; base produce value 24 credits each.
+[*][b]Starfruit:[/b] about 7 nights to harvest; base produce value 72 credits each.
+[*][b]Ancient Fruit:[/b] about 12 nights to first harvest, then 4 nights per regrowth; base produce value 40 credits each.
+[/list]
+Small/Regular/Giant base-value multipliers are 0.5/1/3. Delicious and harvest condition modify value further. Perennials regrow; other crops need replanting.
+
+[h3]Brews[/h3]
+Base values for Wheat Beer, Pale Ale, Strawberry Wine, Starfruit Wine and Ancient Fruit Wine are [b]60/100/120/320/200 credits[/b], respectively. Ingredient/water quality influences wine quality; chilling or aging can increase value further.
+
+[h3]Animals and livestock products[/h3]
+[list]
+[*][b]Cattle:[/b] Normally adult at day 6 and elderly at day 26. Adult females produce Milk every 2 days, with a base value of 42 credits; old age stops milk production.
+[*][b]Pigs:[/b] Normally adult at day 10 and elderly at day 22. Adult males find Small Black Truffles every 3 days, worth 45 credits at base. The extra Black Truffle from butchering an elderly pig of either sex has a base value of 90 credits.
+[*][b]Lobsters:[/b] Normally adult at day 14 and elderly at day 30. Meat yield accumulates through feeding and growth; insufficient feed limits fattening. They do not reproduce naturally.
+[*][b]Sea cucumbers:[/b] Adult at day 8. After 10/20/30 qualifying fed nights: about 424/683/884 kcal, worth 84/136/176 base credits as a whole harvest. Later gains taper.
+[*][b]Live animals and meat:[/b] Cattle/pig live base values scale with weight, minimum 120/180 credits. A full 900-kcal cut is worth 130 for Beef, 150 for Pork or 180 for Lobster Meat. Yield and partial-cut values follow the actual animal and remaining calories.
+[/list]
+Cattle/pig adult and elder ages and product intervals are configurable. Milk and small-truffle production consume additional nutrition; feed, power, water and maintenance contribute to operating costs.
+
+[h2]Installation and compatibility[/h2]
+Simplified Chinese and English. Probably Stolen 1.0.0.12. No mandatory mod dependency; Station Scavenging and Metal Bottle Making are optional companions.
+Enable the mod in the game's mod menu after subscribing and restart after updates. Avoid enabling duplicate manual/Workshop copies. Existing mod and save identifiers remain.
+v1.1.7 cleans redundant code and losslessly recompresses textures, reducing runtime size by about 32.8% while retaining their dimensions and pixel detail.
+
+[h2]Privacy and permissions[/h2]
+[b]This mod does not read, collect or upload personal information from your computer.[/b]
+It does not scan unrelated personal files, collect hardware/account/browsing data, initiate outbound networking, or launch/control external programs. Configuration, save progress and logs use game APIs. External reflection only supports optional Station Scavenging integration; it does not gather personal information.

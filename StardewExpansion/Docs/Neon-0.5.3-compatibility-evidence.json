@@ -1,0 +1,28 @@
+{
+  "version": "1.2",
+  "game_version": "1.0.0.12 / 100-Rev12",
+  "peer_version": "0.5.3",
+  "peer_workshop_id": "3833095213",
+  "peer_id": "water_seller_english_collection",
+  "original_peer_sha256": {
+    "WaterSellerCollection.dll": "AEC869853080F9B47A70CB64DA28C44DA5B1BCEF53B5272DEB123226A65CDEE6",
+    "WaterSellerBridge.dll": "574AF39A415B87521F8996DF8F2A302C5A00908A59072065403177DBBB18C791"
+  },
+  "baseline_v119_failure_reproduced": true,
+  "failure_method": "WaterSellerPack.NeonFish.Grown",
+  "failure": "Null __state after BeforeCohort was skipped",
+  "original_peer_dll_checks": 239,
+  "both_patch_registration_orders": true,
+  "native_mammal_and_tank_night_callbacks": true,
+  "brood_dna_and_traits_preserved": true,
+  "full_space_and_partial_placement_rollback": true,
+  "founder_pair_preserved": true,
+  "native_rat_milk_preserved": true,
+  "pending_diet_projection_keeps_neon_growth_multipliers": true,
+  "third_party_files_modified": false,
+  "new_required_dependency": false,
+  "full_live_neon_overnight_test": false,
+  "user_saves_opened": false,
+  "settings_modified": false,
+  "v119_accepted_by_user_in_game_on": "2026-11-07"
+}

@@ -1,0 +1,19 @@
+老乡来了 v1.0.2 — 每周三、周六来访
+
+老乡改为每周三、周六各来访一次，独立于退休农夫及其解锁状态。首周对应经营第3、6天，此后每7天循环。
+每次种子库存和售价保持原样，每周有两次进货机会。第三次实际到访的赠种保底继续沿用，不按周数重算。
+读档及访客队列刷新不会重复安排同一天的到访；已完成交易后同一天不会再次安排。旧版尚未到场的非日程访客按新日程修正，正在进行的交易和本次库存保留。
+中英文初次及回访对话、说明和工坊介绍同步更新。
+本版只调整来访日程；养殖扩展仍在构思阶段，小牛、小猪和新增鱼种尚未加入。
+
+通过：15,545项逻辑检查、182项原生Harmony集成检查、57项原生日历集成检查、原生模组扫描、107组中英文语言键及39张贴图检查。未接管游戏进行实机操作。
+
+A Fellow Townsman Arrives v1.0.2 — Wednesday and Saturday visits
+
+The Fellow Townsman now visits once every Wednesday and once every Saturday, independently of the retired farmer and his unlock state. Operating days 3 and 6 start the schedule, repeating every seven days.
+Per-visit seed stock and prices stay unchanged, giving two weekly restocking opportunities. The seed gift still counts actual visits and retains its existing records.
+Loading or regenerating the client queue cannot duplicate a same-day visit. Completed visits are not requeued. Legacy off-day queued visits follow the new schedule; an ongoing trade and its stock are retained.
+English and Simplified Chinese dialogue, instructions and Workshop descriptions have been updated.
+This update changes the visit schedule. Husbandry remains in design; calves, piglets and added fish species are not included yet.
+
+Passed: 15,545 logic checks, 182 native Harmony integration checks, 57 native-calendar integration checks, native mod scan, 107 bilingual keys and 39 sprite checks. No game UI control was used.

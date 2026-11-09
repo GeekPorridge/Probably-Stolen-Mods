@@ -1,0 +1,4 @@
+perk_name,Night Walker
+perk_description,Go out up to 3 times per night. Each location can be visited once per night. Resets the next day.
+config_perk_cost,Starting perk point cost
+config_perk_cost_hint,"Choose 1 or 2 points (default: 2). Apply and restart the game before selecting perks for a new run. Existing saves keep their outing effects."

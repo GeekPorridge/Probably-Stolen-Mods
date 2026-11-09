@@ -1,0 +1,9 @@
+A Fellow Townsman Arrives v1.1.6 — Trash fix and scrollable native night reports
+
+Version 1.1.6 fixes and scrollable night reports
+Resolve feces disposal from the actual scene trashcan's attached storage, not the factory-populated cache that temporary/probe trashcan creation can redirect. A null cache does not disable a real trashcan; a cached grid is never accepted without a live fixture. Full/restricted destinations preserve original items.
+Use concise Animals / Expected growth labels, remove the care qualifier and the separate feed-reserves heading. Keep per-machine calories and estimated nights.
+Wrap the original native report body in a vertical scroll viewport with a draggable scrollbar and wheel support. Preserve actual native/add-on row objects and text, with preferred text heights and wrapping. The themed frame/tabs/background and footer stay in place. Added or changed rows reflow; disabling the extension restores the body layout.
+Profit and other add-on values remain owned by their original writers. This extension preserves existing entries without recalculating their values; it does not invent statistics that another mod has not emitted.
+Passed 160 night-report/equipment/serum checks, including 116 waste/feed checks (13 additional cases), plus existing regressions. All 46 targets/parameters were checked. Unity UI rendering is excluded from the standalone CLR harness; live wheel/drag and actual waste-transfer acceptance remain unverified.
+248 bilingual keys, 71 unchanged textures and 75 runtime files. Native scanner: 580 methods, existing reflection-external only. Authorized backup/local sync, no Workshop upload.

@@ -1,0 +1,14 @@
+A Fellow Townsman Arrives v1.1.3 — Dialogue edits and a sea-cucumber starter pair
+
+Revises the farming and gene-editing opening lines. Removes only the specified introductory sentences from the 1000/2000 revenue texts, retaining the remaining text and milestone triggers. Replaces the 5000 text with congratulations on becoming a well-known merchant and the visitor's memories of being a well-known farmer in his town. Existing announcement progress is retained. Both languages are updated.
+
+Farm Report and management are temporarily removed. No custom subpage bar or changes to the native Night Report layout remain. Automatic feeding, resource upkeep, products and saved device settings are retained.
+
+The first actual purchase of one sea-cucumber egg clutch from this visitor is marked per save. Its marker survives grouped hatching. When the two larvae become individual sea cucumbers, they are assigned one male and one female. The guarantee is completed only after the whole pair fits and is placed successfully; crowded tanks retain the original group and pending guarantee. No extra animal is created on retries.
+Previously purchased eggs/larvae can recover the guarantee using native saved purchase-price metadata. Existing adults keep their sex. Natural offspring and later ordinary purchases retain random sexes. Discarded/dead clutches or a surviving count below two do not create a replacement animal.
+
+Retains v1.1.2's Saturday stock, short egg names, hidden farm-item mod-information, aquatic growth, meat/truffle prices and all artwork.
+
+Passed 31,253 logic checks, 182 native wine checks, 57 calendar checks, 118 husbandry/metadata checks, 35 dialogue checks and 23 starter-pair checks. All 47 Harmony bindings, 206 bilingual keys and 71 unchanged textures passed. The native scanner examined 476 methods and retained only reflection-external, with no hard flag or refusal.
+Starter coverage includes actual purchase versus display, grouped hatching, all-male/all-female factory rolls, restored state, crowded space, legacy purchase recovery and unchanged ordinary offspring. These headless checks do not replace a live purchase/hatching/save-round-trip acceptance pass.
+Verified files are synchronized to the game mod folder with a recoverable backup. Restart a running game to load the update. No Steam Workshop upload is performed.

@@ -1,0 +1,40 @@
+水培与酿酒扩展 0.1.2
+
+本次更新
+1. 新增商人更名“老乡”；重绘正面半身像，到访时按原版顾客宽高边界适配。
+2. 8种种子改为1格，适配原版水培机；已有种子加载后也会刷新。
+3. 1格、2格作物都使用原名，仅4格作物显示“大型”。价格与产量规则不变。
+4. 8种种子、8种作物各增加独立中英文描述，融合星露谷田园与空间站当铺背景；移除重复种植教程。
+5. 成功酿成的草莓果酒、杨桃酒、上古果酒分类调整为“烟酒类 + 奢侈品”。
+6. 重绘三款细长果酒瓶和两款较宽啤酒瓶，标签融入瓶身；全部保留原版1×4占格。
+7. 修复自定义酒倒空后仍使用模组贴图检索的问题。五种酒继续使用原版陈酿与酒架。
+
+更新使用
+退出并重新启动游戏，再加载原存档。替换文件不会让正在运行的游戏立即加载新DLL。
+已有物品会在加载时更新；基因、陈酿价格、到访次数和本次库存记录保留。
+压缩包中的 Mods/PelicanCultivation 放入游戏 Mods 目录。不要同时保留两个同ID的启用副本。
+当前包为测试版，未发布到Steam工坊。
+
+验证
+编译通过；4,359项逻辑与回归检查通过；原生模组扫描通过。
+75组中英文语言键及占位符、34张PNG透明与格数检查通过。
+0.1.2尚未进行游戏内画面和全经营流程验证。
+
+Hydroponics & Brewing 0.1.2
+
+Changes
+1. Renamed the visitor Fellow Townsman (老乡); new front-facing waist-up portrait fitted to native visitor bounds.
+2. All eight seeds occupy one cell and fit the native hydroponic slot. Saved seeds refresh on load.
+3. One- and two-cell crops use their base names; only four-cell crops use Large. Prices and yields are unchanged.
+4. Sixteen individual bilingual seed/crop descriptions connect Stardew farming with the station pawnshop; repeated seed tutorials removed.
+5. Successfully brewed strawberry, starfruit and ancient-fruit wines use Substance plus Luxury Item categories.
+6. Three new slender fruit-wine bottles and two broader beer bottles; all retain the native 1-by-4 footprint.
+7. Emptying a custom wine restores native sprite lookup. All five brews retain native aging and wine-rack support.
+
+Restart the game before loading your save. Copying files cannot update a DLL already loaded by the running game.
+Existing item genetics, aged prices, visitor counts and stock records are retained.
+Place Mods/PelicanCultivation inside the game's Mods directory. Enable only one copy of the same mod ID.
+This test build has not been published to Steam Workshop.
+
+Validation: compilation, 4,359 logic/regression checks, native mod scan, 75 bilingual keys/placeholders and 34 PNG checks passed.
+In-game visuals and the full production-to-customer flow still require testing for 0.1.2.

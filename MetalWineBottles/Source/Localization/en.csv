@@ -1,0 +1,12 @@
+Key,Value
+grade_1,"Very low purity: bottles per two ingots"
+grade_2,"Low purity: bottles per two ingots"
+grade_3,"Fair purity: bottles per two ingots"
+grade_4,"High purity: bottles per two ingots"
+grade_5,"Very high purity: bottles per two ingots"
+grade_6,"Perfect purity: bottles per two ingots"
+config_hint,"Consumes one unit from each ingot. Average true purity grades, rounded down. Leave room for the full batch. Adjustable range: 1-50."
+yield_hint,"Bottles per batch, very low to perfect: {0}."
+mix_hint,"Average true grades (1-6), rounded down. Perfect + Low = High; Perfect + Very Low = Fair."
+ingot_hint,"Use on another owned metal ingot to craft empty wine bottles. Consumes only one unit from each ingot."
+output_full,"Not enough room for the full batch. Clear space in the ingots' inventories and try again. Both ingots were kept."

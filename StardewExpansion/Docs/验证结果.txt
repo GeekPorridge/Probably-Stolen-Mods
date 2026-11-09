@@ -1,0 +1,26 @@
+Passed 15876 checks: beer fridge acceptance and native Chilled +20% feature, fruit-wine-only aging, historical value preservation, finished-wine transfer protection, three crop sizes, wrapped-grid lookup, selective tooltips, giant guarantees, brewing and prior regressions.
+Passed 15637 husbandry checks (sex/stages, stock gates, tapered growth, placement and metadata conservation).
+Created isolated managed RNG/time boundary fixture; installed game files are untouched.
+Validated 78 Harmony target and named-parameter bindings against the installed game.
+Night-report scroll patch: native target/parameters verified; engine rendering is excluded from the CLR harness.
+Passed 182 native Harmony integration checks against installed game methods and the actual ager inventory callback (headless localization fixture only).
+Passed 57 merchant schedule integration checks against the installed native calendar (Wednesday/Friday/Saturday, three times per week).
+Passed 15637 husbandry checks (sex/stages, stock gates, tapered growth, placement and metadata conservation).
+Passed 118 patched husbandry integration checks, including the actual native aquatic geometry callback.
+Passed 23 sea-cucumber founder-pair checks (first purchase, hatch metadata, both same-sex rolls, restoration, full space and legacy purchase recovery).
+Passed 35 dialogue and persisted-visit checks (abilities, revenue, replay, stock migration and contextual random text).
+Passed 126 feces-transfer and per-machine feed planning checks (transfer boundary fixture; native diets, growth, production, stable names and complete lists).
+Passed 174 native night-report, equipment and serum checks (both languages, append-only logs, repeat guards, forecasts, real doses and optional treatment).
+Native balance comparison: Nutrifruit=12 value / 300 kcal; Fillerweed=690 kcal / 1 night; mature Corn=2400 kcal / 2 nights; no quality/production modules.
+Passed 436 crop-update checks: actual native harvest/stop/regrowth, native seed-removal rules, save migration, partial food, original-crop balance and report font baseline. Unity render, scene inventory, care inputs and RNG are fixtures; no player save is opened.
+Passed 917 v2 checks: native recipes/resource conservation/output rollback, barrel staged reward, plant-only feed, two-parent egg inheritance/incubation, hen/goat production, exact fish-mother costs/age gates, perfume upgrades/charges, unchanged fishing rates/timing/stock/cash/merge/pending/cooldowns, 54-item catalog and native handbooks' locales/pagination/unlock gates. Unity scene rendering and physical placement remain fixtures; no player save opened.
+Native scanner passed: 959 methods; declared capability: reflection-external
+Approved bilingual meat names and fifteen pairs of natural descriptions/flavor text passed.
+Simplified egg names and all 30 contextual dialogue texts plus two goods lines passed in both languages.
+Bilingual text, placeholders, transparency, native grid and minimal runtime passed: 445 keys, 157 sprites, 14100426 bytes.
+Native asset-layout and CSV-key regression checks passed.
+Native seed filter, HD sprite geometry, smaller portrait and sixteen bilingual crop narratives passed.
+Original artwork aspect ratios and retained texture detail passed for 14 seed/bottle exports.
+Crop artwork proportions and strictly increasing visible subject sizes passed for 18 exports.
+
+Manual DLL isolation, fresh button events, matching bottle heights and unchanged night fishing passed. Live Unity rendering is not claimed.

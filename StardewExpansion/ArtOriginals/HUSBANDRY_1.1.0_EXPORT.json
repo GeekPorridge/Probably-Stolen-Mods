@@ -1,0 +1,290 @@
+[
+  {
+    "key": "farmer_ranch",
+    "source": "farmer-ranch.png",
+    "columns": 1,
+    "rows": 1,
+    "index": 0,
+    "width": 128,
+    "height": 160
+  },
+  {
+    "key": "cow_baby",
+    "source": "cattle-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 0,
+    "width": 256,
+    "height": 128
+  },
+  {
+    "key": "cow_young",
+    "source": "cattle-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 1,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "cow_female",
+    "source": "cattle-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 2,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "cow_male",
+    "source": "cattle-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 3,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "pig_baby",
+    "source": "pig-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "pig_young",
+    "source": "pig-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 1,
+    "width": 256,
+    "height": 128
+  },
+  {
+    "key": "pig_female",
+    "source": "pig-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 2,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "pig_male",
+    "source": "pig-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 3,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "lobster_roe",
+    "source": "lobster-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "lobster_fry",
+    "source": "lobster-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 1,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "lobster_small",
+    "source": "lobster-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 2,
+    "width": 256,
+    "height": 128
+  },
+  {
+    "key": "lobster_medium",
+    "source": "lobster-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 3,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "lobster_large",
+    "source": "lobster-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 4,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "sea_cucumber_roe",
+    "source": "sea-cucumber-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "sea_cucumber_fry",
+    "source": "sea-cucumber-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 1,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "sea_cucumber_small",
+    "source": "sea-cucumber-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 2,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "sea_cucumber_medium",
+    "source": "sea-cucumber-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 3,
+    "width": 256,
+    "height": 128
+  },
+  {
+    "key": "sea_cucumber_large",
+    "source": "sea-cucumber-sheet.png",
+    "columns": 3,
+    "rows": 2,
+    "index": 4,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "milk",
+    "source": "milk.png",
+    "columns": 1,
+    "rows": 1,
+    "index": 0,
+    "width": 128,
+    "height": 256
+  },
+  {
+    "key": "truffle_small",
+    "source": "truffle-sheet.png",
+    "columns": 2,
+    "rows": 1,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "truffle",
+    "source": "truffle-sheet.png",
+    "columns": 2,
+    "rows": 1,
+    "index": 1,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "beef_tiny",
+    "source": "beef-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "beef_medium",
+    "source": "beef-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 1,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "beef_large",
+    "source": "beef-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 2,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "pork_tiny",
+    "source": "pork-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "pork_medium",
+    "source": "pork-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 1,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "pork_large",
+    "source": "pork-sheet.png",
+    "columns": 3,
+    "rows": 1,
+    "index": 2,
+    "width": 384,
+    "height": 256
+  },
+  {
+    "key": "lobster_meat_tiny",
+    "source": "lobster-meat-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 0,
+    "width": 128,
+    "height": 128
+  },
+  {
+    "key": "lobster_meat_small",
+    "source": "lobster-meat-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 1,
+    "width": 256,
+    "height": 128
+  },
+  {
+    "key": "lobster_meat_medium",
+    "source": "lobster-meat-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 2,
+    "width": 256,
+    "height": 256
+  },
+  {
+    "key": "lobster_meat_large",
+    "source": "lobster-meat-sheet.png",
+    "columns": 2,
+    "rows": 2,
+    "index": 3,
+    "width": 384,
+    "height": 256
+  }
+]

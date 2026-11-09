@@ -1,0 +1,10 @@
+A Fellow Townsman Arrives v1.1.5 — Feces handling and per-machine feed reserves
+
+Feces-to-trash defaults ON, configurable off to retain feces for water. Clean cage feces without a robot; with a same-cage robot, empty its storage only near full, default 80% occupied cells, configurable 50-100%. At most one successful emptying per robot per night.
+Full/missing trash and removal restrictions preserve original items. Successful retries clear stale warnings. No carcasses or unrelated items are selected.
+Native night logs list feed per active cage/tank with stable saved numbers/custom names, lowest reserves first. Default lists all active machines; optional shortage-only mode and a three-night refill threshold are configurable.
+Use processed, diet-compatible local dispenser calories and project existing stock growth/normal production costs night by night. No warehouse feeding or real supply consumption by forecasting. Births, deaths, diet changes and future deliveries can change actual duration. Missing dispensers, incompatible food and low targets have separate warnings.
+Preserves native/cosmetic UI with no new page/layout changes, and keeps production, sea cleanup, founder-pair and optional serum features.
+
+103 new waste/feed checks; 147 total night-report checks, plus 31,246 existing logic and native wine/calendar/husbandry/dialogue/founder checks. All 45 bindings, 249 bilingual keys and 71 unchanged textures pass. Native scanner: 554 methods, existing reflection-external only.
+Transfer placement/rendering use headless fixtures. No live cosmetic overnight, waste transfer or real-save acceptance claim. Complete 100-row logs do not guarantee 100 visible rows on every screen. Authorized backup/local sync only; no Workshop upload.

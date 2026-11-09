@@ -1,0 +1,13 @@
+A Fellow Townsman Arrives v1.1.7 — Size optimization and publication materials
+
+Baseline: the user accepted v1.1.6 in game on 2026-11-06.
+
+Removed an unused meat-footprint helper, a calendar predicate referenced only by tests, a runtime sprite-key array used only for verification, an unused growth-stage argument and redundant default growth initialization. Calendar tests now exercise the production ability-aware rule; sprite checks use export metadata. Crop calorie lookup no longer allocates a new array for each call.
+Harmony entries, Unity lifecycle methods, callbacks, migrations, item IDs, config keys and legacy textures are retained. Removed management/warehouse-feeding systems remain absent.
+
+All 71 PNGs retain exact dimensions, RGBA pixels, alpha and non-IDAT chunks; only compressed data is replaced. Textures: 5,255,153 to 3,471,074 bytes.
+DLL: 140,800 to 139,776 bytes (1,024 saved).
+Runtime: 5,439,301 to 3,654,198 bytes (1,785,103 saved, about 32.8%), still 75 files.
+
+Prepared bilingual guides, announcement copy, Steam BBCode drafts and content inventory, plus 64 current transparent sprites, 54 distinct master-art cuts, seven legacy sprites and five contact sheets.
+Existing automated checks passed. Unity rendering is excluded from the standalone CLR harness; v1.1.7 has not had a separate new live overnight session. No Workshop upload/publication, save edits or changes to other mods were performed.

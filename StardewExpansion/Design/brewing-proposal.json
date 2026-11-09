@@ -1,0 +1,51 @@
+{
+  "status": "user_approved_working_fermentation_and_prices_native_aging_all_five_not_implemented",
+  "updated_at": "2026-11-05",
+  "confirmed_by_user": [
+    "Use the previous fermentation cycles and selling prices as the current working balance",
+    "All five wines use native aging, including wheat beer and pale ale"
+  ],
+  "confirmed_recipe": "Two individual crops of the same species per bottle, regardless of size",
+  "proposed_wines": [
+    {"crop":"wheat","name_zh":"小麦啤酒","work":4,"base_price":60,"role":"Early accessible turnover"},
+    {"crop":"hops","name_zh":"淡啤酒","work":6,"base_price":100,"role":"High-volume recurring supply and correspondingly high bottle demand"},
+    {"crop":"strawberry","name_zh":"草莓果酒","work":6,"base_price":120,"role":"Choice between fresh crop sales and brewing"},
+    {"crop":"starfruit","name_zh":"杨桃酒","work":8,"base_price":320,"role":"High unit value, lower farm throughput and recurring seed costs"},
+    {"crop":"ancient_fruit","name_zh":"上古果酒","work":10,"base_price":200,"role":"Long establishment and sustained production, with breeding competing for fruit"}
+  ],
+  "native_rules_verified": {
+    "native_bloomberry_wine": {"work":4,"base_price":100},
+    "daily_progress": {"no_yeast":1,"ordinary_yeast":2,"super_yeast":4,"reusable_yeast":2},
+    "base_reference_input_prices": {"empty_bottle":12,"ordinary_yeast":10,"super_yeast":20,"water_ration_750ml":30,"reusable_yeast_capital":250},
+    "ingredient_container": {"columns":6,"rows":2},
+    "wine_score": {
+      "effective_ingredient_scores": [-1,0,1,2],
+      "native_condition_mapping": {"raw_minus_2":-1,"raw_minus_1":0,"raw_plus_1":1,"raw_plus_2":2},
+      "at_least_two_ingredients_bonus":1,
+      "any_yeast_bonus":1,
+      "water_score_range": [-3,1],
+      "stronger_yeast": "Faster progression; same one-point yeast score bonus",
+      "ingredient_roll": "Native bloomberry condition roll depends on harvest health; proposed new brewing crops reuse this mapping"
+    },
+    "quality_tiers": [
+      {"name_zh":"粗桶劣酿","score_min":1,"score_max":1,"percent":-15},
+      {"name_zh":"手工自酿","score_min":2,"score_max":2,"percent":0},
+      {"name_zh":"量产酒液","score_min":3,"score_max":4,"percent":25},
+      {"name_zh":"臻品窖藏","score_min":5,"score_max":5,"percent":50},
+      {"name_zh":"琼浆玉液","score_min":6,"score_max":null,"percent":75}
+    ],
+    "failed_wine": {"name_zh":"难以下咽","score_max":0,"percent":-100},
+    "aging": "AgableHelper.OnAge adds 3 to unitValue per aging day, before native quality and market pricing. It does not add 3 percent and does not change WINE_SCORE_INT. Wine rack can apply additional aging ticks.",
+    "names_source": "Local Mechanic_zh localization table verified for all six quality labels"
+  },
+  "proposed_behavior": [
+    "Apply native scoring without species rarity, physical size, delicious, calorie or potent traits directly adding score",
+    "Allow different sizes and strains of the same crop in a fixed recipe; validate exactly two crop portions before consuming anything",
+    "Natural fermentation remains available without yeast; proposed maximum one yeast item per batch",
+    "Show recipe, input count, predicted quality and expected fermentation time before starting",
+    "Keep price previews fresh, unaged and free of negotiation or market modifiers",
+    "Proposed shapes: small 1x1, normal 1x2, large 2x2; user renamed giant to large while retaining 1/2/4 cells. Geometry is a proposal satisfying user-selected cell counts"
+  ],
+  "aging_scope": "User approved native aging for all five wines; use the existing wine rack, add 3 unitValue per native aging tick before quality and market pricing, and retain the original wine quality rating",
+  "balance_limits": "All economics are reference arithmetic, not gameplay-validated net profit. Include cultivation resources, modules, inventory occupancy, customer arrival and bottle acquisition path before final release. Newly crafted bottles can have a different opportunity cost from the native 12-price merchant bottle."
+}

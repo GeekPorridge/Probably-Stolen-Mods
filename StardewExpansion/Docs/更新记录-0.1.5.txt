@@ -1,0 +1,28 @@
+水培与酿酒扩展 0.1.5
+
+1. 小麦啤酒、淡啤酒改为横2格、纵3格，共6格；保留原图宽高比和矮宽瓶身。
+2. 增加自动补种，默认开启，可在模组设置中关闭。覆盖本机登记的7种原版植物和8种新增植物。
+3. 补种来源依次为本机输出区、主背包、仓库，只取1粒同种现有种子。普通容器可查找，其他机器内部的种子不取用。
+4. 保留种子基因与品系数据；堆叠种子拆分后互不影响。多年生保留母株，缺种时等待。生长、耗水和耗电沿用原版周期。
+5. 增加8种种子的中英文完整初始词条报告，效果值直接读取原版公式。Ⅱ级不按简单翻倍计算。
+6. 旧啤酒扩为6格时检查容量；无空间时保留原位置和价值，腾出后再展开。
+7. 保留0.1.4已确认正常的作物鼠标命中修复与老乡向下偏移。
+
+重新启动游戏后加载原存档生效。开关位于本模组设置的“水培 / Hydroponics”分组。
+安装时只替换模组文件，不修改存档。旧版已备份；当前仍为本地测试版，未发布Steam工坊。
+已通过编译、4,720项逻辑回归、原生模组扫描、79组中英文文本及34张资源检查。
+六格啤酒和自动补种尚待本轮实机验证。
+
+Hydroponics & Brewing 0.1.5
+
+Wheat Beer and Pale Ale now occupy six cells (2 by 3) with their original broad silhouettes.
+Automatic replanting defaults to on and is configurable. All seven native and eight added plant species are supported.
+One matching seed is taken from the machine output, main inventory, then storage. Ordinary containers are searched; seeds inside other machines are excluded.
+Actual strain data, edited traits and heat are retained. Split seeds have independent state. Perennials retain their parent; missing seeds cause waiting. Native growth/power/water cycles remain.
+Added bilingual initial trait reports generated from native formulas. Rank II effects use the native curve.
+Finished beer expansion checks capacity and safely waits if all areas are full, preserving the item and its aged value.
+Includes the user-confirmed 0.1.4 hit-surface and downward portrait fixes.
+
+Restart before loading your save. The switch is in this mod's Hydroponics settings section.
+Installation replaces mod files only, with a backup of the previous version. Not published to Steam Workshop.
+Compilation, 4,720 regression checks, native scanning, 79 bilingual keys and 34 sprites passed. In-game testing of the new 0.1.5 features remains pending.

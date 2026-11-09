@@ -1,0 +1,94 @@
+Visitor dialogue v1.1.7
+
+farmer_story_intro
+Just call me the townsman. I used to work the land and keep a few animals. One moment I was out in the fields, and the next I was in this tin box... Still cannot tell you how I got here. At least I have my seeds, and these hands still work.
+
+farmer_unlock_farming
+Heard you have started planting. A small patch, perhaps, but seeds never complain about the size. Get the roots settled first. The rest of life can follow.
+
+farmer_unlock_dna
+Heard you can even edit the genes in your seeds now. Quite a skill. I have picked out a few fussier varieties for you. This counter might look rather different by my next visit.
+
+farmer_unlock_mammals
+Heard you have a cage ready. Cattle take their time; pigs like a bit of commotion. You will get to know their habits soon enough. Animals remember who looks after them.
+
+farmer_unlock_aquaculture
+Keeping a little aquatic stock now? I will bring some eggs along. Mind the food and the water, rather than staring at them all day. I have tried that. It does not make them grow much faster.
+
+farmer_unlock_aquaculture_ii
+Ready for lobsters, are you? Those claws make for rather particular tenants. Get the tank in order before they start inspecting your fingers.
+
+farmer_income_1000
+Congratulations! The first harvest is always the one you remember. Save yourself enough for a decent meal.
+
+farmer_income_2000
+Trading is a bit like farming: you keep at it every day, then look back and realise how much has grown.
+
+farmer_income_5000
+Congratulations! You have made quite a name for yourself as a merchant. I was a well-known farmer back in our town, you know. Whenever the neighbours talked about a fine crop, my name tended to come up. Seeing your business thrive makes me happy too.
+
+farmer_goods_seed
+I have seeds with me today. Care to try a few packets?
+
+farmer_goods_ranch
+Some young stock and husbandry supplies today. Make a little room for them before choosing.
+
+farmer_chat_seed_0
+Thought I would check the sky before setting out. Looked up: same old lamp. Saves guessing whether it might rain, at least.
+
+farmer_chat_seed_1
+A fellow asked whether he could grow potatoes in a flowerpot. I said yes. Then he wanted to know what the whole pot would sell for. People here do have ideas.
+
+farmer_chat_seed_2
+Little packets, but there are dinners in every one. Though dinners here sometimes need permission from the electricity meter first.
+
+farmer_chat_seed_3
+Used to check the sky when the crops were slow. Now I check the tank, then the plug. Feels more like fixing a tractor.
+
+farmer_chat_seed_4
+Counted every seed before I came. If an extra plant grows, that is your good work. If a seed goes missing, do not blame the pig. It stayed home today.
+
+farmer_chat_seed_5
+A fine clean counter, though not much use for drying seeds. Last time I spread some out, someone wanted a price for the handful.
+
+farmer_chat_seed_6
+Your seeds get better treatment than I do, having their very nature improved. Wonder whether that machine could do anything about my back.
+
+farmer_chat_seed_7
+Crops into drink, drink into money, money into seeds... A proper circle. Makes rather more sense than the route that brought me here.
+
+farmer_chat_ranch_0
+A slow journey today. The pig would not walk; the calf would not hurry. Between the two, it felt as though they were taking me to market.
+
+farmer_chat_ranch_1
+Milk looks respectable in a bottle, does it not? We used to catch it straight in a bowl. Never seemed to hurt the taste.
+
+farmer_chat_ranch_2
+The pig has a better nose for valuables than I do. I spent ages finding a nut off a bolt. One bit of digging from the pig, and suddenly everyone was interested.
+
+farmer_chat_ranch_3
+If the little ones are making a fuss, check their food first. I once spent ages trying to reason with them. A handful of feed worked better.
+
+farmer_chat_ranch_4
+Washed my apron today. Had barely left the door before the pig added two little hoofprints. Saves people thinking I never do any work.
+
+farmer_chat_ranch_5
+An old hat, yes, but the cattle know it. So do the pigs. If I ever get a new one, they might need introducing to their keeper all over again.
+
+farmer_chat_aqua_0
+Used to wish for bigger tanks. Now I sometimes wish for fewer of them. Fish may keep quiet, but there is nothing shy about their appetite.
+
+farmer_chat_aqua_1
+A sea cucumber never seems in a hurry. Watched one for a while and felt quite peaceful myself. Then I remembered the rent does not share its patience.
+
+farmer_chat_aqua_2
+A sniff will not tell you whether the water is good. Was about to compliment a tank once, until I noticed the look on the fish.
+
+farmer_chat_aqua_3
+Asked a sea cucumber what keeps it so busy down there. No answer. Still, less trouble than certain customers who owe me money.
+
+farmer_chat_aqua_4
+The lobster did not come with a warning about its claws. I added that myself. Buy it, and I will throw in the warning for free.
+
+farmer_chat_aqua_5
+The lobster would not let go of the basket rim. Told it there was a tank waiting at the other end. Seemed to want a viewing first.

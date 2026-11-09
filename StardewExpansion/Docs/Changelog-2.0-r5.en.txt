@@ -1,0 +1,29 @@
+Stardew Expansion 2.0 r5 — Revision notes
+
+The manifest version remains 2.0 and the existing mod/configuration/save identifiers are retained. This revision follows r4; historical changelogs remain unchanged.
+
+Handbook hover blocking
+Independent handbook paper now intercepts pointer hits and clears the existing tooltip when opened. Machine information behind the reading area no longer participates in that hover path. Illustrated pages, independent page state and fixed-scale dragging remain.
+
+Barrel stars
+Both native finished wine and added fruit wines continue through native maximum. Native tier 0–3 reaches Reserve after 6 barrel nights and maximum after 14; Reserve starts need 8 nights.
+After native maximum, Silver needs 7 additional nights and gives +25%; Gold needs another 10 nights and gives +35%; Iridium needs another 15 and gives +50%. The cumulative star times are 7/17/32 nights after maximum. Each star replaces the preceding barrel modifier and applies after native quality, without stacking with r4's +10% reward. Saved bottle progress and native aging data remain intact.
+The Barrel still uses no power, holds at most ten whole bottles, and has one storage bay with no recipe/progress controls. Beer, pale ale, chili spirit, counterfeit and partly used bottles remain ineligible.
+
+Backpack-based night fishing
+The native-style panel is compact and anchored at the bottom right. Hold left mouse or Space to raise tension; release to lower it, keeping it in the green zone to reel in. Legendary fish use narrower zones and longer control. Single-press and two-of-three rounds are removed.
+Opening Esc or settings pauses tension, catch progress and the timeout; closing the menu resumes without counting the paused time. Removing the selected bait from the backpack cancels an active reel without payment. A pending catch remains saved, but its original bait type must be returned to the backpack before collection.
+The first reservoir entry of the night records actual backpack bait as that night's allowance. Ground and side pockets do not count. There is no fixed eight-catch cap, reservoir purchase or first-visit bait gift; re-entry does not refresh the allowance.
+One actual selected backpack bait and one allowance are spent only after successful catch placement on the ground. Failed/cancelled attempts cost neither. If ground space is full, the catch waits pending and blocks another cast; collection requires the original bait type still present. Bonus eggs cost no extra bait. Legendary cooldown starts on successful placement; independent cooldowns and catch probability intervals are retained.
+Saturday Townsman stock includes five ordinary bait. Aquaculture II adds three premium bait without replacing the ordinary bait.
+
+Three Grill dishes
+Lobster meat -> Baked Lobster (Food, Luxury).
+Sea cucumber, whole or harvested -> Scallion Sea Cucumber (Food).
+One whole Tuna + Lava Eel + Midnight Carp + Largemouth Bass -> Sashimi Platter (Food, Luxury), one of each required.
+All take one base night and occupy 3x2 cells, with distinct dish artwork. Lobster/sea cucumber do not enter generic grilled-fish recipes. Their batches cap at four portions; sashimi makes one platter. Remaining raw/harvestable calories are preserved. Finished dishes cannot be reprocessed, and full output retains all inputs until the batch fits.
+
+Documentation and acceptance
+README, complete machine recipes, handbook text and local Workshop description drafts describe the r5 rules in Simplified Chinese and English.
+The final isolated regression run passes 2072 v2 checks and 231 Saturday bait/stock checks. All 79 Harmony bindings are validated, and the native scanner accepts 996 methods. Both locales contain 452 matching keys, with 160 item/growth sprites checked. Unity rendering and physical mouse interaction remain subject to in-game acceptance after restart. Historical r4 totals describe r4 only.
+After updating, restart the game and check the handbook over a machine, all three barrel stars, backpack-only fishing allowance, failure/cancellation, pending ground rewards, Saturday bait stock and all three dishes. No Workshop upload or web-page change is included.

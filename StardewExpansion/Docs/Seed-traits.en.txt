@@ -1,0 +1,51 @@
+A Fellow Townsman Arrives v1.1.9 — Default traits of the eight added seeds
+Generated from current mod definitions and the installed native trait formulas. Edited strains retain their actual traits.
+The default Edible trait has been removed from all eight seeds. Their produce is inherently food merchandise; eligible crops can also be brewed.
+Percentages below have two decimal places. The game may round its display; rank II uses the native rank^0.75 curve.
+
+parsnip seed
+  Fast Grower 1: GROWTH_SPEED +25%.
+  Hardy 1: CONTAMINANT_SENSITIVITY -30%.
+  Simple Genome 1: genetic complexity -4; native locked trait.
+
+potato seed
+  Bountiful 2: HARVEST_QUANTITY +33.64%.
+  Nutritious 1: CALORIES +25%.
+  Thirsty 1: WATER_USE +25%.
+
+corn seed
+  Perennial 1: parent survives harvest and fruits again; HARVEST_QUANTITY -25%; GROWTH_SPEED -20%; SEED_YIELD -50%.
+  Hardy 1: CONTAMINANT_SENSITIVITY -30%.
+  Thirsty 1: WATER_USE +25%.
+
+wheat seed
+  Fast Grower 1: GROWTH_SPEED +25%.
+  Drought Resistant 1: WATER_USE -25%.
+
+hops seed
+  Perennial 1: parent survives harvest and fruits again; HARVEST_QUANTITY -25%; GROWTH_SPEED -20%; SEED_YIELD -50%.
+  Bountiful 1: HARVEST_QUANTITY +20%.
+  Thirsty 2: WATER_USE +42.04%.
+
+strawberry seed
+  Perennial 1: parent survives harvest and fruits again; HARVEST_QUANTITY -25%; GROWTH_SPEED -20%; SEED_YIELD -50%.
+  Delicious 1: PRODUCE_SELL_PRICE +15%.
+  Frail 1: CONTAMINANT_SENSITIVITY +30%.
+
+starfruit seed
+  Delicious 2: PRODUCE_SELL_PRICE +25.23%.
+  Slow Grower 1: GROWTH_SPEED -25%.
+  Frail 2: CONTAMINANT_SENSITIVITY +50.45%.
+  Complex Genome 1: genetic complexity +4; native locked trait.
+
+ancient_fruit seed
+  Perennial 1: parent survives harvest and fruits again; HARVEST_QUANTITY -25%; GROWTH_SPEED -20%; SEED_YIELD -50%.
+  Slow Grower 1: GROWTH_SPEED -25%.
+  Complex Genome 2: genetic complexity +8; native locked trait.
+
+Different traits multiply under native rules: Perennial I and Bountiful I give 0.75×1.20=0.90 harvest quantity.
+Perennial survival does not create replacement seeds. Automatic replanting checks matching seeds in the machine output, main inventory, then storage.
+
+v1.1.8 adds per-machine Stop after harvest, pausing both perennial regrowth and replanting. Trait definitions are unchanged.
+
+Stopped established perennials still require a hatchet to clear and do not return seeds; turn the control off to resume regrowth.

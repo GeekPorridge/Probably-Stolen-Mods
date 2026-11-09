@@ -1,0 +1,15 @@
+老乡来了 v1.0.1 — 啤酒冰镇与果酒催陈
+
+小麦啤酒、淡啤酒：放入有电冰箱，日结算后获得原生“冰镇”标签，价值+20%。重复冷藏不叠加，离开后的保冷失效沿用原版。饮用或倒空后，空瓶不保留冰镇加成。
+草莓果酒、杨桃酒、上古果酒：继续放入催陈器，沿用原版陈酿增值。两种啤酒不能再放入催陈器，也不会继续陈酿；旧存档已获得的陈酿价值和天数保留。
+原版酒、配方、品级、瓶型、贴图及存档标识保持原有规则。重启游戏后加载原存档即可生效。
+
+检查：14,868项逻辑检查、182项原生Harmony集成检查、原生模组扫描、107组中英文语言键及39张贴图检查通过。未接管游戏进行实机操作。
+
+A Fellow Townsman Arrives v1.0.1 — Chilled beer and aged fruit wine
+
+Wheat Beer and Pale Ale enter a powered fridge and gain native Chilled (+20% value) at its daily cycle. Repeated cycles do not stack. Cold expiry follows native rules. Drinking or emptying removes the bonus from the empty bottle.
+Strawberry Wine, Starfruit Wine and Ancient Fruit Wine retain native ager support and aging value gains. Beer cannot enter the ager or age further. Saved beer keeps its historical aging days and value.
+Native-only wines, recipes, quality, bottle geometry, artwork and save identifiers keep their existing behavior. Restart the game and load the existing save.
+
+Passed: 14,868 logic checks, 182 native Harmony integration checks, native mod scan, 107 bilingual keys and 39 sprite checks. No in-game UI operation was performed.

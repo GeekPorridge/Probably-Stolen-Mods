@@ -1,0 +1,9 @@
+成品酒作弊ID
+pelican_beer — 啤酒
+pelican_pale_ale — 淡啤酒
+pelican_strawberry_wine — 草莓果酒
+pelican_starfruit_wine — 杨桃果酒
+pelican_ancient_wine — 上古果酒
+pelican_chili_spirit — 白酒
+pelican_blueberry_wine — 蓝莓果酒
+

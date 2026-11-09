@@ -1,0 +1,22 @@
+{
+  "status": "user_accepted_current_trait_direction_not_final_balance",
+  "scope": "Initial purchased seeds; numerical base stats are proposed separately and not yet approved",
+  "edible_trait": "User corrected that the game has no player eating mechanic. All eight crops are intended as showcase merchandise for original food buyers. Verify native food tags and any edible trait needed for sale classification and existing delicious/nutritious trait effects; do not interpret them as player eating, hunger or cooking gameplay.",
+  "trait_sets": {
+    "parsnip": {"fast_grower": 1, "hardy": 1, "simple_genome": 1},
+    "potato": {"bountiful": 2, "nutritious": 1, "thirsty": 1},
+    "corn": {"perennial": 1, "hardy": 1, "thirsty": 1},
+    "wheat": {"fast_grower": 1, "drought_resistant": 1},
+    "hops": {"perennial": 1, "bountiful": 1, "thirsty": 2},
+    "strawberry": {"perennial": 1, "delicious": 1, "frail": 1},
+    "starfruit": {"delicious": 2, "slow_grower": 1, "frail": 2, "complex_genome": 1},
+    "ancient_fruit": {"perennial": 1, "slow_grower": 1, "complex_genome": 2}
+  },
+  "breeding_constraints_proposed": [
+    "User selected normal ancient-fruit harvest producing fruit and breeding harvest retaining half the fruit plus seeds",
+    "Preserve the mother's current trait ranks, including removed native traits; retain mother plant if it remains perennial",
+    "User selected whole-batch breeding seed calculation with reliable one-seed output for the initial ancient-fruit strain; account for native seed-yield modifiers once and display the resulting output",
+    "Follow native inheritance of temporary editing heat; calculate genome complexity from inherited traits",
+    "No free trait rank upgrades or automatic fermentation quality bonuses from breeding"
+  ]
+}

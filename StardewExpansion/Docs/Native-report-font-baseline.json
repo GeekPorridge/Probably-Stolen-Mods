@@ -1,0 +1,11 @@
+{
+  "m_fontSize": 15.0,
+  "m_fontSizeBase": 24.0,
+  "m_fontSizeMax": 24.0,
+  "m_enableAutoSizing": 1,
+  "m_fontSizeMin": 15.0,
+  "asset_file": "level1",
+  "manager_path_id": 14623,
+  "prefab": "StartOfDayTMPPrefab",
+  "expected_report_font": 24
+}

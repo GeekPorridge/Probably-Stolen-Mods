@@ -1,0 +1,39 @@
+老乡来了 v1.0 正式版
+内部版本：1.0.0
+
+本次收尾
+1. 模组由“水培与酿酒扩展”更名为“老乡来了”，英文名 A Fellow Townsman Arrives。
+2. 上古果酒从深紫色改为浅蓝色系，保留深青色瓶颈、果实标签和细长酒瓶造型，外部仍占1×4格。
+3. 延续22格酒瓶原料区、1/4/9格作物体型、巨型保底及成酒液体转移保护。
+
+更新与兼容
+沿用 pelican_cultivation 模组ID及 Mods/PelicanCultivation 目录，直接替换旧版；不要同时安装两份。
+重启游戏再加载存档，已有上古果酒会使用新贴图，评分、陈酿价值、基因、种植进度和保底记录继续保留。
+运行目录只保留加载必需文件；说明、工坊文案、源码、美术原图与提示词位于运行目录之外。
+工坊中英文介绍已随包提供；本次没有向Steam上传或发布。
+
+验证
+编译、13,064项逻辑检查及原生模组扫描通过。
+105组中英文语言键和占位符、39张贴图透明与占格、种袋和酒瓶比例检查通过。
+新酒瓶已目视检查浅蓝色、透明背景和四格导出；其余38张运行贴图与0.1.9哈希相同。
+本次没有接管游戏，也没有修改存档内容。
+
+A Fellow Townsman Arrives v1.0
+Internal version: 1.0.0
+
+Finishing changes
+1. Renamed Hydroponics & Brewing to A Fellow Townsman Arrives (老乡来了).
+2. Ancient Fruit Wine changes from dark purple to light blue. Its dark teal neck, fruit label and slender silhouette remain; the bottle still occupies 1 by 4 cells.
+3. Retains the 22-cell ingredient inventory, 1/4/9-cell crop sizes, giant guarantee and finished-wine liquid-transfer protection.
+
+Updating and compatibility
+The pelican_cultivation ID and Mods/PelicanCultivation folder are retained. Replace the existing installation; do not install a duplicate.
+Restart the game before loading a save. Existing Ancient Fruit Wine uses the new sprite; scores, aged values, genetics, growth and guarantee records are retained.
+The runtime contains only required loading files. Documentation, workshop copy, source, original artwork and prompts are kept outside it.
+Bilingual workshop descriptions are provided. Nothing was uploaded or published to Steam during this update.
+
+Verification
+Compilation, 13,064 logic checks and the native mod scanner passed.
+105 bilingual keys/placeholders, 39 transparent sprites, native footprints and seed/bottle export proportions passed.
+The new bottle was visually checked for its light-blue palette, transparency and four-cell export. All other 38 runtime sprite hashes match 0.1.9.
+The game was not controlled and save contents were not edited during this update.

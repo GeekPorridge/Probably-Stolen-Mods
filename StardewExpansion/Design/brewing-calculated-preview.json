@@ -1,0 +1,186 @@
+{
+  "status": "draft_arithmetic_not_playtest",
+  "waterBenchmark": "One native 750ml ration valued at 30; self-prepared water may have another cost",
+  "rows": [
+    {
+      "name": "小麦啤酒",
+      "work": 4,
+      "noYeastDays": 4,
+      "ordinaryDays": 2,
+      "superDays": 1,
+      "prices": [
+        {
+          "name": "粗桶劣酿",
+          "value": 51.0
+        },
+        {
+          "name": "手工自酿",
+          "value": 60.0
+        },
+        {
+          "name": "量产酒液",
+          "value": 75.0
+        },
+        {
+          "name": "臻品窖藏",
+          "value": 90.0
+        },
+        {
+          "name": "琼浆玉液",
+          "value": 105.0
+        }
+      ],
+      "normalRawValue": 8.0,
+      "referenceInputsPerBottle": 68.0,
+      "topProcessingGainBeforeSaleModifiers": 37.0,
+      "firstHarvestCrops": 6,
+      "firstHarvestWineCount": 3,
+      "firstFinishedDay": 5,
+      "steadyCropInterval": null
+    },
+    {
+      "name": "淡啤酒",
+      "work": 6,
+      "noYeastDays": 6,
+      "ordinaryDays": 3,
+      "superDays": 2,
+      "prices": [
+        {
+          "name": "粗桶劣酿",
+          "value": 85.0
+        },
+        {
+          "name": "手工自酿",
+          "value": 100.0
+        },
+        {
+          "name": "量产酒液",
+          "value": 125.0
+        },
+        {
+          "name": "臻品窖藏",
+          "value": 150.0
+        },
+        {
+          "name": "琼浆玉液",
+          "value": 175.0
+        }
+      ],
+      "normalRawValue": 10.0,
+      "referenceInputsPerBottle": 72.0,
+      "topProcessingGainBeforeSaleModifiers": 103.0,
+      "firstHarvestCrops": 7,
+      "firstHarvestWineCount": 3,
+      "firstFinishedDay": 9,
+      "steadyCropInterval": 2
+    },
+    {
+      "name": "草莓果酒",
+      "work": 6,
+      "noYeastDays": 6,
+      "ordinaryDays": 3,
+      "superDays": 2,
+      "prices": [
+        {
+          "name": "粗桶劣酿",
+          "value": 102.0
+        },
+        {
+          "name": "手工自酿",
+          "value": 120.0
+        },
+        {
+          "name": "量产酒液",
+          "value": 150.0
+        },
+        {
+          "name": "臻品窖藏",
+          "value": 180.0
+        },
+        {
+          "name": "琼浆玉液",
+          "value": 210.0
+        }
+      ],
+      "normalRawValue": 23.0,
+      "referenceInputsPerBottle": 98.0,
+      "topProcessingGainBeforeSaleModifiers": 112.0,
+      "firstHarvestCrops": 6,
+      "firstHarvestWineCount": 3,
+      "firstFinishedDay": 8,
+      "steadyCropInterval": 3
+    },
+    {
+      "name": "杨桃酒",
+      "work": 8,
+      "noYeastDays": 8,
+      "ordinaryDays": 4,
+      "superDays": 2,
+      "prices": [
+        {
+          "name": "粗桶劣酿",
+          "value": 272.0
+        },
+        {
+          "name": "手工自酿",
+          "value": 320.0
+        },
+        {
+          "name": "量产酒液",
+          "value": 400.0
+        },
+        {
+          "name": "臻品窖藏",
+          "value": 480.0
+        },
+        {
+          "name": "琼浆玉液",
+          "value": 560.0
+        }
+      ],
+      "normalRawValue": 90.0,
+      "referenceInputsPerBottle": 232.0,
+      "topProcessingGainBeforeSaleModifiers": 328.0,
+      "firstHarvestCrops": 4,
+      "firstHarvestWineCount": 2,
+      "firstFinishedDay": 11,
+      "steadyCropInterval": null
+    },
+    {
+      "name": "上古果酒",
+      "work": 10,
+      "noYeastDays": 10,
+      "ordinaryDays": 5,
+      "superDays": 3,
+      "prices": [
+        {
+          "name": "粗桶劣酿",
+          "value": 170.0
+        },
+        {
+          "name": "手工自酿",
+          "value": 200.0
+        },
+        {
+          "name": "量产酒液",
+          "value": 250.0
+        },
+        {
+          "name": "臻品窖藏",
+          "value": 300.0
+        },
+        {
+          "name": "琼浆玉液",
+          "value": 350.0
+        }
+      ],
+      "normalRawValue": 36.0,
+      "referenceInputsPerBottle": 124.0,
+      "topProcessingGainBeforeSaleModifiers": 226.0,
+      "firstHarvestCrops": 6,
+      "firstHarvestWineCount": 3,
+      "firstFinishedDay": 17,
+      "steadyCropInterval": 4
+    }
+  ]
+}

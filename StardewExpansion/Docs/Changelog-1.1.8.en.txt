@@ -1,0 +1,37 @@
+A Fellow Townsman Arrives v1.1.8 — Crop returns, stopping after harvest and report text
+
+1. Crop prices and nutrition
+Native regular Nutrifruit has a base value of 12 credits and 300 kcal with its innate nutrition trait. Regular-size crop base values/calories, before taste, nutrition and trade modifiers:
+Parsnip: 8 -> 12 credits; 100 -> 240 kcal.
+Potato: 9 -> 14 credits; 100 -> 320 kcal. Innate Nutritious I makes a regular Potato 400 kcal.
+Corn: 8 -> 16 credits; 100 -> 320 kcal.
+Wheat: 8 -> 12 credits; 100 -> 300 kcal.
+Hops: 10 -> 14 credits; 100 -> 180 kcal.
+Strawberry: 20 -> 24 credits; 100 -> 200 kcal.
+Starfruit: base value remains 72 credits; 100 -> 240 kcal.
+Ancient Fruit: 36 -> 40 credits; 100 -> 300 kcal.
+Small/Regular/Giant value and base-calorie multipliers remain 0.5/1/3. Fixed-size crops do not generate other sizes.
+
+Corn base first-growth work: 32 -> 24; regrowth: 16 -> 12; base harvest quantity: 8 -> 10.
+With innate Perennial I, first work changes from 40 to 30, regrowth from 20 to 15, and harvest quantity from 6 to 8. A standard speed-8 hydroponic machine takes about four nights initially and two nights thereafter.
+The native harvest flow at ordinary care with no quality/production modules yields about 2,400 kcal per two nights for mature Corn, versus 690 kcal per night for native Fillerweed. This comparison excludes the dedicated Fillerweed production module, edited genes, giants, inventory space and operating costs. Corn first needs its establishment period.
+Brewing recipes and the five brew base values keep their existing rules.
+
+2. Stop after harvest, per hydroponic machine
+The new Cycle control panel defaults to Stop after harvest: off, preserving continuous production.
+Turn it on during growth to finish and deliver the current harvest, then stop. It does not cut down an unfinished plant, consume an extra seed or start another cycle.
+The stopped machine releases the seed and module bay and blocks automatic replanting. A replacement seed waits until you turn the control off.
+A perennial retained in the same machine resumes its regrowth cycle. Removing it or moving it to another machine counts as planting again; edited genes and heat remain.
+The control persists per machine in saves and supports native and added plants. The global replanting default is unchanged.
+
+3. Original night-report text size
+Body rows take their font size from the native report prefab. Long text wraps and longer reports scroll, instead of retaining an already shrunken row size.
+Native and other-mod messages/numbers, the ledger frame/buttons, mouse wheel and scrollbar remain.
+
+4. Saves and verification
+A one-time marker upgrades old produce values and remaining calories proportionally, retaining existing modifiers and partially consumed portions. Exhausted calories are not refilled. Historical size migration runs before the new economy migration; repeated loads do not compound the upgrade.
+An already growing cycle retains its saved progress/target; later cycles use the new definition. Existing item IDs, seed genetics and configuration/save keys remain.
+Passed the existing 31,246 logic checks, 301 crop-update checks, 49 Harmony binding checks and the existing wine, calendar, husbandry, dialogue and report integration suites.
+The isolated tests run native harvesting, regrowth, seed-removal predicates and native save-node decoding. Unity rendering, scene placement, care inputs and RNG boundaries use fixtures. This is not a live overnight playthrough or visual report acceptance.
+Built and checked against the installed November 7 game 1.0.0.12 (100-Rev12). Runtime retains 75 required files and all 71 lossless textures.
+Local installation backs up the previous version, preserves saves/settings and verifies hashes. Workshop updates retain item 3834581016; upload and webpage metadata changes are not performed automatically.

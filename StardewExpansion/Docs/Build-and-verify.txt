@@ -1,0 +1,38 @@
+Stardew Expansion 2.0 r7 source / 源码
+
+Requirements
+PowerShell 7 and the installed Probably Stolen managed assemblies. The isolated harness uses .NET 6. No native game DLL is included in the source or runtime package.
+
+Build and verify from the project root
+Build: & ./Source/build.ps1
+Verify: & ./Source/Tests/verify.ps1
+Run the build before verification. The harness uses isolated engine/resource boundaries and does not open player saves. Keep the actual logs for the delivered build; older revision totals are not evidence for r7.
+Locale regeneration: & ./Source/make-localization.ps1
+
+Rebuilding art
+Run the exporters in order: export-r2-art.ps1, export-r3-art.ps1, export-r4-art.ps1, export-r5-art.ps1, export-r6-art.ps1, from Source.
+The r4 exporter applies the matching fruit-wine bottles and Artisan portrait. The r5 exporter adds Baked Lobster, Scallion Sea Cucumber and Sashimi Platter. The r6 exporter resizes ordinary and premium bait to 256x256 for 2x2 cells using the original atlas, preserving aspect ratio and alpha. Original PNG atlases are in ArtOriginals; asset geometry and export records are in Design/v2-art-exports.json. PNG optimization must preserve decoded RGBA pixels.
+
+Runtime and documents
+Runtime: Release/Mods/PelicanCultivation. Install only the DLL, manifest, two locale CSVs and PNG assets. Source, original art, scripts, QA and documentation remain outside the runtime folder.
+Latest notes: 更新记录-2.0-r7.txt / Changelog-2.0-r7.en.txt.
+Complete recipes: 机器作用与全部配方-2.0-r7.zh.txt / All-machine-recipes-2.0-r7.en.txt.
+The README and r7 references define current behavior. The r6 and earlier files remain historical references.
+
+Changed behavior to verify
+The reservoir is immediately after native dr_jackson and before the Upper District. Its card stays discovered without bait, shows the localized reason and disables departure. The native Travel boundary rechecks bait. Before native departure transfer, inspect selectedBackpack; while already outside, inspect afterhourPocketSlotInvBackpack. Count ordinary/premium bait through owned nested bags, excluding ground, side pockets, unowned branches and stale unplaced selections. A bait-filled selected backpack must not be rejected merely because the afterhour slot is still empty.
+Legendary Fish Activity uses the native afterhour event lifecycle: a 20% chance on an unlocked night, one-day duration, one concurrent event, native transit title/description/effect and an Artisan Handbook page. All four legendary intervals multiply by 2 and premium independently multiplies by 1.5. Junk and independent cooldowns remain unchanged. Persist the daily roll before success/failure so reopening, revisiting and loading cannot reroll; installing or unlocking after the daily loop still gets that day's single eligible roll.
+Fishing difficulty is 1–5, default 3, and snapshots at cast so settings affect the next cast. Default target speeds are ordinary 0.42 and legendary 0.75, 50% above r6; default target widths are ordinary 0.16 and legendary 0.10–0.13. Cursor response scales with target speed; verify controllability at all five levels using the isolated tracking checks, then confirm actual mouse/Space feel in game.
+Midnight Carp, Largemouth Bass, Tuna and Lava Eel plus their eggs and fry require complete Chinese/English descriptions and flavor text. Verify new-item creation, old-save loading and native aging callbacks retain the correct localized narrative rather than blank or unresolved text.
+Chicken production is automatic, without a laying/breeding selector or chicken management panel. A healthy adult hen still produces an ordinary 150-kcal egg. A healthy adult pair can additionally produce a 150-kcal fertile egg at an extra 150-kcal cost, retaining the existing fertility/health chance, successful-egg interval and two-parent inheritance. Sterilized chickens must not breed, but hens must retain ordinary egg production. Product inventory and space for new fertile eggs are independent; a blocked destination charges no food for that output. A saved fertile egg hatches after two effective incubation nights even if its parents are no longer present. Verify a one-cell egg is replaced by a one-cell chick in place even when every other cage cell is occupied. Preserve the egg only if the replacement genuinely cannot fit.
+The three seafood dishes use actual ingredient calories x1.2 and fixed base prices: Scallion Sea Cucumber 200, Baked Lobster 350, Sashimi Platter 600. Calories must not automatically rescale those prices. Old r5 dishes receive the nutrition upgrade and fixed price once, without repeated 20% gains on later loads.
+Both bait types occupy 2x2 cells and retain a stack limit of 20. Old one-cell stacks must preserve their counts, identity, ownership and metadata when a full container prevents expansion. A space-needed hint and automatic retry must complete the change once an empty 2x2 slot exists. Migration must not merge stacks, overlap neighbors or move bait to a different container.
+Fishing shows two bait-selection buttons and follows a moving green target with mouse/Space cursor control. Legendary targets are faster and narrower. A cast immediately consumes exactly one selected backpack bait and one nightly allowance. Success, failure, abandonment and pending-reward collection neither refund nor repeat that charge. The allowance remains initialized once per night from the actual backpack, excluding ground and side pockets.
+Esc, settings and return confirmations pause fight input, progress and timers. The top X is hidden and disabled; the native bottom Return remains available. Unexpected hiding or destruction of the panel while remaining at the reservoir restores the current fight without resetting the allowance or paying again. Check panel placement against the visible viewport at different resolutions and UI scales; it must stay within the screen.
+Retain the r6 handbook hover blocking, barrel native-quality and 7/17/32-night star stages, Saturday five ordinary plus three Aquaculture-II premium bait, recipe priorities, safe output rollback and independent legendary cooldowns.
+
+Final isolated result
+The final isolated r7 build passed 2,562 v2 checks, 26 reservoir-entry checks, 19 native-event checks and all existing regression suites. The delivered logs confirm 81 Harmony bindings, 474 bilingual keys, 160 item sprites and 1,061 native-scanned methods. Record the final r7 compilation, regression, Harmony-binding, localization, asset and native-scanner results from the delivered build's logs. Do not reuse historical counts or present isolated fixtures as live rendering evidence.
+
+Acceptance boundaries
+Unity rendering, actual hover occlusion, panel placement, return/recovery transitions and mouse/Space feel require in-game acceptance after restart. Native rule, value, save, inventory and schedule checks do not claim a live render. Do not terminate the running game. Preserve configuration and saves during backup/synchronization, and use logs to identify the currently loaded mod folder. Workshop description files are local drafts; this workflow performs no upload or web-page edit.

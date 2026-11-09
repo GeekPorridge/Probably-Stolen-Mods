@@ -1,0 +1,13 @@
+Stardew Expansion 2.0
+Bundles the accepted 1.2.1 fixes; no separate 1.2.1 publication.
+
+- Chili, Blueberry, Poppy and Fairy Rose; distinct three-stage growth art for all twelve crops.
+- Chili spirit and blueberry wine; Cheese Press, Oil Press, Barrel and Grill with dairy, oil, perfume, seasoned food and bait production.
+- Chickens/goats, laying/breeding modes, two-parent fertile eggs, goat milk and postpartum recovery; plant-only diets for cattle/chickens/goats.
+- Reservoir timing fishing, four farmable fish, four separately cooled legendary collectibles, two baits and persistent pending rewards.
+- Three native paper handbooks with research-gated genetics chapters.
+- Fix initial seed start under Stop after harvest, hatchet targeting inside seed slots, repeated hydro appendices and lengthy stop help.
+- Barrel completion rewards multiply after quality; blocked production preserves resources; new fish adulthood, elderly age and mortality age follow separate approved milestones.
+
+Build, existing regressions, 550 v2 checks, 431 crop checks and native scanning pass. Two locales with 430 keys each, 178 item/growth sprites plus reservoir cover/background.
+Local acceptance delivery; actual in-game windows and mouse interactions await this round's acceptance. No Workshop or Nexus upload. See README.en.txt for the player guide.

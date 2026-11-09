@@ -1,0 +1,13 @@
+{
+  "version": "0.1.5",
+  "mode": "Mechanical export of selected existing imagegen artwork; no new generation or semantic edits",
+  "prompt_provenance": "PROMPTS.json and UPDATE_0.1.2_PROMPTS.json",
+  "texture_pixels_per_cell": 128,
+  "native_pixels_per_cell": 16,
+  "inventory_sprite_ppu": 800,
+  "seed_texture": "128x128; logical 1x1",
+  "fruit_wine_texture": "128x512; logical 1x4",
+  "beer_texture": "256x384; logical 2x3",
+  "scaling": "Uniform nearest-neighbor resize, original aspect ratio preserved",
+  "portrait": "Same selected source; keep 80% scale relative to 0.1.2 and add downward offset via normalized pivot Y +0.16"
+}

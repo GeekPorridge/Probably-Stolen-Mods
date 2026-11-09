@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>StationScavenging</AssemblyName>
+    <RootNamespace>StationScavenging</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <GameDir Condition="'$(GameDir)' == ''">D:\steam\steamapps\common\Probably Stolen</GameDir>
+    <GameManaged>$(GameDir)\Probably Stolen_Data\Managed</GameManaged>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(GameManaged)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManaged)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(GameManaged)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(GameManaged)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(GameManaged)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(GameManaged)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tests\**\*.cs" />
+    <None Include="manifest.xml" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Localization\*.csv" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Textures\Items\*.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="preview.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

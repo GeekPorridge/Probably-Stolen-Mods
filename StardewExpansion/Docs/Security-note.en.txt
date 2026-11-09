@@ -1,0 +1,5 @@
+A Fellow Townsman Arrives v1.1.7 — Privacy and permissions
+This mod does not read, collect or upload personal information from your computer. It does not scan unrelated personal files, collect hardware/account/browsing data, initiate outbound networking, or launch/control external programs.
+Configuration, current-save progress and in-game logs use game APIs. External reflection is declared solely for optional Station Scavenging integration, not system or personal-data collection.
+Static review of the local release DLL: 577 methods; no P/Invoke, native module references, personal-file/device/account collection, networking or external-process calls. Managed thread-ID reads come from compiler-generated iterators. This record applies to the mod DLL below; the game engine and other mods have their own behavior.
+SHA256: 50451DB41C66E7008F51CD702E47B245FF3B2A228DC8490B13655A43180D6058

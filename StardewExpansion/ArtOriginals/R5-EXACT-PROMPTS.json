@@ -1,0 +1,18 @@
+{
+  "generator": "Built-in image_gen",
+  "transparent_background": true,
+  "assets": [
+    {
+      "key": "baked_lobster",
+      "prompt": "Use case: stylized-concept. Asset type: inventory sprite for the pixel-art game Probably Stolen. A baked lobster dish: split red lobster shell with golden baked meat, a little browned cheese and green herb flecks, on one simple dark round plate. Vintage 2D pixel art, warm highlights, dark 1-2 pixel outline, crisp stepped pixel edges, compact readable silhouette. Three-quarter top-down view; centered with generous transparent padding. One isolated complete dish. True transparent background; no floor, scene, text, lettering, grid, watermark, utensils, or cast shadow outside the plate. Landscape 3:2 dish silhouette suitable for a 3x2-cell inventory item. The dish should look appetizing and hand-drawn, with carefully limited color ramps. Full plate visible."
+    },
+    {
+      "key": "scallion_sea_cucumber",
+      "prompt": "Use case: stylized-concept. Asset type: inventory sprite for the pixel-art game Probably Stolen. Chinese braised sea cucumber with scallions: three glossy dark brown ridged sea cucumbers with recognizable bumpy surface, thick green scallion sections and a little rich amber sauce on one simple dark oval plate. Vintage 2D pixel art, warm highlights, dark 1-2 pixel outline, crisp stepped pixel edges, compact readable silhouette. Three-quarter top-down view; centered with generous transparent padding. One isolated complete dish. True transparent background; no floor, scene, text, lettering, grid, watermark, utensils, or cast shadow outside the plate. Landscape 3:2 dish silhouette suitable for a 3x2-cell inventory item. The dish should look appetizing and hand-drawn, with carefully limited color ramps. Full plate visible."
+    },
+    {
+      "key": "sashimi_platter",
+      "prompt": "Use case: stylized-concept. Asset type: inventory sprite for the pixel-art game Probably Stolen. A lavish sashimi platter: neatly arranged red tuna slices, pale coral fish slices, ivory fish slices and deep orange-red slices, green shiso garnish, on one simple dark oval plate. Only sliced sashimi, no whole fish. Vintage 2D pixel art, warm highlights, dark 1-2 pixel outline, crisp stepped pixel edges, compact readable silhouette. Three-quarter top-down view; centered with generous transparent padding. One isolated complete dish. True transparent background; no floor, scene, text, lettering, grid, watermark, utensils, or cast shadow outside the plate. Landscape 3:2 dish silhouette suitable for a 3x2-cell inventory item. The dish should look appetizing and hand-drawn, with carefully limited color ramps. Full plate visible."
+    }
+  ]
+}

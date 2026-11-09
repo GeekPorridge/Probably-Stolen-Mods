@@ -1,0 +1,15 @@
+{
+  "version": "0.1.3",
+  "mode": "Re-export existing selected artwork; no new image generation or semantic editing",
+  "generation_provenance": "Built-in imagegen prompts retained in PROMPTS.json and UPDATE_0.1.2_PROMPTS.json",
+  "texture_pixels_per_cell": 128,
+  "native_pixels_per_cell": 16,
+  "inventory_sprite_ppu": 800,
+  "scaling": "Uniform nearest-neighbor scaling of source subject bounds; original proportions retained. No nonuniform stretching.",
+  "seed_texture": "128x128; logical shape 1x1",
+  "bottle_texture": "128x512; logical shape 1x4; squat beer uses transparent margins",
+  "crop_texture": "128x128 small, 128x256 regular, 256x256 large; logical shapes unchanged",
+  "portrait": "Same selected source; runtime portrait display scale 0.8 relative to 0.1.2",
+  "aspect_ratio_checks": 13,
+  "maximum_relative_ratio_error": 0.025
+}
