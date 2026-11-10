@@ -180,7 +180,7 @@ namespace PelicanCultivation
         public static GameItem CreateEgg()
         {
             var item=ItemDirectory.CreateEmptyItem("pelican_chicken_egg");Crops.Sprite(item,"chicken_egg",1,1);item.name=Expansion.L("fertile_egg");item.shortDescription=Expansion.L("fertile_egg_desc");
-            item.EnableTag(Egg);item.EnableTag("ALLOWED_IN_CAGE_TAG");item.SetGameItemType("FARMING_SUPPLIES");item.mayInventoryRemoveItemFunc=(self,inv)=>false;item.mayStackItemFunc=(a,b)=>false;return item;
+            item.EnableTag(Egg);item.EnableTag("ALLOWED_IN_CAGE_TAG");item.SetGameItemType("FARMING_SUPPLIES");item.mayStackItemFunc=(a,b)=>false;return item;
         }
         public static void CopyState(GameItem source,GameItem target)
         {target.state=new TagSystem();foreach(var p in source.state.dict)target.state.dict[p.Key]=p.Value.Clone();target.modifiedState=target.state.Clone();}
@@ -234,7 +234,7 @@ namespace PelicanCultivation
             bool chicken=animal.GetTagReadonly("ANIMAL_SPECIES_TAG").GetString()==Chicken;int remaining=Math.Max(0,(int)(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()*0.9f));if(animal.IsTag("ANIMAL_DISEASED_TAG"))remaining=remaining*3/4;
             var result=new List<GameItem>();foreach(int tier in new[]{900,400,100})while(remaining>=tier){result.Add(Expansion.RawMeat(chicken?"chicken_meat":"goat_meat",tier));remaining-=tier;}
             if(remaining>0){var cut=Expansion.RawMeat(chicken?"chicken_meat":"goat_meat",100);Crops.SetInt(cut,"CALORIE_VALUE_TAG",remaining);Expansion.Refresh(cut);result.Add(cut);}
-            foreach(var cut in result){if(animal.IsTag("ANIMAL_PRION_TAG"))cut.EnableTag("ANIMAL_PRION_TAG");if(animal.IsTag("ANIMAL_DISEASED_TAG"))cut.EnableTag("ANIMAL_DISEASED_TAG");}return result;
+            foreach(var cut in result){if(animal.IsTag("ANIMAL_PRION_TAG"))cut.EnableTag("ANIMAL_PRION_TAG");if(animal.IsTag("ANIMAL_DISEASED_TAG"))cut.EnableTag("ANIMAL_DISEASED_TAG");}return FarmButchery.OwnCuts(result,animal);
         }
     }
     [HarmonyPatch(typeof(HusbandryHelper),nameof(HusbandryHelper.TryChangeSprite))]

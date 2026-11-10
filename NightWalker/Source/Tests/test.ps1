@@ -72,6 +72,13 @@ Assert-Equal $cost.Max 2 'Maximum selectable cost is 2'
 $applyCost=$cost.GetType().GetMethod('ApplyBoxed',[Reflection.BindingFlags]'Instance,NonPublic')
 [void]$applyCost.Invoke($cost,[object[]]@([int]1))
 $configuredEntry.OnEnable()
+$iconPatch=$modAssembly.GetType('NightWalker.SavedPerkIconPatch').GetMethod('Prefix',$staticPrivate)
+$savedPerk=[StartingPerk]@{id='night_walker.night_walker'}
+$iconPatch.Invoke($null,[object[]]@($savedPerk)) | Out-Null
+Assert-Equal $savedPerk.iconKey 'night_walker:night_walker_icon' 'Saved perk restores its omitted icon key before native resolution'
+$otherPerk=[StartingPerk]@{id='other.mod';iconKey='other:icon'}
+$iconPatch.Invoke($null,[object[]]@($otherPerk)) | Out-Null
+Assert-Equal $otherPerk.iconKey 'other:icon' 'Other mods retain their own icon keys'
 Assert-Equal ([StartingPerkList]::GetModPerk('night_walker.night_walker').cost) 1 'Native setting 1 creates a 1-point perk'
 $oldDefinition=[StartingPerkList]::GetModPerk('night_walker.night_walker')
 [void]$applyCost.Invoke($cost,[object[]]@([int]2))
@@ -221,6 +228,6 @@ foreach($locale in @('en','zh')){
     $locales[$locale]=$map
 }
 Assert-Equal (($locales.en.Keys | Sort-Object) -join '|') (($locales.zh.Keys | Sort-Object) -join '|') 'All four labels/descriptions have matching English and Chinese keys'
-$report=[ordered]@{version='1.1.0';checks=$script:assertions;scannerMethods=$scan.MethodsScanned;scannerFindings=$scan.Findings.Count;scannerHardFlags=$scan.HardFlags.Count;note='Isolated native game assemblies; no settings/save writes. Live settings layout not visually tested.'}
+$report=[ordered]@{version='1.1.1';checks=$script:assertions;scannerMethods=$scan.MethodsScanned;scannerFindings=$scan.Findings.Count;scannerHardFlags=$scan.HardFlags.Count;note='Isolated native game assemblies; no settings/save writes. Live settings layout not visually tested.'}
 if($ReportPath){$report | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $ReportPath -Encoding utf8}
 Write-Output "ALL CHECKS PASSED: $script:assertions"

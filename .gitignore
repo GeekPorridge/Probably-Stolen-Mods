@@ -2,6 +2,7 @@
 **/obj/
 **/.vs/
 **/__pycache__/
+**/verification/
 *.pyc
 *.log
 .DS_Store

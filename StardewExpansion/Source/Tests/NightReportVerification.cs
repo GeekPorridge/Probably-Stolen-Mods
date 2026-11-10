@@ -177,7 +177,7 @@ public static class NightReportVerification
             double projected=FarmFeedForecast.Estimate(new FarmFeedForecast.Pool{Other=300},new[]{growing},out firstDemand);
             Check(Math.Abs(projected-300/firstDemand)>0.01,"future aquatic growth changes demand rather than freezing the first night's appetite");
             var feeder=Feeder(650);var foreign=Feeder(9000);GeneralHelper.SetItemOwned(foreign,false);
-            Check(FarmFeedForecast.Supply(new[]{feeder,feeder,foreign}).Other==650,"processed supplies are not duplicated and vendor feed is excluded");
+            Check(FarmFeedForecast.Supply(new[]{feeder,feeder,foreign}).Available(15)==650,"processed supplies are not duplicated and vendor feed is excluded");
             var a=new Item("cage_a");a.EnableTag("CAGE_TAG");var b=new Item("cage_b");b.EnableTag("CAGE_TAG");GeneralHelper.SetItemOwned(a,true);GeneralHelper.SetItemOwned(b,true);
             FarmFeedForecast.AssignNumbers(new[]{a,b});int numberA=a.GetTagReadonly(FarmFeedForecast.NumberTag).GetInt(),numberB=b.GetTagReadonly(FarmFeedForecast.NumberTag).GetInt();
             FarmFeedForecast.AssignNumbers(new[]{b,a});Check(numberA!=numberB && a.GetTagReadonly(FarmFeedForecast.NumberTag).GetInt()==numberA && b.GetTagReadonly(FarmFeedForecast.NumberTag).GetInt()==numberB,"machine numbers stay stable when inventory enumeration order changes");
@@ -185,6 +185,10 @@ public static class NightReportVerification
             Check(cloned.GetTagReadonly(FarmFeedForecast.NumberTag).GetInt()>Math.Max(numberA,numberB),"copied machine numbers are repaired without renumbering the existing pair");
             GeneralHelper.SetCustomName(a,"育种一号");var feedGrid=Grid(10,3,rat,feeder);BindPanels(a,feedGrid,Grid(1,1));
             var row=FarmFeedForecast.InspectMachine(a,feedGrid,new[]{feeder});Check(row.Name=="育种一号" && row.Usable==650 && row.Nights==10,"custom names identify a machine's actual local feed supply");
+            var incompatible=Feeder(33714);Crops.SetInt(incompatible,PlantDiet.PlantKcal,0);var herbivore=Animal(FarmRules.Cow,6,"MALE");
+            var mixedFeedRow=FarmFeedForecast.InspectMachine(a,Grid(10,3,rat,herbivore),new[]{incompatible});
+            Check(mixedFeedRow.DietBlocked && mixedFeedRow.Stored==33714 && mixedFeedRow.Nights==0,"a mixed cage can have stored feed that one species cannot eat");
+            LoadLocale("zh");Check(FarmFeedForecast.Lines(new[]{mixedFeedRow}).Single().Contains("适口饲料"),"incompatible mixed diets explain the shortage instead of displaying 33714 kcal for zero nights");
             Check(FarmFeedForecast.InspectMachine(a,Grid(10,3,lobster),new[]{feeder})==null,"a fish placed outside an actual aquaculture tank does not invent a cage feeding demand");
             var missing=FarmFeedForecast.InspectMachine(b,Grid(10,3,rat),new GameItem[0]);Check(missing.Missing,"an absent dispenser gets a specific warning instead of invented food");
             Crops.SetInt(feeder,"FEED_DISPENSER_TARGET_PERCENT_INT",50);Check(FarmFeedForecast.InspectMachine(a,feedGrid,new[]{feeder}).LowTarget,"low feeding targets are reported instead of promising adequate care");
@@ -331,6 +335,14 @@ public static class NightReportVerification
         Crops.SetInt(serum,"CURRENT_USE_COUNT_INT",5);GeneralHelper.SetItemOwned(serum,false);Check(!FarmTreatment.UseSerum(cow,supplies,part),"unowned vendor medicine is never consumed");
         GeneralHelper.SetItemOwned(serum,true);cow.EnableTag("ANIMAL_IS_DEAD_TAG");Check(!FarmTreatment.UseSerum(cow,supplies,part),"carcasses never receive serum");
         FarmNightReport.EndNight();Check(store.nightLogs.Last().Contains("自动使用绿色血清1次"),"only successful treatment is reported");
+        data.Clear();store.nightLogs.Clear();var group=new List<GameItem>();
+        for(int i=0;i<5;i++){var animal=Animal(FarmRules.Cow,5);GeneticHelper.SetTrait(animal,FarmSpecies.Cattle,"ANIMAL_IMMUNITY_TAG",0.01f);group.Add(animal);}
+        var nextSerum=(GameItem)AccessTools.Method(typeof(HusbandryDirectory),"SerumGreen").Invoke(directory,null);nextSerum.identifier="serum_green";GeneralHelper.SetItemOwned(nextSerum,true);supplies=new[]{nextSerum};owned=group;
+        FarmNightReport.BeginNight();
+        Check(group.All(a=>a.GetTagReadonly(part).GetInt()==20)&&nextSerum.GetTagReadonly("CURRENT_USE_COUNT_INT").GetInt()==5,"all five low-immunity animals receive a real preventive dose before disease checks");
+        foreach(var animal in group){HusbandryHelper.CheckImmunityDisease(animal);FarmTreatment.TryTreatAtNight(animal);}
+        Check(nextSerum.GetTagReadonly("CURRENT_USE_COUNT_INT").GetInt()==5,"disease callbacks do not spend five more doses on protected animals");
+        FarmNightReport.EndNight();Check(store.nightLogs.Last().Contains("自动使用绿色血清5次"),"report counts all five successful preventive doses");
         data.Clear();owned.Clear();store.nightLogs.Clear();FarmNightReport.BeginNight();FarmNightReport.EndNight();Check(store.nightLogs.Count==0,"no livestock means no empty husbandry report");
         ModEntry.Enabled=false;owned.Add(Animal(FarmRules.Cow,5));FarmNightReport.BeginNight();FarmNightReport.EndNight();Check(store.nightLogs.Count==0,"disabled mod never adds reports");
     }

@@ -7,6 +7,7 @@ namespace NightWalker
     {
         public const string ModId = "night_walker";
         public const string PerkId = "night_walker.night_walker";
+        public const string IconKey = ModId + ":night_walker_icon";
         public const int VisitsPerNight = 3;
 
         private ModLog log;
@@ -35,7 +36,7 @@ namespace NightWalker
                 type: StartingPerk.StartingPerkType.POSITIVE,
                 name: () => ModHelper.GetLocalized(ModId, "perk_name"),
                 description: () => ModHelper.GetLocalized(ModId, "perk_description"),
-                iconKey: ModId + ":night_walker_icon");
+                iconKey: IconKey);
 
             NightRules.Enabled = true;
             ModHook.OnShutterClosedLate += NightRules.SyncRemainingVisits;
@@ -53,6 +54,17 @@ namespace NightWalker
             ModHook.OnReturningStoreLate -= NightRules.SyncRemainingVisits;
             ModHook.OnGameLoadedLate -= NightRules.SyncRemainingVisits;
             ModHelper.RemoveStartingPerks(ModId);
+        }
+    }
+
+    [HarmonyPatch(typeof(StartingPerkIconLoader),nameof(StartingPerkIconLoader.GetIcon))]
+    internal static class SavedPerkIconPatch
+    {
+        internal static void Prefix(StartingPerk perk)
+        {
+            // Native saves deliberately omit iconKey. Restore the resource key
+            // before the resolver falls back to the generic people/paw icon.
+            if(NightRules.Enabled && perk!=null && perk.id==ModEntry.PerkId) perk.iconKey=ModEntry.IconKey;
         }
     }
 

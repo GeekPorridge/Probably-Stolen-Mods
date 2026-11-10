@@ -67,6 +67,9 @@ namespace PelicanCultivation
     [HarmonyPatch(typeof(HusbandryHelper),nameof(HusbandryHelper.HandleDisease))]
     public static class FarmImmunityTreatmentPatch
     { public static void Prefix(GameItem item){FarmTreatment.TryTreatAtNight(item);} }
+    [HarmonyPatch(typeof(HusbandryHelper),nameof(HusbandryHelper.CheckImmunityDisease))]
+    public static class FarmImmunityPreventionPatch
+    { public static void Prefix(GameItem item){FarmTreatment.TryTreatAtNight(item);} }
     [HarmonyPatch(typeof(HusbandryHelper),nameof(HusbandryHelper.OnAnimalItemDayEnd))]
     public static class FarmProductionPatch
     {
@@ -138,7 +141,7 @@ namespace PelicanCultivation
             if(animal.IsTag("ANIMAL_DISEASED_TAG")) kcal=kcal*3/4;
             var result=Cuts(id,kcal,animal);
             if(id==FarmRules.Pig && animal.GetTagReadonly("ANIMAL_AGE_TAG").GetInt()>=FarmSettings.PigElder) result.Add(DirectoryMaster.Item("pelican_truffle"));
-            return result;
+            return OwnCuts(result,animal);
         }
         public static List<GameItem> FishCuts(GameItem fish)
         {
@@ -146,10 +149,17 @@ namespace PelicanCultivation
             if(id==FarmRules.Sea)
             {
                 int remaining=FarmSeaCaloriesPatch.SeaCalories(fish);
-                return remaining<=0?new List<GameItem>():new List<GameItem>{FarmSpecies.SeaFood(fish.GetTagReadonly(FarmRules.FedNights).GetInt(),(int)AquacultureHelper.GetStage(fish),remaining)};
+                return OwnCuts(remaining<=0?new List<GameItem>():new List<GameItem>{FarmSpecies.SeaFood(fish.GetTagReadonly(FarmRules.FedNights).GetInt(),(int)AquacultureHelper.GetStage(fish),remaining)},fish);
             }
             int kcal=AquacultureHelper.IsDead(fish)?fish.GetTagReadonly("FISH_CARCASS_KCAL_TAG").GetInt():AquacultureHelper.GetMeatKcal(fish);
-            return Cuts(id,kcal,fish);
+            return OwnCuts(Cuts(id,kcal,fish),fish);
+        }
+        public static List<GameItem> OwnCuts(List<GameItem> cuts,GameItem source)
+        {
+            // Directory factories return unowned catalog items. Unlike native
+            // spawners, custom cuts must explicitly inherit the livestock owner.
+            if(cuts!=null) foreach(var cut in cuts) GeneralHelper.SetItemOwned(cut,GeneralHelper.IsItemOwned(source));
+            return cuts;
         }
         private static List<GameItem> Cuts(string species,int kcal,GameItem source)
         {
@@ -176,6 +186,11 @@ namespace PelicanCultivation
     {
         public static bool Prefix(GameItem fish,ref List<GameItem> __result)
         {if(!ModEntry.Enabled || !FarmRules.Aquatic(fish.GetTagReadonly("FISH_SPECIES_TAG").GetString())) return true;__result=FarmButchery.FishCuts(fish);return false;}
+        public static void Postfix(GameItem fish,List<GameItem> __result)
+        {
+            string id=fish.GetTagReadonly("FISH_SPECIES_TAG").GetString();
+            if(ModEntry.Enabled && (FarmRules.Aquatic(id) || ExpansionStock.NewFish(id))) FarmButchery.OwnCuts(__result,fish);
+        }
     }
     [HarmonyPatch(typeof(MachineAutoButcher),"IsFishMeat")]
     public static class FarmPremiumOutputPatch

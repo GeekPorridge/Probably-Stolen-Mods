@@ -476,13 +476,13 @@
   ],
   [
     "farm_config_auto_immunity",
-    "普通疾病自动使用绿色血清",
-    "Automatic green serum for ordinary illness"
+    "低免疫／普通疾病自动使用绿色血清",
+    "Automatic green serum for low immunity or ordinary illness"
   ],
   [
     "farm_config_auto_immunity_hint",
-    "默认关闭。夜间对患普通疾病的自有动物使用主背包／仓库里的绿色血清，消耗实际次数；不取其他机器内的药。药效仍在时不重复，不能清除朊病毒，且会增加食量。",
-    "Off by default. At night, spend real green-serum doses from your main inventory or warehouse on owned animals with ordinary illness. Supplies inside other machines are reserved. No repeat while the effect remains. Does not clear prion disease and increases hunger."
+    "默认关闭。夜间结算前，逐只对免疫低于物种阈值或患普通疾病的自有动物使用主背包／仓库里的绿色血清，消耗实际次数；不取其他机器内的药。药效仍在时不重复，不能清除朊病毒，且会增加食量。",
+    "Off by default. Before nightly disease checks, spend real green-serum doses on each owned animal below its species' immunity threshold or with ordinary illness. Use main-inventory/warehouse supplies, reserving medicine inside machines. No repeat while active. Does not clear prion disease and increases hunger."
   ],
   [
     "farm_night_status",

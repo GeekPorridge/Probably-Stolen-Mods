@@ -30,6 +30,7 @@ namespace PelicanCultivation
             => new List<GameItem>(EmporiumEntry.Instance.GetAllItems()).Where(i=>i!=null && GeneralHelper.IsItemOwned(i)).Distinct().ToList();
         public static void BeginNight()
         {
+            Progress.EnsureReady();
             if(Collecting && Progress.Ready && Progress.Day==nightDay) return;
             Reset();
             if(!ModEntry.Enabled || !Progress.Ready || Progress.Get("husbandry_native_report_day",-1)==Progress.Day) return;
@@ -40,6 +41,9 @@ namespace PelicanCultivation
                 hadStock=items.Any(i=>i.IsTag("ANIMAL_ITEM_TAG") || AquacultureHelper.IsFish(i) || AquacultureHelper.IsGroup(i));
                 Collecting=true;
                 FarmWaste.Service(items);
+                // Protect every at-risk animal before native disease rolls and
+                // health damage; active doses are never stacked.
+                foreach(var animal in items.OrderByDescending(i=>i.IsTag("ANIMAL_DISEASED_TAG"))) FarmTreatment.TryTreatAtNight(animal);
             }
             catch(Exception error){Reset();ModEntry.Error("Begin husbandry night report",error);}
         }

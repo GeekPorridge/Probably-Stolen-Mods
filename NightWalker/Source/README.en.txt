@@ -1,4 +1,4 @@
-Night Walker v1.1.0 — 小粥
+Night Walker v1.1.1 — 小粥
 Probably Stolen 0.46D. Simplified Chinese / English.
 
 Adds the positive starting perk Night Walker: up to 3 outings per night, with

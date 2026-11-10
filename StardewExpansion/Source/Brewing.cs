@@ -102,6 +102,12 @@ namespace PelicanCultivation
             Barrel.RefreshQuality(bottle);
             bottle.Validate();
         }
+        public static string FinishedName(GameItem bottle)
+        {
+            int kind=bottle.GetTagReadonly(Rules.WineTag).GetInt();
+            return kind>0 && kind<Rules.WineKeys.Length && WineHelper.IsFinishedWine(bottle) && !bottle.IsTag(WineHelper.WINE_COUNTERFEIT_TAG)
+                ?ModEntry.L("wine_"+Rules.WineKeys[kind]):null;
+        }
         public static void ApplyFinishedClassification(GameItem bottle,int kind)
         {
             if(kind==6){bottle.SetGameItemType("ALCOHOL");bottle.RemoveGameItemType("SUBSTANCE");bottle.RemoveGameItemType("LUXURY_ITEM");return;}

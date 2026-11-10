@@ -3,7 +3,7 @@
   <ID>night_walker</ID>
   <Name>夜行者 / Night Walker</Name>
   <Author>小粥</Author>
-  <ModVersion>1.1.0</ModVersion>
+  <ModVersion>1.1.1</ModVersion>
   <Description>夜晚最多外出3次，同一地点当晚只能访问一次，次日恢复。开局默认消耗2点，可在模组设置中改为1点。 / Up to 3 outings per night; each location once. Resets the next day. Costs 2 starting perk points by default; configurable to 1 point in mod settings.</Description>
   <GameVersions>
     <Version>0.46D</Version>

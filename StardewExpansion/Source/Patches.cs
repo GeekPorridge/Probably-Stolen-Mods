@@ -118,7 +118,20 @@ namespace PelicanCultivation
     [HarmonyPatch(typeof(WineHelper),nameof(WineHelper.FinishFermentation))]
     public static class FinishPatch
     {
+        [HarmonyPriority(Priority.Last)]
         public static void Postfix(GameItem item) { if(ModEntry.Enabled) Brewing.RefreshFinished(item,true); }
+    }
+    [HarmonyPatch(typeof(GameItem),nameof(GameItem.GetDisplayName))]
+    public static class BrewDisplayNamePatch
+    {
+        // Loaded bottles retain the native wine_bottle identifier. Do not let
+        // a native/default name replace the custom drink represented by its tags.
+        [HarmonyPriority(Priority.Last)]
+        public static void Postfix(GameItem __instance,bool preferCustomName,ref string __result)
+        {
+            if(!ModEntry.Enabled || (preferCustomName && GeneralHelper.HasCustomName(__instance))) return;
+            string name=Brewing.FinishedName(__instance);if(name!=null) __result=name;
+        }
     }
     [HarmonyPatch(typeof(WineHelper),nameof(WineHelper.ResetToEmptyBottle))]
     public static class EmptyBottlePatch

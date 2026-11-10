@@ -7,9 +7,15 @@ namespace PelicanCultivation
     {
         public static bool NeedsSerum(GameItem animal,string immunityPart)
             => animal!=null && animal.IsTag("ANIMAL_ITEM_TAG") && !HusbandryHelper.IsAnimalDead(animal)
-                && GeneralHelper.IsItemOwned(animal) && animal.IsTag("ANIMAL_DISEASED_TAG")
+                && GeneralHelper.IsItemOwned(animal) && AtRisk(animal)
                 && !string.IsNullOrEmpty(immunityPart) && animal.GetTagReadonly(immunityPart).GetInt()<=0
                 && !animal.IsTag(immunityPart+"_INGESTER_ACTIVE");
+        public static bool AtRisk(GameItem animal)
+        {
+            var species=HusbandryHelper.GetSpecies(animal);
+            return animal.IsTag("ANIMAL_DISEASED_TAG") || (species!=null
+                && GeneticHelper.GetCurrentStat(animal,"ANIMAL_IMMUNITY_TAG")<species.immunityThreshold);
+        }
         public static IEnumerable<GameItem> AvailableSerums()
         {
             var seen=new HashSet<GameItem>();

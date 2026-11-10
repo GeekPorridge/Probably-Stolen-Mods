@@ -13,7 +13,7 @@ namespace PelicanCultivation
             public int Number,Stored,Usable;
             public string Name;
             public double Nights,NextDemand;
-            public bool Missing,LowTarget,EggsOnly;
+            public bool Missing,LowTarget,EggsOnly,DietBlocked;
         }
         public sealed class Pool
         {
@@ -133,6 +133,7 @@ namespace PelicanCultivation
         {
             var pool=new Pool();foreach(var feeder in feeders.Where(f=>f!=null && f.IsTag("FEED_DISPENSER_TAG") && GeneralHelper.IsItemOwned(f)).Distinct())
             {
+                PlantDiet.RestoreLegacyFeed(feeder);
                 pool.Meat+=Math.Max(0,MachineFeedDispenser.GetMeatKcal(feeder));
                 int plant=PlantDiet.Available(feeder);pool.Plant+=plant;pool.Other+=Math.Max(0,feeder.GetTagReadonly("STORED_OTHER").GetInt()-plant);
                 pool.FishFeed+=Math.Max(0,MachineFeedDispenser.GetFishFeedKcal(feeder));
@@ -162,7 +163,8 @@ namespace PelicanCultivation
             int number=machine.GetTagReadonly(NumberTag).GetInt();
             return new Row{Number=number,Name=GeneralHelper.HasCustomName(machine)?GeneralHelper.GetCustomName(machine):ModEntry.L(machine.IsTag("CAGE_TAG")?"farm_feed_cage":"farm_feed_tank",number),
                 Stored=(int)Math.Min(int.MaxValue,pool.Available(15)),Usable=(int)Math.Min(int.MaxValue,pool.Available(mask)),Nights=nights,NextDemand=nextDemand,
-                Missing=installed.Count==0,LowTarget=installed.Any(f=>MachineFeedDispenser.GetTargetPercent(f)<75),EggsOnly=stock.All(i=>i.IsTag("FISH_ROE_TAG"))};
+                Missing=installed.Count==0,LowTarget=installed.Any(f=>MachineFeedDispenser.GetTargetPercent(f)<75),EggsOnly=stock.All(i=>i.IsTag("FISH_ROE_TAG")),
+                DietBlocked=stock.Select(Demand).Any(c=>c!=null && !c.Roe && pool.Available(c.Mask)<=0)};
         }
         public static List<Row> Inspect(IEnumerable<GameItem> items)
         {
@@ -175,19 +177,20 @@ namespace PelicanCultivation
             return Sort(rows);
         }
         public static List<Row> Sort(IEnumerable<Row> rows)
-            => rows.OrderBy(r=>r.Missing || r.LowTarget || r.Usable<=0?0:r.Nights).ThenBy(r=>r.Number).ToList();
+            => rows.OrderBy(r=>r.Missing || r.LowTarget || r.DietBlocked || r.Usable<=0?0:r.Nights).ThenBy(r=>r.Number).ToList();
         public static IEnumerable<string> Lines(IEnumerable<Row> rows)
         {
             foreach(var row in rows)
             {
-                bool low=row.Missing || row.LowTarget || (!row.EggsOnly && row.Nights<FarmSettings.FeedWarningNights);
+                bool low=row.Missing || row.LowTarget || row.DietBlocked || (!row.EggsOnly && row.Nights<FarmSettings.FeedWarningNights);
                 if(FarmSettings.FeedOnlyLow && !low) continue;
                 string status;
                 if(row.Missing) status=ModEntry.L("farm_feed_missing");
                 else if(row.LowTarget) status=ModEntry.L("farm_feed_target");
+                else if(row.DietBlocked && row.Stored>0) status=ModEntry.L("farm_feed_wrong_diet");
                 else if(row.Usable<=0) status=ModEntry.L(row.Stored>0?"farm_feed_wrong_diet":"farm_feed_empty");
                 else if(row.EggsOnly) status=ModEntry.L("farm_feed_eggs");
-                else status=ModEntry.L("farm_feed_days",row.Usable,row.Nights>=365?"365+":(Math.Floor(row.Nights*10)/10).ToString("0.#",CultureInfo.InvariantCulture),low?ModEntry.L("farm_feed_low"):"");
+                else status=ModEntry.L("farm_feed_days",row.Usable,row.Nights>=365?"365+":row.Nights>0 && row.Nights<0.1?"<0.1":(Math.Floor(row.Nights*10)/10).ToString("0.#",CultureInfo.InvariantCulture),low?ModEntry.L("farm_feed_low"):"");
                 yield return ModEntry.L("farm_feed_row",row.Name,status);
             }
         }

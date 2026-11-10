@@ -10,6 +10,13 @@ namespace PelicanCultivation
         public static int Get(string key,int fallback=0) => Ready?ModHelper.GetModDataInt(ModEntry.ModId,key,fallback):fallback;
         public static void Set(string key,int value) { if(Ready) ModHelper.SetModDataInt(ModEntry.ModId,key,value); }
         public static bool EverObtained => Get("ancient_obtained")!=0;
+        public static void EnsureReady()
+        {
+            // Intro-skipping runs can precede both the initial-item and morning
+            // UI hooks. HasInstance prevents constructing a save at the menu.
+            if(ModEntry.Enabled && !ModEntry.GameplayReady && PlayerStore.HasInstance
+                && EmporiumEntry.Instance!=null && (NewGameData.Instance==null || !NewGameData.Instance.isInMainMenu)) OnLoaded();
+        }
         public static void ObserveSeed(GameItem item)
         {
             if(item!=null && item.identifier==Rules.Crops[Rules.AncientIndex].SeedId && item.parentInventory!=null && GeneralHelper.IsItemOwned(item)) Set("ancient_obtained",1);
@@ -24,7 +31,7 @@ namespace PelicanCultivation
             TownDialogue.Initialize();
             Assets.RegisterFarmerPortrait();
             var savedItems=new List<GameItem>(EmporiumEntry.Instance.GetAllItems());
-            foreach(var item in savedItems) WineStorage.Expand(item);
+            foreach(var item in savedItems){WineStorage.Expand(item);PlantDiet.RestoreLegacyFeed(item);}
             foreach(var item in savedItems)
             {
                 Crops.RefreshLoaded(item);

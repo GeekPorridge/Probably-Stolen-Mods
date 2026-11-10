@@ -5,8 +5,8 @@ namespace PelicanCultivation
 {
     public sealed class ModEntry : IMod
     {
-        public const string ModId="pelican_cultivation", Version="2.0.2";
-        public const string BuildRevision="r9";
+        public const string ModId="pelican_cultivation", Version="2.0.3";
+        public const string BuildRevision="r10";
         public static bool Enabled, GameplayReady;
         private static ModLog log;
         private static ConfigEntry<int> nativeSeedChance,stationSeedShare;
@@ -90,7 +90,9 @@ namespace PelicanCultivation
         {
             // PlayerStore.Instance is a lazy factory, not a harmless null check.
             // Never touch it (or game time) until the game-loaded/new-game hook.
-            if(!ModEntry.Enabled || !ModEntry.GameplayReady) return;
+            if(!ModEntry.Enabled) return;
+            Progress.EnsureReady();
+            if(!ModEntry.GameplayReady) return;
             ReservoirEvents.EnsureToday();Fishing.Tick();
             if(!Progress.Ready) { ModEntry.GameplayReady=false; return; }
             if(Time.unscaledTime<nextTick) return;

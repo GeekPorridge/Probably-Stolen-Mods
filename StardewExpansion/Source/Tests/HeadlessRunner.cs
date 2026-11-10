@@ -43,6 +43,7 @@ public static class HeadlessRunner
             Console.WriteLine(PelicanVerification.RunScheduleIntegration());
             Console.WriteLine(FarmVerification.Run());
             Console.WriteLine(FarmVerification.RunPatchedIntegration());
+            Console.WriteLine(CompatibilityVerification.Run());
             Console.WriteLine(TownDialogueVerification.Run());
             Console.WriteLine(NightReportVerification.Run(Path.Combine(Path.GetDirectoryName(modDll),"Localization")));
             harmony.Unpatch(typeof(LocHelper).GetMethod("GetLocalizedMechanic"),typeof(PelicanVerification).GetMethod("MechanicTextFixture"));

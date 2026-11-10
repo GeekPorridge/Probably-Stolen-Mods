@@ -13,13 +13,27 @@ namespace PelicanCultivation
         public static void AttachCage(GameItem cage)
         {
             var row=cage?.contentWindow?.childElement as MachineryPanelRow;
-            if(row==null || row.GetPanel("pelican_products")!=null) return;
+            if(row==null) return;
+            var existing=row.GetPanel("pelican_products")?.content as GameGridInventory;
+            if(existing!=null){ConfigureProducts(existing);return;}
             var products=new GameGridInventory(6,2);products.EnableTag("PELICAN_FARM_PRODUCT_INVENTORY");
-            products.mayInventoryAddItemFunc=(food,inv)=>GeneralHelper.IsItemOwned(cage) && (food.identifier=="pelican_milk" || food.identifier=="pelican_truffle_small" || food.identifier=="pelican_truffle" || food.identifier=="pelican_egg" || food.identifier=="pelican_goat_milk");
+            ConfigureProducts(products);
             row.Add(MachineHelper.Panel(ModEntry.L("farm_products"),products,"pelican_products"));
             ExpansionStock.AttachCage(cage,row);
             var order=new List<int>{1,0};for(int i=3;i<row.Panels.Count;i++) order.Add(i);order.Add(2);
             row.SetDisplayOrder(order.ToArray());row.SetColumns(2);cage.contentWindow.RelinkStorage();
+        }
+        public static void ConfigureProducts(GameGridInventory products)
+        {
+            products.mayInventoryAddItemFunc=MayAddProduct;
+        }
+        public static bool MayAddProduct(GameItem food,GameInventory inventory)
+        {
+            // Resolve the live owning cage. Captured factory objects can differ
+            // from the object restored into the player's inventory.
+            var host=Host(inventory);
+            return host!=null && GeneralHelper.IsItemOwned(host) && GeneralHelper.IsItemOwned(food)
+                && (food.identifier=="pelican_milk" || food.identifier=="pelican_truffle_small" || food.identifier=="pelican_truffle" || food.identifier=="pelican_egg" || food.identifier=="pelican_goat_milk");
         }
         public static GameGridInventory Products(GameItem cage)
             => ((cage?.contentWindow?.childElement as MachineryPanelRow)?.GetPanel("pelican_products")?.content) as GameGridInventory;

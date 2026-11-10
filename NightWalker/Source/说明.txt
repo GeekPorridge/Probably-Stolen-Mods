@@ -1,4 +1,4 @@
-夜行者 / Night Walker v1.1.0
+夜行者 / Night Walker v1.1.1
 作者：小粥
 适用：Probably Stolen 0.46D
 语言：简体中文、英语，跟随游戏语言。

@@ -7,6 +7,15 @@ namespace PelicanCultivation
     public static class PlantDiet
     {
         public const string PlantKcal="PELICAN_PLANT_KCAL";
+        public const string FeedSchema="PELICAN_FEED_DIET_SCHEMA";
+        public static void RestoreLegacyFeed(GameItem item)
+        {
+            if(item==null || !item.IsTag("FEED_DISPENSER_TAG") || item.IsTag(FeedSchema)) return;
+            // Older saves did not record plant provenance. Retain their existing
+            // non-meat feed once; never increase the total stored calories.
+            if(!item.IsTag(PlantKcal)) Crops.SetInt(item,PlantKcal,Math.Max(0,item.GetTagReadonly(MachineFeedDispenser.STORED_OTHER_KEY).GetInt()));
+            Crops.SetInt(item,FeedSchema,1);
+        }
         public static bool Herbivore(GameItem item)
         {string s=item.GetTagReadonly("ANIMAL_SPECIES_TAG").GetString();return s==FarmRules.Cow||s==ExpansionStock.Chicken||s==ExpansionStock.Goat;}
         public static bool PlantFood(GameItem item)
@@ -28,6 +37,7 @@ namespace PelicanCultivation
             var sources=(IEnumerable<GameItem>)AccessTools.Method(typeof(HusbandryHelper),"GetReachableDispensers").Invoke(null,new object[]{inventory});
             foreach(var dispenser in sources)
             {
+                RestoreLegacyFeed(dispenser);
                 float target=maximum*MachineFeedDispenser.GetTargetRatio(dispenser);int need=(int)Math.Ceiling(target-hunger);if(need<=0)continue;
                 hunger+=Draw(dispenser,need);FarmSpecies.SetFloat(animal,"ANIMAL_HUNGER_TAG",Math.Min(maximum,hunger));if(hunger>=maximum*0.75f)return;
             }
@@ -46,7 +56,7 @@ namespace PelicanCultivation
     [HarmonyPatch(typeof(MachineFeedDispenser),nameof(MachineFeedDispenser.TryBlendItem))]
     public static class PlantBlendProvenancePatch
     {
-        public static void Prefix(GameItem foodItem,out int __state){__state=ModEntry.Enabled&&PlantDiet.PlantFood(foodItem)?Math.Max(0,foodItem.GetTagReadonly("CALORIE_VALUE_TAG").GetInt()):0;}
+        public static void Prefix(GameItem machine,GameItem foodItem,out int __state){if(ModEntry.Enabled)PlantDiet.RestoreLegacyFeed(machine);__state=ModEntry.Enabled&&PlantDiet.PlantFood(foodItem)?Math.Max(0,foodItem.GetTagReadonly("CALORIE_VALUE_TAG").GetInt()):0;}
         public static void Postfix(GameItem machine,bool __result,int __state){if(__result&&__state>0)Crops.SetInt(machine,PlantDiet.PlantKcal,PlantDiet.Available(machine)+__state);}
     }
     [HarmonyPatch(typeof(MachineFeedDispenser),nameof(MachineFeedDispenser.DrawKcal),new[]{typeof(GameItem),typeof(int),typeof(bool),typeof(bool),typeof(bool),typeof(int),typeof(int),typeof(int)},new[]{ArgumentType.Normal,ArgumentType.Normal,ArgumentType.Normal,ArgumentType.Normal,ArgumentType.Normal,ArgumentType.Out,ArgumentType.Out,ArgumentType.Out})]

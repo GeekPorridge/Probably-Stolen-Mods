@@ -225,7 +225,7 @@ public static class V2Verification
         var mother=Owned(ExpansionStock.CreateAnimal(true));var father=Owned(ExpansionStock.CreateAnimal(true));
         foreach(string gene in ExpansionStock.Chickens.geneticTraitIDs){GeneticHelper.SetTrait(mother,ExpansionStock.Chickens,gene,1);GeneticHelper.SetTrait(father,ExpansionStock.Chickens,gene,2);}
         var egg=(GameItem)AccessTools.Method(typeof(ExpansionStock),"FertilizedEgg").Invoke(null,new object[]{mother,father});Owned(egg);
-        Check(egg.IsTag(ExpansionStock.Egg)&&!egg.IsTag("ANIMAL_ITEM_TAG")&&!egg.IsTag("CALORIE_VALUE_TAG")&&!egg.mayInventoryRemoveItemFunc(egg,null),"fertile egg is protected, non-food and not a live animal");
+        Check(egg.IsTag(ExpansionStock.Egg)&&!egg.IsTag("ANIMAL_ITEM_TAG")&&!egg.IsTag("CALORIE_VALUE_TAG")&&egg.mayInventoryRemoveItemFunc==null,"fertile egg is movable, non-food and not a live animal");
         foreach(string gene in ExpansionStock.Chickens.geneticTraitIDs)
         {
             float a=egg.GetTagReadonly(gene+"_ALLELE_A").GetFloat(),b=egg.GetTagReadonly(gene+"_ALLELE_B").GetFloat();
@@ -548,7 +548,10 @@ public static class V2Verification
         Field(typeof(LoadedMod),"Textures").SetValue(mod,new Dictionary<string,UnityEngine.Texture2D>());Field(typeof(LoadedMod),"Sprites").SetValue(mod,new Dictionary<string,UnityEngine.Sprite>());Field(typeof(LoadedMod),"PaperSprites").SetValue(mod,new Dictionary<string,UnityEngine.Sprite>());
         var card=(UnityEngine.Texture2D)FormatterServices.GetUninitializedObject(typeof(UnityEngine.Texture2D));var scene=(UnityEngine.Texture2D)FormatterServices.GetUninitializedObject(typeof(UnityEngine.Texture2D));uiSprite=(UnityEngine.Sprite)FormatterServices.GetUninitializedObject(typeof(UnityEngine.Sprite));
         var pointer=Field(typeof(UnityEngine.Object),"m_CachedPtr");foreach(var obj in new UnityEngine.Object[]{card,scene,uiSprite})pointer.SetValue(obj,new IntPtr(1));
-        mod.Textures["reservoir_card"]=card;mod.Textures["reservoir_scene"]=scene;ModLoader.Mods.Add(mod);
+        // Current ModLoader.Mods returns a defensive copy. Modify only the
+        // isolated harness registry, not the copy returned by its public API.
+        var registry=(List<LoadedMod>)Field(typeof(ModLoader),"mods").GetValue(null);
+        mod.Textures["reservoir_card"]=card;mod.Textures["reservoir_scene"]=scene;registry.Add(mod);
         var manager=(CustomUIManager)FormatterServices.GetUninitializedObject(typeof(CustomUIManager));
         try
         {
@@ -558,7 +561,7 @@ public static class V2Verification
             Check(sceneTextures.Count==2&&ReferenceEquals(sceneTextures[0],card)&&ReferenceEquals(sceneTextures[1],scene)&&mod.Sprites.Count==0,"reservoir registration uses both source textures without entering inventory sprite scaling");
             Check(Math.Abs(ReservoirStage.CoverScale(9.6f,5.4f,19.2f,10.8f)-2)<0.0001f&&Math.Abs(ReservoirStage.CoverScale(19.2f,10.8f,25.6f,10.8f)-4f/3)<0.0001f,"reservoir background covers the camera for normal and ultrawide aspect ratios");
         }
-        finally{ModLoader.Mods.Remove(mod);foreach(var obj in new UnityEngine.Object[]{card,scene,uiSprite})pointer.SetValue(obj,IntPtr.Zero);uiSprite=null;sceneTextures.Clear();}
+        finally{registry.Remove(mod);foreach(var obj in new UnityEngine.Object[]{card,scene,uiSprite})pointer.SetValue(obj,IntPtr.Zero);uiSprite=null;sceneTextures.Clear();}
     }
     public static bool ChildValue(GameItem __instance,ref long __result){if(__instance!=valueChild)return true;__result=213;return false;}
     public static bool DialogueText(Dialogue __instance,ref Dialogue __result){__result=__instance;return false;}
