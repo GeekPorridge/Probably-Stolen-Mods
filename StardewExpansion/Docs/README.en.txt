@@ -1,7 +1,7 @@
-Stardew Expansion 2.0 r7 — Local acceptance build
+Stardew Expansion 2.0.4
 Author: Xiao Zhou; Probably Stolen 0.46D; Simplified Chinese / English
 
-This revision retains the mod ID pelican_cultivation and the manifest version 2.0. Earlier revision notes remain historical references. Current rules are described here and in All-machine-recipes-2.0-r7.en.txt. No Workshop or Nexus publication is part of this update.
+This revision retains the mod ID pelican_cultivation. See 2.0.4-fixes.en.md for current fixes. Earlier notes remain historical references; the r7 recipe reference still describes base recipes, with later footprint and aging corrections taking precedence. No Workshop or Nexus publication is part of this update.
 
 Getting started
 Restart the game to load the new assembly and art together. Buy seeds and planting/husbandry books on Wednesday, machines and the Artisan Handbook from the Friday Townsman Artisan, and husbandry stock on Saturday, subject to native ability unlocks.

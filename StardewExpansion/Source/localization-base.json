@@ -336,8 +336,8 @@
     "en": "Make room for a four-cell empty bottle before starting fermentation. The bottle and ingredients have been retained."
   },
   "beer_space_hint": {
-    "zh": "啤酒需要2×3格空间；腾出位置后会自动调整占格，当前酒液与陈酿价值均已保留。",
-    "en": "Beer needs a 2-by-3 space. Its footprint will update when room is available; the wine and its aged value are retained."
+    "zh": "此酒需要2×3格空间，腾出位置后会自动调整；等待期间保留原占格和酒液。",
+    "en": "This bottle needs a 2-by-3 space. It will resize when room is available; its old footprint and contents are retained until then."
   },
   "beer_storage_hint": {
     "zh": "放入有电冰箱，日结算后获得“冰镇”（价值+20%）；不进入催陈器，不再陈酿。离开冰箱后的保冷期限沿用原版。",
@@ -808,12 +808,12 @@
     "en": "The lobster would not let go of the basket rim. Told it there was a tank waiting at the other end. Seemed to want a viewing first."
   },
   "farm_config_auto_immunity": {
-    "zh": "普通疾病自动使用绿色血清",
-    "en": "Automatic green serum for ordinary illness"
+    "zh": "低免疫／普通疾病自动使用绿色血清",
+    "en": "Automatic green serum for low immunity or ordinary illness"
   },
   "farm_config_auto_immunity_hint": {
-    "zh": "默认关闭。夜间对患普通疾病的自有动物使用主背包／仓库里的绿色血清，消耗实际次数；不取其他机器内的药。药效仍在时不重复，不能清除朊病毒，且会增加食量。",
-    "en": "Off by default. At night, spend real green-serum doses from your main inventory or warehouse on owned animals with ordinary illness. Supplies inside other machines are reserved. No repeat while the effect remains. Does not clear prion disease and increases hunger."
+    "zh": "默认关闭。夜间结算前，逐只对免疫低于物种阈值或患普通疾病的自有动物使用主背包／仓库里的绿色血清，消耗实际次数；不取其他机器内的药。药效仍在时不重复，不能清除朊病毒，且会增加食量。",
+    "en": "Off by default. Before nightly disease checks, spend real green-serum doses on each owned animal below its species' immunity threshold or with ordinary illness. Use main-inventory/warehouse supplies, reserving medicine inside machines. No repeat while active. Does not clear prion disease and increases hunger."
   },
   "farm_night_status": {
     "zh": "动物情况：存活{0}只，卵{1}份；缺粮{2}只，待处理尸体{3}只。",

@@ -5,8 +5,13 @@ namespace PelicanCultivation
 {
     public static class Progress
     {
-        public static bool Ready => ModEntry.GameplayReady && EmporiumEntry.Instance!=null && (NewGameData.Instance==null || !NewGameData.Instance.isInMainMenu);
+        // The menu flag belongs to NewGameData, not the loaded inventory. A
+        // retained flag must not disable an already loaded store, and probing
+        // the menu must never instantiate PlayerStore through its lazy getter.
+        private static bool HasStore => PlayerStore.HasInstance && EmporiumEntry.Instance!=null && EmporiumEntry.Instance.invElement!=null;
+        public static bool Ready => ModEntry.Enabled && ModEntry.GameplayReady && HasStore;
         public static int Day => Ready?StoreStation.Instance.dayCounter:0;
+        public static string RuntimeState => "enabled="+ModEntry.Enabled+"; gameplay="+ModEntry.GameplayReady+"; store="+PlayerStore.HasInstance+"; emporium="+(EmporiumEntry.Instance!=null)+"; menu="+(NewGameData.Instance!=null && NewGameData.Instance.isInMainMenu)+"; ready="+Ready;
         public static int Get(string key,int fallback=0) => Ready?ModHelper.GetModDataInt(ModEntry.ModId,key,fallback):fallback;
         public static void Set(string key,int value) { if(Ready) ModHelper.SetModDataInt(ModEntry.ModId,key,value); }
         public static bool EverObtained => Get("ancient_obtained")!=0;
@@ -14,8 +19,7 @@ namespace PelicanCultivation
         {
             // Intro-skipping runs can precede both the initial-item and morning
             // UI hooks. HasInstance prevents constructing a save at the menu.
-            if(ModEntry.Enabled && !ModEntry.GameplayReady && PlayerStore.HasInstance
-                && EmporiumEntry.Instance!=null && (NewGameData.Instance==null || !NewGameData.Instance.isInMainMenu)) OnLoaded();
+            if(ModEntry.Enabled && !ModEntry.GameplayReady && HasStore) OnLoaded();
         }
         public static void ObserveSeed(GameItem item)
         {
@@ -23,11 +27,13 @@ namespace PelicanCultivation
         }
         public static void OnLoaded()
         {
+            if(!ModEntry.Enabled || !HasStore) return;
             ModEntry.GameplayReady=true;
             ModEntry.EnsurePump();
             if(!Ready) return;
             FarmSpecies.Register();
             ExpansionStock.Register();
+            ReservoirLocation.EnsureRegistered();
             TownDialogue.Initialize();
             Assets.RegisterFarmerPortrait();
             var savedItems=new List<GameItem>(EmporiumEntry.Instance.GetAllItems());
@@ -47,6 +53,7 @@ namespace PelicanCultivation
             AutoPlant.RefreshExistingMachines();
             DebugTools.Register();
             ModEntry.Note("Game ready: farmer visits="+Get("farmer_visits")+"; day="+Day+"; farmer factory="+StoreClientListDict.storeClientDict.ContainsKey(Merchant.Id));
+            ModEntry.Note("Loaded runtime: "+RuntimeState+"; aquaculture="+FarmStock.Aquaculture+"; reservoir="+(AfterhourLocation.Get(Fishing.LocationId)!=null));
         }
     }
 

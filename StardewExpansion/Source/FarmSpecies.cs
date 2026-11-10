@@ -95,6 +95,7 @@ namespace PelicanCultivation
         public static void RefreshAnimal(GameItem item)
         {
             string id=item.GetTagReadonly("ANIMAL_SPECIES_TAG").GetString();if(!FarmRules.Mammal(id)) return;
+            AnimalWeightGuard.Repair(item);
             bool cow=id==FarmRules.Cow;
             item.name=ModEntry.L(cow?"farm_cow":"farm_pig");
             item.SetGameItemType("FARMING_SUPPLIES");

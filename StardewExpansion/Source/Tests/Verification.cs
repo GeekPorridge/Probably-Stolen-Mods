@@ -611,18 +611,19 @@ public static class PelicanVerification
         {
             var rackGrid=(GameGridInventory)FormatterServices.GetUninitializedObject(typeof(GameGridInventory));
             typeof(MachineWineRack).GetMethod("SetupWineSlot",BindingFlags.NonPublic|BindingFlags.Static).Invoke(null,new object[]{rackGrid});
-            foreach(int kind in new[]{1,2,3,4,5}) foreach(int score in new[]{0,1,2,3,5,6})
+            foreach(int kind in new[]{1,2,3,4,5,6,7}) foreach(int score in new[]{0,1,2,3,5,6})
             {
                 var bottle=TransferBottle(kind,2,score);bottle.uniqueId=1000+kind*10+score;AgableHelper.InitAgable(bottle);
                 bottle.unitValue=81;Crops.SetInt(bottle,AgableHelper.AGE_INT,3);
                 bool beer=kind<=2;
+                bool doesNotAge=beer||kind==6;
                 Check(MachineFridge.MayZoneAcceptItem(bottle)==beer && MachineFridge.IsChillable(bottle)==beer,"actual Harmony-patched native fridge decisions route only the two beers");
-                Check(MachineWineRack.CanAgeWine(bottle)==!beer && rackGrid.mayInventoryAddItemFunc(bottle,rackGrid)==!beer,"actual native ager inventory callback accepts fruit wines and rejects beer");
-                Check(AgableHelper.IsAgable(bottle)==!beer,"actual native aging discovery excludes beer");
+                Check(MachineWineRack.CanAgeWine(bottle)==!doesNotAge && rackGrid.mayInventoryAddItemFunc(bottle,rackGrid)==!doesNotAge,"actual native ager inventory callback accepts fruit wines and rejects beer and spirit");
+                Check(AgableHelper.IsAgable(bottle)==!doesNotAge,"actual native aging discovery excludes beer and spirit");
                 WineHelper.OnAgeWine(bottle);
-                Check(bottle.unitValue==(beer?81:84) && AgableHelper.GetAge(bottle)==(beer?3:4),"actual native wine aging preserves beer history and increases fruit-wine value");
+                Check(bottle.unitValue==(doesNotAge?81:84) && AgableHelper.GetAge(bottle)==(doesNotAge?3:4),"actual native wine aging preserves beer/spirit history and increases fruit-wine value");
                 AgableHelper.OnAge(bottle);
-                Check(bottle.unitValue==(beer?81:87) && AgableHelper.GetAge(bottle)==(beer?3:5),"actual native generic aging cannot bypass the beer guard");
+                Check(bottle.unitValue==(doesNotAge?81:87) && AgableHelper.GetAge(bottle)==(doesNotAge?3:5),"actual native generic aging cannot bypass the beer/spirit guard");
                 if(beer)
                 {
                     MachineFridge.ChillItem(bottle);
@@ -669,7 +670,7 @@ public static class PelicanVerification
         bool previousEnabled=ModEntry.Enabled;ModEntry.Enabled=true;
         try
         {
-            foreach(int kind in new[]{0,1,2,3,4,5,99}) foreach(int state in new[]{0,1,2})
+            foreach(int kind in new[]{0,1,2,3,4,5,6,7,99}) foreach(int state in new[]{0,1,2})
                 foreach(int score in new[]{0,1,2,3,5,6}) foreach(bool counterfeit in new[]{false,true})
             {
                 var bottle=TransferBottle(kind,state,score);
@@ -678,13 +679,14 @@ public static class PelicanVerification
                 bottle.unitValue=149;Crops.SetInt(bottle,AgableHelper.AGE_INT,7);
                 bool beer=(kind==1 || kind==2) && state==2;
                 bool coldBeer=beer && !counterfeit;
+                bool doesNotAge=beer || (kind==6 && state==2);
                 Check(!MachineFridge.MayZoneAcceptItem(bottle) && !MachineFridge.IsChillable(bottle),"native wine-bottle exclusion is reproduced before the storage hooks");
                 Check(FridgeAccepts(bottle)==coldBeer && Chillable(bottle)==coldBeer,"only finished genuine custom beer enters the fridge and follows its chill cycle");
-                Check(RackAccepts(bottle)==(state==2 && !counterfeit && !beer),"fruit wines and native wines retain the ager; custom beer is rejected at every score");
-                Check(Agable(bottle)==!beer && BeerAgePatch.Prefix(bottle)==!beer,"both generic aging discovery and direct aging reject completed custom beer");
-                Check(BeerWineTooltipPatch.Prefix(bottle)==!coldBeer,"finished beer stops advertising native aging while all other wine tooltips remain native");
+                Check(RackAccepts(bottle)==(state==2 && !counterfeit && !doesNotAge),"fruit wines and native wines retain the ager; beer and spirit are rejected at every score");
+                Check(Agable(bottle)==!doesNotAge && BeerAgePatch.Prefix(bottle)==!doesNotAge,"generic and direct aging both reject finished beer and spirit");
+                Check(BeerWineTooltipPatch.Prefix(bottle)==(!doesNotAge||counterfeit),"genuine beer and spirit stop advertising aging; counterfeit tooltips stay native");
                 if(BeerAgePatch.Prefix(bottle)) WineHelper.OnAgeWine(bottle);
-                bool aged=!beer && !counterfeit;
+                bool aged=!doesNotAge && !counterfeit;
                 Check(bottle.unitValue==(aged?152:149) && AgableHelper.GetAge(bottle)==(aged?8:7),"old beer retains historical value and age without further aging; native and fruit-wine gains still work");
                 Check(bottle.GetTagReadonly(Rules.WineTag).GetInt()==kind && bottle.GetTagReadonly(WineHelper.WINE_SCORE_INT).GetInt()==score,"storage routing leaves wine identity and quality unchanged");
                 if(coldBeer)
@@ -700,6 +702,14 @@ public static class PelicanVerification
             }
             var stale=TransferBottle(1,2,5);stale.DisableTag(Rules.WineTag);
             Check(!BeverageStorage.IsBeer(stale) && !Chillable(stale) && RackAccepts(stale),"disabled saved kind data cannot route an unrelated wine into the fridge");
+            var spirit=TransferBottle(6,2,5);AgableHelper.InitAgable(spirit);spirit.unitValue=133;Crops.SetInt(spirit,AgableHelper.AGE_INT,11);
+            Brewing.ApplyFinishedClassification(spirit,6);
+            Check(!spirit.IsTag(AgableHelper.AGE_VALUE_MOD_PER_DAY_INT)&&spirit.unitValue==133&&AgableHelper.GetAge(spirit)==11,"spirit migration disables appreciation without rewriting historical value or age");
+            Crops.SetInt(spirit,Rules.WineTag,3);Brewing.ApplyFinishedClassification(spirit,3);
+            Check(spirit.IsTag(AgableHelper.AGE_VALUE_MOD_PER_DAY_INT)&&BeerAgePatch.Prefix(spirit),"a spirit bottle reused for fruit wine regains native aging");
+            Crops.SetInt(spirit,Rules.WineTag,6);spirit.DisableTag(Rules.WineTag);
+            Check(!BeverageStorage.DoesNotAge(spirit),"disabled historical spirit data cannot prevent native wine aging");
+            Check(!BeverageStorage.DoesNotAge(null),"null aging probes remain harmless");
             Check(!BeverageStorage.IsBeer(null) && !BeverageStorage.CanEnterFridge(null),"null storage probes are harmless");
             var nativeDrink=new NativeItem("native_soft_drink");nativeDrink.SetGameItemType("BREVAGE");GeneralHelper.SetItemOwned(nativeDrink,true);
             Check(FridgeAccepts(nativeDrink) && Chillable(nativeDrink),"native drinks retain their original fridge behavior");

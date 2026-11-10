@@ -110,6 +110,8 @@ namespace PelicanCultivation
         }
         public static void ApplyFinishedClassification(GameItem bottle,int kind)
         {
+            if(kind==6) bottle.DisableTag(AgableHelper.AGE_VALUE_MOD_PER_DAY_INT);
+            else if(Rules.IsFruitWine(kind) && !bottle.IsTag(AgableHelper.AGE_VALUE_MOD_PER_DAY_INT)) AgableHelper.InitAgable(bottle);
             if(kind==6){bottle.SetGameItemType("ALCOHOL");bottle.RemoveGameItemType("SUBSTANCE");bottle.RemoveGameItemType("LUXURY_ITEM");return;}
             if(Rules.IsFruitWine(kind) && WineHelper.GetWineQualityTier(bottle)>0)
             {
@@ -144,12 +146,14 @@ namespace PelicanCultivation
         }
         public static void Tooltip(RichTextBuilder builder,GameItem item)
         {
+            // A deferred resize is actionable status, including when the
+            // ordinary wine appendix is hidden by the concise tooltip policy.
+            if(item.IsTag(BottleGeometry.PendingBeerTag)) builder.AddLine(ModEntry.L("beer_space_hint"));
             if(TooltipPolicy.HideModInfo(item)) return;
             if(BeverageStorage.CanChill(item)) builder.AddLine(ModEntry.L("beer_storage_hint"));
             else if(item.IsTag(Rules.WineTag) && Rules.IsFruitWine(item.GetTagReadonly(Rules.WineTag).GetInt())
                 && WineHelper.IsFinishedWine(item) && !item.IsTag(WineHelper.WINE_COUNTERFEIT_TAG))
                 builder.AddLine(ModEntry.L("fruit_wine_storage_hint"));
-            if(item.IsTag(BottleGeometry.PendingBeerTag)) builder.AddLine(ModEntry.L("beer_space_hint"));
             if(item.IsTag(CropGeometry.PendingTag)) builder.AddLine(ModEntry.L("crop_space_hint"));
             if(item.IsTag(ProductGeometry.Pending)&&(item.identifier=="pelican_bait"||item.identifier=="pelican_premium_bait"))builder.AddLine(Expansion.L("bait_space_pending"));
             var seedCrop=Rules.BySeed(HydroponicHelper.GetPlantId(item));

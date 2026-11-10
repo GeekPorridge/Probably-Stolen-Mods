@@ -637,7 +637,7 @@
   {
     "key": "egg",
     "width": 1,
-    "height": 1,
+    "height": 2,
     "source_box": [
       57,
       351,
@@ -658,8 +658,8 @@
   },
   {
     "key": "mayonnaise",
-    "width": 1,
-    "height": 1,
+    "width": 2,
+    "height": 2,
     "source_box": [
       600,
       345,

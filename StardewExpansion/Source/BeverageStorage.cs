@@ -10,6 +10,8 @@ namespace PelicanCultivation
         }
         public static bool CanChill(GameItem item)
             => IsBeer(item) && !item.IsTag(WineHelper.WINE_COUNTERFEIT_TAG);
+        public static bool DoesNotAge(GameItem item)
+            => IsBeer(item) || (item!=null && item.IsTag(Rules.WineTag) && WineHelper.IsFinishedWine(item) && item.GetTagReadonly(Rules.WineTag).GetInt()==6);
         public static bool CanEnterFridge(GameItem item)
             => CanChill(item) && GeneralHelper.IsItemOwned(item)
                 && !item.IsGameItemType("MACHINE") && !item.IsGameItemType("STORAGE");

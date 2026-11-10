@@ -10,7 +10,7 @@ namespace PelicanCultivation
         private static readonly HashSet<GameItem> pending=new HashSet<GameItem>(),updating=new HashSet<GameItem>();
         private static float next;
         public static bool IsBait(string key)=>key=="bait"||key=="premium_bait";
-        public static bool Handles(string key)=>IsBait(key)||key=="cheese"||key=="goat_cheese"||key=="truffle_oil"||key=="poppy_perfume"||key=="fairy_perfume"||Array.IndexOf(Fishing.Kings,key)>=0;
+        public static bool Handles(string key)=>IsBait(key)||key=="egg"||key=="mayonnaise"||key=="cheese"||key=="goat_cheese"||key=="truffle_oil"||key=="poppy_perfume"||key=="fairy_perfume"||Array.IndexOf(Fishing.Kings,key)>=0;
         public static void Apply(GameItem item,string key)
         {
             if(!Handles(key)||!updating.Add(item))return;
@@ -24,23 +24,23 @@ namespace PelicanCultivation
         {
             var parent=item.parentInventory;if(parent==null)return true;
             if(!Progress.Ready)return false;
-            if(item.identifier=="pelican_bait"||item.identifier=="pelican_premium_bait")
+            // A migration moves this exact item. Never let a placement search
+            // merge it with a nearby stack and lose its saved identity/state.
+            var stacking=item.mayStackItemFunc;item.mayStackItemFunc=(a,b)=>false;
+            try
             {
-                if(parent.CheckInventorySlotStillValid(item,item.modifiedShape,item.modifiedState))return true;
-                // Resizing is a move of this exact stack, never a stack merge.
-                // Keep it in its current container; a full old backpack waits
-                // instead of sending bait to another area or losing its ID.
-                var stacking=item.mayStackItemFunc;item.mayStackItemFunc=(a,b)=>false;
-                try
+                if(IsBait(item.identifier.Substring(8)))
                 {
+                    if(parent.CheckInventorySlotStillValid(item,item.modifiedShape,item.modifiedState))return true;
+                    // Keep bait in the bag selected for native departure.
                     var space=parent.TryFindOneValidInventorySlot(item);
                     return space!=null&&space.inventory==parent&&space.targetItem==null&&space.numTransfer==item.unitCount&&space.TryAcceptOnce()==item.unitCount;
                 }
-                finally{item.mayStackItemFunc=stacking;}
+                if(GeneralHelper.IsItemOwned(item))return BottleGeometry.PlaceExpanded(item);
+                if(parent.CheckInventorySlotStillValid(item,item.modifiedShape,item.modifiedState))return true;
+                var slot=parent.TryFindOneValidInventorySlot(item);return slot!=null&&slot.targetItem==null&&slot.TryAcceptOnce()==item.unitCount;
             }
-            if(GeneralHelper.IsItemOwned(item))return BottleGeometry.PlaceExpanded(item);
-            if(parent.CheckInventorySlotStillValid(item,item.modifiedShape,item.modifiedState))return true;
-            var slot=parent.TryFindOneValidInventorySlot(item);return slot!=null&&slot.targetItem==null&&slot.TryAcceptOnce()==item.unitCount;
+            finally{item.mayStackItemFunc=stacking;}
         }
         public static void Retry()
         {

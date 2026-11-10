@@ -42,7 +42,7 @@ namespace PelicanCultivation
         {
             width=height=1;
             if(Array.IndexOf(SeafoodRecipes.Keys,key)>=0){width=3;height=2;return true;}
-            if(Array.IndexOf(ProductKeys,key)>=0){if(key=="bait"||key=="premium_bait"||key=="cheese"||key=="goat_cheese"||key.EndsWith("oil")||key.EndsWith("perfume")){width=height=2;return true;}height=key.EndsWith("milk")?2:1;return true;}
+            if(Array.IndexOf(ProductKeys,key)>=0){if(key=="mayonnaise"||key=="bait"||key=="premium_bait"||key=="cheese"||key=="goat_cheese"||key.EndsWith("oil")||key.EndsWith("perfume")){width=height=2;return true;}height=key=="egg"||key.EndsWith("milk")?2:1;return true;}
             if(key.EndsWith("_manual")){width=2;height=3;return true;}
             if(key=="cheese_press" || key=="oil_press" || key=="barrel" || key=="grill"){width=height=3;return true;}
             if(key.StartsWith("chicken_") || key.StartsWith("goat_"))

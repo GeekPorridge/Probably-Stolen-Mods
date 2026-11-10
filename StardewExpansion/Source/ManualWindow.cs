@@ -27,7 +27,7 @@ namespace PelicanCultivation
         public static void Open(string key,GameItem item)
         {
             var source=MultiPageUIManager.Instance;
-            if(source==null||source.panel==null||source.books==null||source.books.Count<=2)return;
+            if(source==null||source.panel==null||source.books==null||source.books.Count<=2){ModEntry.Note("Manual template unavailable: manager="+(source!=null)+"; books="+(source?.books?.Count??0));return;}
             CloseAll();
             var guide=source.books[2];
             var candidates=source.panel.GetComponentsInChildren<Image>(true).Where(i=>!source.books.Where(b=>b!=guide).Any(b=>i.transform.IsChildOf(b.transform))).Concat(guide.GetComponentsInChildren<Image>(true)).Distinct();

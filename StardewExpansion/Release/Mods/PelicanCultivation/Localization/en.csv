@@ -82,7 +82,7 @@ wine_desc_starfruit_wine,"Fruit that once shone beneath a desert sun has become 
 wine_desc_ancient_wine,"No one can put an age to its aroma. The fellow townsman calls it good wine; connoisseurs begin discussing a more impressive price tag."
 recipe_error,"New recipes need exactly two crops of the same species and at most one yeast. Do not mix species or native bloomberries. Ingredients have not been consumed."
 bottle_space,"Make room for a four-cell empty bottle before starting fermentation. The bottle and ingredients have been retained."
-beer_space_hint,"Beer needs a 2-by-3 space. Its footprint will update when room is available; the wine and its aged value are retained."
+beer_space_hint,"This bottle needs a 2-by-3 space. It will resize when room is available; its old footprint and contents are retained until then."
 beer_storage_hint,"Place in a powered fridge to gain Chilled (+20% value) at the daily cycle. Beer cannot enter the wine ager or age further. Cold expiry follows native fridge rules."
 fruit_wine_storage_hint,"Fruit wine can enter the wine ager for native aging value gains. It does not receive the fridge Chilled bonus."
 config_auto_replant,"Automatic replanting (native and added seeds)"

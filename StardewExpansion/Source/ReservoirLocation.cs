@@ -23,6 +23,12 @@ namespace PelicanCultivation
             ModHelper.AddAfterhourLocation(new ReservoirLocation());
             PlaceAfterDoctor(AfterhourLocation.GetAll());
         }
+        public static void EnsureRegistered()
+        {
+            if(!ModEntry.Enabled) return;
+            if(!(AfterhourLocation.Get(Fishing.LocationId) is ReservoirLocation)) Register();
+            else PlaceAfterDoctor(AfterhourLocation.GetAll());
+        }
         public static void PlaceAfterDoctor(List<AfterhourLocation> locations)
         {
             var reservoir=locations.Find(location=>location?.Id==Fishing.LocationId);if(reservoir==null)return;

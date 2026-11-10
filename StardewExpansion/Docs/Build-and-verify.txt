@@ -15,9 +15,10 @@ The r4 exporter applies the matching fruit-wine bottles and Artisan portrait. Th
 
 Runtime and documents
 Runtime: Release/Mods/PelicanCultivation. Install only the DLL, manifest, two locale CSVs and PNG assets. Source, original art, scripts, QA and documentation remain outside the runtime folder.
-Latest notes: 更新记录-2.0-r7.txt / Changelog-2.0-r7.en.txt.
+Latest notes: 2.0.4-fixes.zh.md / 2.0.4-fixes.en.md.
 Complete recipes: 机器作用与全部配方-2.0-r7.zh.txt / All-machine-recipes-2.0-r7.en.txt.
-The README and r7 references define current behavior. The r6 and earlier files remain historical references.
+Run Source/update-runtime-art.ps1 after the historical exporters to apply the 2.0.4 egg and mayonnaise dimensions.
+The latest repair notes take precedence over historical footprint and aging descriptions.
 
 Changed behavior to verify
 The reservoir is immediately after native dr_jackson and before the Upper District. Its card stays discovered without bait, shows the localized reason and disables departure. The native Travel boundary rechecks bait. Before native departure transfer, inspect selectedBackpack; while already outside, inspect afterhourPocketSlotInvBackpack. Count ordinary/premium bait through owned nested bags, excluding ground, side pockets, unowned branches and stale unplaced selections. A bait-filled selected backpack must not be rejected merely because the afterhour slot is still empty.
@@ -36,3 +37,8 @@ The final isolated r7 build passed 2,562 v2 checks, 26 reservoir-entry checks, 1
 
 Acceptance boundaries
 Unity rendering, actual hover occlusion, panel placement, return/recovery transitions and mouse/Space feel require in-game acceptance after restart. Native rule, value, save, inventory and schedule checks do not claim a live render. Do not terminate the running game. Preserve configuration and saves during backup/synchronization, and use logs to identify the currently loaded mod folder. Workshop description files are local drafts; this workflow performs no upload or web-page edit.
+
+2.0.4 r13 verification
+The final build passes 89 native Harmony bindings, 1,091 scanned methods, 474 bilingual keys and 160 item sprites. Added 120 compatibility regressions cover the actual MachineryIntake wrapper, repeated cage attachment, legacy storage-index repair, native product transfer, four consecutive eligible hen outputs and invalid live-livestock weights. Other existing suites remain green.
+Live tests on 100-REV13: an unmodified day-15 save produced one owned two-cell egg in its real output tray after normal sleep; all 11 livestock had positive saved weights. A separate r12 test save with a misplaced dispenser logged one corrected cage path and displayed the dispenser in its proper slot, with one output tray. Original save/index files are restored after tests.
+The four-night production and removal tests run against native inventory methods in the CLR harness; they are not four fully automated live-game nights. Illness-to-zero was not reproduced from the provided save; recovery of explicit zero/invalid records and preservation of positive loss, disease and death state were verified. Ice cream remains non-plant food.

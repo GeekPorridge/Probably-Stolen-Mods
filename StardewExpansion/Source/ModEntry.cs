@@ -5,8 +5,8 @@ namespace PelicanCultivation
 {
     public sealed class ModEntry : IMod
     {
-        public const string ModId="pelican_cultivation", Version="2.0.3";
-        public const string BuildRevision="r10";
+        public const string ModId="pelican_cultivation", Version="2.0.4";
+        public const string BuildRevision="r13";
         public static bool Enabled, GameplayReady;
         private static ModLog log;
         private static ConfigEntry<int> nativeSeedChance,stationSeedShare;
@@ -86,11 +86,14 @@ namespace PelicanCultivation
     public sealed class RuntimePump : MonoBehaviour
     {
         private float nextTick;
+        private bool observed,lastReady;
         private void Update()
         {
             // PlayerStore.Instance is a lazy factory, not a harmless null check.
             // Never touch it (or game time) until the game-loaded/new-game hook.
             if(!ModEntry.Enabled) return;
+            bool ready=Progress.Ready;
+            if(!observed || ready!=lastReady){observed=true;lastReady=ready;ModEntry.Note("Runtime readiness: "+Progress.RuntimeState);}
             Progress.EnsureReady();
             if(!ModEntry.GameplayReady) return;
             ReservoirEvents.EnsureToday();Fishing.Tick();

@@ -95,6 +95,7 @@ namespace PelicanCultivation
             string species=item.GetTagReadonly("ANIMAL_SPECIES_TAG").GetString();
             if(NewAnimal(species) && !item.IsTag(Egg))
             {
+                AnimalWeightGuard.Repair(item);
                 item.name=Expansion.L(species==Chicken?"chicken":"goat");item.shortDescription=Expansion.L(species==Chicken?"chicken_desc":"goat_desc");
                 FarmGeometry.Apply(item,AnimalSprite(item));int weight=Math.Max(0,(int)item.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat());
                 item.unitValue=Math.Max(species==Chicken?55:100,(long)Math.Round(weight*(species==Chicken?95.0:145.0)/1000));
@@ -140,7 +141,7 @@ namespace PelicanCultivation
             float hunger=mother.GetTagReadonly("ANIMAL_HUNGER_TAG").GetFloat();if(hunger-cost<HusbandryHelper.GetMaxHunger(mother)*0.25f)return;
             var product=DirectoryMaster.Item("pelican_goat_milk");GeneralHelper.SetItemOwned(product,true);GraphNodeStorage target=FarmHusbandry.Products(host);
             if(target==null || !GraphUtils.CanAccept(target,product) || GraphUtils.TryAcceptAll(target,product)!=0 || product.parentInventory!=target)
-            {if(product.parentInventory==null)product.Destroy();return;}
+            {if(product.parentInventory==null)product.Destroy();FarmNightReport.RecordFullProducts(host);return;}
             Crops.SetInt(mother,FarmRules.ProductClock,0);FarmSpecies.SetFloat(mother,"ANIMAL_HUNGER_TAG",hunger-cost);
         }
         private static void ProduceChicken(GameItem mother,GameInventory inventory,GameItem host,int today)
@@ -152,6 +153,7 @@ namespace PelicanCultivation
                 var egg=DirectoryMaster.Item("pelican_egg");
                 if(TryPlaceProduct(egg,FarmHusbandry.Products(host)))
                 {FarmSpecies.SetFloat(mother,"ANIMAL_HUNGER_TAG",hunger-cost);Crops.SetInt(mother,FarmRules.ProductClock,0);}
+                else FarmNightReport.RecordFullProducts(host);
             }
             // Fertile eggs are a separate natural product, not a replacement
             // for the edible egg or dependent on the product tray's capacity.

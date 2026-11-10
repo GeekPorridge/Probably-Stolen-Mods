@@ -51,7 +51,8 @@ namespace PelicanCultivation
         }
         public static void Open(string key,GameItem item)
         {
-            if(!ModEntry.Enabled||!Progress.Ready)return;
+            Progress.EnsureReady();
+            if(!ModEntry.Enabled||!Progress.Ready){ModEntry.Note("Manual unavailable: "+Progress.RuntimeState);return;}
             ManualWindow.Open(key,item);
         }
         public static ManualBookData Build(string key,Func<string,bool> fits=null)

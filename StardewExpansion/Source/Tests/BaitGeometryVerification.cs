@@ -108,8 +108,35 @@ public static class BaitGeometryVerification
                 Check(item.GetItemSize()==1&&item.IsTag(ProductGeometry.Pending)&&item.unitCount==7,"early load waits for the complete inventory graph");
                 ready=true;ProductGeometry.Apply(item,key);Check(item.GetItemSize()==4&&!item.IsTag(ProductGeometry.Pending)&&item.unitCount==7,"late-ready retry safely completes early-load migration");
             }
+            foreach(int index in new[]{0,2})
+            {
+                string key=Expansion.ProductKeys[index];int area=index==0?2:4;
+                var item=Expansion.Product(index);Check(item.GetItemSize()==area,"new egg/mayonnaise factory uses the requested footprint: "+key);
+                GeneralHelper.SetItemOwned(item,true);item.SetUnitCount(7);item.unitValue=73;Crops.SetInt(item,Expansion.PriceTag,73);int id=item.uniqueId;
+                item.SetShape(new GridShapeBuilder().SetData(new byte[]{1},1));Position(item,0,0);
+                var grid=NewGrid(1,1,item);item.onLoaded?.Invoke(item);
+                Check(item.GetItemSize()==1&&item.IsTag(ProductGeometry.Pending)&&item.parentInventory==grid&&item.unitCount==7,"a full old save defers egg/mayonnaise growth without dropping or overwriting items: "+key);
+                var blocker=new Item("blocker");Position(blocker,0,1);var same=Expansion.Product(index);GeneralHelper.SetItemOwned(same,true);same.SetUnitCount(13);Position(same,3,0);
+                Field(typeof(GameGridInventory),"<inventoryShape>k__BackingField").SetValue(grid,new GridShapeBuilder().SetData(new byte[15],5).SetDataOutside(1).Build());
+                ((List<GameItem>)Field(typeof(GameGridInventory),"items").GetValue(grid)).AddRange(new GameItem[]{blocker,same});blocker.parentInventory=grid;same.parentInventory=grid;
+                ProductGeometry.Apply(item,key);
+                Check(item.GetItemSize()==area&&!item.IsTag(ProductGeometry.Pending)&&!item.modifiedShape.Intersects(blocker.modifiedShape)&&!item.modifiedShape.Intersects(same.modifiedShape),"retry relocates resized egg/mayonnaise to free cells: "+key);
+                Check(item.uniqueId==id&&item.unitCount==7&&same.unitCount==13&&item.unitValue==73&&grid.StackOffers==0&&GeneralHelper.IsItemOwned(item),"resize preserves both stacks, saved value, ownership and identity without merging: "+key);
+                int removed=grid.Removed;ProductGeometry.Apply(item,key);Check(grid.Removed==removed&&item.unitCount==7,"repeated egg/mayonnaise migration is idempotent: "+key);
+            }
+            var spirit=new Item("wine_bottle");GeneralHelper.SetItemOwned(spirit,true);spirit.EnableTag(WineHelper.WINE_CONTAINER_TAG);Crops.SetInt(spirit,WineHelper.WINE_CONTAINER_STATE,2);Crops.SetInt(spirit,Rules.WineTag,6);
+            spirit.unitValue=133;Crops.SetInt(spirit,AgableHelper.AGE_INT,11);Crops.BindSprite(spirit,"bottle_chili_spirit",1,4);Position(spirit,0,0);
+            var bottleGrid=NewGrid(1,4,spirit);BottleGeometry.ApplyFinished(spirit,6);
+            Check(spirit.GetItemSize()==4&&spirit.IsTag(BottleGeometry.PendingBeerTag)&&spirit.parentInventory==bottleGrid&&spirit.unitValue==133&&AgableHelper.GetAge(spirit)==11,"full old spirit footprint safely defers six-cell migration without changing value, age or placement");
+            harmony.Patch(AccessTools.Method(typeof(RichTextBuilder),"AddLine"),new HarmonyMethod(typeof(FarmVerification).GetMethod("HeadlessAddLine")));
+            var tooltip=new RichTextBuilder(40);Brewing.Tooltip(tooltip,spirit);
+            var slices=Field(typeof(RichTextBuilder),"slices");var textField=Field(slices.FieldType.GetGenericArguments()[0],"text");
+            Check(((System.Collections.IList)slices.GetValue(tooltip)).Cast<object>().Any(slice=>(string)textField.GetValue(slice)=="beer_space_hint"),"pending spirit resize remains visible despite concise wine tooltips");
+            Field(typeof(GameGridInventory),"<inventoryShape>k__BackingField").SetValue(bottleGrid,new GridShapeBuilder().SetData(new byte[12],3).SetDataOutside(1).Build());
+            Field(typeof(BottleGeometry),"nextRetry").SetValue(null,0f);Field(typeof(UnityEngine.Time),"CodexTime").SetValue(null,6f);BottleGeometry.RetryPending();
+            Check(spirit.shape.width==2&&spirit.shape.height==3&&spirit.GetItemSize()==6&&!spirit.IsTag(BottleGeometry.PendingBeerTag)&&spirit.parentInventory==bottleGrid&&spirit.unitValue==133,"pending spirit becomes a six-cell bottle when actual inventory capacity is restored");
         }
         finally{harmony.UnpatchAll(harmony.Id);ready=true;}
-        return "Passed "+checks+" bait 2x2 geometry, full-backpack rollback, native slot relocation and stack-preservation checks.";
+        return "Passed "+checks+" bait/egg/mayonnaise geometry, full-inventory rollback, native slot relocation and stack-preservation checks.";
     }
 }

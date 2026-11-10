@@ -14,7 +14,7 @@ namespace PelicanCultivation
         {
             var row=cage?.contentWindow?.childElement as MachineryPanelRow;
             if(row==null) return;
-            var existing=row.GetPanel("pelican_products")?.content as GameGridInventory;
+            var existing=Products(cage);
             if(existing!=null){ConfigureProducts(existing);return;}
             var products=new GameGridInventory(6,2);products.EnableTag("PELICAN_FARM_PRODUCT_INVENTORY");
             ConfigureProducts(products);
@@ -35,8 +35,21 @@ namespace PelicanCultivation
             return host!=null && GeneralHelper.IsItemOwned(host) && GeneralHelper.IsItemOwned(food)
                 && (food.identifier=="pelican_milk" || food.identifier=="pelican_truffle_small" || food.identifier=="pelican_truffle" || food.identifier=="pelican_egg" || food.identifier=="pelican_goat_milk");
         }
+        public static GameGridInventory ProductStorage(MachineryPanel panel)
+        {
+            // MachineHelper.Panel wraps inventories in MachineryIntake. Use
+            // the native storage collector rather than casting the UI wrapper.
+            var stores=new List<GraphNodeStorage>();panel?.CollectStorage(stores);
+            foreach(var node in stores)
+            {
+                if(node is GameGridInventory grid) return grid;
+                var nested=GraphUtils.FindAllChildrenType<GameGridInventory>(node);
+                if(nested.Count>0) return nested[0];
+            }
+            return null;
+        }
         public static GameGridInventory Products(GameItem cage)
-            => ((cage?.contentWindow?.childElement as MachineryPanelRow)?.GetPanel("pelican_products")?.content) as GameGridInventory;
+            => ProductStorage((cage?.contentWindow?.childElement as MachineryPanelRow)?.GetPanel("pelican_products"));
         public static void Produce(GameItem animal,GameInventory inventory)
         {
             if(!ModEntry.Enabled || !Progress.Ready) return;

@@ -2,6 +2,15 @@ using HarmonyLib;
 
 namespace PelicanCultivation
 {
+    [HarmonyPatch(typeof(TransitUI),nameof(TransitUI.Open))]
+    public static class RuntimeTransitPatch
+    {
+        public static void Prefix()
+        {
+            Progress.EnsureReady();
+            if(Progress.Ready) ReservoirLocation.EnsureRegistered();
+        }
+    }
     [HarmonyPatch(typeof(MachineFridge),nameof(MachineFridge.MayZoneAcceptItem))]
     public static class BeerFridgeAcceptancePatch
     {
@@ -21,27 +30,27 @@ namespace PelicanCultivation
     public static class BeerRackPatch
     {
         public static void Postfix(GameItem wine,ref bool __result)
-        { if(ModEntry.Enabled && BeverageStorage.IsBeer(wine)) __result=false; }
+        { if(ModEntry.Enabled && BeverageStorage.DoesNotAge(wine)) __result=false; }
     }
     [HarmonyPatch(typeof(AgableHelper),nameof(AgableHelper.IsAgable))]
     public static class BeerAgablePatch
     {
         public static void Postfix(GameItem item,ref bool __result)
-        { if(ModEntry.Enabled && BeverageStorage.IsBeer(item)) __result=false; }
+        { if(ModEntry.Enabled && BeverageStorage.DoesNotAge(item)) __result=false; }
     }
     [HarmonyPatch(typeof(AgableHelper),nameof(AgableHelper.OnAge))]
     public static class BeerAgePatch
     {
         // Also covers beer already inside an old saved rack and direct aging
         // callbacks. Historical age and value are left intact.
-        public static bool Prefix(GameItem item) => !ModEntry.Enabled || !BeverageStorage.IsBeer(item);
+        public static bool Prefix(GameItem item) => !ModEntry.Enabled || !BeverageStorage.DoesNotAge(item);
     }
     [HarmonyPatch(typeof(WineHelper),nameof(WineHelper.CreateTooltip))]
     public static class BeerWineTooltipPatch
     {
         // For finished beer this native section contains only aging help and
         // developer scores. The late mod tooltip supplies the fridge help.
-        public static bool Prefix(GameItem item) => !ModEntry.Enabled || !BeverageStorage.CanChill(item);
+        public static bool Prefix(GameItem item) => !ModEntry.Enabled || item.IsTag(WineHelper.WINE_COUNTERFEIT_TAG) || !BeverageStorage.DoesNotAge(item);
     }
     [HarmonyPatch(typeof(WineHelper),"CanBottleSourceTarget")]
     public static class CustomWineTargetPatch

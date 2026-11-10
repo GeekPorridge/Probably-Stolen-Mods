@@ -20,6 +20,7 @@ public static class CompatibilityVerification
     }
     private sealed class Grid:GameGridInventory
     {public Grid():base(1,1){} public override void Validate(){}}
+    private sealed class Slot:GameSlotInventory {public override void Validate(){}}
     private static void Check(bool value,string why){if(!value)throw new Exception("COMPATIBILITY FAIL: "+why);checks++;}
     private static void Patch(Harmony h,MethodBase method,string prefix){h.Patch(method,new HarmonyMethod(typeof(CompatibilityVerification).GetMethod(prefix)));}
     public static bool Empty(string identifier,ref GameItem __result){__result=new Item(identifier);return false;}
@@ -59,26 +60,31 @@ public static class CompatibilityVerification
             Patch(h,AccessTools.Method(typeof(OverlayHandler),"UpdateInventoryStateUI"),"NoOp");
             Patch(h,AccessTools.PropertyGetter(typeof(Progress),"Ready"),"Ready");Patch(h,AccessTools.PropertyGetter(typeof(Progress),"Day"),"Day");
             Patch(h,AccessTools.Method(typeof(ModEntry),"L"),"Text");
-            Storage();Harvest();Feed();Names();Bootstrap(h);
-            return "Passed "+checks+" compatibility regressions: native product-tray placement/removal, movable fertile eggs, ownership of all six custom livestock cuts, balanced night fish, legacy feed migration, drink names and early-run initialization.";
+            Storage();SavePaths();Weights();Harvest();Feed();Names();Bootstrap(h);
+            return "Passed "+checks+" compatibility regressions: native wrapped-tray placement/removal, repeat attachment, saved cage path repair, live-weight recovery, movable fertile eggs, harvest ownership, balanced night fish, feed migration, drink names and early-run initialization.";
         }
         finally{h.UnpatchAll(h.Id);AccessTools.Field(typeof(UISettings),"current").SetValue(null,oldSettings);overlayField.SetValue(null,oldOverlay);ModEntry.Enabled=enabled;}
     }
     private static void Storage()
     {
         var cage=Owned("animal_cage");cage.EnableTag("CAGE_TAG");var tray=Inventory(6,2,cage);var stock=Inventory(10,8,cage);
-        var panel=(MachineryPanel)FormatterServices.GetUninitializedObject(typeof(MachineryPanel));panel.role="pelican_products";AccessTools.Field(typeof(MachineryPanel),"<content>k__BackingField").SetValue(panel,tray);
+        var panel=WrappedPanel("pelican_products",tray);
         var row=(MachineryPanelRow)FormatterServices.GetUninitializedObject(typeof(MachineryPanelRow));AccessTools.Field(typeof(MachineryPanelRow),"panels").SetValue(row,new List<MachineryPanel>{panel});
         var window=(PixelWindow)FormatterServices.GetUninitializedObject(typeof(PixelWindow));AccessTools.Field(typeof(PixelWindow),"<childElement>k__BackingField").SetValue(window,row);cage.Bind(window);
         var factoryCage=new Item("animal_cage");tray.mayInventoryAddItemFunc=(food,inventory)=>GeneralHelper.IsItemOwned(factoryCage);
         Check(!GraphUtils.CanAccept(tray,Owned("pelican_egg")),"stale factory-owned tray callback reproduces false-full rejection");
         FarmHusbandry.AttachCage(cage);
+        Check(!(panel.content is GameGridInventory)&&ReferenceEquals(FarmHusbandry.Products(cage),tray),"actual native MachineryIntake traversal resolves the production tray");
+        for(int load=0;load<5;load++)FarmHusbandry.AttachCage(cage);
+        Check(row.Panels.Count==1&&row.children.Count==1,"repeated load/morning attachment never appends duplicate wrapped trays");
+        var productBag=Inventory(10,8);
         foreach(string id in new[]{"pelican_milk","pelican_truffle_small","pelican_truffle","pelican_egg","pelican_goat_milk"})
         {
             var product=Owned(id);
             Check(GraphUtils.CanAccept(tray,product),"native empty product tray accepts "+id);
             Check(GraphUtils.TryAcceptAll(tray,product)==0 && product.parentInventory==tray,"native product transfer commits "+id);
-            Check(product.MayRemove(),"product can be taken back out: "+id);tray.Expel(product);
+            Check(product.MayRemove(),"product can be taken back out: "+id);
+            Check(GraphUtils.TryAcceptAll(productBag,product)==0&&product.parentInventory==productBag,"native transfer removes the same owned product from the wrapped tray: "+id);
         }
         var foreign=new Item("pelican_milk");Check(!GraphUtils.CanAccept(tray,foreign),"product bay rejects vendor-owned items");
         var egg=ExpansionStock.CreateEgg();GeneralHelper.SetItemOwned(egg,true);
@@ -94,6 +100,61 @@ public static class CompatibilityVerification
             Check(tray.childItems.Count==1 && tray.childItems[0].identifier=="pelican_egg","hen lays exactly one egg on each of the first four nights: "+day);
             Check(hen.GetTagReadonly("ANIMAL_HUNGER_TAG").GetFloat()==650,"hen pays one real production cost: "+day);tray.Expel(tray.childItems[0]);
         }
+    }
+    private static MachineryIntake Intake(PixelElement content)
+    {
+        var intake=(MachineryIntake)FormatterServices.GetUninitializedObject(typeof(MachineryIntake));
+        AccessTools.Field(typeof(MachineryIntake),"<content>k__BackingField").SetValue(intake,content);return intake;
+    }
+    private static MachineryPanel WrappedPanel(string role,PixelElement content)
+    {
+        var panel=(MachineryPanel)FormatterServices.GetUninitializedObject(typeof(MachineryPanel));panel.role=role;
+        AccessTools.Field(typeof(MachineryPanel),"<content>k__BackingField").SetValue(panel,Intake(content));return panel;
+    }
+    private static GridPixelElement SlotPanel(GameSlotInventory slot)
+    {
+        var grid=(GridPixelElement)FormatterServices.GetUninitializedObject(typeof(GridPixelElement));
+        AccessTools.Field(typeof(GridPixelElement),"childElements").SetValue(grid,new PixelElement[]{Intake(slot)});return grid;
+    }
+    private static void SavePaths()
+    {
+        var cage=Owned("animal_cage");cage.uniqueId=987;var stock=Inventory(10,8,cage);var tray=Inventory(6,2,cage);
+        var dispenser=(Slot)FormatterServices.GetUninitializedObject(typeof(Slot));var butcher=(Slot)FormatterServices.GetUninitializedObject(typeof(Slot));
+        var row=(MachineryPanelRow)FormatterServices.GetUninitializedObject(typeof(MachineryPanelRow));
+        var panels=new List<MachineryPanel>{WrappedPanel("cage",stock),WrappedPanel("dispenser",SlotPanel(dispenser)),WrappedPanel("butcher",SlotPanel(butcher)),WrappedPanel("pelican_products",tray)};
+        AccessTools.Field(typeof(MachineryPanelRow),"panels").SetValue(row,panels);
+        var window=(PixelWindow)FormatterServices.GetUninitializedObject(typeof(PixelWindow));AccessTools.Field(typeof(PixelWindow),"<childElement>k__BackingField").SetValue(window,row);cage.Bind(window);
+        Check(ReferenceEquals(AnimalCage.GetDispenserSlot(cage),dispenser)&&ReferenceEquals(AnimalCage.GetButcherSlot(cage),butcher),"migration uses real native nested dispenser/butcher slots");
+        var numbers=CageSaveMigration.InventoryNumbers(cage);
+        var saved=new SaveItemNode{identifier="animal_cage",uniqueId=cage.uniqueId,uuid=1,childItems=new List<long>{2,3,4,5},childItemInventoryNode=new List<int>{numbers[dispenser]+2,numbers[butcher]+2,numbers[tray]+1,numbers[stock]}};
+        var records=new List<SaveItemNode>{saved,new SaveItemNode{identifier="livestock_feed_dispenser",uuid=2},new SaveItemNode{identifier="auto_butcher",uuid=3},new SaveItemNode{identifier="pelican_egg",uuid=4},new SaveItemNode{identifier="pelican_chicken",uuid=5}};
+        var scope=CageSaveMigration.Enter(records);
+        try
+        {
+            CageSaveMigration.Normalize(cage);
+            Check(saved.childItemInventoryNode.SequenceEqual(new[]{numbers[dispenser],numbers[butcher],numbers[tray],numbers[stock]}),"duplicate-panel saves restore machine slots and products while preserving animal placement");
+            var once=saved.childItemInventoryNode.ToArray();CageSaveMigration.Normalize(cage);Check(once.SequenceEqual(saved.childItemInventoryNode),"cage path migration is idempotent");
+            var nested=CageSaveMigration.Enter(new List<SaveItemNode>());CageSaveMigration.Exit(nested);saved.childItemInventoryNode[0]+=2;CageSaveMigration.Normalize(cage);Check(saved.childItemInventoryNode[0]==numbers[dispenser],"nested decode restores its outer migration scope");
+        }
+        finally{CageSaveMigration.Exit(scope);}
+        saved.childItemInventoryNode[0]+=2;CageSaveMigration.Normalize(cage);Check(saved.childItemInventoryNode[0]==numbers[dispenser]+2,"migration cannot touch unrelated non-decoding runtime objects");
+    }
+    private static void Weights()
+    {
+        foreach(string species in new[]{FarmRules.Cow,FarmRules.Pig,ExpansionStock.Chicken,ExpansionStock.Goat})
+        {
+            var animal=Owned("animal");FarmSpecies.SetString(animal,"ANIMAL_SPECIES_TAG",species);Crops.SetInt(animal,"ANIMAL_AGE_TAG",9);
+            animal.EnableTag("ANIMAL_DISEASED_TAG");FarmSpecies.SetFloat(animal,"ANIMAL_HEALTH_TAG",31);FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",800);
+            AnimalWeightGuard.Repair(animal);FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",0);AnimalWeightGuard.Repair(animal);
+            Check(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()==800,"zero weight restores the last valid weight: "+species);
+            FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",750);AnimalWeightGuard.Repair(animal);Check(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()==750,"positive illness/starvation weight loss is preserved: "+species);
+            FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",float.NaN);AnimalWeightGuard.Repair(animal,700);Check(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()==700,"disease boundary snapshot repairs invalid weight: "+species);
+            animal.DisableTag(AnimalWeightGuard.LastWeight);FarmSpecies.SetFloat(animal,AnimalWeightGuard.LastWeight,0);FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",0);AnimalWeightGuard.Repair(animal);
+            Check(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()>0&&animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()<700,"old zero record gets only the native minimum floor: "+species);
+            Check(animal.IsTag("ANIMAL_DISEASED_TAG")&&animal.GetTagReadonly("ANIMAL_HEALTH_TAG").GetFloat()==31,"weight repair preserves actual health and disease: "+species);
+            animal.EnableTag("ANIMAL_IS_DEAD_TAG");FarmSpecies.SetFloat(animal,"ANIMAL_WEIGHT_TAG",0);AnimalWeightGuard.Repair(animal);Check(animal.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()==0,"repair never invents carcass weight: "+species);
+        }
+        var native=Owned("rat");FarmSpecies.SetString(native,"ANIMAL_SPECIES_TAG",AnimalSpecies.Rat.speciesID);AnimalWeightGuard.Repair(native);Check(native.GetTagReadonly("ANIMAL_WEIGHT_TAG").GetFloat()==0,"native species outside this mod retain their own weight rules");
     }
     private static void Harvest()
     {
@@ -141,6 +202,7 @@ public static class CompatibilityVerification
     }
     private static void Bootstrap(Harmony h)
     {
+        h.Unpatch(AccessTools.PropertyGetter(typeof(Progress),"Ready"),HarmonyPatchType.Prefix,h.Id);
         var storeField=AccessTools.Field(typeof(PlayerStore),"instance");object oldStore=storeField.GetValue(null);
         var menuField=AccessTools.Field(typeof(NewGameData),"<Instance>k__BackingField");object oldMenu=menuField.GetValue(null);bool oldReady=ModEntry.GameplayReady;
         var menu=(NewGameData)FormatterServices.GetUninitializedObject(typeof(NewGameData));menuField.SetValue(null,menu);
@@ -150,7 +212,12 @@ public static class CompatibilityVerification
         try
         {
             initializations=0;storeField.SetValue(null,null);menu.isInMainMenu=true;ModEntry.GameplayReady=false;Progress.EnsureReady();Check(initializations==0 && !PlayerStore.HasInstance,"menu cannot construct a player store");
-            storeField.SetValue(null,FormatterServices.GetUninitializedObject(typeof(PlayerStore)));entryField.SetValue(null,entry);menu.isInMainMenu=false;
+            storeField.SetValue(null,FormatterServices.GetUninitializedObject(typeof(PlayerStore)));entryField.SetValue(null,entry);
+            Progress.EnsureReady();Check(initializations==0&&!Progress.Ready,"an early or menu store without an inventory graph cannot initialize gameplay");
+            AccessTools.Field(typeof(EmporiumEntry),"<invElement>k__BackingField").SetValue(entry,Inventory(2,2));
+            Progress.EnsureReady();Check(initializations==1&&Progress.Ready&&menu.isInMainMenu,"a fully loaded store is usable even when NewGameData retains its menu flag");
+            ModEntry.Enabled=false;Check(!Progress.Ready,"disabling the mod immediately removes gameplay readiness");ModEntry.Enabled=true;
+            initializations=0;menu.isInMainMenu=false;
             for(int i=1;i<=3;i++){day=i;ModEntry.GameplayReady=false;Progress.EnsureReady();Check(ModEntry.GameplayReady && initializations==i,"first three nights initialize without waiting for a morning report: "+i);Progress.EnsureReady();Check(initializations==i,"initialization is not repeated during an active run");}
         }
         finally{pointer.SetValue(entry,IntPtr.Zero);pointer.SetValue(menu,IntPtr.Zero);storeField.SetValue(null,oldStore);entryField.SetValue(null,oldEntry);menuField.SetValue(null,oldMenu);ModEntry.GameplayReady=oldReady;}

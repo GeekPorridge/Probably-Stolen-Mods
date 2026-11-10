@@ -137,7 +137,7 @@ foreach($sprite in $sprites){
     }
     elseif($sprite.BaseName.EndsWith('_seed')){if($bitmap.Width -ne 128 -or $bitmap.Height -ne 128){throw ('Seed detail must be retained in a 128px one-cell texture: '+$sprite.Name)}}
     elseif($sprite.BaseName.StartsWith('bottle_')){
-      $beer=$sprite.BaseName -in @('bottle_beer','bottle_pale_ale')
+      $beer=$sprite.BaseName -in @('bottle_beer','bottle_pale_ale','bottle_chili_spirit')
       $expectedWidth=if($beer){256}else{128};$expectedHeight=if($beer){384}else{512}
       if($bitmap.Width -ne $expectedWidth -or $bitmap.Height -ne $expectedHeight){throw ('Bottle must retain 128px detail per native cell: '+$sprite.Name)}
     }
